@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Terminal</name>
+	<submenu></submenu>
+	<unique-id>1719836387816908-1</unique-id>
+	<command>/usr/bin/kitty --working-directory %f</command>
+	<description>Opens a new terminal in the current directory.</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>go-next</icon>
+	<name>Extract</name>
+	<submenu></submenu>
+	<unique-id>1719982747357211-1</unique-id>
+	<command>sh -c &apos;for f in %F; do dirname=$(basename &quot;$f&quot; .tar.gz); dirname=$(basename &quot;$dirname&quot; .tar); dirname=$(basename &quot;$dirname&quot; .zip); mkdir &quot;$dirname&quot; &amp;&amp; tar -xf &quot;$f&quot; -C &quot;$dirname&quot; || unzip &quot;$f&quot; -d &quot;$dirname&quot; &amp;&amp; rm &quot;$f&quot;; done&apos;
+</command>
+	<description>Extracts to a new folder and deletes the archive.</description>
+	<range>*</range>
+	<patterns>*</patterns>
+</action>
+<action>
+	<icon>bookmark-new</icon>
+	<name>Archive</name>
+	<submenu></submenu>
+	<unique-id>1719982817869427-2</unique-id>
+	<command>sh -c &apos;archive_name=$(date +&quot;%Y%m%d_%H%M%S&quot;).tar.gz; tar -czf &quot;$archive_name&quot; %F&apos;
+</command>
+	<description>Makes a gzipped tarball with the selected items.</description>
+	<range>*</range>
+	<patterns>*</patterns>
+</action>
+</actions>

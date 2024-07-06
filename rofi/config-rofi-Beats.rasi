@@ -1,0 +1,20 @@
+/* Made by Ecys — https://ecys.xyz */
+
+/* Rofi Beats Config (compact) */
+
+@import "~/.config/rofi/config-compact.rasi" 
+
+window {
+  height: 59%;
+}
+
+/* ---- Entry ---- */ 
+entry {
+  placeholder: "📻 Choose station";
+}
+
+/* ---- Listview ---- */
+listview {
+  lines: 6;
+}
+
