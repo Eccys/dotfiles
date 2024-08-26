@@ -1,0 +1,76 @@
+@import '../../.config/waybar/wallust/colors-waybar.css';
+
+window {
+    font-family: Fira Code Medium;
+    font-size: 16pt;
+    color: #cdd6f4; /* text */
+    background-color: rgba(30, 30, 46, 0.6);
+}
+
+button {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 25%;
+    background-color: rgba(200, 220, 255, 0);
+    animation: gradient_f 20s ease-in infinite;
+    border-radius: 20px; /* Increased border radius for a more rounded look */
+    padding: 20px;
+    transition: background-size 0.15s ease-in-out, box-shadow 0.15s ease-in-out, background-color 0.15s ease-in-out; /* Faster and smoother transition */
+    outline: none; /* Prevent buttons from auto-focusing */
+}
+
+button:focus {
+    background-size: 35%; /* Reduce the size increase on focus */
+    border: 0px;
+    outline: none; /* Remove focus outline */
+}
+
+button:hover {
+    background-color: @color12; 
+    color: #1e1e2e;
+    background-size: 40%; /* Reduce the size increase on hover */
+    border-radius: 20px; 
+    box-shadow: 0 0 15px @color12; /* Reduce the intensity of the shadow */
+}
+
+#lock {
+    background-image: image(url("./icons/lock.png"));
+}
+/* #lock:hover { */
+/*     background-image: image(url("./icons/lock-hover.png")); */
+/* } */
+
+#logout {
+    background-image: image(url("./icons/logout.png"));
+}
+/* #logout:hover { */
+/*     background-image: image(url("./icons/logout-hover.png")); */
+/* } */
+
+#suspend {
+    background-image: image(url("./icons/sleep.png"));
+}
+/* #suspend:hover { */
+/*     background-image: image(url("./icons/sleep-hover.png")); */
+/* } */
+
+#shutdown {
+    background-image: image(url("./icons/power.png"));
+}
+/* #shutdown:hover { */
+/*     background-image: image(url("./icons/power-hover.png")); */
+/* } */
+
+#reboot {
+    background-image: image(url("./icons/restart.png"));
+}
+/* #reboot:hover { */
+/*     background-image: image(url("./icons/restart-hover.png")); */
+/* } */
+
+#hibernate {
+    background-image: image(url("./icons/hibernate.png"));
+}
+/* #hibernate:hover { */
+/*     background-image: image(url("./icons/hibernate-hover.png")); */
+/* } */

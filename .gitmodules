@@ -1,0 +1,33 @@
+[submodule "nvim/pack/vendor/start/auto-pairs"]
+	path = nvim/pack/vendor/start/auto-pairs
+	url = https://github.com/windwp/nvim-autopairs
+[submodule "nvim/pack/vendor/start/coc"]
+	path = nvim/pack/vendor/start/coc
+	url = https://github.com/neoclide/coc.nvim
+[submodule "nvim/pack/vendor/start/indent-blankline.nvim"]
+	path = nvim/pack/vendor/start/indent-blankline.nvim
+	url = https://github.com/lukas-reineke/indent-blankline.nvim
+[submodule "nvim/pack/vendor/start/fzf.vim"]
+	path = nvim/pack/vendor/start/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
+[submodule "nvim/pack/vendor/start/neo-tree.nvim"]
+	path = nvim/pack/vendor/start/neo-tree.nvim
+	url = https://github.com/nvim-neo-tree/neo-tree.nvim
+[submodule "nvim/pack/vendor/start/comfortable-motion.vim"]
+	path = nvim/pack/vendor/start/comfortable-motion.vim
+	url = https://github.com/yuttie/comfortable-motion.vim
+[submodule "nvim/pack/vendor/start/telescope.nvim"]
+	path = nvim/pack/vendor/start/telescope.nvim
+	url = https://github.com/nvim-telescope/telescope.nvim
+[submodule "nvim/pack/vendor/start/vim-wayland-clipboard"]
+	path = nvim/pack/vendor/start/vim-wayland-clipboard
+	url = https://github.com/jasonccox/vim-wayland-clipboard
+[submodule "nvim/pack/vendor/start/nui.nvim"]
+	path = nvim/pack/vendor/start/nui.nvim
+	url = https://github.com/MunifTanjim/nui.nvim
+[submodule "nvim/pack/vendor/start/plenary.nvim"]
+	path = nvim/pack/vendor/start/plenary.nvim
+	url = https://github.com/nvim-lua/plenary.nvim
+[submodule "nvim/pack/vendor/start/ReplaceWithRegister"]
+	path = nvim/pack/vendor/start/ReplaceWithRegister
+	url = https://github.com/vim-scripts/ReplaceWithRegister

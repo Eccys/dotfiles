@@ -1,0 +1,16 @@
+/* Made by Ecys — https://ecys.xyz */
+
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Main Config 1080p */
+
+@import "~/.config/rofi/master-config.rasi" 
+
+/* ---- Configuration ---- */
+configuration {
+	font: "Fira Code SemiBold 12";
+}
+
+element-text {
+    font:	"Fira Code SemiBold 14";
+}
+
