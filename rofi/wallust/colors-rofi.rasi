@@ -1,0 +1,30 @@
+/* Made by Ecys — https://ecys.xyz */
+
+* {
+active-background: #082345;
+active-foreground: #F0E6F0;
+normal-background: #21232A;
+normal-foreground: #F0E6F0;
+urgent-background: #6D8BB4;
+urgent-foreground: #F0E6F0;
+
+alternate-active-background: #576D8C;
+alternate-active-foreground: #F0E6F0;
+alternate-normal-background: #21232A;
+alternate-normal-foreground: #F0E6F0;
+alternate-urgent-background: #21232A;
+alternate-urgent-foreground: #F0E6F0;
+
+selected-active-background: #082345;
+selected-active-foreground: #F0E6F0;
+selected-normal-background: #E2D3E1;
+selected-normal-foreground: #F0E6F0;
+selected-urgent-background: #6D8BB4;
+selected-urgent-foreground: #F0E6F0;
+background: rgba(0,0,0,0.7);
+background-color: #21232A;
+background: rgba(0,0,0,0.7);
+foreground: #E2D3E1;
+border-color: #082345;
+}
+

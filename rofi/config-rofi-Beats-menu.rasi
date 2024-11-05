@@ -1,0 +1,25 @@
+/* Made by Ecys — https://ecys.xyz */
+
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Rofi Beats Config (compact) */
+
+@import "~/.config/rofi/config-compact.rasi" 
+
+/* ---- Entry ---- */ 
+entry {
+  width: 20%;
+  placeholder: "📻 Choose Music Source";
+}
+
+/* ---- Window ---- */
+window {
+  width: 24%;
+  height: 47%;
+}
+
+/* ---- Listview ---- */
+listview {
+  fixed-columns: false;
+  colums: 1;
+  lines: 4;
+}
