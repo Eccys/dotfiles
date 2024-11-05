@@ -32,13 +32,17 @@ rofi_command="rofi -i -show -dmenu -config ~/.config/rofi/config-wallpaper.rasi"
 
 # Sorting Wallpapers
 menu() {
-  sorted_options=($(printf '%s\n' "${PICS[@]}" | sort))
-  # Place "Random" at the beginning with the random photo as an icon
+  # Sort the PICS array
+  IFS=$'\n' sorted_options=($(sort <<<"${PICS[*]}"))
+  
+  # Place ". random" at the beginning with the random picture as an icon
   printf "%s\x00icon\x1f%s\n" "$RANDOM_PIC_NAME" "$RANDOM_PIC"
+  
   for pic_path in "${sorted_options[@]}"; do
     pic_name=$(basename "$pic_path")
+    
     # Displaying .gif to indicate animated images
-    if [[ -z $(echo "$pic_name" | grep -i "\.gif$") ]]; then
+    if [[ ! "$pic_name" =~ \.gif$ ]]; then
       printf "%s\x00icon\x1f%s\n" "$(echo "$pic_name" | cut -d. -f1)" "$pic_path"
     else
       printf "%s\n" "$pic_name"
@@ -60,6 +64,8 @@ main() {
   # Random choice case
   if [ "$choice" = "$RANDOM_PIC_NAME" ]; then
     swww img -o $focused_monitor "${RANDOM_PIC}" $SWWW_PARAMS
+    "$SCRIPTSDIR/WallustSwww.sh"
+    "$SCRIPTSDIR/RefreshNoWaybar.sh"
     exit 0
   fi
 

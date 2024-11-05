@@ -1,62 +1,38 @@
-"	 DEFAULT
-:set ignorecase
-:set smartcase
-:set showcmd
+" Basic Configurations
+
 :set rnu number
+:set mouse=a
+:syntax enable
+:set showcmd
+:set encoding=utf-8
+:set showmatch
 :set expandtab
+:set guicursor=n-v-c-i:block
 :set tabstop=4
-:set shiftwidth=4
+:set shiftwidth=0
+:set softtabstop=0
+:set autoindent
+:set smarttab
+:set guicursor=a:blinkon100
+:set ic
+:set scs
 
-" JK ESCAPE
-let g:esc_j_lasttime = 0
-let g:esc_k_lasttime = 0
-function! JKescape(key)
-    if a:key=='j' | let g:esc_j_lasttime = reltimefloat(reltime()) | endif
-    if a:key=='k' | let g:esc_k_lasttime = reltimefloat(reltime()) | endif
-    let l:timediff = abs(g:esc_j_lasttime - g:esc_k_lasttime)
-    if l:timediff <= 0.5 && l:timediff >=0.001
-        " Move cursor 1 slot to the right
-        return "\b\e\l"
-    else
-        return a:key
-    endif
-endfunction
-inoremap <expr> j JKescape('j')
-inoremap <expr> k JKescape('k')
-
-" E-Z ESCAPE
-inoremap <esc> <esc>l
-
-" CTRL + BACKSPACE/DEL = WORK
-inoremap <C-Del> <esc>lce
-noremap <C-Del> <esc>lce
-inoremap <C-BS> <esc>lcb
-noremap <C-BS> <esc>lcb
-
-" E-Z WRITE
-map <F2> :write<CR>
-
-" NO BACKGROUND
+" CLEAR BACKGROUND
 :hi Normal guibg=NONE ctermbg=NONE
 
-" BLINKING CURSOR
-:set guicursor=a:blinkon100
+" EZ NUMBER CHANGE
+function! Numbers()
+    call search('\d\([^0-9\.]\|$\)', 'cW')
+    normal v
+    call search('\(^\|[^0-9\.]\d\)', 'becW')
+endfunction
+xnoremap in :<C-u>call Numbers()<CR>
+onoremap in :normal vin<CR>
 
-" E-Z WINDOW SWITCH
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+" ESC FIX
+inoremap <Esc> <Esc>l
 
-" VIM-PLUG
-
-"call plug#begin()
-
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-"call plug#end()
-
-" WINDOWED TERMINAL
+" TOGGLE TERM
 let g:term_buf = 0
 let g:term_win = 0
 function! TermToggle(height)
@@ -78,38 +54,32 @@ function! TermToggle(height)
         let g:term_win = win_getid()
     endif
 endfunction
-" Toggle terminal on/off (neovim)
+
 nnoremap <A-t> :call TermToggle(12)<CR>
 inoremap <A-t> <Esc>:call TermToggle(12)<CR>
 tnoremap <A-t> <C-\><C-n>:call TermToggle(12)<CR>
-" Terminal go back to normal mode
+
 tnoremap <Esc> <C-\><C-n>
 tnoremap :q! <C-\><C-n>:q!<CR>
 
-" E-Z BUFFER SWITCH
-:nnoremap <Tab> :bnext<cr>
-:nnoremap <S-Tab> :bprevious<cr>
-:nnoremap gd :bdelete<cr>
+" F2 = write
+nnoremap <F2> :w<CR>
+inoremap <F2> <Esc>:w<CR>a
 
-" E-Z AUTOCOMPLETE
-inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<TAB>"
-let g:coc_snippet_next = '<TAB>'
-let g:coc_snippet_prev = '<S-TAB>'
+" File Tree
+nnoremap <C-T> :Neotree toggle<CR>
 
-" CHANGE LEADER
-let mapleader = " "
+" E-Z buffer switch
+nnoremap gd :tabclose<CR>
+nnoremap gn :tabnew<CR>
+nnoremap <TAB> :tabnext<CR>
+nnoremap <S-TAB> :tabprev<CR>
+nnoremap <C-n> :bnext<CR>
+nnoremap <C-p> :bprev<CR>
 
-" SMOOTH SCROLL
-" let g:comfortable_motion_scroll_down_key = "j"
-" let g:comfortable_motion_scroll_up_key = "k"
-" noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(40)<CR>
-" noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-40)<CR>
+" MINIMAP
+let g:minimap_width = 10
+" let g:minimap_auto_start = 1
+" let g:minimap_auto_start_win_enter = 1
+nnoremap <C-m> :call minimap#vim#MinimapToggle()<CR>
 
-" E-Z NUMBER CHANGE
-function! Numbers()
-    call search('\d\([^0-9\.]\|$\)', 'cW')
-    normal v
-    call search('\(^\|[^0-9\.]\d\)', 'becW')
-endfunction
-xnoremap in :<C-u>call Numbers()<CR>
-onoremap in :normal vin<CR>

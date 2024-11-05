@@ -27,6 +27,7 @@ else
 	sleep 0.5
 	${SCRIPTSDIR}/Refresh.sh	 
     notify-send -e -u normal -i "$notif" "gamemode disabled. All animations normal"
+    hyprctl reload
     exit
 fi
 hyprctl reload

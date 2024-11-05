@@ -35,3 +35,4 @@ export EDITOR=/usr/bin/nvim
 # Fuzzily find directories by aliasing 'f' to FZF
 alias f='cd $(fd --type directory | fzf)'
 
+set -gx LIBVIRT_DEFAULT_URI "qemu:///system"

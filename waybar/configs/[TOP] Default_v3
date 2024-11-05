@@ -1,7 +1,13 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
 
 // ### DEFAULT v3  - Top ### //
 {
-"include": "~/.config/waybar/modules",
+"include": [
+  "$HOME/.config/waybar/Modules",
+  "$HOME/.config/waybar/ModulesWorkspaces",
+  "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesGroups",
+  ],
 "layer": "top",
 //"mode": "dock",
 "exclusive": true,
@@ -33,7 +39,8 @@
 	"custom/separator#line",
 	"hyprland/workspaces#kanji",
 	"custom/separator#dot-line",
-	"idle_inhibitor",	
+	"idle_inhibitor",
+	//"idle_inhibitor",	
 	"custom/hint",	
 	], 
 

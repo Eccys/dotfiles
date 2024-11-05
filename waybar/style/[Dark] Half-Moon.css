@@ -1,4 +1,4 @@
-/* ....................................*/
+/* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
 /* ..........Half Moon.................. */
 /* NOTE: This is only for some waybar configs */
 /* --- 👍 shared by https://github.com/TomekBobrowicz  👍 --- */
@@ -28,7 +28,7 @@ window#waybar.empty,
 window#waybar.empty #window {
     background-color: transparent;
 }
-#cava,
+
 #taskbar,
 #workspaces {
   background: #0F1419;
@@ -51,6 +51,7 @@ window#waybar.empty #window {
   opacity: 0.5;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
+
 #taskbar button.active,
 #workspaces button.active {
   padding: 0px 5px;
@@ -121,28 +122,21 @@ color: #F3F4F5;
 }
 
 #custom-light_dark,
-#custom-swaync {
-	color: #B8CC52;
-	background: #0F1419;
-	border-radius: 50px 50px;
-	margin: 5px;
-	padding: 2px 12px;
-}
+#custom-swaync,
+#custom-hypridle,
 #idle_inhibitor,
 #clock {
 	color: #B8CC52;
 	background: #0F1419;
 	border-radius: 50px 50px;
-	margin: 5px 5px 5px 0px;
-	padding: 2px 12px;
+	margin: 5px;
+	padding: 2px 15px;
 }
 
-#cava {
-	color: #B8CC52;
-	background: #0F1419;
-	border-radius: 50px 50px;
-	margin: 5px 5px 5px 0px;
-	padding: 2px 12px;
+/*-----Indicators----*/
+#custom-hypridle.notactive,
+#idle_inhibitor.activated {
+	color: #39FF14;
 }
 
 #bluetooth {
@@ -150,7 +144,7 @@ color: #F3F4F5;
 	background: #0F1419;
 	border-radius: 50px 50px;
 	margin: 5px;
-	padding: 2px 12px;
+	padding: 2px 15px;
 }
 
 #power-profiles-daemon,
@@ -202,7 +196,7 @@ color: #F3F4F5;
 	background: #0F1419;
 	border-radius: 50px 50px;
 	margin: 5px;
-	padding: 2px 15px 2px 12px;
+	padding: 2px 15px;
 }
 
 #custom-hyprbindings {
@@ -236,6 +230,17 @@ color: #F3F4F5;
 	border-radius: 50px 50px;
 	margin: 5px;
 	padding: 2px 15px;
+}
+
+#custom-browser,
+#custom-file_manager,
+#custom-tty,
+#custom-settings {
+	border-radius: 50px 50px;
+	margin: 5px;
+	padding: 2px 15px;
+	color: #0F1419;
+    background: linear-gradient(45deg, #95E6CB, #59C2FF, #D2A6FF);
 }
 
 #custom-weather {
@@ -331,4 +336,3 @@ color: #F3F4F5;
 	border-radius: 5px;
 	background-color: purple;
 }
-

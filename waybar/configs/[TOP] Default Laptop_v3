@@ -1,7 +1,13 @@
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
 
 // ### DEFAULT v2 (Laptop)  - Top ### //
 {
-"include": "~/.config/waybar/modules",
+"include": [
+  "$HOME/.config/waybar/Modules",
+  "$HOME/.config/waybar/ModulesWorkspaces",
+  "$HOME/.config/waybar/ModulesCustom",
+  "$HOME/.config/waybar/ModulesGroups",
+  ],
 "layer": "top",
 //"mode": "dock",
 "exclusive": true,
@@ -13,7 +19,6 @@
 "margin-top": 3,
 "margin-left": 8,
 "margin-right": 8,
-
 
 "modules-left": [
 	"power-profiles-daemon",
@@ -41,6 +46,7 @@
 	"group/connections",
 	"custom/separator#line",
 	"tray",
+	"mpris", 
 	"group/audio",
 	"custom/separator#line",
 	"custom/swaync",

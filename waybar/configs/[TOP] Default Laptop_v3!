@@ -1,0 +1,48 @@
+
+// ### DEFAULT v2 (Laptop)  - Top ### //
+{
+"include": "~/.config/waybar/modules",
+"layer": "top",
+//"mode": "dock",
+"exclusive": true,
+"passthrough": false,
+"position": "top",
+"spacing": 3,
+"fixed-center": true,
+"ipc": true,
+"margin-top": 3,
+"margin-left": 8,
+"margin-right": 8,
+
+
+"modules-left": [
+	"power-profiles-daemon",
+	"custom/separator#blank",
+	"group/laptop",
+	"group/mobo_drawer",
+	"custom/separator#line",
+	"custom/weather",
+  	"hyprland/window",
+	],
+
+"modules-center": [
+	"custom/separator#dot-line",
+	"custom/cava",
+	"hyprland/workspaces#kanji",
+	"clock",
+	"custom/hypridle",	
+	"custom/separator#dot-line",
+	], 
+
+"modules-right": [
+	"custom/cava_mviz",
+	"custom/separator#dot-line",
+	"network#speed",
+	"group/connections",
+	"custom/separator#line",
+	"tray",
+	"group/audio",
+	"custom/separator#line",
+	"custom/swaync",
+	],
+}
