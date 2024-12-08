@@ -81,5 +81,10 @@ nnoremap <C-p> :bprev<CR>
 let g:minimap_width = 10
 " let g:minimap_auto_start = 1
 " let g:minimap_auto_start_win_enter = 1
-nnoremap <C-m> :call minimap#vim#MinimapToggle()<CR>
+nnoremap <C-m> :MinimapToggle<CR>
+
+" AUTOCOMPLETION FIX
+:highlight CocMenuSel guibg=#34374a guifg=#ffffff ctermbg=darkblue ctermfg=white
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 

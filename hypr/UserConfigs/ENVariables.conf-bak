@@ -14,7 +14,7 @@ env = QT_WAYLAND_DISABLE_WINDOWDECORATION,1
 # env = XDG_CURRENT_DESKTOP,Sway
 env = XDG_SESSION_DESKTOP,Hyprland
 env = XDG_SESSION_TYPE,wayland
-env = QT_STYLE_OVERRIDE,kvantum 
+# env = QT_STYLE_OVERRIDE,kvantum 
 
 # xwayland apps scale fix (useful if you are use monitor scaling)
 # see https://wiki.hyprland.org/Configuring/XWayland/

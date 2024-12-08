@@ -3,3 +3,4 @@ vim.cmd.source(vimrc)
 
 require("nvim-autopairs").setup {}
 require("ibl").setup()
+require('faster').setup()

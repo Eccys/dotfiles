@@ -60,7 +60,7 @@ main() {
             $tty $editor "$configs/Keybinds.conf"
             ;;
         11)
-            $tty $editor "$HOME/fish/config.fish"
+            $tty $editor "$HOME/.config/fish/config.fish"
             ;;
 	12)
             $tty $editor "$HOME/.vimrc"
