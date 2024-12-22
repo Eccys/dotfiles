@@ -1,21 +1,7 @@
-" Basic Configurations
-
-:set rnu number
-:set mouse=a
 :syntax enable
-:set showcmd
-:set encoding=utf-8
-:set showmatch
-:set expandtab
 :set guicursor=n-v-c-i:block
-:set tabstop=4
-:set shiftwidth=0
-:set softtabstop=0
-:set autoindent
-:set smarttab
 :set guicursor=a:blinkon100
-:set ic
-:set scs
+
 
 " CLEAR BACKGROUND
 :hi Normal guibg=NONE ctermbg=NONE
@@ -66,25 +52,25 @@ tnoremap :q! <C-\><C-n>:q!<CR>
 nnoremap <F2> :w<CR>
 inoremap <F2> <Esc>:w<CR>a
 
-" File Tree
-nnoremap <C-T> :Neotree toggle<CR>
+" File Tree --- Replaced by harpoon/netrw/fzf
+" nnoremap <C-T> :Neotree toggle<CR>
 
 " E-Z buffer switch
-nnoremap gd :tabclose<CR>
-nnoremap gn :tabnew<CR>
-nnoremap <TAB> :tabnext<CR>
-nnoremap <S-TAB> :tabprev<CR>
-nnoremap <C-n> :bnext<CR>
-nnoremap <C-p> :bprev<CR>
+" nnoremap gd :tabclose<CR>
+" nnoremap gn :tabnew<CR>
+" nnoremap <TAB> :tabnext<CR>
+" nnoremap <S-TAB> :tabprev<CR>
+" nnoremap <C-n> :bnext<CR>
+" nnoremap <C-p> :bprev<CR>
 
-" MINIMAP
-let g:minimap_width = 10
-" let g:minimap_auto_start = 1
-" let g:minimap_auto_start_win_enter = 1
-nnoremap <C-m> :MinimapToggle<CR>
+" MINIMAP --- Replaced by after/pluginminimap.lua
+" let g:minimap_width = 10
+" " let g:minimap_auto_start = 1
+" " let g:minimap_auto_start_win_enter = 1
+" nnoremap <C-m> :MinimapToggle<CR>
 
-" AUTOCOMPLETION FIX
-:highlight CocMenuSel guibg=#34374a guifg=#ffffff ctermbg=darkblue ctermfg=white
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
+" AUTOCOMPLETION FIX --- Replaced by LSP
+" :highlight CocMenuSel guibg=#34374a guifg=#ffffff ctermbg=darkblue ctermfg=white
+" inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
+" inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"
+" nnoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
