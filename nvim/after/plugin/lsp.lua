@@ -80,7 +80,26 @@ cmp.setup({
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     }),
+          ["<C-k>"] = cmp.mapping({
+        i = function()
+          if cmp.visible() then
+            cmp.abort()
+          else
+            cmp.complete()
+          end
+        end,
+        c = function()
+          if cmp.visible() then
+            cmp.close()
+          else
+            cmp.complete()
+          end
+        end,
+      }),
   },
+          formatting = {
+                format = require("nvim-highlight-colors").format
+        }
 })
 
 

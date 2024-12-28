@@ -1,3 +1,4 @@
+:set mouse=a
 :syntax enable
 :set guicursor=n-v-c-i:block
 :set guicursor=a:blinkon100

@@ -1,1 +1,1 @@
-vim.keymap.set('n', '<leader>m', vim.cmd.MinimapToggle)
+vim.keymap.set('n', '<leader>M', vim.cmd.MinimapToggle)
