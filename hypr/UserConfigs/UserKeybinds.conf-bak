@@ -9,7 +9,7 @@
 $mainMod = SUPER
 $files = nemo
 $term = kitty
-$browser = mercury-browser
+$browser = zen-browser
 $scriptsDir = $HOME/.config/hypr/scripts
 $UserScripts = $HOME/.config/hypr/UserScripts
 
