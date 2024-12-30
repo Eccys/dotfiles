@@ -1,0 +1,3 @@
+[submodule "arab-key"]
+	path = arab-key
+	url = https://github.com/Eccys/arab-key
