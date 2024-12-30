@@ -67,9 +67,9 @@ mainbox {
 inputbar {
     enabled:                     true;
     padding:                     48px;
-    margin:                      10px;
+    margin:                      0px 0px 10px 0px;
     background-color:            transparent;
-    border-radius:               25px;
+    border-radius:               12px;
     orientation:                 vertical;
     children:                    ["entry", "mode-switcher"];
     background-image:            url("~/.config/rofi/.current_wallpaper", width);
@@ -81,18 +81,18 @@ entry {
     expand:                      false;
     width:                       100%;
     padding:                     10px;
-    border-radius:               12px;
+    border-radius:               3px;
     background-color:            @selected;
     text-color:                  @text-selected;
     cursor:                      text;
     margin:                      10px 10px 25px 10px;
-    placeholder:                 "🖥️ Search "; // << Search symbol
+    placeholder:                 "🖥️ Search Apps "; // << Search symbol
     placeholder-color:           inherit;
 }
 
 /* ---- Mode Switcher ---- */
 mode-switcher{
-    enabled:                     true;
+    enabled:                     false;
     spacing:                     10px;
     background-color:            transparent;
 }
@@ -112,8 +112,8 @@ button selected {
 
 /* ---- Listbox ---- */
 listbox {
-    spacing:                     10px;
-    padding:                     10px;
+    spacing:                     8px;
+    padding:                     8px;
     background-color:            transparent;
     orientation:                 vertical;
     children:                    [ "message", "listview" ];
@@ -126,10 +126,10 @@ listview {
     lines:                       6;
     cycle:                       true;
     dynamic:                     true;
-    scrollbar:                   true;
+    scrollbar:                   false;
     layout:                      vertical;
     reverse:                     false;
-    fixed-height:                false;
+    fixed-height:                true;
     fixed-columns:               true;    
     spacing:                     10px;
     background-color:            transparent;
@@ -158,7 +158,7 @@ element {
     enabled:                     true;
     spacing:                     10px;
     padding:                     10px;
-    border-radius:               12px;
+    border-radius:               8px;
     background-color:            transparent;
     cursor:                      pointer;
 }

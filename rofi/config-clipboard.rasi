@@ -21,19 +21,19 @@ listview {
   lines: 6;
 }
 configuration {
-	font: "Fira Code SemiBold 12";
+	font: "JetBrains Mono SemiBold 12";
 }
 
 element-text {
-    font: "Fira Code SemiBold 14";
+    font: "JetBrains Mono SemiBold 14";
 }
-/*
+
 element {
     enabled:                     true;
-    spacing:                     10px;
-    padding:                     10px;
+    spacing:                     0px 0px 0px -20px;
+    padding:                     7px;
     border-radius:               12px;
     background-color:            transparent;
     cursor:                      pointer;
 }
-*/
+

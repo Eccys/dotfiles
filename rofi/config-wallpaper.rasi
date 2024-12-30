@@ -46,7 +46,7 @@ element-icon {
 }
 
 element-text {
-  font: "Fira Code SemiBold 14";
+  font: "JetBrains Mono 14";
   vertical-align: 0.5;
   horizontal-align: 0.5;
 }

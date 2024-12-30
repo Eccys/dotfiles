@@ -10,6 +10,7 @@
 while true; do
     result=$(
         rofi -i -dmenu \
+            -display-columns 2 \
             -kb-custom-1 "Control-Delete" \
             -kb-custom-2 "Alt-Delete" \
             -config ~/.config/rofi/config-clipboard.rasi < <(cliphist list)
