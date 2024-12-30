@@ -36,3 +36,8 @@ export EDITOR=/usr/bin/nvim
 alias f='cd $(fd --type directory | fzf)'
 
 set -gx LIBVIRT_DEFAULT_URI "qemu:///system"
+
+# if status is-interactive
+# and not set -q TMUX
+#     exec tmux
+# end
