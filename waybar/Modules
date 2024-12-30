@@ -200,7 +200,9 @@
         "offscreen-css-text": "(inactive)",
 	"rewrite": {
 		"(.*) — Mercury": "  $1",
+		"(.*) — Zen Browser": "  $1",
 		"Mercury": "  Mercury",
+		"Zen Browser": "  Zen Browser",
 		"(.*) Discord \\| (.*)": " $2",	
 		"^nvim (?!.*\bMercury\b)(.*)": " $1",
 		"^Yazi:(.*)": "🗁$1",
@@ -282,7 +284,7 @@
 	"format-icons": [
 		"󰤯", "󰤟", "󰤢", "󰤥", "󰤨"
 	],
-	"on-click-right": "kitty nmtui"
+	"on-click": "kitty nmtui"
 },
 "network#speed": {
 	"interval": 1,
