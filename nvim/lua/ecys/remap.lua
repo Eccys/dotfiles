@@ -86,3 +86,17 @@ vim.keymap.set("n", "<A-h>", "<C-w>h", { desc = "Move to left window" })
 vim.keymap.set("n", "<A-j>", "<C-w>j", { desc = "Move to down window" })
 vim.keymap.set("n", "<A-k>", "<C-w>k", { desc = "Move to up window" })
 vim.keymap.set("n", "<A-l>", "<C-w>l", { desc = "Move to right window" })
+
+-- Use <CR> to fold when in normal mode
+-- To see help about folds use `:help fold`
+vim.keymap.set("n", "<C-CR>", function()
+  -- Get the current line number
+  local line = vim.fn.line(".")
+  -- Get the fold level of the current line
+  local foldlevel = vim.fn.foldlevel(line)
+  if foldlevel == 0 then
+    vim.notify("No fold found", vim.log.levels.INFO)
+  else
+    vim.cmd("normal! za")
+  end
+end, { desc = "[P]Toggle fold" })
