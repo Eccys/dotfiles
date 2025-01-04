@@ -30,7 +30,7 @@ get_icon() {
 
 # Notify
 notify_user() {
-	notify-send -e -h string:x-canonical-private-synchronous:brightness_notif -h int:value:$current -u low -i "$icon" "Brightness : $current%"
+	echo "hey <3"
 }
 
 # Change brightness
@@ -55,7 +55,6 @@ change_backlight() {
 	brightnessctl set "${new_brightness}%"
 	get_icon
 	current=$new_brightness
-	notify_user
 }
 
 # Execute accordingly

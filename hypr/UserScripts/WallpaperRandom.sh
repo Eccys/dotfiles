@@ -15,7 +15,7 @@ RANDOMPICS=${PICS[ $RANDOM % ${#PICS[@]} ]}
 # Transition config
 FPS=144
 TYPE="any"
-DURATION=1
+DURATION=2
 BEZIER=".43,1.19,1,.4"
 SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE"
 
@@ -24,5 +24,5 @@ swww query || swww-daemon --format xrgb && swww img -o $focused_monitor ${RANDOM
 
 
 ${scriptsDir}/WallustSwww.sh
-#sleep 1
+sleep 3
 ${scriptsDir}/RefreshNoWaybar.sh 

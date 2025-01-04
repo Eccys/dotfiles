@@ -16,7 +16,7 @@ iDIR="$HOME/.config/swaync/images"
 # swww transition config
 FPS=60
 TYPE="wipe"
-DURATION=1.5
+DURATION=2
 BEZIER=".43,1.19,1,.4"
 SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION"
 
@@ -79,7 +79,7 @@ main() {
                 notify-send -u normal -i "$iDIR/bell.png" "Applying $choice effects"
                 eval "${effects[$choice]}"
                 # Wait for effects to be applied
-                sleep 1
+                sleep 3
                 # Execute swww command after image conversion
                 swww img -o "$focused_monitor" "$wallpaper_output" $SWWW_PARAMS &
                 # Wait for swww command to complete
