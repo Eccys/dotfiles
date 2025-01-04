@@ -1,6 +1,6 @@
 /* ---- 💫 https://github.com/JaKooLit 💫 ---- */
 
-// ### DEFAULT v4 (Laptop)  - Top ### //
+// ### DEFAULT v2 (Laptop)  - Top ### //
 {
 "include": [
   "$HOME/.config/waybar/Modules",
@@ -16,38 +16,40 @@
 "spacing": 3,
 "fixed-center": true,
 "ipc": true,
-"margin-top": 3,
-"margin-left": 8,
-"margin-right": 8,
+"margin-top": 0,
+"margin-left": 0,
+"margin-right": 0,
+"margin-right": 0,
 
 "modules-left": [
-	"group/app_drawer",
-	"custom/separator#dot-line",
+	"power-profiles-daemon",
+	"custom/separator#blank",
+	"group/laptop",
 	"group/mobo_drawer",
 	"custom/separator#line",
 	"custom/weather",
+  	"hyprland/window",
 	],
 
 "modules-center": [
-	"custom/swaync",
-	"custom/cava_mviz",
 	"custom/separator#dot-line",
-	"clock",
-	"custom/separator#line",
+	"custom/cava",
 	"hyprland/workspaces#kanji",
-	"custom/separator#dot-line",
+	"clock",
 	"idle_inhibitor",	
-	"custom/hint",	
+	"custom/separator#dot-line",
 	], 
 
 "modules-right": [
+	"custom/cava_mviz",
+	"custom/separator#dot-line",
 	"network#speed",
 	"group/connections",
 	"custom/separator#line",
 	"tray",
 	"mpris", 
 	"group/audio",
-	"custom/separator#dot-line",
-	"group/status",
+	"custom/separator#line",
+	"custom/swaync",
 	],
 }

@@ -90,6 +90,7 @@ window#waybar.empty #window {
   padding: 0px 5px;
   background-color: @orange;
   color: @black;
+  border-radius: 3px;
 }
 
 #taskbar button.active,
@@ -131,12 +132,14 @@ window#waybar.empty #window {
 
 #memory {
   padding: 0px 5px;
+  border-radius: 0px 0px 0px 0px;
   background-color: @yellow;
   color: @bg_yellow;
 }
 
 #temperature {
   padding: 0px 5px;
+  margin-left: -5px;
   background-color: @green;
   color: @bg_yellow;
 }
@@ -153,7 +156,7 @@ window#waybar.empty #window {
 }
 
 #battery.bat2 {
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 5px 5px 5px 5px;
 }
 
 .modules-left :last-child {
@@ -190,17 +193,29 @@ window#waybar.empty #window {
 }
 
 #backlight {
-  border-radius: 5px 0px 0px 5px;
-  padding: 0px 5px;
+  border-radius: 5px;
   margin-left: 5px;
   background-color: @red;
   color: @black;
 }
 
-#network,
+#network {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 4px 0px 0px;
+  border-radius: 5px;
+  background-color: @blue;
+  color: @bg_yellow;
+}
+
+#connections {
+  padding: 0px 0px 0px 0px;
+  border-radius: 5px;
+  background-color: @blue;
+  color: @bg_yellow;
+}
+
 #pulseaudio {
-  padding: 0px 5px;
-  border-radius: 0px 5px 5px 0px;
+  border-radius: 5px;
   background-color: @blue;
   color: @bg_yellow;
 }
@@ -221,8 +236,9 @@ window#waybar.empty #window {
 #custom-hypridle,
 #idle_inhibitor {
   padding: 0px 5px;
-  border-radius: 5px;
+  border-radius: 3px;
   margin-left: 5px;
+  margin-right: 5px;
   background-color: @blue;
   color: @black;
 }
@@ -235,7 +251,7 @@ window#waybar.empty #window {
 
 #clock {
   padding: 0px 5px;
-  border-radius: 5px;
+  border-radius: 3px;
   margin: 0px 5px;
   color: @bg_yellow;
   background-color: @aqua;

@@ -1,72 +1,45 @@
-/* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
-/* .............Purpl..................... */
-/* --- 👍 designed by https://github.com/Krautt  👍 --- */
+/* ---- 💫 https://github.com/JaKooLit 💫 ---- */
+/* Light - Obsidian Glow */
 
 * {
-	font-family: "JetBrains Mono Nerd Font";
-	font-weight: bold;
-	min-height: 0;		
-	/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
-	font-size: 97%;
-	font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
+font-family: "JetBrainsMono Nerd Font";
+font-weight: bold;
+min-height: 0;
+/* set font-size to 100% if font scaling is set to 1.00 using nwg-look */
+font-size: 97%;
+font-feature-settings: '"zero", "ss01", "ss02", "ss03", "ss04", "ss05", "cv31"';
 }
 
 window#waybar {
-	background: #100214;
-	color: #cba6f7;
+	background: white;
+	border-radius: 0px;
 }
 
 window#waybar.hidden {
-	opacity: 0.5;
+	opacity: 0.7;
 }
 
 window#waybar.empty,
 window#waybar.empty #window {
 	padding: 0px;
 	border: 0px;
+	/*  background-color: rgba(66,66,66,0.5); */ /* transparent */
 	background-color: transparent;
 }
 
 tooltip {
-	background: #1e1e2e;
+	background: white;
 	border-radius: 10px;
-	border-width: 2px;
-	border-style: solid;
-	border-color: #11111b;
-	color: #cba6f7;
 }
 
-/*-----module groups----*/
-.modules-right {
-	border: 3px solid #20052a;
-	border-radius: 100px 0px 0px 0px;
-	background-color: #3d174b;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-right: 4px;
-	padding-left: 4px;
-}
-
-.modules-center {
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-right: 4px;
-	padding-left: 4px;
-}
-
-.modules-left {
-	/*background-color: #1e1e2e;*/
-	border: 3px solid #20052a;
-	border-radius: 0px 0px 100px 0px;
-	background-color: #441a53;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	padding-right: 4px;
-	padding-left: 4px;
+tooltip label {
+	color: #373737;
+	padding-right: 2px;
+	padding-left: 2px;
 }
 
 #workspaces button {
-	color: #6E6A86;
+	color: #585b70;
     box-shadow: none;
 	text-shadow: none;
     padding: 0px;
@@ -78,9 +51,9 @@ tooltip {
 }
 
 #workspaces button.active {
-	color: #cba6f7;
-	border-radius: 50%;
-	background-color: black;
+	background-color: dimgrey;
+	color: #000000;
+    border-radius: 15px 15px 15px 15px;
     padding-left: 8px;
     padding-right: 8px;
     animation: gradient_f 20s ease-in infinite;
@@ -88,16 +61,16 @@ tooltip {
 }
 
 #workspaces button.focused {
-	color: #d8dee9;
+	color: #000000;
 }
 
 #workspaces button.urgent {
-	color: #11111b;
+	color: #000000;
 	border-radius: 10px;
 }
 
 #workspaces button:hover {
-	color: #9CCFD8;
+	color: #000000;
     border-radius: 15px;
  	padding-left: 2px;
     padding-right: 2px;
@@ -157,7 +130,8 @@ tooltip {
 #custom-weather.showyIcyDay,
 #custom-weather.snowyIcyNight,
 #custom-weather.sunnyDay {
-	color: whitesmoke;
+	color: #000000;
+	border-radius: 8px;
 	padding-top: 4px;
 	padding-bottom: 4px;
 	padding-right: 6px;
@@ -181,7 +155,8 @@ tooltip {
 }
 
 #taskbar button.active {
-	background-color: purple;
+	background-color: #585b70;
+	color: #cdd6f4;
     padding-left: 12px;
     padding-right: 12px;
     animation: gradient_f 20s ease-in infinite;
@@ -212,18 +187,18 @@ tooltip {
 	border: none;
 	box-shadow: none;
 }
-
+	
 #pulseaudio-slider trough {
-	min-width: 80px;
-	min-height: 5px;
+	min-width: 80px;  
+	min-height: 5px; 
 	border-radius: 5px;
-	background-color: #6E6A86;
+	background-color: grey;
 }
-
+	
 #pulseaudio-slider highlight {
-	min-height: 10px;
+	min-height: 10px; 
 	border-radius: 5px;
-	background-color: purple;
+	background-color: #ba5663;
 }
 
 #backlight-slider slider {
@@ -234,16 +209,16 @@ tooltip {
 	border: none;
 	box-shadow: none;
 }
-
+	
 #backlight-slider trough {
-	min-width: 80px;
-	min-height: 10px;
+	min-width: 80px;  
+	min-height: 10px; 
 	border-radius: 5px;
-	background-color: #6E6A86;
+	background-color: grey;
 }
-
+	
 #backlight-slider highlight {
-	min-width: 10px;
+	min-width: 10px; 
 	border-radius: 5px;
-	background-color: purple;
+	background-color: #ba5663;
 }

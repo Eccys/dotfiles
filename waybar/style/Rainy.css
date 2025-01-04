@@ -78,7 +78,7 @@ window#waybar.empty #window {
 /* This section can be use if you want to separate waybar modules */
 .modules-left, .modules-center, .modules-right {
   background: @theme_base_color;
-  border: 2px solid transparent;
+  border: 0px solid transparent;
   padding-top: 2px;
   padding-bottom: 2px;
   padding-right: 4px;
@@ -217,7 +217,7 @@ window#waybar.empty #window {
 }
 
 #custom-cava_mviz {
-    animation: rainbow-text 0.80s linear infinite;
+    animation: rainbow-text 40.00s linear infinite;
 }
 
 @keyframes rainbow-text {

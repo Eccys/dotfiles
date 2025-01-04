@@ -180,7 +180,7 @@
 "hyprland/language": {
 	"format": "Lang: {}",
 	"format-en": "US",
-	"format-tr": "Korea",
+	"format-myarabic": "ARK",
 	"keyboard-name": "at-translated-set-2-keyboard",
 	"on-click": "hyprctl switchxkblayout $SET_KB next"
 },

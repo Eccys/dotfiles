@@ -71,8 +71,8 @@ window#waybar.empty #window {
   background: linear-gradient(45deg, #59C2FF, #D2A6FF);
   opacity: 0.8;
   transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
-
 }
+
 @keyframes gradient_horizontal {
 0% {
   background-position: 0% 50%;

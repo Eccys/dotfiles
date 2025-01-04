@@ -140,7 +140,7 @@ window#waybar.empty #window {
 	transition: none;
 	color: @foreground;
 	background: @color0;
-    border-bottom-width: 5px;
+    border-bottom-width: 1px;
     border-bottom-color: @color12;
     border-bottom-style: solid;
 }
@@ -157,6 +157,7 @@ window#waybar.empty #window {
 
 #network {
 	padding-right: 12px;
+    margin: 0px 4px;
 }
 
 #temperature.critical {

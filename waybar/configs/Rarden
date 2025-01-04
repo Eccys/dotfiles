@@ -1,10 +1,11 @@
 //* ----------- 💫 https://github.com/JaKooLit 💫 -------- */
 //* ............................................*/
-//* .............CHRYSANTHEMUM.......................*/
+//* .............GARDENIA.......................*/
 //* ............................................*/
 //* --- 👍 designed by https://github.com/Krautt  👍 --- */
 
 {
+ 
 "include": [
   "$HOME/.config/waybar/Modules",
   "$HOME/.config/waybar/ModulesWorkspaces",
@@ -17,11 +18,11 @@
 "passthrough": false,
 "position": "top",
 "spacing": 5,
-"fixed-center": true,
+"fixed-center": false,
 "ipc": true,
-"margin-left": 5,
-"margin-right": 5,
 "margin-top": 0,
+//"margin-bottom": 5,
+"width": 1000,
 	
 "modules-left": [
 	"clock#5", 
@@ -29,12 +30,13 @@
 	"tray", 
 	"custom/swaync"
 	],
-  
-"modules-center": ["hyprland/workspaces"], 
+	  
+"modules-center": ["hyprland/workspaces#kanji"], 
 	
 "modules-right": [
 	"pulseaudio#1",
 	"backlight#2", 
-	"battery"],
-   
+	"battery"
+	],
+
 }
