@@ -9,6 +9,23 @@ time=$(date "+%Y-%m-%d-%H-%M-%S")
 file="Recording_${time}.mp4"
 file_path="${SAVE_DIR}/${file}"
 
+# Default audio option is false
+AUDIO=false
+
+# Parse arguments
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        --audio)
+            AUDIO="$2"
+            shift 2
+            ;;
+        *)
+            echo "Unknown option: $1"
+            exit 1
+            ;;
+    esac
+done
+
 # Check if wf-recorder is running
 if pgrep -x "wf-recorder" > /dev/null; then
     # If running, stop the recording
@@ -23,7 +40,12 @@ else
         exit 1
     fi
 
-    # Start recording with wf-recorder
-    wf-recorder -g "$region" -f "$file_path" &
-    notify-send "Recording started."
+    # Start recording with or without audio based on the argument
+    if [[ "$AUDIO" == "true" ]]; then
+        wf-recorder -g "$region" -f "$file_path" --audio -c libx264rgb &
+        notify-send "Recording started with audio."
+    else
+        wf-recorder -g "$region" -f "$file_path" &
+        notify-send "Recording started without audio."
+    fi
 fi
