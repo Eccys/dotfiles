@@ -11,6 +11,7 @@ vim.opt.expandtab = true
 vim.opt.smartindent = true
 
 vim.opt.wrap = false
+vim.opt.linebreak = true
 
 -- vim.opt.swapfile = false
 -- vim.opt.backup = false
@@ -36,8 +37,9 @@ vim.opt.smartcase = true
 
 vim.opt.spelllang = 'en_us'
 vim.opt.spell = true
-vim.o.guifont = "JetBrains Mono:h10" -- text below applies for VimScript
+vim.o.guifont = "JetBrains Mono:h10" -- text below applies far VimScript
 
+vim.opt.conceallevel = 2
 
 -- Helper function for transparency formatting
 local alpha = function()
@@ -47,7 +49,7 @@ end
 vim.g.neovide_transparency = 0.6
 vim.g.neovide_transparency_point = 0.8
 vim.g.neovide_background_color = "#0f1117" .. alpha()
--- Add keybinds to change transparency
+-- Add key binds to change transparency
 local change_transparency = function(delta)
     vim.g.neovide_transparency_point = vim.g.neovide_transparency_point + delta
     vim.g.neovide_background_color = "#0f1117" .. alpha()
@@ -59,5 +61,4 @@ end)
 vim.keymap.set({ "n", "v", "o" }, "<A-[>", function()
     change_transparency(-0.1)
 end)
-
 

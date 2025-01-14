@@ -84,6 +84,7 @@ vim.keymap.set("n", "<leader>pr", function()
             preview_width = 0.45,
         },
         only_cwd = true, -- Load files only in the current working directory
+        show_current_file = true,
     })
 
     -- Call the recent_files picker with the given options
@@ -102,6 +103,7 @@ vim.keymap.set("n", "<leader>R", function()
         layout_config = {
             preview_width = 0.45,
         },
+        show_current_file = true,
     })
 
     -- Call the recent_files picker with the given options

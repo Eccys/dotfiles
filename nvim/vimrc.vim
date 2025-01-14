@@ -50,8 +50,8 @@ tnoremap <Esc> <C-\><C-n>
 tnoremap :q! <C-\><C-n>:q!<CR>
 
 " F2 = write
-nnoremap <F2> :w<CR>
-inoremap <F2> <Esc>:w<CR>a
+" nnoremap <F2> :w<CR>
+" inoremap <F2> <Esc>:w<CR>a
 
 " File Tree --- Replaced by harpoon/netrw/fzf
 " nnoremap <C-T> :Neotree toggle<CR>

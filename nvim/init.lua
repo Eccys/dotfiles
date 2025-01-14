@@ -1,3 +1,4 @@
+vim.hl = vim.highlight
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
 
 require("lazy.plugins")

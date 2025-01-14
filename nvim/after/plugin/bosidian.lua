@@ -1,5 +1,6 @@
 require("obsidian").setup({
 
+    event = "VeryLazy",
 	version = "*", -- recommended, use latest release instead of latest commit
 	lazy = true,
 	ft = "markdown",
@@ -28,7 +29,7 @@ require("obsidian").setup({
 		-- Optional, default tags to add to each new daily note created.
 		default_tags = { "daily-notes" },
 		-- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
-		template = "const/Daily.md",
+		templates = { "const/Daily.md" }
 	},
 
 	completion = {
@@ -47,7 +48,7 @@ require("obsidian").setup({
 			opts = { noremap = false, expr = true, buffer = true },
 		},
 		-- Smart action depending on context, either follow link or toggle checkbox.
-		["<cr>"] = {
+		["<A-CR>"] = {
 			action = function()
 				return require("obsidian").util.smart_action()
 			end,
@@ -158,8 +159,8 @@ vim.keymap.set("n", "<leader>ot", vim.cmd.ObsidianToday)
 vim.keymap.set("n", "<leader>oy", vim.cmd.ObsidianYesterday)
 vim.keymap.set("n", "<leader>os", vim.cmd.ObsidianSearch)
 vim.keymap.set("n", "<leader>or", vim.cmd.ObsidianQuickSwitch)
-vim.keymap.set("n", "<leader>oR", vim.cmd.ObsidianQuickSwitch)
+vim.keymap.set("n", "<leader>oR", vim.cmd.ObsidianQuickSwitch) --- ???
 vim.keymap.set("n", "<leader>ob", vim.cmd.ObsidianBacklinks)
 vim.keymap.set("n", "<leader>on", vim.cmd.ObsidianNew)
-vim.keymap.set("n", "<leader>op", vim.cmd.ObsidianNew)
+vim.keymap.set("n", "<leader>of", vim.cmd.ObsidianFollowLink)
 vim.keymap.set("n", "<leader>op", "<cmd>e ~/Documents/Office/Notes/main/Prayer Times.md<CR>")
