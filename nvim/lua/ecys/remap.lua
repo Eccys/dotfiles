@@ -12,6 +12,9 @@ vim.keymap.set("n", "<leader>zig", "<cmd>LspRestart<cr>")
 -- greatest remap ever
 vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({ "n", "v" }, "<leader>d", '"_d')
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')
+
+
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<F1>", "<nop>")
@@ -27,13 +30,13 @@ vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<leader>x", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
-vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Oreturn err<Esc>")
-
-vim.keymap.set("n", "<leader>ea", 'oassert.NoError(err, "")<Esc>F";a')
-
-vim.keymap.set("n", "<leader>ef", 'oif err != nil {<CR>}<Esc>Olog.Fatalf("error: %s\\n", err.Error())<Esc>jj')
-
-vim.keymap.set("n", "<leader>el", 'oif err != nil {<CR>}<Esc>O.logger.Error("error", "error", err)<Esc>F.;i')
+-- vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Oreturn err<Esc>")
+--
+-- vim.keymap.set("n", "<leader>ea", 'oassert.NoError(err, "")<Esc>F";a')
+--
+-- vim.keymap.set("n", "<leader>ef", 'oif err != nil {<CR>}<Esc>Olog.Fatalf("error: %s\\n", err.Error())<Esc>jj')
+--
+-- vim.keymap.set("n", "<leader>el", 'oif err != nil {<CR>}<Esc>O.logger.Error("error", "error", err)<Esc>F.;i')
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/lazy/plugins.lua<CR>")
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
@@ -104,7 +107,8 @@ vim.keymap.set("i", "<C-BS>", "<C-w>")
 vim.keymap.set("i", "<C-Del>", "<C-o>dw")
 
 -- spell corrector is
-vim.keymap.set("n", "<C-K>", "i<C-x>s")
+vim.keymap.set("n", "<C-S-X>", "i<C-x>s")
+vim.keymap.set("i", "<C-X>", "<C-x>s")
 
 -- movement 
 vim.keymap.set("i", "<C-A>", "<Home>")
@@ -158,3 +162,36 @@ vim.keymap.set("n", "<leader>if", function()
     print("No image found under the cursor")
   end
 end, { desc = "[P](macOS) Open image under cursor in Finder" })
+
+
+vim.keymap.set("n", "<leader>bd", vim.cmd.Bdelete)
+-- vim.keymap.set("n", "<C-[>", "<nop>") -- this shouldnt be there
+vim.keymap.set("n", "<S-Tab>", vim.cmd.bprev)
+vim.keymap.set("n", "<Tab>", vim.cmd.bnext)
+
+-- -- sessions
+-- -- load the session for the current directory
+-- vim.keymap.set("n", "<leader>ss", function() require("persistence").load() end)
+-- -- select a session to load
+-- vim.keymap.set("n", "<leader>sS", function() require("persistence").select() end)
+-- -- load the last session
+-- vim.keymap.set("n", "<leader>sl", function() require("persistence").load({ last = true }) end)
+-- -- stop Persistence => session won't be saved on exit
+-- vim.keymap.set("n", "<leader>sq", function() require("persistence").stop() end)
+
+-- function delete_current_session()
+--   local M = require("persistence")
+--   local sfile = M.current()
+--   if sfile and vim.loop.fs_stat(sfile) ~= 0 then
+--     M.stop()
+--     vim.fn.system("rm " .. vim.fn.fnameescape(sfile))
+--   end
+-- end
+
+
+-- I think this is not vim philography.
+-- vim.keymap.set("i", "<C-k>", "<Esc>gka")
+-- vim.keymap.set("i", "<C-j>", "<Esc>gja")
+
+vim.keymap.set("n", "[t", vim.cmd.tabprev)
+vim.keymap.set("n", "]t", vim.cmd.tabnext)

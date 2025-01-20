@@ -25,3 +25,4 @@ require('neo-tree').setup({
 })
 
 vim.keymap.set('n', '<leader>t', '<Cmd>Neotree toggle reveal float<CR>')
+vim.keymap.set('n', '<C-t>', '<Cmd>Neotree toggle left<CR>')

@@ -25,7 +25,7 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
 	spec = {
 		-- import your plugins
-        { import = "images" },
+		{ import = "images" },
 		{
 			"lukas-reineke/indent-blankline.nvim",
 			main = "ibl",
@@ -33,16 +33,123 @@ require("lazy").setup({
 			---@type ibl.config
 			opts = {},
 		},
+		-- {
+		-- 	"huy-hng/anyline.nvim",
+		-- 	dependencies = { "nvim-treesitter/nvim-treesitter" },
+		-- 	config = true,
+		-- 	event = "VeryLazy",
+		-- },
+		-- {
+		-- 	"folke/persistence.nvim",
+		-- 	event = "BufReadPre", -- this will only start session saving when an actual file was opened
+		-- 	opts = {
+		-- 		-- add any custom options here
+		-- 		keys = {
+		-- 			{
+		-- 				"<leader>qD",
+		-- 				function()
+		-- 					local M = require("persistence")
+		-- 					local sfile = M.current()
+		-- 					if sfile and vim.loop.fs_stat(sfile) ~= 0 then
+		-- 						M.stop()
+		-- 						vim.fn.system("rm " .. vim.fn.fnameescape(sfile))
+		-- 					end
+		-- 				end,
+		-- 				desc = "Delete Current Session",
+		-- 			},
+		-- 		},
+		-- 	},
+		-- },
+		-- {
+		-- 	"gennaro-tedesco/nvim-possession",
+		-- 	dependencies = {
+		-- 		"ibhagwan/fzf-lua",
+		-- 	},
+		-- 	config = true,
+		-- 	init = function()
+		-- 		local possession = require("nvim-possession")
+		-- 		vim.keymap.set("n", "<leader>sl", function()
+		-- 			possession.list()
+		-- 		end)
+		-- 		vim.keymap.set("n", "<leader>sn", function()
+		-- 			possession.new()
+		-- 		end)
+		-- 		vim.keymap.set("n", "<leader>su", function()
+		-- 			possession.update()
+		-- 		end)
+		-- 		vim.keymap.set("n", "<leader>sd", function()
+		-- 			possession.delete()
+		-- 		end)
+		-- 	end,
+		-- },
 		{
-			"nvim-neo-tree/neo-tree.nvim",
-			branch = "v3.x",
-			dependencies = {
-				"nvim-lua/plenary.nvim",
-				"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
-				"MunifTanjim/nui.nvim",
-				-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+			"rmagatti/auto-session", -- ASESH
+			lazy = false,
+			keys = {
+				-- Will use Telescope if installed or a vim.ui.select picker otherwise
+				{ "<leader>sr", "<cmd>SessionSearch<CR>", desc = "Session search" },
+				{ "<leader>ss", "<cmd>SessionSave<CR>", desc = "Save session" },
+				{ "<leader>sa", "<cmd>SessionToggleAutoSave<CR>", desc = "Toggle autosave" },
+				{ "<leader>sl", "<cmd>SessionRestore<CR>", desc = "Restore session" },
+			},
+
+			---enables autocomplete for opts
+			---@module "auto-session"
+			---@type AutoSession.Config
+			opts = {
+				enabled = true, -- Enables/disables auto creating, saving and restoring
+				root_dir = vim.fn.stdpath("data") .. "/sessions/", -- Root dir where sessions will be stored
+				auto_save = true, -- Enables/disables auto saving session on exit
+				auto_restore = false, -- Enables/disables auto restoring session on start
+				auto_create = true, -- Enables/disables auto creating new session files. Can take a function that should return true/false if a new session file should be created or not
+				suppressed_dirs = nil, -- Suppress session restore/create in certain directories
+				allowed_dirs = nil, -- Allow session restore/create in certain directories
+				auto_restore_last_session = false, -- On startup, loads the last saved session if session for cwd does not exist
+				use_git_branch = false, -- Include git branch name in session name
+				lazy_support = true, -- Automatically detect if Lazy.nvim is being used and wait until Lazy is done to make sure session is restored correctly. Does nothing if Lazy isn't being used. Can be disabled if a problem is suspected or for debugging
+				bypass_save_filetypes = nil, -- List of filetypes to bypass auto save when the only buffer open is one of the file types listed, useful to ignore dashboards
+				close_unsupported_windows = true, -- Close windows that aren't backed by normal file before autosaving a session
+				args_allow_single_directory = true, -- Follow normal sesion save/load logic if launched with a single directory as the only argument
+				args_allow_files_auto_save = false, -- Allow saving a session even when launched with a file argument (or multiple files/dirs). It does not load any existing session first. While you can just set this to true, you probably want to set it to a function that decides when to save a session when launched with file args. See documentation for more detail
+				continue_restore_on_error = true, -- Keep loading the session even if there's an error
+				show_auto_restore_notif = false, -- Whether to show a notification when auto-restoring
+				cwd_change_handling = false, -- Follow cwd changes, saving a session before change and restoring after
+				lsp_stop_on_restore = false, -- Should language servers be stopped when restoring a session. Can also be a function that will be called if set. Not called on autorestore from startup
+				log_level = "error", -- Sets the log level of the plugin (debug, info, warn, error).
+				-- ⚠️ This will only work if Telescope.nvim is installed
+				-- The following are already the default values, no need to provide them if these are already the settings you want.
+				session_lens = {
+					-- If load_on_setup is false, make sure you use `:SessionSearch` to open the picker as it will initialize everything first
+					load_on_setup = false,
+					previewer = true,
+					mappings = {
+						-- Mode can be a string or a table, e.g. {"i", "n"} for both insert and normal mode
+						delete_session = { "i", "<C-D>" },
+						alternate_session = { "i", "<C-S>" },
+						copy_session = { "i", "<C-Y>" },
+					},
+					-- Can also set some Telescope picker options
+					-- For all options, see: https://github.com/nvim-telescope/telescope.nvim/blob/master/doc/telescope.txt#L112
+					theme_conf = {
+						border = true,
+						-- layout_config = {
+						--   width = 0.8, -- Can set width and height as percent of window
+						--   height = 0.5,
+						-- },
+					},
+				},
 			},
 		},
+		-- {
+		-- 	"nvim-neo-tree/neo-tree.nvim",
+		-- 	branch = "v3.x",
+		-- 	dependencies = {
+		-- 		"nvim-lua/plenary.nvim",
+		-- 		"nvim-tree/nvim-web-devicons", -- not strictly required, but recommended
+		-- 		"MunifTanjim/nui.nvim",
+		-- 		-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+		-- 	},
+		-- },
 		{
 			"nvim-telescope/telescope.nvim",
 			tag = "0.1.8",
@@ -104,6 +211,10 @@ require("lazy").setup({
 				})
 				require("telescope").load_extension("frecency")
 			end,
+		},
+		{
+			"nvim-telescope/telescope-fzf-native.nvim",
+			build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release",
 		},
 		{
 			"folke/flash.nvim",
@@ -185,9 +296,11 @@ require("lazy").setup({
 		},
 		{
 			"hedyhli/outline.nvim",
+			lazy = true,
+			cmd = { "Outline", "OutlineOpen" },
 			config = function()
 				-- Example mapping to toggle outline
-				vim.keymap.set("n", "<leader>o", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
+				vim.keymap.set("n", "<leader>l", "<cmd>Outline<CR>", { desc = "Toggle Outline" })
 
 				require("outline").setup({
 					-- Your setup opts here (leave empty to use defaults)
@@ -211,6 +324,21 @@ require("lazy").setup({
 					virtual_symbol_prefix = " ",
 					virtual_symbol_suffix = "",
 					virtual_symbol = "■",
+				})
+			end,
+		},
+		{
+			"chenxin-yan/footnote.nvim",
+			config = function()
+				require("footnote").setup({
+					keys = {
+						new_footnote = "<C-f>",
+						organize_footnotes = "<leader>of",
+						next_footnote = "]f",
+						prev_footnote = "[f",
+					},
+					organize_on_save = true,
+					organize_on_new = true,
 				})
 			end,
 		},
@@ -258,9 +386,11 @@ require("lazy").setup({
 		-- { 'kperath/dailynotes.nvim' },
 		-- { 'mhinz/vim-startify' },
 		{ "epwalsh/obsidian.nvim" },
-        { "f3fora/cmp-spell" },
-        { "numToStr/Comment.nvim" },
-        { "nat-418/boole.nvim" },
+		{ "f3fora/cmp-spell" },
+		{ "numToStr/Comment.nvim" },
+		{ "nat-418/boole.nvim" },
+		{ "nvim-lualine/lualine.nvim" },
+		{ "famiu/bufdelete.nvim" },
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.

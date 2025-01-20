@@ -23,8 +23,12 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		vim.keymap.set("n", "<leader>gr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
 		vim.keymap.set("n", "<leader>gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
 		vim.keymap.set("n", "<leader><F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
-		vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
+		-- vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
 		vim.keymap.set("n", "<leader><F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
+		vim.keymap.set("n", "[e", vim.diagnostic.goto_prev, opts)
+		vim.keymap.set("n", "]e", vim.diagnostic.goto_next, opts)
+		vim.keymap.set("n", "<leader>pe", vim.diagnostic.open_float, opts)
+		-- vim.keymap.set({ "n", "v" }, "<leader>l", vim.lsp.codelens.run, opts)
 	end,
 })
 
@@ -70,18 +74,17 @@ cmp.setup({
 		{ name = "nvim_lsp" },
 		{ name = "buffer" },
 
-       -- SPELL CHECKER --
-       -- {
-       --     name = "spell",
-       --     option = {
-       --         keep_all_entries = false,
-       --         enable_in_context = function()
-       --             return true
-       --         end,
-       --         preselect_correct_word = true,
-       --     },
-       -- },
-
+		-- SPELL CHECKER --
+		-- {
+		--     name = "spell",
+		--     option = {
+		--         keep_all_entries = false,
+		--         enable_in_context = function()
+		--             return true
+		--         end,
+		--         preselect_correct_word = true,
+		--     },
+		-- },
 	},
 	mapping = {
 		["<Tab>"] = cmp.mapping.select_next_item(select_opts),
@@ -131,7 +134,7 @@ lspconfig.lua_ls.setup({
 			},
 			workspace = {
 				-- Make the server aware of Neovim runtime files
-				library = vim.api.nvim_get_runtime_file("", true)
+				library = vim.api.nvim_get_runtime_file("", true),
 			},
 			-- Do not send telemetry data containing a randomized but unique identifier
 			telemetry = {

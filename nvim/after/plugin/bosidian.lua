@@ -29,7 +29,7 @@ require("obsidian").setup({
 		-- Optional, default tags to add to each new daily note created.
 		default_tags = { "daily-notes" },
 		-- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
-		templates = { "const/Daily.md" }
+		templates = { "Daily.md" }
 	},
 
 	completion = {
@@ -56,7 +56,8 @@ require("obsidian").setup({
 		},
 	},
 
-	new_notes_location = "notes_subdir",
+    -- I want it to be current directory.
+	-- new_notes_location = "const", 
 
 	-- Either 'wiki' or 'markdown'.
 	preferred_link_style = "markdown",
@@ -164,3 +165,7 @@ vim.keymap.set("n", "<leader>ob", vim.cmd.ObsidianBacklinks)
 vim.keymap.set("n", "<leader>on", vim.cmd.ObsidianNew)
 vim.keymap.set("n", "<leader>of", vim.cmd.ObsidianFollowLink)
 vim.keymap.set("n", "<leader>op", "<cmd>e ~/Documents/Office/Notes/main/Prayer Times.md<CR>")
+vim.keymap.set("n", "<leader>op", "<cmd>e ~/Documents/Office/Notes/main/CHECKLIST.md<CR>")
+
+vim.g.obsidian_vault_root = "~/Documents/Office/Notes/main"
+

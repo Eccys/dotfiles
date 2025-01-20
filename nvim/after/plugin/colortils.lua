@@ -1,1 +1,1 @@
-vim.keymap.set("n", "<leader>k", vim.cmd.Color)
+-- vim.keymap.set("n", "<leader>k", vim.cmd.Color)
