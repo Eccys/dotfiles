@@ -9,7 +9,7 @@ notify_user() {
 }
 
 pick_color() {
-    hyprpicker -f hex | tr -d '\n'
+    hyprpicker -af hex | tr -d '\n'
 }
 
 main() {
