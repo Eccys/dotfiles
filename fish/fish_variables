@@ -1,6 +1,18 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
-SETUVAR __fish_initialized:3400
+SETUVAR --export BRAVE_API_KEY:BSAaS4deJzVdW7BYJhIQmWztiIUBtkP
+SETUVAR --export DISCORD_TOKEN:OTk0Mzc1NTM0NDM4MDExMDIx\x2eGOm9JU\x2ew2BnKKbgVLHwHk0a8AU\x2dI_K8w9tkscHQAmORaI
+SETUVAR --export EDITOR:nvim
+SETUVAR --export NVD_BACKEND:direct
+SETUVAR --export SCIRTPS:\x1d
+SETUVAR --export SCRITPS:\x1d
+SETUVAR --export SSS:/home/ecys/Pictures/sss/2025\x2d01
+SETUVAR --export SYSTEMD_EDITOR:/usr/bin/nvim
+SETUVAR --export WALLPAPER:/home/ecys/\x2econfig/hypr/wallpaper_effects/\x2ewallpaper_current
+SETUVAR --export WINEPREFIX:/home/ecys/\x2ewine
+SETUVAR --export XDG_CURRENT_DESKTOP:Sway
+SETUVAR --export XDG_DATA_DIRS:/usr/share\x3a/usr/local/share
+SETUVAR __fish_initialized:3800
 SETUVAR fish_color_autosuggestion:brblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:blue
@@ -18,7 +30,7 @@ SETUVAR fish_color_operator:brcyan
 SETUVAR fish_color_param:cyan
 SETUVAR fish_color_quote:yellow
 SETUVAR fish_color_redirection:cyan\x1e\x2d\x2dbold
-SETUVAR fish_color_search_match:bryellow\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_search_match:white\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
 SETUVAR fish_color_status:red
 SETUVAR fish_color_user:brgreen

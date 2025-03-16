@@ -4,16 +4,16 @@ require("rose-pine").setup({
 	dim_inactive_windows = false,
 	extend_background_behind_borders = true,
 
-	enable = {
-		terminal = true,
-		legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
-		migrations = true, -- Handle deprecated options automatically
-	},
+	-- enable = {
+	-- 	terminal = true,
+	-- 	legacy_highlights = true, -- Improve compatibility for previous versions of Neovim
+	-- 	migrations = true, -- Handle deprecated options automatically
+	-- },
 
 	styles = {
 		bold = true,
 		italic = true,
-		transparency = false,
+		-- transparency = false,
 	},
 
 	groups = {
@@ -60,7 +60,8 @@ require("rose-pine").setup({
 		-- VertSplit = { fg = "muted", bg = "muted" },
 		["@markup.strong"] = { fg = "#f265b5", bold = true },
 		["@markup.strikethrough"] = { fg = "#908CAA", bold = true },
-		["@markup.italic"] = { fg = "#02f5b5", bold = true },
+		["@markup.italic"] = { fg = "#65F2A2", bold = true },
+		["ObsidianHighlightText"] = { fg = "#18191a", bg = "#E2F965", bold = false },
 	},
 
 	before_highlight = function(group, highlight, palette)
@@ -82,11 +83,11 @@ vim.cmd("colorscheme rose-pine")
 -- vim.cmd("colorscheme rose-pine-dawn")
 
 function ColorMyPencils(color)
-	color = color or "rose-pine"
-	vim.cmd.colorscheme(color)
+	-- color = color or "rose-pine"
+	-- vim.cmd.colorscheme(color)
 	vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 	vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
-	-- vim.api.nvim_set_hl(0, "Folded", { bg = "none", ctermbg = "none" })
+	vim.api.nvim_set_hl(0, "Folded", { bg = "none", ctermbg = "none" })
 	vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 end
 

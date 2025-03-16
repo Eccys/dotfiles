@@ -26,11 +26,16 @@ function fish_prompt
     echo -n '> '
 end
 
+# E-Z download yt-audio
+function yt-audio
+    yt-dlp --extract-audio --audio-format mp3 --audio-quality 0 $argv
+end
+
 # Aliasing cd for zoxide
 zoxide init --cmd cd fish | source
 
 # Set editor to nvim
-export EDITOR=/usr/bin/nvim
+set -x EDITOR nvim
 
 # Fuzzily find directories by aliasing 'f' to FZF
 alias f='cd $(fd --type directory | fzf)'

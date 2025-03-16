@@ -1,6 +1,5 @@
 require("obsidian").setup({
-
-    event = "VeryLazy",
+	event = "VeryLazy",
 	version = "*", -- recommended, use latest release instead of latest commit
 	lazy = true,
 	ft = "markdown",
@@ -29,7 +28,7 @@ require("obsidian").setup({
 		-- Optional, default tags to add to each new daily note created.
 		default_tags = { "daily-notes" },
 		-- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
-		templates = { "Daily.md" }
+		templates = { "Daily.md" },
 	},
 
 	completion = {
@@ -38,6 +37,7 @@ require("obsidian").setup({
 		-- Trigger completion at 2 chars.
 		min_chars = 2,
 	},
+
 
 	mappings = {
 		-- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
@@ -48,16 +48,21 @@ require("obsidian").setup({
 			opts = { noremap = false, expr = true, buffer = true },
 		},
 		-- Smart action depending on context, either follow link or toggle checkbox.
-		["<A-CR>"] = {
+		["<leader>mc"] = {
 			action = function()
 				return require("obsidian").util.smart_action()
 			end,
 			opts = { buffer = true, expr = true },
 		},
+		-- ["<leader>ch"] = {
+		-- 	action = function()
+		-- 		return require("obsidian").util.toggle_checkbox()
+		-- 	end,
+		-- 	opts = { buffer = true },
+		-- },
 	},
-
-    -- I want it to be current directory.
-	-- new_notes_location = "const", 
+	-- I want it to be current directory.
+	-- new_notes_location = "const",
 
 	-- Either 'wiki' or 'markdown'.
 	preferred_link_style = "markdown",
@@ -124,7 +129,7 @@ require("obsidian").setup({
 			ObsidianExtLinkIcon = { fg = "#c792ea" },
 			ObsidianTag = { italic = true, fg = "#89ddff" },
 			ObsidianBlockID = { italic = true, fg = "#89ddff" },
-			ObsidianHighlightText = { bg = "#75662e" },
+			ObsidianHighlightText = { bg = "#FFFF00" },
 		},
 	},
 	-- Specify how to handle attachments.
@@ -165,7 +170,5 @@ vim.keymap.set("n", "<leader>ob", vim.cmd.ObsidianBacklinks)
 vim.keymap.set("n", "<leader>on", vim.cmd.ObsidianNew)
 vim.keymap.set("n", "<leader>of", vim.cmd.ObsidianFollowLink)
 vim.keymap.set("n", "<leader>op", "<cmd>e ~/Documents/Office/Notes/main/Prayer Times.md<CR>")
-vim.keymap.set("n", "<leader>op", "<cmd>e ~/Documents/Office/Notes/main/CHECKLIST.md<CR>")
-
+vim.keymap.set("n", "<leader>oc", "<cmd>e ~/Documents/Office/Notes/main/CHECKLIST.md<CR>")
 vim.g.obsidian_vault_root = "~/Documents/Office/Notes/main"
-

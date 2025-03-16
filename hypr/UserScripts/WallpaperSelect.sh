@@ -14,8 +14,8 @@ focused_monitor=$(hyprctl monitors | awk '/^Monitor/{name=$2} /focused: yes/{pri
 FPS=144
 TYPE="any"
 DURATION=2
-BEZIER=".43,1.19,1,.4"
-SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE"
+BEZIER="0.25,0.1,0.25,1.0"
+SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-bezier $BEZIER"
 
 # Check if swaybg is running
 if pidof swaybg > /dev/null; then

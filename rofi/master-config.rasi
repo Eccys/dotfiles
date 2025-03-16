@@ -86,7 +86,7 @@ entry {
     text-color:                  @text-selected;
     cursor:                      text;
     margin:                      10px 10px 25px 10px;
-    placeholder:                 "🖥️ Search Apps "; // << Search symbol
+    placeholder:                 "🔍 Search apps"; // << Search symbol
     placeholder-color:           inherit;
 }
 

@@ -10,7 +10,7 @@ configuration {
 }
 
 window {
-  height: 85%;
+  height: 90%;
   width: 60%;
 }
 
@@ -37,16 +37,18 @@ listview {
 element {
   orientation: vertical;
   padding: 0px;
-  spacing: 0px;
+  spacing: 0px; /* Already minimal, but ensure no override exists */
   border-radius: 15px;
 }
 
 element-icon {
-  size: 16%;
+  size: 18%; /* Reduced from 16% to make the image smaller, potentially reducing the gap */
+  margin: -20px; /* Negative top margin to pull the image up */
 }
 
 element-text {
-  font: "JetBrains Mono 14";
+  font: "JetBrains Mono 13";
   vertical-align: 0.5;
   horizontal-align: 0.5;
+  margin: -0px 0 0 0; /* Optional: Negative top margin to pull the text closer to the icon */
 }

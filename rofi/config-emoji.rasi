@@ -6,17 +6,23 @@
 
 /* ---- Entry ---- */
 entry {
-  width: 37%;
-  placeholder: "💫 Search Emoji's  **note** 👀 Click or Return to choose | Ctrl V to Paste";
+  width: 40%;
+  placeholder: "💫 Search emojis";
 }
 
 /* ---- Listview ---- */
 listview {
-  columns: 1;
-  lines: 8;
+  columns: 7;
+  lines: 6;
 }
 
 window {
-  height: 61%;
+  height: 59%;
 }
 
+element {
+  border-radius: 5px;
+}
+
+element-icon {
+}

@@ -17,8 +17,8 @@ iDIR="$HOME/.config/swaync/images"
 FPS=60
 TYPE="wipe"
 DURATION=2
-BEZIER=".43,1.19,1,.4"
-SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION"
+BEZIER="0.25,0.1,0.25,1.0"
+SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION --transition-bezier $BEZIER"
 
 # Define ImageMagick effects
 # https://imagemagick.org/script/magick.php

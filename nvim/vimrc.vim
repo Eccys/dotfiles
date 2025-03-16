@@ -3,10 +3,6 @@
 :set guicursor=n-v-c-i:block
 :set guicursor=a:blinkon100
 
-
-" CLEAR BACKGROUND
-:hi Normal guibg=NONE ctermbg=NONE
-
 " EZ NUMBER CHANGE
 function! Numbers()
     call search('\d\([^0-9\.]\|$\)', 'cW')
@@ -16,10 +12,6 @@ endfunction
 xnoremap in :<C-u>call Numbers()<CR>
 onoremap in :normal vin<CR>
 
-" ESC FIX
-inoremap <Esc> <Esc>l
-
-" TOGGLE TERM
 let g:term_buf = 0
 let g:term_win = 0
 function! TermToggle(height)
@@ -45,9 +37,9 @@ endfunction
 nnoremap <A-t> :call TermToggle(12)<CR>
 inoremap <A-t> <Esc>:call TermToggle(12)<CR>
 tnoremap <A-t> <C-\><C-n>:call TermToggle(12)<CR>
-
-tnoremap <Esc> <C-\><C-n>
-tnoremap :q! <C-\><C-n>:q!<CR>
+"
+" tnoremap <Esc> <C-\><C-n>
+" tnoremap :q! <C-\><C-n>:q!<CR>
 
 " F2 = write
 " nnoremap <F2> :w<CR>
@@ -70,7 +62,7 @@ tnoremap :q! <C-\><C-n>:q!<CR>
 " " let g:minimap_auto_start_win_enter = 1
 " nnoremap <C-m> :MinimapToggle<CR>
 
-" AUTOCOMPLETION FIX --- Replaced by LSP
+" AUTOCOMPLETION FIX --- Replaced by LSP --> blink.cmp
 " :highlight CocMenuSel guibg=#34374a guifg=#ffffff ctermbg=darkblue ctermfg=white
 " inoremap <expr> <Tab> coc#pum#visible() ? coc#pum#next(1) : "\<Tab>"
 " inoremap <expr> <S-Tab> coc#pum#visible() ? coc#pum#prev(1) : "\<S-Tab>"

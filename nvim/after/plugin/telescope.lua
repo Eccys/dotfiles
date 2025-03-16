@@ -12,7 +12,7 @@ vim.keymap.set("n", "<leader>pb", function()
 		-- -- Leave this at false, otherwise when put in normal mode, the buffer
 		-- -- below is selected, not the one at the top
 		sort_lastused = false,
-		initial_mode = "normal",
+		initial_mode = "insert",
 		hidden = true,
 		-- Pre-select the current buffer
 		-- ignore_current_buffer = false,

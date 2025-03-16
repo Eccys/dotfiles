@@ -16,8 +16,8 @@ RANDOMPICS=${PICS[ $RANDOM % ${#PICS[@]} ]}
 FPS=144
 TYPE="any"
 DURATION=2
-BEZIER=".43,1.19,1,.4"
-SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE"
+BEZIER="0.25,0.1,0.25,1.0"
+SWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-bezier $BEZIER"
 
 
 swww query || swww-daemon --format xrgb && swww img -o $focused_monitor ${RANDOMPICS} $SWWW_PARAMS
