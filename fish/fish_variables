@@ -2,6 +2,7 @@
 # VERSION: 3.0
 SETUVAR --export BRAVE_API_KEY:BSAaS4deJzVdW7BYJhIQmWztiIUBtkP
 SETUVAR --export DISCORD_TOKEN:OTk0Mzc1NTM0NDM4MDExMDIx\x2eGOm9JU\x2ew2BnKKbgVLHwHk0a8AU\x2dI_K8w9tkscHQAmORaI
+SETUVAR --export DISPLAY:wayland
 SETUVAR --export EDITOR:nvim
 SETUVAR --export NVD_BACKEND:direct
 SETUVAR --export SCIRTPS:\x1d
@@ -44,3 +45,4 @@ SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
 SETUVAR fish_prompt_pwd_dir_length:1
 SETUVAR fish_user_paths:/home/ecys/\x2ecargo/bin
+SETUVAR --export wayland:\x1d

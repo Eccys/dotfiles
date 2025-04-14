@@ -5,7 +5,7 @@ plugins = [
   "magnify",
   "fetch_client_menu"
 ]
-
+#
 [scratchpads.term]
 animation = "fromTop"
 command = "kitty --class kitty-dropterm"

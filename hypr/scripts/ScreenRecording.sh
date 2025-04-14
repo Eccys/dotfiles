@@ -3,11 +3,13 @@
 # Directory to save the recordings
 SAVE_DIR="$HOME/Pictures/sss/$(date "+%Y-%m")"
 mkdir -p "$SAVE_DIR"
+echo "Save directory: $SAVE_DIR"
 
 # Get current date and time for the filename
 time=$(date "+%Y-%m-%d-%H-%M-%S")
 file="Recording_${time}.mp4"
 file_path="${SAVE_DIR}/${file}"
+echo "File path: $file_path"
 
 # Default audio option is false
 AUDIO=false
@@ -42,10 +44,12 @@ else
 
     # Start recording with or without audio based on the argument
     if [[ "$AUDIO" == "true" ]]; then
-        wf-recorder -g "$region" -f "$file_path" --audio -c libx264rgb &
+        echo "Starting recording with audio..."
+        wf-recorder -g "$region" -f "$file_path" --audio -c libx264rgb 2>&1 | tee -a "$SAVE_DIR/recording.log" &
         notify-send "Recording started with audio."
     else
-        wf-recorder -g "$region" -f "$file_path" &
+        echo "Starting recording without audio..."
+        wf-recorder -g "$region" -f "$file_path" 2>&1 | tee -a "$SAVE_DIR/recording.log" &
         notify-send "Recording started without audio."
     fi
 fi
