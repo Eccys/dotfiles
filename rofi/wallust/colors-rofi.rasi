@@ -1,30 +1,30 @@
 /* Made by Ecys — https://ecys.xyz */
 
 * {
-active-background: #3C667F;
-active-foreground: #F0EDEC;
-normal-background: #000206;
-normal-foreground: #F0EDEC;
-urgent-background: #75A1CA;
-urgent-foreground: #F0EDEC;
+active-background: #65684A;
+active-foreground: #E9EDF3;
+normal-background: #0B0B02;
+normal-foreground: #E9EDF3;
+urgent-background: #3999CC;
+urgent-foreground: #E9EDF3;
 
-alternate-active-background: #9D8C37;
-alternate-active-foreground: #F0EDEC;
-alternate-normal-background: #000206;
-alternate-normal-foreground: #F0EDEC;
-alternate-urgent-background: #000206;
-alternate-urgent-foreground: #F0EDEC;
+alternate-active-background: #8F7A3F;
+alternate-active-foreground: #E9EDF3;
+alternate-normal-background: #0B0B02;
+alternate-normal-foreground: #E9EDF3;
+alternate-urgent-background: #0B0B02;
+alternate-urgent-foreground: #E9EDF3;
 
-selected-active-background: #3C667F;
-selected-active-foreground: #F0EDEC;
-selected-normal-background: #E1DCDB;
-selected-normal-foreground: #F0EDEC;
-selected-urgent-background: #75A1CA;
-selected-urgent-foreground: #F0EDEC;
+selected-active-background: #65684A;
+selected-active-foreground: #E9EDF3;
+selected-normal-background: #D7DDE6;
+selected-normal-foreground: #E9EDF3;
+selected-urgent-background: #3999CC;
+selected-urgent-foreground: #E9EDF3;
 background: rgba(0,0,0,0.7);
-background-color: #000206;
+background-color: #0B0B02;
 background: rgba(0,0,0,0.7);
-foreground: #E1DCDB;
-border-color: #3C667F;
+foreground: #D7DDE6;
+border-color: #65684A;
 }
 

@@ -88,7 +88,7 @@ require("lazy").setup({
 		{
 			"rmagatti/auto-session", -- ASESH
 			lazy = true,
-            event = "VeryLazy",
+			event = "VeryLazy",
 			keys = {
 				-- Will use Telescope if installed or a vim.ui.select picker otherwise
 				{ "<leader>sr", "<cmd>SessionSearch<CR>", desc = "Session search" },
@@ -331,19 +331,19 @@ require("lazy").setup({
 		{
 			"nvim-treesitter/nvim-treesitter",
 			lazy = true,
-            event = "VeryLazy",
+			event = "VeryLazy",
 			build = ":TSUpdate",
 		},
 		{
 			"kevinhwang91/nvim-ufo",
 			"kevinhwang91/promise-async",
-            lazy = true,
+			lazy = true,
 			event = "VeryLazy",
 			dependencies = {},
 		},
 		{
 			"kevinhwang91/nvim-hlslens",
-            lazy = true,
+			lazy = true,
 			event = "VeryLazy",
 			config = function()
 				-- require('hlslens').setup() is not required
@@ -416,7 +416,134 @@ require("lazy").setup({
 		{ "nvim-treesitter/nvim-treesitter-textobjects", lazy = true, event = "VeryLazy" },
 		-- { 'kperath/dailynotes.nvim', lazy = true, event = "VeryLazy" },
 		-- { 'mhinz/vim-startify', lazy = true, event = "VeryLazy" },
-		-- { "epwalsh/obsidian.nvim", lazy = true, event = "VeryLazy" },
+		{
+			"epwalsh/obsidian.nvim",
+			event = "VeryLazy",
+			version = "*", -- recommended, use latest release
+			dependencies = {
+				"nvim-lua/plenary.nvim",
+			},
+
+			-- The 'opts' table is where your main setup configuration goes.
+			opts = {
+				-- FIX: Use the absolute path instead of '~'
+				dir = "/home/ecys/Documents/Office/Notes/main",
+
+				-- ALL OF YOUR OTHER SETTINGS ARE PRESERVED BELOW
+				notes_subdir = "const",
+				daily_notes = {
+					folder = os.date("Notes/%Y-%m"),
+					date_format = "%d",
+					alias_format = "%B %-d, %Y",
+					default_tags = { "daily-notes" },
+					templates = {
+						folder = "templates",
+						date_format = "%Y-%m-%d",
+						time_format = "%H:%M",
+						substitutions = {},
+					},
+				},
+				completion = {
+					nvim_cmp = true,
+					min_chars = 2,
+				},
+				mappings = {
+					["gf"] = {
+						action = function()
+							return require("obsidian").util.gf_passthrough()
+						end,
+						opts = { noremap = false, expr = true, buffer = true },
+					},
+					["<leader>mc"] = {
+						action = function()
+							return require("obsidian").util.smart_action()
+						end,
+						opts = { buffer = true, expr = true },
+					},
+				},
+				preferred_link_style = "markdown",
+				picker = {
+					name = "telescope.nvim",
+					note_mappings = {
+						new = "<A-x>",
+						insert_link = "<A-l>",
+					},
+					tag_mappings = {
+						tag_note = "<A-x>",
+						insert_tag = "<A-l>",
+					},
+				},
+				sort_by = "modified",
+				sort_reversed = true,
+				open_notes_in = "current",
+				ui = {
+					enable = true,
+					update_debounce = 200,
+					max_file_length = 5000,
+					checkboxes = {
+						[" "] = { char = "󰄱", hl_group = "ObsidianTodo" },
+						["x"] = { char = "", hl_group = "ObsidianDone" },
+						[">"] = { char = "", hl_group = "ObsidianRightArrow" },
+						["~"] = { char = "󰰱", hl_group = "ObsidianTilde" },
+						["!"] = { char = "", hl_group = "ObsidianImportant" },
+					},
+					bullets = { char = "•", hl_group = "ObsidianBullet" },
+					external_link_icon = { char = "", hl_group = "ObsidianExtLinkIcon" },
+					reference_text = { hl_group = "ObsidianRefText" },
+					highlight_text = { hl_group = "ObsidianHighlightText" },
+					tags = { hl_group = "ObsidianTag" },
+					block_ids = { hl_group = "ObsidianBlockID" },
+					hl_groups = {
+						ObsidianTodo = { bold = true, fg = "#f78c6c" },
+						ObsidianDone = { bold = true, fg = "#89ddff" },
+						ObsidianRightArrow = { bold = true, fg = "#f78c6c" },
+						ObsidianTilde = { bold = true, fg = "#ff5370" },
+						ObsidianImportant = { bold = true, fg = "#d73128" },
+						ObsidianBullet = { bold = true, fg = "#89ddff" },
+						ObsidianRefText = { underline = true, fg = "#c792ea" },
+						ObsidianExtLinkIcon = { fg = "#c792ea" },
+						ObsidianTag = { italic = true, fg = "#89ddff" },
+						ObsidianBlockID = { italic = true, fg = "#89ddff" },
+						ObsidianHighlightText = { bg = "#444400" },
+					},
+				},
+				attachments = {
+					img_folder = "attachments",
+					img_name_func = function()
+						return string.format("%s-", os.time())
+					end,
+					img_text_func = function(client, path)
+						path = client:vault_relative_path(path) or path
+						return string.format("![%s](%s)", path.name, path)
+					end,
+				},
+			},
+
+			-- The 'config' function runs AFTER the plugin is loaded.
+			-- This is the correct place for keymaps.
+			config = function(_, opts)
+				-- This line is important to actually apply the options from the 'opts' table above
+				require("obsidian").setup(opts)
+
+				-- Your keymaps, with the paths fixed
+				vim.keymap.set("n", "<leader>od", vim.cmd.ObsidianDailies)
+				vim.keymap.set("n", "<leader>ot", vim.cmd.ObsidianToday)
+				vim.keymap.set("n", "<leader>oy", vim.cmd.ObsidianYesterday)
+				vim.keymap.set("n", "<leader>os", vim.cmd.ObsidianSearch)
+				vim.keymap.set("n", "<leader>or", vim.cmd.ObsidianQuickSwitch)
+				vim.keymap.set("n", "<leader>oR", vim.cmd.ObsidianQuickSwitch)
+				vim.keymap.set("n", "<leader>ob", vim.cmd.ObsidianBacklinks)
+				vim.keymap.set("n", "<leader>on", vim.cmd.ObsidianNew)
+				vim.keymap.set("n", "<leader>of", vim.cmd.ObsidianFollowLink)
+				-- FIX: Use the absolute path for these keymaps
+				vim.keymap.set("n", "<leader>op", "<cmd>e /home/ecys/Documents/Office/Notes/main/Prayer Times.md<CR>")
+				vim.keymap.set(
+					"n",
+					"<leader>oc",
+					"<cmd>e /home/ecys/Documents/Office/Notes/main/const/chess tutorial<CR>"
+				)
+			end,
+		},
 		{ "f3fora/cmp-spell", lazy = true, event = "VeryLazy" },
 		{ "numToStr/Comment.nvim", lazy = true, event = "VeryLazy" },
 		{ "nat-418/boole.nvim", lazy = true, event = "VeryLazy" },
@@ -424,6 +551,7 @@ require("lazy").setup({
 		{ "vim-illuminate", lazy = true, event = "VeryLazy" },
 		{ "petertriho/nvim-scrollbar", lazy = true, event = "VeryLazy" },
 		{ "giuxtaposition/blink-cmp-copilot", lazy = true, event = "VeryLazy" },
+		{ "pteroctopus/faster.nvim", lazy = true, event = "VeryLazy" },
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.

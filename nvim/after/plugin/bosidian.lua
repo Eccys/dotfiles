@@ -28,7 +28,13 @@ require("obsidian").setup({
 		-- Optional, default tags to add to each new daily note created.
 		default_tags = { "daily-notes" },
 		-- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
-		templates = { "Daily.md" },
+		templates = {
+			folder = "templates",
+			date_format = "%Y-%m-%d",
+			time_format = "%H:%M",
+			-- A map for custom variables, the key should be the variable and the value a function
+			substitutions = {},
+		},
 	},
 
 	completion = {
@@ -37,7 +43,6 @@ require("obsidian").setup({
 		-- Trigger completion at 2 chars.
 		min_chars = 2,
 	},
-
 
 	mappings = {
 		-- Overrides the 'gf' mapping to work on markdown/wiki links within your vault.
@@ -74,15 +79,15 @@ require("obsidian").setup({
 		-- Not all pickers support all mappings.
 		note_mappings = {
 			-- Create a new note from your query.
-			new = "<C-x>",
+			new = "<A-x>",
 			-- Insert a link to the selected note.
-			insert_link = "<C-l>",
+			insert_link = "<A-l>",
 		},
 		tag_mappings = {
 			-- Add tag(s) to current note.
-			tag_note = "<C-x>",
+			tag_note = "<A-x>",
 			-- Insert a tag at the current location.
-			insert_tag = "<C-l>",
+			insert_tag = "<A-l>",
 		},
 	},
 
@@ -129,7 +134,7 @@ require("obsidian").setup({
 			ObsidianExtLinkIcon = { fg = "#c792ea" },
 			ObsidianTag = { italic = true, fg = "#89ddff" },
 			ObsidianBlockID = { italic = true, fg = "#89ddff" },
-			ObsidianHighlightText = { bg = "#FFFF00" },
+			ObsidianHighlightText = { bg = "#444400" },
 		},
 	},
 	-- Specify how to handle attachments.
@@ -169,6 +174,6 @@ vim.keymap.set("n", "<leader>oR", vim.cmd.ObsidianQuickSwitch) --- ???
 vim.keymap.set("n", "<leader>ob", vim.cmd.ObsidianBacklinks)
 vim.keymap.set("n", "<leader>on", vim.cmd.ObsidianNew)
 vim.keymap.set("n", "<leader>of", vim.cmd.ObsidianFollowLink)
-vim.keymap.set("n", "<leader>op", "<cmd>e ~/Documents/Office/Notes/main/Prayer Times.md<CR>")
-vim.keymap.set("n", "<leader>oc", "<cmd>e ~/Documents/Office/Notes/main/CHECKLIST.md<CR>")
+vim.keymap.set("n", "<leader>op", "<cmd>e ~/Documents/Office/Notes/main/Prayer Times.md<CR>") -- Prayer Times
+vim.keymap.set("n", "<leader>oc", "<cmd>e ~/Documents/Office/Notes/main/const/chess tutorial<CR>") -- Chess
 vim.g.obsidian_vault_root = "~/Documents/Office/Notes/main"

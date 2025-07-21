@@ -12,7 +12,6 @@
 @define-color text-color-disabled rgba(150, 150, 150, 0.8);
 * {
     font-family: "JetBrains Mono Nerd Font";
-    font-weight: bold;
 }
 
 .control-center .notification-row:focus,

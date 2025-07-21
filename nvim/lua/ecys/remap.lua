@@ -14,6 +14,19 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 vim.keymap.set({ "n", "v" }, "<leader>d", '"_d')
 vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')
 
+-- linebreaks
+vim.keymap.set({ "n", "v" }, "j", 'gj')
+vim.keymap.set({ "n", "v" }, "k", 'gk')
+-- vim.keymap.set({ "n", "v" }, "0", "g0")
+-- vim.keymap.set({ "n", "v" }, "^", "g^")
+-- vim.keymap.set({ "n", "v" }, "_", "g_")
+-- vim.keymap.set({ "n", "v" }, "c0", "cg0")
+-- vim.keymap.set({ "n", "v" }, "c^", "cg^")
+-- vim.keymap.set({ "n", "v" }, "c_", "cg_")
+-- vim.keymap.set({ "n", "v" }, "d0", "dg0")
+-- vim.keymap.set({ "n", "v" }, "d^", "dg^")
+-- vim.keymap.set({ "n", "v" }, "d_", "dg_")
+
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<F1>", "<nop>")
 vim.keymap.set("n", "Q:", "q:")
@@ -114,7 +127,7 @@ vim.keymap.set("i", "<C-X>", "<C-x>s")
 vim.keymap.set("i", "<C-A>", "<Home>")
 vim.keymap.set("i", "<C-E>", "<End>")
 
-vim.keymap.set({ "n", "i" }, "<M-a>", function()
+vim.keymap.set({ "n", "i" }, "<M-v>", function()
 	local pasted_image = require("img-clip").paste_image()
 	if pasted_image then
 		-- "Update" saves only if the buffer has been modified since the last save
@@ -221,3 +234,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	end,
 })
 vim.keymap.set("i", "<Esc>", "<Esc>l", { noremap = true, silent = true })
+
+-- Replace With Register
+vim.keymap.del("n", "gri")
+vim.keymap.del("n", "gra")

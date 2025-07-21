@@ -3,7 +3,8 @@
 plugins = [
   "scratchpads",
   "magnify",
-  "fetch_client_menu"
+  "fetch_client_menu",
+  "expose"
 ]
 #
 [scratchpads.term]
@@ -11,3 +12,4 @@ animation = "fromTop"
 command = "kitty --class kitty-dropterm"
 class = "kitty-dropterm"
 size = "65% 50%"
+
