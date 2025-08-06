@@ -76,7 +76,7 @@ vim.keymap.set({ "n", "v", "i" }, "<M-k>", "<cmd>Telescope keymaps<cr>", { desc 
 
 -- Keymaps for opening the file's directory in system file explorer
 vim.keymap.set("n", "<leader>T", function()
-	vim.fn.jobstart({ "nemo", vim.fn.expand("%:p:h") }, { detach = true })
+	vim.fn.jobstart({ "dolphin", vim.fn.expand("%:p:h") }, { detach = true })
 end, { silent = true })
 
 -- Alternate file

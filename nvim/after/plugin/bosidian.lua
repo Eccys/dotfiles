@@ -29,7 +29,7 @@ require("obsidian").setup({
 		default_tags = { "daily-notes" },
 		-- Optional, if you want to automatically insert a template from your template directory like 'daily.md'
 		templates = {
-			folder = "templates",
+			folder = "const/Daily.md",
 			date_format = "%Y-%m-%d",
 			time_format = "%H:%M",
 			-- A map for custom variables, the key should be the variable and the value a function

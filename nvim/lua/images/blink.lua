@@ -24,7 +24,7 @@ return {
 	-- https://github.com/Saghen/blink.cmp/releases
 	-- version = "v0.9.3",
 	-- version = "1.*",
-    version = '1.*',
+	version = "1.*",
 	dependencies = {
 		"moyiz/blink-emoji.nvim",
 		"Kaiser-Yang/blink-cmp-dictionary",
@@ -50,7 +50,17 @@ return {
 		-- Merge custom sources with the existing ones from lazyvim
 		-- NOTE: by default lazyvim already includes the lazydev source, so not adding it here again
 		opts.sources = vim.tbl_deep_extend("force", opts.sources or {}, {
-			default = { "obsidian", "obsidian_new", "obsidian_tags", "lsp", "path", "snippets", "buffer", "emoji", "dictionary" },
+			default = {
+				"obsidian",
+				"obsidian_new",
+				"obsidian_tags",
+				"lsp",
+				"path",
+				"snippets",
+				"buffer",
+				"emoji",
+				"dictionary",
+			},
 			providers = {
 				obsidian = { name = "obsidian", module = "blink.compat.source" },
 				obsidian_new = { name = "obsidian_new", module = "blink.compat.source" },
