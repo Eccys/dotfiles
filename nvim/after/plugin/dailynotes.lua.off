@@ -1,0 +1,6 @@
+require "dailynotes".setup({
+    date = os.date("%Y-%m-%d"),
+    path = '~/Documents/Office/Notes/main/Notes/'..os.date("%Y-%m")..'/'
+})
+
+vim.keymap.set('n', '<leader>nd', vim.cmd.Daily)
