@@ -1,0 +1,10 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR --export EDITOR:nvim
+SETUVAR --export LIBVA_DRIVER_NAME:nvidia
+SETUVAR --export SHELL:/usr/bin/fish
+SETUVAR --export VISUAL:nvim
+SETUVAR --export WLR_NO_HARDWARE_CURSORS:1
+SETUVAR --export XDG_SESSION_TYPE:wayland
+SETUVAR __fish_initialized:4300
+SETUVAR --export fish_greeting:\x1d
