@@ -1,0 +1,8 @@
+{
+  "uiScale": 1.0,
+  "openGuideAtStartup": true,
+  "topbarHelpIcon": true,
+  "wallpaperDir": "/home/ecys/Pictures/Wallpapers",
+  "language": "us",
+  "kbOptions": "grp:win_space_toggle"
+}

@@ -115,16 +115,7 @@ require("lazy").setup({
 			-- or                              , branch = '0.1.x',
 			dependencies = { "nvim-lua/plenary.nvim" },
 		},
-		{
-			"rose-pine/neovim",
-			-- opts = {
-			-- 	transparent = true,
-			-- },
-			name = "rose-pine",
-			config = function()
-				vim.cmd("colorscheme rose-pine")
-			end,
-		},
+		{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 		{
 			"CopilotC-Nvim/CopilotChat.nvim",
 			lazy = true,
@@ -318,10 +309,15 @@ require("lazy").setup({
 			config = function()
 				require("footnote").setup({
 					keys = {
-						new_footnote = "<A-f>",
-						organize_footnotes = "<A-S-f",
-						next_footnote = "]f",
-						prev_footnote = "[f",
+						n = {
+							new_footnote = "<A-f>",
+							organize_footnotes = "<A-S-f>",
+							next_footnote = "]f",
+							prev_footnote = "[f",
+						},
+						i = {
+							new_footnote = "<A-f>",
+						},
 					},
 					organize_on_save = true,
 					organize_on_new = true,
@@ -336,10 +332,9 @@ require("lazy").setup({
 		},
 		{
 			"kevinhwang91/nvim-ufo",
-			"kevinhwang91/promise-async",
 			lazy = true,
 			event = "VeryLazy",
-			dependencies = {},
+			dependencies = { "kevinhwang91/promise-async" },
 		},
 		{
 			"kevinhwang91/nvim-hlslens",
@@ -548,7 +543,7 @@ require("lazy").setup({
 		{ "numToStr/Comment.nvim", lazy = true, event = "VeryLazy" },
 		{ "nat-418/boole.nvim", lazy = true, event = "VeryLazy" },
 		{ "famiu/bufdelete.nvim", lazy = true, event = "VeryLazy" },
-		{ "vim-illuminate", lazy = true, event = "VeryLazy" },
+		{ "RRethy/vim-illuminate", lazy = true, event = "VeryLazy" },
 		{ "petertriho/nvim-scrollbar", lazy = true, event = "VeryLazy" },
 		{ "giuxtaposition/blink-cmp-copilot", lazy = true, event = "VeryLazy" },
 		{ "pteroctopus/faster.nvim", lazy = true, event = "VeryLazy" },

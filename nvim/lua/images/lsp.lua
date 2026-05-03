@@ -5,12 +5,12 @@ return {
     enabled = true,
     dependencies = { 'saghen/blink.cmp' },
 
-    -- example calling setup directly for each LSP
     config = function()
         local capabilities = require('blink.cmp').get_lsp_capabilities()
-        local lspconfig = require('lspconfig')
 
-        lspconfig['lua_ls'].setup({ capabilities = capabilities })
-        lspconfig['ts_ls'].setup({ capabilities = capabilities })
+        -- Use the native Nvim 0.12+ API instead of the deprecated lspconfig framework
+        vim.lsp.config('lua_ls', { capabilities = capabilities })
+        vim.lsp.config('ts_ls', { capabilities = capabilities })
+        vim.lsp.enable({ 'lua_ls', 'ts_ls' })
     end
 }
