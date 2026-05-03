@@ -1,46 +1,60 @@
-# Dotfiles for Arch Linux
+# 🌌 Eccys' Dotfiles
 
-This project contains my personal settings for Arch Linux. It uses the Hyprland desktop and the Neovim code editor. The goal is to keep the system fast and easy to use.
-
-> [!NOTE]
-> These files are made for my own computer. You may need to change some paths to make them work for you.
-
-## System Parts
-
-### Neovim
-I use Neovim to write code. It is set up to be fast.
-- It uses the "Blink" tool for quick word completion.
-- It uses the built-in LSP to find errors in code.
-- It has a tool called "Footnote" for making notes.
-
-> [!TIP]
-> You should use Neovim version 0.12 or newer. This version supports all the tools in these files.
-
-### Hyprland
-Hyprland is a tool that manages windows on the screen. It uses a tiled layout.
-- It has smooth movements for windows.
-- It uses custom bars to show the time and battery life.
-- It uses "Kitty" as the main terminal.
-
-### Other Tools
-- **Yazi**: A fast way to look at files in the terminal.
-- **Matugen**: A tool that picks colors based on your wallpaper.
+A premium, modern Arch Linux configuration powered by **Hyprland** and **Neovim**. This setup is designed for efficiency, aesthetics, and high performance.
 
 ---
 
-## How to Install
+## 🚀 Highlights
 
-1. **Get the files**:
+### 🛠️ Neovim (v0.12+ Ready)
+Custom IDE-like experience with zero startup errors and lightning-fast completion.
+- **Blink.cmp**: Next-gen completion engine with frecency-based fuzzy matching.
+- **Native LSP**: Transitioned to Neovim's native `vim.lsp.config` and `vim.lsp.enable` APIs.
+- **Modern UI**: Catppuccin Mocha theme with dynamic Matugen color reloading.
+- **Fold/UFO**: Advanced code folding with `nvim-ufo`.
+
+### 🖥️ Hyprland & Desktop
+Smooth animations and vim-centric workflow.
+- **Compositor**: Hyprland with glassmorphism and blur effects.
+- **Bar**: Quickshell-based vertical and horizontal widgets.
+- **Terminal**: Kitty with Matugen-synced color schemes.
+- **File Manager**: Yazi (Terminal) with modern keybinds.
+
+---
+
+## 📂 Structure
+
+| Directory | Component | Description |
+|-----------|-----------|-------------|
+| `nvim/` | Neovim | Full Lua-based config with Lazy.nvim |
+| `hypr/` | Hyprland | Window manager rules and keybinds |
+| `kitty/` | Kitty | Fast, GPU-accelerated terminal |
+| `quickshell/` | Widgets | Custom bars and system monitors |
+| `yazi/` | Yazi | Modern terminal file manager |
+
+---
+
+## 🛠️ Installation
+
+1. **Clone the repo**:
    ```bash
    git clone https://github.com/eccys/dotfiles ~/dotfiles
    ```
-2. **Link the files**:
-   Move these folders to your `.config` folder. You can use a symbolic link to keep them in sync.
-3. **Install programs**:
-   Make sure you have `hyprland`, `neovim`, and `kitty` on your system.
-
-> [!CAUTION]
-> Back up your own settings before you overwrite them with these files.
+2. **Symlink configs**:
+   ```bash
+   ln -s ~/dotfiles/nvim ~/.config/nvim
+   # Repeat for other directories
+   ```
+3. **Install dependencies**:
+   - `neovim` (v0.12+)
+   - `lua51` (for luarocks/image.nvim)
+   - `hyprland`, `kitty`, `yazi`
 
 ---
-*Maintained by Eccys* 🌌
+
+## 📝 Recent Updates
+- **2026-05-03**: Major Neovim refactor. Fixed all deprecation warnings, migrated to native LSP APIs, and optimized `blink.cmp` configuration.
+
+---
+
+*Crafted with ❤️ by Eccys*
