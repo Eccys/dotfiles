@@ -28,7 +28,7 @@ return {
 			local snippets = {}
 			local file = io.open(file_path, "r")
 			if not file then
-				vim.notify("Could not open snippets file: " .. file_path, vim.log.levels.ERROR)
+				-- vim.notify("Could not open snippets file: " .. file_path, vim.log.levels.ERROR)
 				return snippets
 			end
 

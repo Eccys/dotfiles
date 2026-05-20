@@ -3,9 +3,10 @@ local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
 require("lazy.plugins")
 require("ecys.set")
 require("ecys.remap")
+require("ecys.smartfind")
 vim.cmd.source(vimrc)
 
-vim.cmd.source(vim.fn.stdpath("config") .. "/after/plugin/bosidian.lua")
+-- vim.cmd.source(vim.fn.stdpath("config") .. "/after/plugin/bosidian.lua")
 
 -- ==========================================================================
 -- DYNAMIC THEME LOGIC
@@ -40,7 +41,7 @@ _G.reload_matugen_colors = function()
     end
 
     -- Nuke Neovim's existing highlights
-    vim.cmd("hi clear")
+    -- vim.cmd("hi clear")
     if vim.fn.exists("syntax_on") then
       vim.cmd("syntax reset")
     end
@@ -50,6 +51,7 @@ _G.reload_matugen_colors = function()
     if ok_cat then
       cat.setup({
         flavour = "mocha",
+        transparent_background = true,
         compile = { enabled = false }, -- MUST be false for dynamic overrides
         color_overrides = overrides,
         integrations = {
@@ -84,7 +86,7 @@ _G.reload_matugen_colors = function()
     vim.cmd("redraw!")
 
     -- Provide visual confirmation
-    vim.notify("Matugen colors reloaded!", vim.log.levels.INFO)
+    -- vim.notify("Matugen colors reloaded!", vim.log.levels.INFO)
   end)
 end
 

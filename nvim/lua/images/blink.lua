@@ -51,6 +51,7 @@ return {
 		-- Merge custom sources with the existing ones from lazyvim
 		-- NOTE: by default lazyvim already includes the lazydev source, so not adding it here again
 		opts.sources = vim.tbl_deep_extend("force", opts.sources or {}, {
+			min_keyword_length = 2,
 			default = { "obsidian", "obsidian_new", "obsidian_tags", "lsp", "path", "snippets", "buffer", "emoji", "dictionary" },
 			providers = {
 				obsidian = { name = "obsidian", module = "blink.compat.source" },
@@ -81,7 +82,7 @@ return {
 					enabled = true,
 					max_items = 3,
 					module = "blink.cmp.sources.buffer",
-					min_keyword_length = 4,
+					min_keyword_length = 2,
 					score_offset = 15, -- the higher the number, the higher the priority
 				},
 				snippets = {
@@ -128,7 +129,7 @@ return {
 					score_offset = 20,
 					enabled = true,
 					max_items = 8,
-					min_keyword_length = 3,
+					min_keyword_length = 2,
 					opts = {
 						dictionary_directories = { vim.fn.expand("~/github/dotfiles-latest/dictionaries") },
 						dictionary_files = {

@@ -27,13 +27,14 @@
 return {
 	{
 		-- luarocks.nvim is a Neovim plugin designed to streamline the installation
-		-- of luarocks packages directly within Neovim. It simplifies the process
-		-- of managing Lua dependencies, ensuring a hassle-free experience for
-		-- Neovim users.
-		-- https://github.com/vhyrro/luarocks.nvim
+		-- of luarocks packages directly within Neovim.
 		"vhyrro/luarocks.nvim",
-        lazy = true,
-		-- this plugin needs to run before anything else
+		priority = 1001, -- Must run before everything else!
+		lazy = false,    -- Do NOT lazy-load this!
+		init = function()
+			local rocks_path = vim.fn.stdpath("data") .. "/lazy/luarocks.nvim/.rocks"
+			package.path = package.path .. ";" .. rocks_path .. "/share/lua/5.1/luarocks/vendor/?.lua"
+		end,
 		opts = {
 			rocks = { "magick" },
 		},

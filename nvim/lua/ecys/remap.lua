@@ -1,59 +1,34 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Project View (Netrw)" })
 
-vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
-vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selection down" })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selection up" })
 
-vim.keymap.set("n", "J", "mzJ`z")
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
-vim.keymap.set("n", "<leader>zig", "<cmd>LspRestart<cr>")
+vim.keymap.set("n", "J", "mzJ`z", { desc = "Join line (keep cursor)" })
+vim.keymap.set("n", "n", "nzzzv", { desc = "Next search result (centered)" })
+vim.keymap.set("n", "N", "Nzzzv", { desc = "Prev search result (centered)" })
+vim.keymap.set("n", "<leader>zig", "<cmd>LspRestart<cr>", { desc = "LSP Restart" })
 
 -- greatest remap ever
-vim.keymap.set("x", "<leader>p", [["_dP]])
-vim.keymap.set({ "n", "v" }, "<leader>d", '"_d')
-vim.keymap.set({ "n", "v" }, "<leader>y", '"+y')
+vim.keymap.set("x", "<leader>p", [["_dP]], { desc = "Paste without overwriting register" })
+vim.keymap.set({ "n", "v" }, "<leader>d", '"_d', { desc = "Delete without copying" })
+vim.keymap.set({ "n", "v" }, "<leader>y", '"+y', { desc = "Copy to clipboard" })
 
 -- linebreaks
-vim.keymap.set({ "n", "v" }, "j", 'gj')
-vim.keymap.set({ "n", "v" }, "k", 'gk')
--- vim.keymap.set({ "n", "v" }, "0", "g0")
--- vim.keymap.set({ "n", "v" }, "^", "g^")
--- vim.keymap.set({ "n", "v" }, "_", "g_")
--- vim.keymap.set({ "n", "v" }, "c0", "cg0")
--- vim.keymap.set({ "n", "v" }, "c^", "cg^")
--- vim.keymap.set({ "n", "v" }, "c_", "cg_")
--- vim.keymap.set({ "n", "v" }, "d0", "dg0")
--- vim.keymap.set({ "n", "v" }, "d^", "dg^")
--- vim.keymap.set({ "n", "v" }, "d_", "dg_")
+vim.keymap.set({ "n", "v" }, "j", 'gj', { desc = "Move down visual line" })
+vim.keymap.set({ "n", "v" }, "k", 'gk', { desc = "Move up visual line" })
 
 vim.keymap.set("n", "Q", "<nop>")
 vim.keymap.set("n", "<F1>", "<nop>")
 vim.keymap.set("n", "Q:", "q:")
 vim.keymap.set("n", "q:", "<nop>")
--- vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
--- vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
--- vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
--- vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
--- vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
--- vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+vim.keymap.set("n", "<leader>x", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]], { desc = "Search/Replace word under cursor" })
 
-vim.keymap.set("n", "<leader>x", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
--- vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
-
--- vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Oreturn err<Esc>")
---
--- vim.keymap.set("n", "<leader>ea", 'oassert.NoError(err, "")<Esc>F";a')
---
--- vim.keymap.set("n", "<leader>ef", 'oif err != nil {<CR>}<Esc>Olog.Fatalf("error: %s\\n", err.Error())<Esc>jj')
---
--- vim.keymap.set("n", "<leader>el", 'oif err != nil {<CR>}<Esc>O.logger.Error("error", "error", err)<Esc>F.;i')
-
-vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/lazy/plugins.lua<CR>")
-vim.keymap.set("n", "<leader>vps", "<cmd>e ~/.config/nvim/lua/ecys/set.lua<CR>")
-vim.keymap.set("n", "<leader>vpr", "<cmd>e ~/.config/nvim/lua/ecys/remap.lua<CR>")
-vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>")
+vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/lazy/plugins.lua<CR>", { desc = "Edit lazy plugins config" })
+vim.keymap.set("n", "<leader>vps", "<cmd>e ~/.config/nvim/lua/ecys/set.lua<CR>", { desc = "Edit settings config" })
+vim.keymap.set("n", "<leader>vpr", "<cmd>e ~/.config/nvim/lua/ecys/remap.lua<CR>", { desc = "Edit remaps config" })
+vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>", { desc = "Make it rain (cellular animation)" })
 
 vim.keymap.set("n", "<leader><leader>", function()
 	vim.cmd("so")
@@ -82,13 +57,13 @@ end, { silent = true })
 -- Alternate file
 vim.keymap.set("n", "<leader><leader>", function()
 	vim.cmd("silent! e #")
-end, { silent = true })
+end, { desc = "Alternate file", silent = true })
 
 -- Window switching
 vim.keymap.set("n", "<A-h>", "<C-w>h", { desc = "Move to left window" })
 vim.keymap.set("n", "<A-j>", "<C-w>j", { desc = "Move to down window" })
 vim.keymap.set("n", "<A-k>", "<C-w>k", { desc = "Move to up window" })
-vim.keymap.set("n", "<A-l>", "<C-w>l", { desc = "Move to ight window" })
+vim.keymap.set("n", "<A-l>", "<C-w>l", { desc = "Move to right window" })
 
 -- Use <CR> to fold when in normal mode
 -- To see help about folds use `:help fold`
@@ -105,27 +80,25 @@ vim.keymap.set("n", "<C-CR>", function()
 end, { desc = "[P]Toggle fold" })
 
 -- Quick write
--- vim.keymap.set("n", "<C-s>", vim.cmd.write)
-vim.keymap.set("n", "<F2>", vim.cmd.write)
-vim.keymap.set("i", "<F2>", vim.cmd.write)
+vim.keymap.set("n", "<F2>", vim.cmd.write, { desc = "Save file" })
+vim.keymap.set("i", "<F2>", vim.cmd.write, { desc = "Save file" })
 
 -- linewrap
 vim.keymap.set({ "n", "i", "v" }, "<C-l>", function()
 	vim.opt.wrap = not vim.opt.wrap:get()
-end)
+end, { desc = "Toggle line wrap" })
 
 -- word del insert mode
-vim.keymap.set("i", "<C-BS>", vim.cmd.write)
-vim.keymap.set("i", "<C-BS>", "<C-w>")
-vim.keymap.set("i", "<C-Del>", "<C-o>dw")
+vim.keymap.set("i", "<C-BS>", "<C-w>", { desc = "Delete word backward" })
+vim.keymap.set("i", "<C-Del>", "<C-o>dw", { desc = "Delete word forward" })
 
 -- spell corrector is
-vim.keymap.set("n", "<C-S-X>", "i<C-x>s")
-vim.keymap.set("i", "<C-X>", "<C-x>s")
+vim.keymap.set("n", "<C-S-X>", "i<C-x>s", { desc = "Spell check correction" })
+vim.keymap.set("i", "<C-X>", "<C-x>s", { desc = "Spell check correction" })
 
 -- movement
-vim.keymap.set("i", "<C-A>", "<Home>")
-vim.keymap.set("i", "<C-E>", "<End>")
+vim.keymap.set("i", "<C-A>", "<Home>", { desc = "Move to start of line" })
+vim.keymap.set("i", "<C-E>", "<End>", { desc = "Move to end of line" })
 
 vim.keymap.set({ "n", "i" }, "<M-v>", function()
 	local pasted_image = require("img-clip").paste_image()
@@ -175,38 +148,12 @@ vim.keymap.set("n", "<leader>if", function()
 	end
 end, { desc = "[P](macOS) Open image under cursor in Finder" })
 
-vim.keymap.set("n", "<leader>bd", vim.cmd.Bdelete)
--- vim.keymap.set("n", "<C-[>", "<nop>") -- this shouldnt be there
-vim.keymap.set("n", "<S-Tab>", vim.cmd.bprev)
-vim.keymap.set("n", "<Tab>", vim.cmd.bnext)
+vim.keymap.set("n", "<leader>bd", vim.cmd.Bdelete, { desc = "Close current buffer" })
+vim.keymap.set("n", "<S-Tab>", vim.cmd.bprev, { desc = "Previous buffer" })
+vim.keymap.set("n", "<Tab>", vim.cmd.bnext, { desc = "Next buffer" })
 
--- -- sessions
--- -- load the session for the current directory
--- vim.keymap.set("n", "<leader>ss", function() require("persistence").load() end)
--- -- select a session to load
--- vim.keymap.set("n", "<leader>sS", function() require("persistence").select() end)
--- -- load the last session
--- vim.keymap.set("n", "<leader>sl", function() require("persistence").load({ last = true }) end)
--- -- stop Persistence => session won't be saved on exit
--- vim.keymap.set("n", "<leader>sq", function() require("persistence").stop() end)
-
--- function delete_current_session()
---   local M = require("persistence")
---   local sfile = M.current()
---   if sfile and vim.loop.fs_stat(sfile) ~= 0 then
---     M.stop()
---     vim.fn.system("rm " .. vim.fn.fnameescape(sfile))
---   end
--- end
-
--- I think this is not vim philography.
--- vim.keymap.set("i", "<C-k>", "<Esc>gka")
--- vim.keymap.set("i", "<C-j>", "<Esc>gja")
-
-vim.keymap.set("n", "[t", vim.cmd.tabprev)
-vim.keymap.set("n", "]t", vim.cmd.tabnext)
-
--- vim.keymap.set('c', '<Esc>', '<C-c>') -- Does not work =(
+vim.keymap.set("n", "[t", vim.cmd.tabprev, { desc = "Previous tab" })
+vim.keymap.set("n", "]t", vim.cmd.tabnext, { desc = "Next tab" })
 
 ---------
 -- LSP --
@@ -215,22 +162,18 @@ vim.keymap.set("n", "]t", vim.cmd.tabnext)
 vim.api.nvim_create_autocmd("LspAttach", {
 	desc = "LSP actions",
 	callback = function(event)
-		local opts = { buffer = event.buf }
-
-		vim.keymap.set("n", "<leader>K", "<cmd>lua vim.lsp.buf.hover()<cr>", opts)
-		vim.keymap.set("n", "<leader>gd", "<cmd>lua vim.lsp.buf.definition()<cr>", opts)
-		vim.keymap.set("n", "<leader>gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", opts)
-		vim.keymap.set("n", "<leader>gi", "<cmd>lua vim.lsp.buf.implementation()<cr>", opts)
-		vim.keymap.set("n", "<leader>go", "<cmd>lua vim.lsp.buf.type_definition()<cr>", opts)
-		vim.keymap.set("n", "<leader>gr", "<cmd>lua vim.lsp.buf.references()<cr>", opts)
-		vim.keymap.set("n", "<leader>gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", opts)
-		vim.keymap.set("n", "<leader><F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", opts)
-		-- vim.keymap.set({ "n", "x" }, "<F3>", "<cmd>lua vim.lsp.buf.format({async = true})<cr>", opts)
-		vim.keymap.set("n", "<leader><F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
-		vim.keymap.set("n", "[e", vim.diagnostic.goto_prev, opts)
-		vim.keymap.set("n", "]e", vim.diagnostic.goto_next, opts)
-		vim.keymap.set("n", "<leader>pe", vim.diagnostic.open_float, opts)
-		-- vim.keymap.set({ "n", "v" }, "<leader>l", vim.lsp.codelens.run, opts)
+		vim.keymap.set("n", "<leader>K", "<cmd>lua vim.lsp.buf.hover()<cr>", { buffer = event.buf, desc = "LSP hover information" })
+		vim.keymap.set("n", "<leader>gd", "<cmd>lua vim.lsp.buf.definition()<cr>", { buffer = event.buf, desc = "LSP go to definition" })
+		vim.keymap.set("n", "<leader>gD", "<cmd>lua vim.lsp.buf.declaration()<cr>", { buffer = event.buf, desc = "LSP go to declaration" })
+		vim.keymap.set("n", "<leader>gi", "<cmd>lua vim.lsp.buf.implementation()<cr>", { buffer = event.buf, desc = "LSP go to implementation" })
+		vim.keymap.set("n", "<leader>go", "<cmd>lua vim.lsp.buf.type_definition()<cr>", { buffer = event.buf, desc = "LSP go to type definition" })
+		vim.keymap.set("n", "<leader>gr", "<cmd>lua vim.lsp.buf.references()<cr>", { buffer = event.buf, desc = "LSP show references" })
+		vim.keymap.set("n", "<leader>gs", "<cmd>lua vim.lsp.buf.signature_help()<cr>", { buffer = event.buf, desc = "LSP signature help" })
+		vim.keymap.set("n", "<leader><F2>", "<cmd>lua vim.lsp.buf.rename()<cr>", { buffer = event.buf, desc = "LSP rename symbol" })
+		vim.keymap.set("n", "<leader><F4>", "<cmd>lua vim.lsp.buf.code_action()<cr>", { buffer = event.buf, desc = "LSP code action" })
+		vim.keymap.set("n", "[e", vim.diagnostic.goto_prev, { buffer = event.buf, desc = "Go to previous diagnostic" })
+		vim.keymap.set("n", "]e", vim.diagnostic.goto_next, { buffer = event.buf, desc = "Go to next diagnostic" })
+		vim.keymap.set("n", "<leader>pe", vim.diagnostic.open_float, { buffer = event.buf, desc = "Open diagnostic details float" })
 	end,
 })
 vim.keymap.set("i", "<Esc>", "<Esc>l", { noremap = true, silent = true })
