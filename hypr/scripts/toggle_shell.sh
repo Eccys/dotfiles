@@ -15,6 +15,7 @@ CURRENT_TARGET=$(readlink "$LINK_TARGET" || echo "")
 if [[ "$CURRENT_TARGET" == *"shell_quickshell.conf"* ]]; then
     # Switch to Modus
     ln -sf "$CONFIG_DIR/shell_modus.conf" "$LINK_TARGET"
+    ln -sf "$CONFIG_DIR/submap_modus.conf" "$CONFIG_DIR/submap.conf"
     
     # Kill quickshell and related daemons
     pkill -f "quickshell"
@@ -36,6 +37,7 @@ if [[ "$CURRENT_TARGET" == *"shell_quickshell.conf"* ]]; then
 else
     # Switch to Quickshell
     ln -sf "$CONFIG_DIR/shell_quickshell.conf" "$LINK_TARGET"
+    ln -sf "$CONFIG_DIR/submap_quickshell.conf" "$CONFIG_DIR/submap.conf"
     
     # Kill Modus and its components
     pkill -f -i "modus"
