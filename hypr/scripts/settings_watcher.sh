@@ -10,7 +10,7 @@ CONF_DIR="$HOME/.config/hypr/config"
 SETTINGS_CONF="$CONF_DIR/settings.conf"
 AUTOSTART_CONF="$CONF_DIR/autostart.conf"
 ENV_CONF="$CONF_DIR/env.conf"
-KEYBINDS_CONF="$CONF_DIR/keybindings.conf"
+KEYBINDS_CONF="$CONF_DIR/keybindings"
 MONITORS_CONF="$CONF_DIR/monitors.conf"
 
 ZSH_RC="$HOME/.zshrc"
