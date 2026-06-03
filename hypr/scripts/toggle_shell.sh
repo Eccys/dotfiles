@@ -49,7 +49,6 @@ else
     quickshell -p "$HOME/.config/hypr/scripts/quickshell/Floating.qml" &
     quickshell -p "$HOME/.config/hypr/scripts/quickshell/Shell.qml" &
     python3 "$HOME/.config/hypr/scripts/quickshell/focustime/focus_daemon.py" &
-    "$HOME/.config/hypr/scripts/quickshell/focustime/launch_daemon.sh" &
     "$HOME/.config/hypr/scripts/settings_watcher.sh" &
     
     # Start Quickshell OSD and volume listener
