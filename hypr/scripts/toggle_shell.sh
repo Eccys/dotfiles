@@ -20,22 +20,33 @@ if [[ "$CURRENT_TARGET" == *"shell_quickshell.conf"* ]]; then
     pkill -f "quickshell"
     pkill -f "qs_manager.sh"
     pkill -f "focus_daemon.py"
+    pkill -f "settings_watcher.sh"
     
     # Reload hyprland to apply new rules, autostarts, and keybinds
     hyprctl reload
     
-    notify-send "Shell Switched" "Loaded Modus Shell"
+    # Start Modus
+    (cd "$HOME/.config/Modus" && source .venv/bin/activate && python main.py) > /tmp/modus.log 2>&1 &
+    
+    notify-send "Shell Switched" "Loaded Modus Shell" || true
 else
     # Switch to Quickshell
     ln -sf "$CONFIG_DIR/shell_quickshell.conf" "$LINK_TARGET"
     
     # Kill Modus and its components
-    # Modus sets its proctitle to "Modus"
-    killall Modus || pkill -f "python main.py"
-    pkill -f "awww-daemon"
+    pkill -f "Modus"
+    pkill -f "python.*main.py"
     
     # Reload hyprland to apply quickshell config
     hyprctl reload
     
-    notify-send "Shell Switched" "Loaded Quickshell"
+    # Start Quickshell
+    quickshell -p "$HOME/.config/hypr/scripts/quickshell/Main.qml" &
+    quickshell -p "$HOME/.config/hypr/scripts/quickshell/Floating.qml" &
+    quickshell -p "$HOME/.config/hypr/scripts/quickshell/Shell.qml" &
+    python3 "$HOME/.config/hypr/scripts/quickshell/focustime/focus_daemon.py" &
+    "$HOME/.config/hypr/scripts/quickshell/focustime/launch_daemon.sh" &
+    "$HOME/.config/hypr/scripts/settings_watcher.sh" &
+    
+    notify-send "Shell Switched" "Loaded Quickshell" || true
 fi
