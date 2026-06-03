@@ -22,6 +22,10 @@ if [[ "$CURRENT_TARGET" == *"shell_quickshell.conf"* ]]; then
     pkill -f "focus_daemon.py"
     pkill -f "settings_watcher.sh"
     
+    # Kill quickshell OSD and volume listener
+    pkill -f "volume_listener.sh"
+    pkill -f "swayosd-server"
+    
     # Reload hyprland to apply new rules, autostarts, and keybinds
     hyprctl reload
     
@@ -34,7 +38,7 @@ else
     ln -sf "$CONFIG_DIR/shell_quickshell.conf" "$LINK_TARGET"
     
     # Kill Modus and its components
-    pkill -f "Modus"
+    pkill -f -i "modus"
     pkill -f "python.*main.py"
     
     # Reload hyprland to apply quickshell config
@@ -47,6 +51,10 @@ else
     python3 "$HOME/.config/hypr/scripts/quickshell/focustime/focus_daemon.py" &
     "$HOME/.config/hypr/scripts/quickshell/focustime/launch_daemon.sh" &
     "$HOME/.config/hypr/scripts/settings_watcher.sh" &
+    
+    # Start Quickshell OSD and volume listener
+    swayosd-server --top-margin 0.9 --style "$HOME/.config/swayosd/style.css" &
+    "$HOME/.config/hypr/scripts/volume_listener.sh" &
     
     notify-send "Shell Switched" "Loaded Quickshell" || true
 fi
