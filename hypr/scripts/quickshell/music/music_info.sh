@@ -40,12 +40,16 @@ if [ "$STATUS" = "Playing" ] || [ "$STATUS" = "Paused" ]; then
     displayBlur="$PLACEHOLDER"
     displayGrad="linear-gradient(45deg, #cba6f7, #89b4fa, #f38ba8, #cba6f7)"
     displayText="#cdd6f4"
+    hasArt="false"
 
     # --- 4. ASYNC BACKGROUND LOGIC ---
     if [ -f "$finalArt" ] && [ -s "$finalArt" ]; then
         displayArt="$finalArt"
         if [ -f "$blurPath" ]; then displayBlur="$blurPath"; fi
-        if [ -f "$colorPath" ]; then displayGrad=$(cat "$colorPath"); fi
+        if [ -f "$colorPath" ]; then 
+            displayGrad=$(cat "$colorPath")
+            hasArt="true"
+        fi
         if [ -f "$textPath" ]; then displayText=$(cat "$textPath"); fi
     else
         if [ ! -f "$lockFile" ] && [ -n "$rawUrl" ]; then
@@ -175,6 +179,7 @@ if [ "$STATUS" = "Playing" ] || [ "$STATUS" = "Paused" ]; then
         --arg devIcon "$dev_icon" \
         --arg devName "$dev_name" \
         --arg finalArt "$displayArt" \
+        --argjson hasArt "$hasArt" \
         '{
             title: $title,
             artist: $artist,
@@ -192,7 +197,8 @@ if [ "$STATUS" = "Playing" ] || [ "$STATUS" = "Paused" ]; then
             textColor: $txtColor,
             deviceIcon: $devIcon,
             deviceName: $devName,
-            artUrl: $finalArt
+            artUrl: $finalArt,
+            hasArt: $hasArt
         }'
 
 else
@@ -233,6 +239,7 @@ else
         textColor: "#cdd6f4",
         deviceIcon: "󰓃",
         deviceName: "Speaker",
-        artUrl: $placeholder
+        artUrl: $placeholder,
+        hasArt: false
     }'
 fi

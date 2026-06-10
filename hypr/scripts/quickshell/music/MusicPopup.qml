@@ -545,6 +545,7 @@ Item {
                         Behavior on scale { NumberAnimation { duration: 800; easing.type: Easing.OutElastic; easing.overshoot: 1.2 } }
 
                         Rectangle {
+                            id: vinylCircle
                             anchors.fill: parent
                             radius: root.s(110)
                             color: root.surface1
@@ -592,7 +593,7 @@ Item {
                                     source: artImg
                                     maskEnabled: true
                                     maskSource: maskRect
-                                    opacity: artImg.status === Image.Ready ? 1.0 : 0.0
+                                    opacity: (artImg.status === Image.Ready && root.musicData.hasArt) ? 1.0 : 0.0
                                     Behavior on opacity { NumberAnimation { duration: 800 } }
                                 }
                                 
@@ -601,14 +602,39 @@ Item {
                                     anchors.fill: parent
                                     radius: width / 2
                                     color: Qt.rgba(root.mauve.r, root.mauve.g, root.mauve.b, 0.2)
-                                    opacity: artImg.status === Image.Ready ? 1.0 : 0.0
+                                    opacity: (artImg.status === Image.Ready && root.musicData.hasArt) ? 1.0 : 0.0
                                     Behavior on opacity { NumberAnimation { duration: 800 } }
+                                }
+
+                                // App Icon fallback when there is no cover art
+                                Item {
+                                    anchors.fill: parent
+                                    anchors.margins: root.s(45)
+                                    visible: !root.musicData.hasArt
+
+                                    Image {
+                                        id: appIconImg
+                                        anchors.fill: parent
+                                        fillMode: Image.PreserveAspectFit
+                                        source: {
+                                            if (!root.musicData.playerName) return "image://icon/music"
+                                            return "image://icon/" + root.musicData.playerName
+                                        }
+                                        asynchronous: true
+                                        smooth: true
+                                        mipmap: true
+                                        
+                                        // Keep the app icon upright while the outer vinyl spins
+                                        rotation: -vinylCircle.rotation
+                                    }
                                 }
 
                                 Rectangle {
                                     width: root.s(40); height: root.s(40)
                                     radius: root.s(20); color: "#000000"
-                                    opacity: 0.8; anchors.centerIn: parent
+                                    opacity: root.musicData.hasArt ? 0.8 : 0.0
+                                    anchors.centerIn: parent
+                                    Behavior on opacity { NumberAnimation { duration: 500 } }
                                 }
                             }
                             
