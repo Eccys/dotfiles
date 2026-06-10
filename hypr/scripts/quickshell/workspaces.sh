@@ -11,8 +11,19 @@ for pid in $(pgrep -f "quickshell/workspaces.sh"); do
     fi
 done
 
-# Cleanly kill immediate children (like socat) when the script exits normally
+# Clean up any leftover pending file on start
+PENDING_FILE="/tmp/qs_ws_pending_$$"
+rm -f "$PENDING_FILE"
+
+# Background worker that handles updates with proper debouncing (completely forkless)
+# The background worker will be defined and started below print_workspaces
+# to ensure it can access the print_workspaces function on start.
+WORKER_PID=""
+
+
 cleanup() {
+    rm -f "$PENDING_FILE"
+    kill $WORKER_PID 2>/dev/null
     pkill -P $$ 2>/dev/null
 }
 trap cleanup EXIT SIGTERM SIGINT
@@ -73,6 +84,29 @@ print_workspaces() {
     mv /tmp/qs_workspaces.tmp /tmp/qs_workspaces.json
 }
 
+# Background worker that handles updates with proper debouncing (completely forkless)
+worker() {
+    while true; do
+        if [ -f "$PENDING_FILE" ]; then
+            if read -r PENDING_TIME < "$PENDING_FILE" 2>/dev/null; then
+                NOW=${EPOCHREALTIME//[!0-9]/}
+                PENDING_TIME_CLEAN=${PENDING_TIME//[!0-9]/}
+                if [ -n "$NOW" ] && [ -n "$PENDING_TIME_CLEAN" ]; then
+                    DIFF=$(( NOW - PENDING_TIME_CLEAN ))
+                    # 120ms debounce window (120000 microseconds)
+                    if [ $DIFF -gt 120000 ]; then
+                        rm -f "$PENDING_FILE"
+                        print_workspaces
+                    fi
+                fi
+            fi
+        fi
+        sleep 0.05
+    done
+}
+worker &
+WORKER_PID=$!
+
 # Print initial state
 print_workspaces
 
@@ -81,19 +115,16 @@ print_workspaces
 # Listen to Hyprland socket wrapped in an infinite loop
 # ============================================================================
 while true; do
-    socat -u UNIX-CONNECT:$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock - | while read -r line; do
+    socat -u UNIX-CONNECT:$XDG_RUNTIME_DIR/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock - 2>/dev/null | while read -r line; do
         case "$line" in
-            workspace*|focusedmon*|activewindow*|createwindow*|closewindow*|movewindow*|destroyworkspace*)
-                
-                # -> THE FIX <-
-                # Hyprland emits HUNDREDS of events a second when you move/resize windows.
-                # This reads and discards all subsequent events arriving within a 50ms window.
-                # It bundles the storm into a single UI update, completely preventing CPU clogging!
-                while read -t 0.05 -r extra_line; do
-                    continue
-                done
-
+            workspace*|focusedmon*|destroyworkspace*)
+                # Instant update for workspace changes!
+                rm -f "$PENDING_FILE"
                 print_workspaces
+                ;;
+            activewindow*|createwindow*|closewindow*|movewindow*)
+                # Debounce window drag/resize and active window storms
+                echo "${EPOCHREALTIME//[!0-9]/}" > "$PENDING_FILE"
                 ;;
         esac
     done
