@@ -515,6 +515,7 @@ Item {
                             }
 
                             Text {
+                                id: appText
                                 Layout.fillWidth: true
                                 text: model.name
                                 font.family: "JetBrains Mono"
@@ -525,7 +526,7 @@ Item {
                                 verticalAlignment: Text.AlignVCenter
                                 
                                 property real textShift: index === appList.currentIndex ? window.s(6) : 0
-                                transform: Translate { x: textShift }
+                                transform: Translate { x: appText.textShift }
                                 
                                 Behavior on textShift { 
                                     NumberAnimation { duration: 500; easing.type: Easing.OutExpo } 
