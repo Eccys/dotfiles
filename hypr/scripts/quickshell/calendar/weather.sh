@@ -21,6 +21,8 @@ fi
 KEY="$OPENWEATHER_KEY"
 ID="$OPENWEATHER_CITY_ID"
 UNIT="${OPENWEATHER_UNIT:-metric}" # Default to metric if not set
+AUTO_UPDATE="${OPENWEATHER_AUTO_UPDATE:-true}"
+INTERVAL_MINS="${OPENWEATHER_UPDATE_INTERVAL:-15}"
 
 # Determine temperature symbol based on unit
 case "$UNIT" in
@@ -232,13 +234,8 @@ get_data() {
         echo "{ \"current_temp\": \"${c_temp}\", \"current_icon\": \"${c_icon}\", \"current_hex\": \"${c_hex}\", \"forecast\": ${final_json} }" > "${json_file}"
     fi
 }
-
-# --- MODE HANDLING ---
-if [[ "$1" == "--getdata" ]]; then
-    get_data
-
-elif [[ "$1" == "--json" ]]; then
-    CACHE_LIMIT=900         # 15 minutes for valid working data
+check_cache() {
+    CACHE_LIMIT=$((INTERVAL_MINS * 60))
     PENDING_RETRY_LIMIT=3600 # 1 hour for invalid/activating keys
 
     if [ -f "$json_file" ]; then
@@ -247,23 +244,34 @@ elif [[ "$1" == "--json" ]]; then
         diff=$((current_time - file_time))
         
         if grep -q '"desc": "No API Key"' "$json_file"; then
-            # Key is pending/invalid. Check once an hour.
-            if [ $diff -gt $PENDING_RETRY_LIMIT ]; then
-                touch "$json_file" # Bump file timestamp slightly to avoid spamming processes
-                get_data &
+            # Key is pending/invalid. Check once an hour if auto update is enabled.
+            if [[ "$AUTO_UPDATE" == "true" ]]; then
+                if [ $diff -gt $PENDING_RETRY_LIMIT ]; then
+                    touch "$json_file" # Bump file timestamp slightly to avoid spamming processes
+                    (get_data >/dev/null 2>&1) & disown
+                fi
             fi
         else
-            # Normal working API key. Check every 15 mins.
-            if [ $diff -gt $CACHE_LIMIT ]; then
-                touch "$json_file"
-                get_data &
+            # Normal working API key. Check every CACHE_LIMIT seconds if auto update is enabled.
+            if [[ "$AUTO_UPDATE" == "true" ]]; then
+                if [ $diff -gt $CACHE_LIMIT ]; then
+                    touch "$json_file"
+                    (get_data >/dev/null 2>&1) & disown
+                fi
             fi
         fi
-        cat "$json_file"
     else
         get_data
-        cat "$json_file"
     fi
+}
+
+# --- MODE HANDLING ---
+if [[ "$1" == "--getdata" ]]; then
+    get_data
+
+elif [[ "$1" == "--json" ]]; then
+    check_cache
+    cat "$json_file"
 
 elif [[ "$1" == "--view-listener" ]]; then
     if [ ! -f "$view_file" ]; then echo "0" > "$view_file"; fi
@@ -287,36 +295,28 @@ elif [[ "$1" == "--nav" ]]; then
     fi
 
 elif [[ "$1" == "--icon" ]]; then
+    check_cache
     cat "$json_file" | jq -r '.forecast[0].icon'
 
 elif [[ "$1" == "--temp" ]]; then 
+    check_cache
     t=$(cat "$json_file" | jq -r '.forecast[0].max')
     echo "${t}${UNIT_SYM}"
 
 elif [[ "$1" == "--hex" ]]; then 
+    check_cache
     cat "$json_file" | jq -r '.forecast[0].hex'
 
 elif [[ "$1" == "--current-icon" ]]; then
-    icon=$(cat "$json_file" | jq -r '.current_icon // empty')
-    if [[ -z "$icon" || "$icon" == "null" ]]; then 
-        get_data
-        icon=$(cat "$json_file" | jq -r '.current_icon')
-    fi
-    echo "$icon"
+    check_cache
+    cat "$json_file" | jq -r '.current_icon // empty'
 
 elif [[ "$1" == "--current-temp" ]]; then 
+    check_cache
     t=$(cat "$json_file" | jq -r '.current_temp // empty')
-    if [[ -z "$t" || "$t" == "null" ]]; then 
-        get_data
-        t=$(cat "$json_file" | jq -r '.current_temp')
-    fi
     echo "${t}${UNIT_SYM}"
 
 elif [[ "$1" == "--current-hex" ]]; then
-    hex=$(cat "$json_file" | jq -r '.current_hex // empty')
-    if [[ -z "$hex" || "$hex" == "null" ]]; then 
-        get_data
-        hex=$(cat "$json_file" | jq -r '.current_hex')
-    fi
-    echo "$hex"
+    check_cache
+    cat "$json_file" | jq -r '.current_hex // empty'
 fi
