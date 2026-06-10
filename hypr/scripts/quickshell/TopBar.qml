@@ -546,6 +546,7 @@ Variants {
 
             Process {
                 id: weatherPoller
+                running: true
                 command: ["bash", "-c", `
                     echo "$(~/.config/hypr/scripts/quickshell/calendar/weather.sh --current-icon)"
                     echo "$(~/.config/hypr/scripts/quickshell/calendar/weather.sh --current-temp)"
@@ -562,7 +563,7 @@ Variants {
                     }
                 }
             }
-            Timer { interval: 150000; running: true; repeat: true; triggeredOnStart: true; onTriggered: { weatherPoller.running = false; weatherPoller.running = true; } }
+            Timer { interval: 150000; running: true; repeat: true; onTriggered: { weatherPoller.running = false; weatherPoller.running = true; } }
 
 
             Timer {
@@ -655,7 +656,9 @@ Variants {
                                 id: helpMouse
                                 anchors.fill: parent
                                 hoverEnabled: true
-                                onClicked: Quickshell.execDetached(["bash", "-c", "~/.config/hypr/scripts/qs_manager.sh toggle guide"])
+                                onClicked: {
+                                    if (root && root.mainWidget) root.mainWidget.handleCommand("toggle", "guide", "");
+                                }
                             }
                         }
 
@@ -680,7 +683,9 @@ Variants {
                                 id: searchMouse
                                 anchors.fill: parent
                                 hoverEnabled: true
-                                onClicked: Quickshell.execDetached(["bash", "-c", "~/.config/hypr/scripts/qs_manager.sh toggle applauncher"])
+                                onClicked: {
+                                    if (root && root.mainWidget) root.mainWidget.handleCommand("toggle", "applauncher", "");
+                                }
                             }
                         }
 
@@ -705,7 +710,9 @@ Variants {
                                 id: settingsMouse
                                 anchors.fill: parent
                                 hoverEnabled: true
-                                onClicked: Quickshell.execDetached(["bash", "-c", "~/.config/hypr/scripts/qs_manager.sh toggle settings"])
+                                onClicked: {
+                                    if (root && root.mainWidget) root.mainWidget.handleCommand("toggle", "settings", "");
+                                }
                             }
                         }
 
@@ -772,7 +779,7 @@ Variants {
                                 onClicked: {
                                     barWindow.updateAvailable = false;
                                     barWindow.forceUpdateShow = false;
-                                    Quickshell.execDetached(["bash", "-c", "~/.config/hypr/scripts/qs_manager.sh toggle updater"]);
+                                    if (root && root.mainWidget) root.mainWidget.handleCommand("toggle", "updater", "");
                                 }
                             }
                         }
@@ -906,7 +913,24 @@ Variants {
                                     id: wsPillMouse
                                     hoverEnabled: true
                                     anchors.fill: parent
-                                    onClicked: Quickshell.execDetached(["bash", "-c", "~/.config/hypr/scripts/qs_manager.sh " + wsName])
+                                    onClicked: {
+                                        let currentActiveWs = "";
+                                        for (let i = 0; i < workspacesModel.count; i++) {
+                                            if (workspacesModel.get(i).wsState === "active") {
+                                                currentActiveWs = workspacesModel.get(i).wsId;
+                                                break;
+                                            }
+                                        }
+                                        let cmd = (currentActiveWs === wsName) ? "previous" : wsName;
+
+                                        // Close open main widgets
+                                        if (root && root.mainWidget) {
+                                            root.mainWidget.handleCommand("close", "", "");
+                                        }
+
+                                        // Instantly switch workspace
+                                        Quickshell.execDetached(["hyprctl", "dispatch", "workspace", cmd]);
+                                    }
                                 }
                             }
                         }
@@ -958,7 +982,9 @@ Variants {
                                 width: infoLayout.width
                                 height: innerMediaLayout.height
                                 hoverEnabled: true
-                                onClicked: Quickshell.execDetached(["bash", "-c", "~/.config/hypr/scripts/qs_manager.sh toggle music"])
+                                onClicked: {
+                                    if (root && root.mainWidget) root.mainWidget.handleCommand("toggle", "music", "");
+                                }
                                 
                                 Row {
                                     id: infoLayout
@@ -1098,7 +1124,9 @@ Variants {
                         id: centerMouse
                         anchors.fill: parent
                         hoverEnabled: true
-                        onClicked: Quickshell.execDetached(["bash", "-c", "~/.config/hypr/scripts/qs_manager.sh toggle calendar"])
+                        onClicked: {
+                            if (root && root.mainWidget) root.mainWidget.handleCommand("toggle", "calendar", "");
+                        }
                     }
 
                     RowLayout {
@@ -1267,6 +1295,7 @@ Variants {
                             property int pillHeight: barWindow.s(34)
 
                             Rectangle {
+                                id: kbPill
                                 property bool isHovered: kbMouse.containsMouse
                                 color: isHovered ? Qt.rgba(mocha.surface1.r, mocha.surface1.g, mocha.surface1.b, 0.6) : Qt.rgba(mocha.surface0.r, mocha.surface0.g, mocha.surface0.b, 0.4)
                                 radius: barWindow.s(10); height: sysLayout.pillHeight;
@@ -1281,9 +1310,9 @@ Variants {
                                 Behavior on color { ColorAnimation { duration: 200 } }
 
                                 property bool initAnimTrigger: false
-                                Timer { running: rightContent.showLayout && !parent.initAnimTrigger; interval: 0; onTriggered: parent.initAnimTrigger = true }
-                                opacity: initAnimTrigger ? 1 : 0
-                                transform: Translate { y: parent.initAnimTrigger ? 0 : barWindow.s(15); Behavior on y { NumberAnimation { duration: 500; easing.type: Easing.OutBack } } }
+                                Timer { running: rightContent.showLayout && !kbPill.initAnimTrigger; interval: 0; onTriggered: kbPill.initAnimTrigger = true }
+                                opacity: kbPill.initAnimTrigger ? 1 : 0
+                                transform: Translate { y: kbPill.initAnimTrigger ? 0 : barWindow.s(15); Behavior on y { NumberAnimation { duration: 500; easing.type: Easing.OutBack } } }
                                 Behavior on opacity { NumberAnimation { duration: 400; easing.type: Easing.OutCubic } }
 
                                 Row { 
@@ -1326,9 +1355,9 @@ Variants {
                                 Behavior on color { ColorAnimation { duration: 200 } }
 
                                 property bool initAnimTrigger: false
-                                Timer { running: rightContent.showLayout && !parent.initAnimTrigger; interval: 50; onTriggered: parent.initAnimTrigger = true }
-                                opacity: initAnimTrigger ? 1 : 0
-                                transform: Translate { y: parent.initAnimTrigger ? 0 : barWindow.s(15); Behavior on y { NumberAnimation { duration: 500; easing.type: Easing.OutBack } } }
+                                Timer { running: rightContent.showLayout && !wifiPill.initAnimTrigger; interval: 50; onTriggered: wifiPill.initAnimTrigger = true }
+                                opacity: wifiPill.initAnimTrigger ? 1 : 0
+                                transform: Translate { y: wifiPill.initAnimTrigger ? 0 : barWindow.s(15); Behavior on y { NumberAnimation { duration: 500; easing.type: Easing.OutBack } } }
                                 Behavior on opacity { NumberAnimation { duration: 400; easing.type: Easing.OutCubic } }
 
                                 Row { 
@@ -1353,7 +1382,13 @@ Variants {
                                         width: Math.min(implicitWidth, barWindow.s(100)); elide: Text.ElideRight 
                                     }
                                 }
-                                MouseArea { id: wifiMouse; hoverEnabled: true; anchors.fill: parent; onClicked: Quickshell.execDetached(["bash", "-c", "~/.config/hypr/scripts/qs_manager.sh toggle network wifi"]) }
+                                MouseArea {
+                                    id: wifiMouse; hoverEnabled: true; anchors.fill: parent;
+                                    onClicked: {
+                                        if (root && root.mainWidget) root.mainWidget.handleCommand("toggle", "network", "wifi");
+                                        Quickshell.execDetached(["nmcli", "device", "wifi", "rescan"]);
+                                    }
+                                }
                             }
 
                             Rectangle {
@@ -1385,9 +1420,9 @@ Variants {
                                 Behavior on color { ColorAnimation { duration: 200 } }
 
                                 property bool initAnimTrigger: false
-                                Timer { running: rightContent.showLayout && !parent.initAnimTrigger; interval: 100; onTriggered: parent.initAnimTrigger = true }
-                                opacity: initAnimTrigger ? 1 : 0
-                                transform: Translate { y: parent.initAnimTrigger ? 0 : barWindow.s(15); Behavior on y { NumberAnimation { duration: 500; easing.type: Easing.OutBack } } }
+                                Timer { running: rightContent.showLayout && !btPill.initAnimTrigger; interval: 100; onTriggered: btPill.initAnimTrigger = true }
+                                opacity: btPill.initAnimTrigger ? 1 : 0
+                                transform: Translate { y: btPill.initAnimTrigger ? 0 : barWindow.s(15); Behavior on y { NumberAnimation { duration: 500; easing.type: Easing.OutBack } } }
                                 Behavior on opacity { NumberAnimation { duration: 400; easing.type: Easing.OutCubic } }
 
                                 Row { 
@@ -1407,10 +1442,16 @@ Variants {
                                         width: Math.min(implicitWidth, barWindow.s(100)); elide: Text.ElideRight 
                                     }
                                 }
-                                MouseArea { id: btMouse; hoverEnabled: true; anchors.fill: parent; onClicked: Quickshell.execDetached(["bash", "-c", "~/.config/hypr/scripts/qs_manager.sh toggle network bt"]) }
+                                MouseArea {
+                                    id: btMouse; hoverEnabled: true; anchors.fill: parent;
+                                    onClicked: {
+                                        if (root && root.mainWidget) root.mainWidget.handleCommand("toggle", "network", "bt");
+                                    }
+                                }
                             }
 
                             Rectangle {
+                                id: volPill
                                 property bool isHovered: volMouse.containsMouse
                                 color: isHovered ? Qt.rgba(mocha.surface1.r, mocha.surface1.g, mocha.surface1.b, 0.6) : Qt.rgba(mocha.surface0.r, mocha.surface0.g, mocha.surface0.b, 0.4)
                                 radius: barWindow.s(10); height: sysLayout.pillHeight;
@@ -1437,9 +1478,9 @@ Variants {
                                 Behavior on color { ColorAnimation { duration: 200 } }
 
                                 property bool initAnimTrigger: false
-                                Timer { running: rightContent.showLayout && !parent.initAnimTrigger; interval: 150; onTriggered: parent.initAnimTrigger = true }
-                                opacity: initAnimTrigger ? 1 : 0
-                                transform: Translate { y: parent.initAnimTrigger ? 0 : barWindow.s(15); Behavior on y { NumberAnimation { duration: 500; easing.type: Easing.OutBack } } }
+                                Timer { running: rightContent.showLayout && !volPill.initAnimTrigger; interval: 150; onTriggered: volPill.initAnimTrigger = true }
+                                opacity: volPill.initAnimTrigger ? 1 : 0
+                                transform: Translate { y: volPill.initAnimTrigger ? 0 : barWindow.s(15); Behavior on y { NumberAnimation { duration: 500; easing.type: Easing.OutBack } } }
                                 Behavior on opacity { NumberAnimation { duration: 400; easing.type: Easing.OutCubic } }
 
                                 Row { 
@@ -1460,10 +1501,16 @@ Variants {
                                         color: barWindow.isSoundActive ? mocha.base : mocha.text; 
                                     }
                                 }
-                                MouseArea { id: volMouse; hoverEnabled: true; anchors.fill: parent; onClicked: Quickshell.execDetached(["bash", "-c", "~/.config/hypr/scripts/qs_manager.sh toggle volume"]) }
+                                MouseArea {
+                                    id: volMouse; hoverEnabled: true; anchors.fill: parent;
+                                    onClicked: {
+                                        if (root && root.mainWidget) root.mainWidget.handleCommand("toggle", "volume", "");
+                                    }
+                                }
                             }
 
                             Rectangle {
+                                id: batPill
                                 property bool isHovered: batMouse.containsMouse
                                 color: isHovered ? Qt.rgba(mocha.surface1.r, mocha.surface1.g, mocha.surface1.b, 0.6) : Qt.rgba(mocha.surface0.r, mocha.surface0.g, mocha.surface0.b, 0.4); 
                                 radius: barWindow.s(10); height: sysLayout.pillHeight;
@@ -1490,9 +1537,9 @@ Variants {
                                 Behavior on color { ColorAnimation { duration: 200 } }
 
                                 property bool initAnimTrigger: false
-                                Timer { running: rightContent.showLayout && !parent.initAnimTrigger; interval: 200; onTriggered: parent.initAnimTrigger = true }
-                                opacity: initAnimTrigger ? 1 : 0
-                                transform: Translate { y: parent.initAnimTrigger ? 0 : barWindow.s(15); Behavior on y { NumberAnimation { duration: 500; easing.type: Easing.OutBack } } }
+                                Timer { running: rightContent.showLayout && !batPill.initAnimTrigger; interval: 200; onTriggered: batPill.initAnimTrigger = true }
+                                opacity: batPill.initAnimTrigger ? 1 : 0
+                                transform: Translate { y: batPill.initAnimTrigger ? 0 : barWindow.s(15); Behavior on y { NumberAnimation { duration: 500; easing.type: Easing.OutBack } } }
                                 Behavior on opacity { NumberAnimation { duration: 400; easing.type: Easing.OutCubic } }
 
                                 Row { 
@@ -1514,7 +1561,12 @@ Variants {
                                         Behavior on color { ColorAnimation { duration: 300 } }
                                     }
                                 }
-                                MouseArea { id: batMouse; hoverEnabled: true; anchors.fill: parent; onClicked: Quickshell.execDetached(["bash", "-c", "~/.config/hypr/scripts/qs_manager.sh toggle battery"]) }
+                                MouseArea {
+                                    id: batMouse; hoverEnabled: true; anchors.fill: parent;
+                                    onClicked: {
+                                        if (root && root.mainWidget) root.mainWidget.handleCommand("toggle", "battery", "");
+                                    }
+                                }
                             }                        
 	         	}
 		    }
