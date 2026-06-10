@@ -283,8 +283,19 @@ Variants {
 
             property bool isMediaActive: barWindow.musicData.status !== "Stopped" && barWindow.musicData.title !== ""
             property bool isWifiOn: barWindow.wifiStatus.toLowerCase() === "enabled" || barWindow.wifiStatus.toLowerCase() === "on"
-            property bool isBtOn: barWindow.btStatus.toLowerCase() === "enabled" || barWindow.btStatus.toLowerCase() === "on"
-            property bool showEthernet: false
+            property bool showEthernet: barWindow.ethStatus === "Connected" || (barWindow.isDesktop && !barWindow.isWifiOn)
+            
+            readonly property string networkPillMode: {
+                if (barWindow.ethStatus === "Connected") return "eth";
+                if (barWindow.isWifiOn) return "wifi";
+                if (barWindow.isDesktop) return "bt";
+                return "wifi";
+            }
+
+            Binding { target: root; property: "isDesktop"; value: barWindow.isDesktop }
+            Binding { target: root; property: "isWifiOn"; value: barWindow.isWifiOn }
+            Binding { target: root; property: "ethStatus"; value: barWindow.ethStatus }
+            Binding { target: root; property: "showEthernet"; value: barWindow.showEthernet }
             
             property bool isSoundActive: !barWindow.isMuted && parseInt(barWindow.volPercent) > 0
             property int batCap: parseInt(barWindow.batPercent) || 0
@@ -1337,12 +1348,16 @@ Variants {
                                 Rectangle {
                                     anchors.fill: parent
                                     radius: barWindow.s(10)
-                                    opacity: barWindow.showEthernet ? (barWindow.ethStatus === "Connected" ? 1.0 : 0.0) : (barWindow.isWifiOn ? 1.0 : 0.0)
+                                    opacity: {
+                                        if (barWindow.networkPillMode === "eth") return 1.0;
+                                        if (barWindow.networkPillMode === "wifi") return barWindow.isWifiOn ? 1.0 : 0.0;
+                                        return barWindow.isBtOn ? 1.0 : 0.0;
+                                    }
                                     Behavior on opacity { NumberAnimation { duration: 300 } }
                                     gradient: Gradient {
                                         orientation: Gradient.Horizontal
-                                        GradientStop { position: 0.0; color: mocha.blue }
-                                        GradientStop { position: 1.0; color: Qt.lighter(mocha.blue, 1.3) }
+                                        GradientStop { position: 0.0; color: barWindow.networkPillMode === "bt" ? mocha.mauve : mocha.blue }
+                                        GradientStop { position: 1.0; color: Qt.lighter(barWindow.networkPillMode === "bt" ? mocha.mauve : mocha.blue, 1.3) }
                                     }
                                 }
 
@@ -1368,25 +1383,42 @@ Variants {
                                     spacing: barWindow.s(8)
                                     Text { 
                                         anchors.verticalCenter: parent.verticalCenter; 
-                                        text: barWindow.showEthernet ? "󰈀" : barWindow.wifiIcon;
+                                        text: {
+                                            if (barWindow.networkPillMode === "eth") return "󰈀";
+                                            if (barWindow.networkPillMode === "wifi") return barWindow.wifiIcon;
+                                            return barWindow.btIcon;
+                                        }
                                         font.family: "Iosevka Nerd Font"; font.pixelSize: barWindow.s(16);
-                                        color: barWindow.showEthernet ? (barWindow.ethStatus === "Connected" ? mocha.base : mocha.subtext0) : (barWindow.isWifiOn ? mocha.base : mocha.subtext0)
+                                        color: {
+                                            if (barWindow.networkPillMode === "eth") return mocha.base;
+                                            if (barWindow.networkPillMode === "wifi") return barWindow.isWifiOn ? mocha.base : mocha.subtext0;
+                                            return barWindow.isBtOn ? mocha.base : mocha.subtext0;
+                                        }
                                     }
                                     Text { 
                                         id: wifiText
                                         anchors.verticalCenter: parent.verticalCenter
-                                        text: barWindow.showEthernet ? barWindow.ethStatus : ((barWindow.isWifiOn ? (barWindow.wifiSsid !== "" ? barWindow.wifiSsid : "On") : "Off"))
+                                        text: {
+                                            if (barWindow.networkPillMode === "eth") return barWindow.ethStatus;
+                                            if (barWindow.networkPillMode === "wifi") return barWindow.isWifiOn ? (barWindow.wifiSsid !== "" ? barWindow.wifiSsid : "On") : "Off";
+                                            return barWindow.isBtOn ? (barWindow.btDevice !== "" ? barWindow.btDevice : "On") : "Off";
+                                        }
                                         visible: text !== ""
                                         font.family: "JetBrains Mono"; font.pixelSize: barWindow.s(13); font.weight: Font.Black;
-                                        color: barWindow.showEthernet ? (barWindow.ethStatus === "Connected" ? mocha.base : mocha.text) : (barWindow.isWifiOn ? mocha.base : mocha.text);
+                                        color: {
+                                            if (barWindow.networkPillMode === "eth") return mocha.base;
+                                            if (barWindow.networkPillMode === "wifi") return barWindow.isWifiOn ? mocha.base : mocha.text;
+                                            return barWindow.isBtOn ? mocha.base : mocha.text;
+                                        }
                                         width: Math.min(implicitWidth, barWindow.s(100)); elide: Text.ElideRight 
                                     }
                                 }
                                 MouseArea {
                                     id: wifiMouse; hoverEnabled: true; anchors.fill: parent;
                                     onClicked: {
-                                        if (root && root.mainWidget) root.mainWidget.handleCommand("toggle", "network", "wifi");
-                                        Quickshell.execDetached(["bash", "-c", "mkdir -p ~/.cache/quickshell/network && echo 'wifi' > ~/.cache/quickshell/network/mode && nmcli device wifi rescan"]);
+                                        let target = barWindow.networkPillMode;
+                                        if (root && root.mainWidget) root.mainWidget.handleCommand("toggle", "network", target);
+                                        Quickshell.execDetached(["bash", "-c", "mkdir -p ~/.cache/quickshell/network && echo '" + target + "' > ~/.cache/quickshell/network/mode" + (target === "wifi" ? " && nmcli device wifi rescan" : "")]);
                                     }
                                 }
                             }

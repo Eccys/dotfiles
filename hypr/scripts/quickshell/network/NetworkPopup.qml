@@ -15,7 +15,14 @@ Item {
         if (visible) {
             window.powerAnimAllowed = false;
             powerAnimBlocker.restart();
-            if (window.activeMode === "wifi") savedNetworksFetcher.running = true;
+            if (window.activeMode === "") {
+                modeReader.running = true;
+            } else {
+                if (window.activeMode === "wifi" && (!root || !root.isWifiOn) && window.btPresent) {
+                    window.activeMode = "bt";
+                }
+                if (window.activeMode === "wifi") savedNetworksFetcher.running = true;
+            }
         } else {
             window.activeMode = "";
         }
@@ -66,7 +73,7 @@ Item {
     readonly property string cacheDir: paths.getCacheDir("network")
     readonly property string modeFilePath: cacheDir + "/mode"
 
-    property bool ethPresent: false
+    property bool ethPresent: root ? root.showEthernet : false
     property bool wifiPresent: false
     property bool btPresent: false
 
@@ -125,6 +132,13 @@ Item {
                     targetMode = mode;
                 }
 
+                if (targetMode === "wifi" && (!root || !root.isWifiOn) && window.btPresent) {
+                    targetMode = "bt";
+                }
+                if (targetMode === "eth" && !window.ethPresent) {
+                    targetMode = (root && root.isWifiOn) ? "wifi" : "bt";
+                }
+
                 if ((targetMode === "eth" && window.ethPresent) || 
                     (targetMode === "wifi" && window.wifiPresent) || 
                     (targetMode === "bt" && window.btPresent)) {
@@ -160,6 +174,9 @@ Item {
         if (window.activeMode === "") {
             modeReader.running = true;
         } else {
+            if (window.activeMode === "wifi" && (!root || !root.isWifiOn) && window.btPresent) {
+                window.activeMode = "bt";
+            }
             if (hasCache) {
                 let validModes = [];
                 if (window.ethPresent) validModes.push("eth");
@@ -572,7 +589,7 @@ Item {
         if (textData === "") { if (!isCache) validateActiveMode(); return; }
         try {
             let data = JSON.parse(textData);
-            window.ethPresent = false;
+            window.ethPresent = (data.present === true) && (root ? root.showEthernet : false);
             let fetchedDevice = data.device || "";
             if (fetchedDevice !== "") window.ethDeviceName = fetchedDevice;
             let fetchedPower = data.power || "off";
