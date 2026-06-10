@@ -448,6 +448,10 @@ PanelWindow {
                 masterWindow.animH = 1;
                 masterWindow.isVisible = false;
 
+                if (widgetStack.currentItem) {
+                    widgetStack.currentItem.visible = false;
+                }
+
                 delayedClear.start();
             }
         } else {
@@ -465,6 +469,10 @@ PanelWindow {
             } else {
                 masterWindow.morphDuration = masterWindow.morphDurationSwitch;
                 masterWindow.disableMorph = false;
+            }
+
+            if (widgetStack.currentItem) {
+                widgetStack.currentItem.visible = false;
             }
 
             Qt.callLater(() => executeSwitch(newWidget, arg, false));

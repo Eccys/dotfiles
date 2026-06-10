@@ -165,6 +165,9 @@ Item {
             if (window.visible) {
                 focusTimer.restart();
                 introPhaseAnim.restart();
+            } else {
+                searchInput.text = "";
+                filterApps("");
             }
         }
     }
