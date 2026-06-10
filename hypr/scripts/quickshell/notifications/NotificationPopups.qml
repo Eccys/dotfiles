@@ -56,10 +56,21 @@ PanelWindow {
     color: "transparent"
 
     width: popupWindow.layoutConfig.w
-    height: Math.min(popupList.contentHeight, Screen.height * 0.8)
+    height: Screen.height * 0.8
+    visible: !!popupWindow.popupModel && (popupWindow.popupModel.count > 0 || clickMaskItem.height > 1)
 
-    Behavior on height {
-        NumberAnimation { duration: 400; easing.type: Easing.OutQuint }
+    mask: Region { item: clickMaskItem }
+
+    Item {
+        id: clickMaskItem
+        anchors.top: parent.top
+        anchors.right: parent.right
+        width: parent.width
+        height: Math.min(popupList.contentHeight, parent.height)
+
+        Behavior on height {
+            NumberAnimation { duration: 400; easing.type: Easing.OutQuint }
+        }
     }
 
     property bool dndEnabled: false
