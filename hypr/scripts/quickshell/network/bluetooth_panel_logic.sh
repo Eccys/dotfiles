@@ -42,23 +42,28 @@ get_audio_profile() {
 }
 
 get_status() {
+    local present=false
     # 1. Zero-latency hardware presence check (Bypasses the 1-second timeout entirely)
-    if ! ls -1d /sys/class/bluetooth/hci* &>/dev/null; then
-        echo "{\"present\":false,\"power\":\"off\",\"connected\":[],\"devices\":[]}"
-        return
+    if ls -1d /sys/class/bluetooth/hci* &>/dev/null; then
+        present=true
     fi
 
     # 2. Check if bluetoothctl is even installed to prevent command errors
     if ! command -v bluetoothctl &> /dev/null; then
+        echo "{\"present\":$present,\"power\":\"off\",\"connected\":[],\"devices\":[]}"
+        return
+    fi
+
+    if [ "$present" = "false" ]; then
         echo "{\"present\":false,\"power\":\"off\",\"connected\":[],\"devices\":[]}"
         return
     fi
 
     # We keep the timeout here just in case the bluetoothd daemon is frozen, 
-    # but the sysfs check above prevents this from running at all on machines without BT.
+    # but if the daemon is stopped, we still return present=true since the hardware is there.
     controller=$(timeout 1 bluetoothctl list 2>/dev/null | head -n1)
     if [[ -z "$controller" || "$controller" == *"Waiting"* ]]; then
-        echo "{\"present\":false,\"power\":\"off\",\"connected\":[],\"devices\":[]}"
+        echo "{\"present\":true,\"power\":\"off\",\"connected\":[],\"devices\":[]}"
         return
     fi
 
@@ -157,7 +162,10 @@ get_status() {
 }
 
 toggle_power() {
-    if bluetoothctl show | grep -q "Powered: yes"; then
+    if ! systemctl is-active --quiet bluetooth.service; then
+        sudo systemctl start bluetooth
+    fi
+    if bluetoothctl show 2>/dev/null | grep -q "Powered: yes"; then
         bluetoothctl power off
     else
         bluetoothctl power on
