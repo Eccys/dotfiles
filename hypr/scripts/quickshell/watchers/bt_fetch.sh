@@ -1,18 +1,20 @@
 #!/usr/bin/env bash
+
+# Check if bluetoothctl is even available
+if ! command -v bluetoothctl &>/dev/null; then
+    echo '{"status":"off","icon":"󰂲","connected":"Off"}'
+    exit 0
+fi
+
 get_bt_status() {
-    if LC_ALL=C timeout 0.5 bluetoothctl show 2>/dev/null | grep -q "Powered: yes"; then echo "on"; else echo "off"; fi
+    local bt_info=$(timeout 0.3 bluetoothctl show 2>/dev/null)
+    if [[ -z "$bt_info" || ! "$bt_info" =~ "Powered: yes" ]]; then
+        echo "off"
+    else
+        echo "on"
+    fi
 }
-get_bt_connected_device() {
-    if [ "$(get_bt_status)" = "on" ]; then
-        local device=$(LC_ALL=C timeout 0.5 bluetoothctl devices Connected 2>/dev/null | head -n1 | cut -d' ' -f3-)
-        if [ -n "$device" ]; then echo "$device"; else echo "Disconnected"; fi
-    else echo "Off"; fi
-}
-get_bt_icon() {
-    if [ "$(get_bt_status)" = "on" ]; then
-        if LC_ALL=C timeout 0.5 bluetoothctl devices Connected 2>/dev/null | grep -q "^Device"; then echo "󰂱"; else echo "󰂯"; fi
-    else echo "󰂲"; fi
-}
+
 toggle_bt() {
     if [ "$(get_bt_status)" = "on" ]; then
         LC_ALL=C timeout 0.5 bluetoothctl power off 2>/dev/null
@@ -22,7 +24,23 @@ toggle_bt() {
         notify-send -u low -i bluetooth-active "Bluetooth" "Enabled"
     fi
 }
+
 case $1 in
     --toggle) toggle_bt ;;
-    *) jq -n -c --arg status "$(get_bt_status)" --arg icon "$(get_bt_icon)" --arg connected "$(get_bt_connected_device)" '{status: $status, icon: $icon, connected: $connected}' ;;
+    *)
+        bt_info=$(timeout 0.3 bluetoothctl show 2>/dev/null)
+        if [[ -z "$bt_info" || ! "$bt_info" =~ "Powered: yes" ]]; then
+            echo '{"status":"off","icon":"󰂲","connected":"Off"}'
+            exit 0
+        fi
+
+        connected_dev=$(timeout 0.3 bluetoothctl devices Connected 2>/dev/null | head -n1 | cut -d' ' -f3-)
+        if [[ -n "$connected_dev" ]]; then
+            echo "{\"status\":\"on\",\"icon\":\"󰂱\",\"connected\":\"$connected_dev\"}"
+        else
+            echo '{"status":"on","icon":"󰂯","connected":"Disconnected"}'
+        fi
+        ;;
 esac
+
+
