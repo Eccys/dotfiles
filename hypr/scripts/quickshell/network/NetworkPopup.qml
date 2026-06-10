@@ -11,6 +11,16 @@ Item {
     id: window
     focus: true
 
+    onVisibleChanged: {
+        if (visible) {
+            window.powerAnimAllowed = false;
+            powerAnimBlocker.restart();
+            if (window.activeMode === "wifi") savedNetworksFetcher.running = true;
+        } else {
+            window.activeMode = "";
+        }
+    }
+
     Caching { id: paths }
 
     Scaler {
@@ -562,7 +572,7 @@ Item {
         if (textData === "") { if (!isCache) validateActiveMode(); return; }
         try {
             let data = JSON.parse(textData);
-            window.ethPresent = data.present === true;
+            window.ethPresent = false;
             let fetchedDevice = data.device || "";
             if (fetchedDevice !== "") window.ethDeviceName = fetchedDevice;
             let fetchedPower = data.power || "off";
@@ -866,8 +876,8 @@ Item {
                 y: (parent.height / 2 - height / 2) + Math.sin(window.globalOrbitAngle * 2) * window.s(100)
                 opacity: window.currentPower ? 0.08 : 0.02
                 color: window.currentConn ? window.activeColor : window.surface2
-                Behavior on color { ColorAnimation { duration: 1000 } }
-                Behavior on opacity { NumberAnimation { duration: 1000 } }
+                Behavior on color { enabled: window.powerAnimAllowed; ColorAnimation { duration: 1000 } }
+                Behavior on opacity { enabled: window.powerAnimAllowed; NumberAnimation { duration: 1000 } }
                 visible: opacity > 0.01
             }
             
@@ -877,8 +887,8 @@ Item {
                 y: (parent.height / 2 - height / 2) + Math.cos(window.globalOrbitAngle * 1.5) * window.s(-100)
                 opacity: window.currentPower ? 0.06 : 0.01
                 color: window.currentConn ? window.activeGradientSecondary : window.surface1
-                Behavior on color { ColorAnimation { duration: 1000 } }
-                Behavior on opacity { NumberAnimation { duration: 1000 } }
+                Behavior on color { enabled: window.powerAnimAllowed; ColorAnimation { duration: 1000 } }
+                Behavior on opacity { enabled: window.powerAnimAllowed; NumberAnimation { duration: 1000 } }
                 visible: opacity > 0.01
             }
 
@@ -2126,8 +2136,8 @@ Item {
                     property real actualLeft: targetLeft
                     property real actualRight: targetRight
 
-                    Behavior on actualLeft { NumberAnimation { id: leftAnim; duration: 250; easing.type: Easing.OutExpo } }
-                    Behavior on actualRight { NumberAnimation { id: rightAnim; duration: 250; easing.type: Easing.OutExpo } }
+                    Behavior on actualLeft { enabled: window.powerAnimAllowed; NumberAnimation { id: leftAnim; duration: 250; easing.type: Easing.OutExpo } }
+                    Behavior on actualRight { enabled: window.powerAnimAllowed; NumberAnimation { id: rightAnim; duration: 250; easing.type: Easing.OutExpo } }
 
                     x: window.s(6) + actualLeft
                     width: Math.max(0, actualRight - actualLeft)
