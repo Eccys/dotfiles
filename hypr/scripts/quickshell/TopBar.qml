@@ -1386,7 +1386,7 @@ Variants {
                                     id: wifiMouse; hoverEnabled: true; anchors.fill: parent;
                                     onClicked: {
                                         if (root && root.mainWidget) root.mainWidget.handleCommand("toggle", "network", "wifi");
-                                        Quickshell.execDetached(["nmcli", "device", "wifi", "rescan"]);
+                                        Quickshell.execDetached(["bash", "-c", "mkdir -p ~/.cache/quickshell/network && echo 'wifi' > ~/.cache/quickshell/network/mode && nmcli device wifi rescan"]);
                                     }
                                 }
                             }
@@ -1446,6 +1446,7 @@ Variants {
                                     id: btMouse; hoverEnabled: true; anchors.fill: parent;
                                     onClicked: {
                                         if (root && root.mainWidget) root.mainWidget.handleCommand("toggle", "network", "bt");
+                                        Quickshell.execDetached(["bash", "-c", "mkdir -p ~/.cache/quickshell/network && echo 'bt' > ~/.cache/quickshell/network/mode"]);
                                     }
                                 }
                             }

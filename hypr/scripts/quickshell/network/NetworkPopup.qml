@@ -11,6 +11,8 @@ Item {
     id: window
     focus: true
 
+    Caching { id: paths }
+
     Scaler {
         id: scaler
         currentWidth: Screen.width
@@ -51,7 +53,7 @@ Item {
         property string lastEthJson: ""
     }
 
-    readonly property string cacheDir: Quickshell.env("XDG_RUNTIME_DIR") ? (Quickshell.env("XDG_RUNTIME_DIR") + "/qs_network") : (Quickshell.env("HOME") + "/.cache/qs_network")
+    readonly property string cacheDir: paths.getCacheDir("network")
     readonly property string modeFilePath: cacheDir + "/mode"
 
     property bool ethPresent: false
@@ -105,46 +107,60 @@ Item {
         command: ["bash", "-c", "cat '" + window.modeFilePath + "' 2>/dev/null"]
         stdout: StdioCollector {
             onStreamFinished: {
+                if (window.activeMode !== "") return; // Already explicitly initialized
+
                 let mode = this.text.trim();
-                if ((mode === "wifi" || mode === "bt" || mode === "eth") && window.activeMode !== mode) {
-                    if ((mode === "eth" && window.ethPresent) || 
-                        (mode === "wifi" && window.wifiPresent) || 
-                        (mode === "bt" && window.btPresent)) {
-                        window.powerAnimAllowed = false;
-                        powerAnimBlocker.restart();
-                        window.ignoreNextModeFileUpdate = true;
-                        window.activeMode = mode;
+                let targetMode = "bt";
+                if (mode === "wifi" || mode === "bt" || mode === "eth") {
+                    targetMode = mode;
+                }
+
+                if ((targetMode === "eth" && window.ethPresent) || 
+                    (targetMode === "wifi" && window.wifiPresent) || 
+                    (targetMode === "bt" && window.btPresent)) {
+                    window.powerAnimAllowed = false;
+                    powerAnimBlocker.restart();
+                    window.ignoreNextModeFileUpdate = true;
+                    window.activeMode = targetMode;
+                } else {
+                    let validModes = [];
+                    if (window.ethPresent) validModes.push("eth");
+                    if (window.wifiPresent) validModes.push("wifi");
+                    if (window.btPresent) validModes.push("bt");
+                    if (validModes.length > 0) {
+                        window.activeMode = validModes[0];
+                    } else {
+                        window.activeMode = "bt";
                     }
                 }
             }
         }
     }
 
-    Timer { interval: 100; running: true; repeat: true; onTriggered: modeReader.running = true }
-
     Component.onCompleted: {
         window.powerAnimAllowed = false;
         powerAnimBlocker.restart();
-        Quickshell.execDetached(["bash", "-c", "mkdir -p '" + window.cacheDir + "'; if [ ! -f '" + window.modeFilePath + "' ]; then echo '" + activeMode + "' > '" + window.modeFilePath + "'; fi"]);
+        Quickshell.execDetached(["bash", "-c", "mkdir -p '" + window.cacheDir + "'; if [ ! -f '" + window.modeFilePath + "' ]; then echo '" + (activeMode !== "" ? activeMode : "bt") + "' > '" + window.modeFilePath + "'; fi"]);
         
         let hasCache = false;
         if (cache.lastEthJson !== "") { processEthJson(cache.lastEthJson, true); hasCache = true; }
         if (cache.lastWifiJson !== "") { processWifiJson(cache.lastWifiJson, true); hasCache = true; }
         if (cache.lastBtJson !== "") { processBtJson(cache.lastBtJson, true); hasCache = true; }
         
-        // INSTANT CACHE PRE-VALIDATION
-        // Evaluates the hardware 'present' states saved in settings and switches tabs 
-        // instantly, bypassing the 1.5s failsafe timer.
-        if (hasCache) {
-            let validModes = [];
-            if (window.ethPresent) validModes.push("eth");
-            if (window.wifiPresent) validModes.push("wifi");
-            if (window.btPresent) validModes.push("bt");
+        if (window.activeMode === "") {
+            modeReader.running = true;
+        } else {
+            if (hasCache) {
+                let validModes = [];
+                if (window.ethPresent) validModes.push("eth");
+                if (window.wifiPresent) validModes.push("wifi");
+                if (window.btPresent) validModes.push("bt");
 
-            if (validModes.length > 0 && validModes.indexOf(window.activeMode) === -1) {
-                window.activeMode = validModes[0];
-                window.powerAnimAllowed = false;
-                powerAnimBlocker.restart();
+                if (validModes.length > 0 && validModes.indexOf(window.activeMode) === -1) {
+                    window.activeMode = validModes[0];
+                    window.powerAnimAllowed = false;
+                    powerAnimBlocker.restart();
+                }
             }
         }
 
@@ -188,7 +204,7 @@ Item {
     readonly property color sharedAccent: Qt.lighter(window.sapphire, 1.15) 
     readonly property color btAccent: window.mauve
 
-    property string activeMode: "bt"
+    property string activeMode: ""
     readonly property color activeColor: activeMode === "bt" ? window.btAccent : window.sharedAccent
     readonly property color activeGradientSecondary: Qt.darker(window.activeColor, 1.25)
 
@@ -354,7 +370,7 @@ Item {
 
     onActiveModeChanged: {
         if (!window.ignoreNextModeFileUpdate) {
-            Quickshell.execDetached(["bash", "-c", "echo '" + window.activeMode + "' > '" + window.modeFilePath + "'"]);
+            Quickshell.execDetached(["bash", "-c", "mkdir -p '" + window.cacheDir + "' && echo '" + window.activeMode + "' > '" + window.modeFilePath + "'"]);
         }
         window.ignoreNextModeFileUpdate = false;
         
@@ -511,14 +527,14 @@ Item {
                 }
 
                 if (window.activeMode === "eth") {
-                    nodes.push({ id: "ip", name: obj.ip || "No IP", icon: "󰩟", action: "IP Address", isInfoNode: true, isActionable: false, parentIndex: cIndex });
+                    nodes.push({ id: "ip", name: obj.ip || "No IP", icon: "󰩟", action: "IP Address", isInfoNode: true, isActionable: true, parentIndex: cIndex });
                     nodes.push({ id: "spd", name: obj.speed || "Unknown", icon: "󰓅", action: "Link Speed", isInfoNode: true, isActionable: false, parentIndex: cIndex });
                     nodes.push({ id: "mac", name: obj.mac || "Unknown", icon: "󰒋", action: "MAC Address", isInfoNode: true, isActionable: false, parentIndex: cIndex });
                 } else if (window.activeMode === "wifi") {
                     let sigValue = obj.signal !== undefined ? obj.signal + "%" : "Calculating...";
                     nodes.push({ id: "sig_" + i, name: sigValue, icon: obj.icon || "󰤨", action: "Signal Strength", isInfoNode: true, isActionable: false, parentIndex: cIndex });
                     nodes.push({ id: "sec_" + i, name: obj.security || "Open", icon: "󰦝", action: "Security", isInfoNode: true, isActionable: false, parentIndex: cIndex });
-                    if (obj.ip) nodes.push({ id: "ip_" + i, name: obj.ip, icon: "󰩟", action: "IP Address", isInfoNode: true, isActionable: false, parentIndex: cIndex });
+                    if (obj.ip) nodes.push({ id: "ip_" + i, name: obj.ip, icon: "󰩟", action: "IP Address", isInfoNode: true, isActionable: true, parentIndex: cIndex });
                     if (obj.freq) nodes.push({ id: "freq_" + i, name: obj.freq, icon: "󰖧", action: "Band", isInfoNode: true, isActionable: false, parentIndex: cIndex });
                 } else {
                     nodes.push({ id: "bat_" + obj.mac, name: (obj.battery || "0") + "%", icon: "󰥉", action: "Battery", isInfoNode: true, isActionable: false, parentIndex: cIndex });
@@ -1657,7 +1673,7 @@ Item {
                                 
                                 property bool isPairedBT: window.activeMode === "bt" && action === "Connect"
                                 property bool isTargetWifi: window.activeMode === "wifi" && !window.isWifiConn && itemId === window.targetWifiSsid
-                                property bool isSpecialAction: itemId === "action_scan" || itemId === "action_settings"
+                                property bool isSpecialAction: itemId === "action_scan" || itemId === "action_settings" || itemId === "ip_0"
                                 property bool isHighlighted: isPairedBT || isTargetWifi || isSpecialAction
                                 
                                 property bool isCurrentlyConnected: {
@@ -1921,7 +1937,7 @@ Item {
                                             font.family: "JetBrains Mono"
                                             font.pixelSize: window.s(10)
                                             color: floatCard.isFailed ? window.maroon : (floatCard.isMyBusy ? window.activeColor : window.overlay0)
-                                            text: floatCard.isFailed ? "Connection Failed" : (floatCard.isMyBusy ? "Connecting..." : (floatCard.renderFill > 0.1 && floatCard.renderFill < 1.0 ? "Hold..." : action))
+                                            text: floatCard.isFailed ? "Connection Failed" : (floatCard.isMyBusy ? "Connecting..." : (floatCard.renderFill > 0.1 && floatCard.renderFill < 1.0 ? floatCard.itemId === "ip_0" ? floatCard.triggered ? "Copied!" : "Hold to copy...": "Hold..." : action))
                                             Behavior on color { ColorAnimation { duration: 200 } }
                                         }
                                     }
@@ -1969,7 +1985,7 @@ Item {
                                             }
                                             Text {
                                                 font.family: "JetBrains Mono"; font.pixelSize: window.s(10); color: window.crust
-                                                text: floatCard.isMyBusy ? "Connecting..." : (floatCard.renderFill > 0.1 && floatCard.renderFill < 1.0 ? "Hold..." : action)
+                                                text: floatCard.isMyBusy ? "Connecting..." : (floatCard.renderFill > 0.1 && floatCard.renderFill < 1.0 ? floatCard.itemId === "ip_0" ? floatCard.triggered ? "Copied!" : "Hold to copy..." : "Hold..." : action)
                                             }
                                         }
                                     }
@@ -2017,6 +2033,14 @@ Item {
                                             window.showInfoView = !window.showInfoView;
                                             floatCard.triggered = false;
                                             drainAnim.start();
+                                        } else if (isInfoNode && action === "IP Address") {
+                                            if (name && name !== "No IP" && name !== "Unknown") {
+                                                window.playSfx("switch.wav");
+                                                let safeIp = name.replace(/'/g, "'\\''");
+                                                Quickshell.execDetached(["bash", "-c", "printf '%s' '" + safeIp + "' | wl-copy"]);
+                                            }
+                                            floatCard.triggered = true;
+                                            drainAnim.start();
                                         } else if (isInfoNode && cmdStr) {
                                             Quickshell.execDetached(["sh", "-c", cmdStr]);
                                             if (window.activeMode === "bt") btPoller.running = true;
@@ -2047,6 +2071,11 @@ Item {
                                     to: 0.0
                                     duration: 1500 * floatCard.fillLevel 
                                     easing.type: Easing.OutQuad
+                                    onFinished: {
+                                        if (isInfoNode && action === "IP Address") {
+                                            floatCard.triggered = false;
+                                        }
+                                    }
                                 }
                             }
                         }
