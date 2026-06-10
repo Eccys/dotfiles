@@ -616,14 +616,37 @@ Item {
                                         id: appIconImg
                                         anchors.fill: parent
                                         fillMode: Image.PreserveAspectFit
-                                        source: {
-                                            if (!root.musicData.playerName) return "image://icon/music"
-                                            return "image://icon/" + root.musicData.playerName
+
+                                        property string resolvedPlayerName: root.musicData.playerName || "music"
+                                        property string fallbackName: ""
+
+                                        source: "image://icon/" + (fallbackName ? fallbackName : resolvedPlayerName)
+
+                                        onResolvedPlayerNameChanged: {
+                                            fallbackName = "";
+                                        }
+
+                                        onStatusChanged: {
+                                            if (status === Image.Error) {
+                                                if (fallbackName === "") {
+                                                    if (resolvedPlayerName === "firefox") {
+                                                        fallbackName = "zen-browser";
+                                                    } else {
+                                                        fallbackName = "music";
+                                                    }
+                                                } else if (fallbackName === "zen-browser") {
+                                                    fallbackName = "zen";
+                                                } else if (fallbackName === "zen") {
+                                                    fallbackName = "browser";
+                                                } else if (fallbackName !== "music") {
+                                                    fallbackName = "music";
+                                                }
+                                            }
                                         }
                                         asynchronous: true
                                         smooth: true
                                         mipmap: true
-                                        
+
                                         // Keep the app icon upright while the outer vinyl spins
                                         rotation: -vinylCircle.rotation
                                     }

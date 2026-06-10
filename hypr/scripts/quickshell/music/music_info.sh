@@ -22,7 +22,22 @@ if [ "$STATUS" = "Playing" ] || [ "$STATUS" = "Paused" ]; then
     rawUrl=$($PT metadata mpris:artUrl 2>/dev/null)
     title=$($PT metadata xesam:title 2>/dev/null)
     artist=$($PT metadata xesam:artist 2>/dev/null)
-    
+    trackUrl=$($PT metadata xesam:url 2>/dev/null)
+
+    # YouTube thumbnail fallback extraction
+    if [ -z "$rawUrl" ] && [ -n "$trackUrl" ]; then
+        if [[ "$trackUrl" =~ watch\?v=([^&]+) ]]; then
+            ytId="${BASH_REMATCH[1]}"
+            rawUrl="https://img.youtube.com/vi/$ytId/hqdefault.jpg"
+        elif [[ "$trackUrl" =~ youtu\.be/([^?&]+) ]]; then
+            ytId="${BASH_REMATCH[1]}"
+            rawUrl="https://img.youtube.com/vi/$ytId/hqdefault.jpg"
+        elif [[ "$trackUrl" =~ embed/([^?&]+) ]]; then
+            ytId="${BASH_REMATCH[1]}"
+            rawUrl="https://img.youtube.com/vi/$ytId/hqdefault.jpg"
+        fi
+    fi
+
     if [ -n "$rawUrl" ]; then
         trackHash=$(echo "$rawUrl" | md5sum | cut -d" " -f1)
     else
@@ -142,6 +157,11 @@ if [ "$STATUS" = "Playing" ] || [ "$STATUS" = "Paused" ]; then
 
     # --- 6. DEVICE INFO ---
     player_raw=$($PT status -f "{{playerName}}" 2>/dev/null | head -n 1)
+    if [ "$player_raw" = "firefox" ]; then
+        if pgrep -f "zen-bin" >/dev/null 2>&1; then
+            player_raw="zen-browser"
+        fi
+    fi
     player_nice="${player_raw^}"
 
     # THE FIX: Use native WirePlumber (wpctl) instead of pactl to prevent D-Bus deadlocks
