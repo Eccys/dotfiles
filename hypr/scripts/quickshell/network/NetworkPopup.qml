@@ -16,7 +16,14 @@ Item {
             window.powerAnimAllowed = false;
             powerAnimBlocker.restart();
             if (window.activeMode === "") {
-                modeReader.running = true;
+                let targetMode = cache.lastActiveMode || "wifi";
+                if (targetMode === "wifi" && (!root || !root.isWifiOn) && window.btPresent) {
+                    targetMode = "bt";
+                }
+                if (targetMode === "eth" && !window.ethPresent) {
+                    targetMode = (root && root.isWifiOn) ? "wifi" : "bt";
+                }
+                window.activeMode = targetMode;
             } else {
                 if (window.activeMode === "wifi" && (!root || !root.isWifiOn) && window.btPresent) {
                     window.activeMode = "bt";
@@ -68,6 +75,7 @@ Item {
         property string lastWifiJson: ""
         property string lastBtJson: ""
         property string lastEthJson: ""
+        property string lastActiveMode: "wifi"
     }
 
     readonly property string cacheDir: paths.getCacheDir("network")
@@ -119,48 +127,6 @@ Item {
     }
 
     property bool ignoreNextModeFileUpdate: false
-    Process {
-        id: modeReader
-        command: ["bash", "-c", "cat '" + window.modeFilePath + "' 2>/dev/null"]
-        stdout: StdioCollector {
-            onStreamFinished: {
-                if (window.activeMode !== "") return; // Already explicitly initialized
-
-                let mode = this.text.trim();
-                let targetMode = "bt";
-                if (mode === "wifi" || mode === "bt" || mode === "eth") {
-                    targetMode = mode;
-                }
-
-                if (targetMode === "wifi" && (!root || !root.isWifiOn) && window.btPresent) {
-                    targetMode = "bt";
-                }
-                if (targetMode === "eth" && !window.ethPresent) {
-                    targetMode = (root && root.isWifiOn) ? "wifi" : "bt";
-                }
-
-                if ((targetMode === "eth" && window.ethPresent) || 
-                    (targetMode === "wifi" && window.wifiPresent) || 
-                    (targetMode === "bt" && window.btPresent)) {
-                    window.powerAnimAllowed = false;
-                    powerAnimBlocker.restart();
-                    window.ignoreNextModeFileUpdate = true;
-                    window.activeMode = targetMode;
-                } else {
-                    let validModes = [];
-                    if (window.ethPresent) validModes.push("eth");
-                    if (window.wifiPresent) validModes.push("wifi");
-                    if (window.btPresent) validModes.push("bt");
-                    if (validModes.length > 0) {
-                        window.activeMode = validModes[0];
-                    } else {
-                        window.activeMode = "bt";
-                    }
-                }
-            }
-        }
-    }
-
     Component.onCompleted: {
         window.powerAnimAllowed = false;
         powerAnimBlocker.restart();
@@ -172,7 +138,14 @@ Item {
         if (cache.lastBtJson !== "") { processBtJson(cache.lastBtJson, true); hasCache = true; }
         
         if (window.activeMode === "") {
-            modeReader.running = true;
+            let targetMode = cache.lastActiveMode || "wifi";
+            if (targetMode === "wifi" && (!root || !root.isWifiOn) && window.btPresent) {
+                targetMode = "bt";
+            }
+            if (targetMode === "eth" && !window.ethPresent) {
+                targetMode = (root && root.isWifiOn) ? "wifi" : "bt";
+            }
+            window.activeMode = targetMode;
         } else {
             if (window.activeMode === "wifi" && (!root || !root.isWifiOn) && window.btPresent) {
                 window.activeMode = "bt";
@@ -396,8 +369,11 @@ Item {
     }
 
     onActiveModeChanged: {
-        if (!window.ignoreNextModeFileUpdate) {
-            Quickshell.execDetached(["bash", "-c", "mkdir -p '" + window.cacheDir + "' && echo '" + window.activeMode + "' > '" + window.modeFilePath + "'"]);
+        if (window.activeMode !== "") {
+            cache.lastActiveMode = window.activeMode;
+            if (!window.ignoreNextModeFileUpdate) {
+                Quickshell.execDetached(["bash", "-c", "mkdir -p '" + window.cacheDir + "' && echo '" + window.activeMode + "' > '" + window.modeFilePath + "'"]);
+            }
         }
         window.ignoreNextModeFileUpdate = false;
         
