@@ -11,6 +11,12 @@ import "../"
 Item {
     id: window
     width: Screen.width
+    focus: true
+
+    Keys.onEscapePressed: {
+        Quickshell.execDetached(["bash", Quickshell.env("HOME") + "/.config/hypr/scripts/qs_manager.sh", "close"]);
+        event.accepted = true;
+    }
 
     Scaler {
         id: scaler
@@ -104,6 +110,37 @@ Item {
                     }
                 } else {
                     console.log("[MonitorSync] ERROR: stdout was empty.");
+                }
+            }
+        }
+    }
+
+    Process {
+        id: currentWallProc
+        command: ["bash", "-c", "
+            SRC_DIR=\"" + window.srcDir + "\"
+            CURRENT_SRC=\"\"
+            if pgrep -a \"mpvpaper\" > /dev/null; then
+                CURRENT_SRC=$(pgrep -a mpvpaper | grep -o \"$SRC_DIR/[^' ]*\" | head -n1)
+            elif command -v awww >/dev/null; then
+                CURRENT_SRC=$(awww query 2>/dev/null | grep -o \"$SRC_DIR/[^ ]*\" | head -n1)
+            fi
+            if [ -n \"$CURRENT_SRC\" ]; then
+                BASE=\"${CURRENT_SRC##*/}\"
+                EXT=\"${BASE##*.}\"
+                if [[ \"${EXT,,}\" =~ ^(mp4|mkv|mov|webm)$ ]]; then
+                    echo \"000_$BASE\"
+                else
+                    echo \"$BASE\"
+                fi
+            fi
+        "]
+        running: false
+        stdout: StdioCollector {
+            onStreamFinished: {
+                let text = this.text.trim();
+                if (text !== "") {
+                    window.widgetArg = text;
                 }
             }
         }
@@ -300,6 +337,9 @@ Item {
         } else {
             window.isFilterAnimating = true;
             filterAnimationTimer.restart();
+
+            currentWallProc.running = false;
+            currentWallProc.running = true;
 
             if (window.currentFilter !== "Search") {
                 window.applyFilters(true);
@@ -867,7 +907,7 @@ Item {
         } 
     }
     
-    Shortcut { sequence: "Escape"; enabled: !window.isApplying; onActivated: { if (window.currentFilter === "Search") { window.currentFilter = "All"; } } }
+    Shortcut { sequence: "Escape"; enabled: !window.isApplying && window.currentFilter === "Search"; onActivated: { window.currentFilter = "All"; } }
     Shortcut { sequence: "Tab"; enabled: !window.isApplying; onActivated: window.cycleFilter(1) }
     Shortcut { sequence: "Backtab"; enabled: !window.isApplying; onActivated: window.cycleFilter(-1) }
 

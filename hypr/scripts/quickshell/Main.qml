@@ -4,6 +4,7 @@ import QtQuick.Controls
 import Quickshell
 import Quickshell.Io
 import Quickshell.Wayland
+import Quickshell.Hyprland
 import Quickshell.Services.Notifications
 import "WindowRegistry.js" as Registry
 
@@ -14,6 +15,77 @@ PanelWindow {
     color: "transparent"
 
     Caching { id: paths }
+
+    GlobalShortcut {
+        name: "applauncherToggle"
+        description: "Toggles applauncher"
+        onPressed: masterWindow.handleCommand("toggle", "applauncher", "")
+    }
+    GlobalShortcut {
+        name: "musicToggle"
+        description: "Toggles music panel"
+        onPressed: masterWindow.handleCommand("toggle", "music", "")
+    }
+    GlobalShortcut {
+        name: "wallpaperToggle"
+        description: "Toggles wallpaper picker"
+        onPressed: masterWindow.handleCommand("toggle", "wallpaper", "")
+    }
+    GlobalShortcut {
+        name: "batteryToggle"
+        description: "Toggles battery panel"
+        onPressed: masterWindow.handleCommand("toggle", "battery", "")
+    }
+    GlobalShortcut {
+        name: "clipboardToggle"
+        description: "Toggles clipboard manager"
+        onPressed: masterWindow.handleCommand("toggle", "clipboard", "")
+    }
+    GlobalShortcut {
+        name: "volumeToggle"
+        description: "Toggles volume panel"
+        onPressed: masterWindow.handleCommand("toggle", "volume", "")
+    }
+    GlobalShortcut {
+        name: "networkToggle"
+        description: "Toggles network panel"
+        onPressed: masterWindow.handleCommand("toggle", "network", "")
+    }
+    GlobalShortcut {
+        name: "calendarToggle"
+        description: "Toggles calendar panel"
+        onPressed: masterWindow.handleCommand("toggle", "calendar", "")
+    }
+    GlobalShortcut {
+        name: "monitorsToggle"
+        description: "Toggles monitors panel"
+        onPressed: masterWindow.handleCommand("toggle", "monitors", "")
+    }
+    GlobalShortcut {
+        name: "moviesToggle"
+        description: "Toggles movies panel"
+        onPressed: masterWindow.handleCommand("toggle", "movies", "")
+    }
+    GlobalShortcut {
+        name: "settingsToggle"
+        description: "Toggles settings panel"
+        onPressed: masterWindow.handleCommand("toggle", "settings", "")
+    }
+    GlobalShortcut {
+        name: "focustimeToggle"
+        description: "Toggles focustime panel"
+        onPressed: masterWindow.handleCommand("toggle", "focustime", "")
+    }
+    GlobalShortcut {
+        name: "guideToggle"
+        description: "Toggles guide panel"
+        onPressed: masterWindow.handleCommand("toggle", "guide", "")
+    }
+    GlobalShortcut {
+        name: "stewartToggle"
+        description: "Toggles stewart panel"
+        onPressed: masterWindow.handleCommand("toggle", "stewart", "")
+    }
 
     function handleCommand(cmd: string, targetWidget: string, arg: string): void {
         cmd = cmd || "";
@@ -155,9 +227,20 @@ PanelWindow {
     // =========================================================
 
     property string currentActive: "hidden"
+    property string previousActive: "hidden"
 
     onCurrentActiveChanged: {
         Quickshell.execDetached(["bash", "-c", "echo '" + currentActive + "' > " + paths.runDir + "/current_widget"]);
+        if (currentActive === "network") {
+            Quickshell.execDetached(["bash", "/home/user/.config/hypr/scripts/qs_manager.sh", "prep_network"]);
+        } else if (currentActive === "wallpaper") {
+            Quickshell.execDetached(["bash", "/home/user/.config/hypr/scripts/qs_manager.sh", "prep_wallpaper"]);
+        }
+
+        if (previousActive === "network" && currentActive !== "network") {
+            Quickshell.execDetached(["bash", "/home/user/.config/hypr/scripts/qs_manager.sh", "close_network"]);
+        }
+        previousActive = currentActive;
     }
 
     property bool isVisible: false
