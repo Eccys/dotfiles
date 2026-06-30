@@ -250,6 +250,27 @@ Item {
         }
     }
 
+    property var cachedPostersMap: ({})
+    Process {
+        id: loadCachedPostersProc
+        command: ["bash", "-c", "mkdir -p ~/.cache/qs_movies && ls ~/.cache/qs_movies"]
+        running: false
+        stdout: SplitParser {
+            onRead: (data) => {
+                let lines = data.trim().split("\n")
+                let map = {}
+                for (let i = 0; i < lines.length; i++) {
+                    let line = lines[i].trim()
+                    if (line.endsWith(".jpg")) {
+                        let id = line.substring(0, line.length - 4)
+                        map[id] = true
+                    }
+                }
+                window.cachedPostersMap = map
+            }
+        }
+    }
+
     // --- SAVING CACHE FUNCTIONS ---
     function saveUiState() {
         saveJsonToCache("qs_ui_state.json", {
@@ -296,6 +317,15 @@ Item {
         prefs[imdbId] = sourceName
         window.sourcePrefs = prefs
         saveJsonToCache("qs_source_prefs.json", prefs)
+    }
+
+    function downloadPoster(imdbId, posterUrl) {
+        if (!imdbId || !posterUrl || posterUrl === "" || window.cachedPostersMap[imdbId]) return
+        let map = window.cachedPostersMap
+        map[imdbId] = true
+        window.cachedPostersMap = map
+        let escapedUrl = posterUrl.replace(/'/g, "'\\''")
+        Quickshell.execDetached(["bash", "-c", "curl -s -L -o ~/.cache/qs_movies/" + imdbId + ".jpg '" + escapedUrl + "'"])
     }
 
     // --- SOURCE MODEL ---
@@ -346,6 +376,7 @@ Item {
     }
 
     Component.onCompleted: {
+        loadCachedPostersProc.running = true
         readHistoryProc.running = true
         readWatchHistoryProc.running = true
         readSourcePrefsProc.running = true
@@ -359,6 +390,8 @@ Item {
         target: window
         function onVisibleChanged() {
             if (window.visible) {
+                loadCachedPostersProc.running = false
+                loadCachedPostersProc.running = true
                 introPhaseAnim.restart()
                 if (!window.isSourceModalOpen && window.currentView === "search") {
                     focusTimer.restart()
@@ -944,7 +977,16 @@ Item {
         Image {
             id: posterImg
             anchors.fill: parent
-            source: model.poster !== "" ? model.poster : ""
+            source: {
+                if (model.imdbId && window.cachedPostersMap[model.imdbId]) {
+                    return "file://" + Quickshell.env("HOME") + "/.cache/qs_movies/" + model.imdbId + ".jpg"
+                }
+                if (model.poster && model.poster !== "") {
+                    window.downloadPoster(model.imdbId, model.poster)
+                    return model.poster
+                }
+                return ""
+            }
             fillMode: Image.PreserveAspectCrop
             asynchronous: true
             smooth: true
@@ -1317,7 +1359,16 @@ Item {
                                         Image {
                                             id: gridImage
                                             anchors.fill: parent
-                                            source: model.poster !== "" ? model.poster : ""
+                                            source: {
+                                                if (model.imdbId && window.cachedPostersMap[model.imdbId]) {
+                                                    return "file://" + Quickshell.env("HOME") + "/.cache/qs_movies/" + model.imdbId + ".jpg"
+                                                }
+                                                if (model.poster && model.poster !== "") {
+                                                    window.downloadPoster(model.imdbId, model.poster)
+                                                    return model.poster
+                                                }
+                                                return ""
+                                            }
                                             fillMode: Image.PreserveAspectCrop
                                             asynchronous: true; smooth: true; cache: true
                                             visible: status === Image.Ready
@@ -1416,7 +1467,16 @@ Item {
                     Layout.fillWidth: true; Layout.preferredHeight: window.s(300); radius: window.s(14); color: window.crust; clip: true
                     Image {
                         anchors.fill: parent
-                        source: window.selectedPoster !== "" ? window.selectedPoster : ""
+                        source: {
+                            if (window.selectedImdbId && window.cachedPostersMap[window.selectedImdbId]) {
+                                return "file://" + Quickshell.env("HOME") + "/.cache/qs_movies/" + window.selectedImdbId + ".jpg"
+                            }
+                            if (window.selectedPoster && window.selectedPoster !== "") {
+                                window.downloadPoster(window.selectedImdbId, window.selectedPoster)
+                                return window.selectedPoster
+                            }
+                            return ""
+                        }
                         fillMode: Image.PreserveAspectCrop
                         asynchronous: true; smooth: true; cache: true
                         sourceSize.width: window.s(440); sourceSize.height: window.s(600)
