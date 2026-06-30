@@ -321,9 +321,11 @@ Item {
 
     function downloadPoster(imdbId, posterUrl) {
         if (!imdbId || !posterUrl || posterUrl === "" || window.cachedPostersMap[imdbId]) return
-        let map = window.cachedPostersMap
-        map[imdbId] = true
-        window.cachedPostersMap = map
+        Qt.callLater(function() {
+            let map = window.cachedPostersMap
+            map[imdbId] = true
+            window.cachedPostersMap = map
+        })
         let escapedUrl = posterUrl.replace(/'/g, "'\\''")
         Quickshell.execDetached(["bash", "-c", "curl -s -L -o ~/.cache/qs_movies/" + imdbId + ".jpg '" + escapedUrl + "'"])
     }
@@ -977,16 +979,9 @@ Item {
         Image {
             id: posterImg
             anchors.fill: parent
-            source: {
-                if (model.imdbId && window.cachedPostersMap[model.imdbId]) {
-                    return "file://" + Quickshell.env("HOME") + "/.cache/qs_movies/" + model.imdbId + ".jpg"
-                }
-                if (model.poster && model.poster !== "") {
-                    window.downloadPoster(model.imdbId, model.poster)
-                    return model.poster
-                }
-                return ""
-            }
+            source: (model.imdbId && window.cachedPostersMap[model.imdbId])
+                ? "file://" + Quickshell.env("HOME") + "/.cache/qs_movies/" + model.imdbId + ".jpg"
+                : (model.poster || "")
             fillMode: Image.PreserveAspectCrop
             asynchronous: true
             smooth: true
@@ -994,6 +989,11 @@ Item {
             sourceSize.width: window.s(240)
             sourceSize.height: window.s(360)
             visible: status === Image.Ready
+            onStatusChanged: {
+                if (status === Image.Ready && model.poster && model.poster !== "" && !window.cachedPostersMap[model.imdbId]) {
+                    window.downloadPoster(model.imdbId, model.poster)
+                }
+            }
         }
         Rectangle {
             anchors.fill: parent
@@ -1333,12 +1333,12 @@ Item {
                             z: 0
                             Rectangle {
                                 color: window.surface0; border.color: window.surface1; border.width: 1; radius: window.s(10)
-                                property real actX: parent.GridView.view.currentItem ? parent.GridView.view.currentItem.x + window.s(5) : 0
-                                property real actY: parent.GridView.view.currentItem ? parent.GridView.view.currentItem.y + window.s(5) : 0
-                                x: actX; y: actY; width: parent.GridView.view.cellWidth - window.s(10); height: parent.GridView.view.cellHeight - window.s(10)
+                                property real actX: (parent && parent.GridView && parent.GridView.view && parent.GridView.view.currentItem) ? parent.GridView.view.currentItem.x + window.s(5) : 0
+                                property real actY: (parent && parent.GridView && parent.GridView.view && parent.GridView.view.currentItem) ? parent.GridView.view.currentItem.y + window.s(5) : 0
+                                x: actX; y: actY; width: (parent && parent.GridView && parent.GridView.view) ? parent.GridView.view.cellWidth - window.s(10) : 0; height: (parent && parent.GridView && parent.GridView.view) ? parent.GridView.view.cellHeight - window.s(10) : 0
                                 Behavior on actX { enabled: window.isKeyboardNav; NumberAnimation { duration: 250; easing.type: Easing.OutQuart } }
                                 Behavior on actY { enabled: window.isKeyboardNav; NumberAnimation { duration: 250; easing.type: Easing.OutQuart } }
-                                opacity: parent.GridView.view.count > 0 && parent.GridView.view.currentIndex >= 0 ? 1 : 0
+                                opacity: (parent && parent.GridView && parent.GridView.view && parent.GridView.view.count > 0 && parent.GridView.view.currentIndex >= 0) ? 1 : 0
                                 Behavior on opacity { NumberAnimation { duration: 300 } }
                             }
                         }
@@ -1349,7 +1349,7 @@ Item {
                             width: GridView.view.cellWidth; height: GridView.view.cellHeight; z: 1
                             Rectangle {
                                 anchors.fill: parent; anchors.margins: window.s(5); radius: window.s(10); color: "transparent"
-                                property bool isActive: index === parent.parent.GridView.view.currentIndex
+                                property bool isActive: (parent && parent.parent && parent.parent.GridView && parent.parent.GridView.view) ? (index === parent.parent.GridView.view.currentIndex) : false
                                 ColumnLayout {
                                     anchors.fill: parent; anchors.margins: window.s(10); spacing: window.s(8)
                                     Rectangle {
@@ -1359,43 +1359,42 @@ Item {
                                         Image {
                                             id: gridImage
                                             anchors.fill: parent
-                                            source: {
-                                                if (model.imdbId && window.cachedPostersMap[model.imdbId]) {
-                                                    return "file://" + Quickshell.env("HOME") + "/.cache/qs_movies/" + model.imdbId + ".jpg"
-                                                }
-                                                if (model.poster && model.poster !== "") {
-                                                    window.downloadPoster(model.imdbId, model.poster)
-                                                    return model.poster
-                                                }
-                                                return ""
-                                            }
+                                            source: (model.imdbId && window.cachedPostersMap[model.imdbId])
+                                                ? "file://" + Quickshell.env("HOME") + "/.cache/qs_movies/" + model.imdbId + ".jpg"
+                                                : (model.poster || "")
                                             fillMode: Image.PreserveAspectCrop
                                             asynchronous: true; smooth: true; cache: true
                                             visible: status === Image.Ready
+                                            onStatusChanged: {
+                                                if (status === Image.Ready && model.poster && model.poster !== "" && !window.cachedPostersMap[model.imdbId]) {
+                                                    window.downloadPoster(model.imdbId, model.poster)
+                                                }
+                                            }
                                         }
                                         Rectangle {
+                                            id: placeholderRect
                                             anchors.fill: parent; color: window.surface0
                                             visible: model.poster === "" || gridImage.status === Image.Error || gridImage.status === Image.Loading
                                             radius: window.s(8)
                                             property bool isLoading: model.poster !== "" && gridImage.status === Image.Loading
                                             Rectangle {
                                                 anchors.fill: parent; radius: window.s(8); color: "transparent"
-                                                visible: parent.isLoading
+                                                visible: placeholderRect.isLoading
                                                 Rectangle {
                                                     width: parent.width * 0.4; height: parent.height
                                                     color: Qt.rgba(window.surface1.r, window.surface1.g, window.surface1.b, 0.4)
-                                                    property real shimX: -parent.parent.width
+                                                    property real shimX: -placeholderRect.width
                                                     x: shimX
                                                     NumberAnimation on shimX {
-                                                        from: -parent.parent.width
-                                                        to: parent.parent.width * 1.5
+                                                        from: -placeholderRect.width
+                                                        to: placeholderRect.width * 1.5
                                                         duration: 1200; loops: Animation.Infinite
-                                                        running: parent.parent.parent.isLoading
+                                                        running: placeholderRect.isLoading
                                                         easing.type: Easing.InOutSine
                                                     }
                                                 }
                                             }
-                                            Text { anchors.centerIn: parent; width: parent.width - window.s(10); text: model.title || "Unknown"; color: window.subtext0; font.family: "JetBrains Mono"; font.pixelSize: window.s(12); wrapMode: Text.WordWrap; horizontalAlignment: Text.AlignHCenter; visible: !parent.isLoading }
+                                            Text { anchors.centerIn: parent; width: parent.width - window.s(10); text: model.title || "Unknown"; color: window.subtext0; font.family: "JetBrains Mono"; font.pixelSize: window.s(12); wrapMode: Text.WordWrap; horizontalAlignment: Text.AlignHCenter; visible: !placeholderRect.isLoading }
                                         }
                                         Rectangle {
                                             anchors.fill: parent; radius: window.s(8)
@@ -1467,20 +1466,18 @@ Item {
                     Layout.fillWidth: true; Layout.preferredHeight: window.s(300); radius: window.s(14); color: window.crust; clip: true
                     Image {
                         anchors.fill: parent
-                        source: {
-                            if (window.selectedImdbId && window.cachedPostersMap[window.selectedImdbId]) {
-                                return "file://" + Quickshell.env("HOME") + "/.cache/qs_movies/" + window.selectedImdbId + ".jpg"
-                            }
-                            if (window.selectedPoster && window.selectedPoster !== "") {
-                                window.downloadPoster(window.selectedImdbId, window.selectedPoster)
-                                return window.selectedPoster
-                            }
-                            return ""
-                        }
+                        source: (window.selectedImdbId && window.cachedPostersMap[window.selectedImdbId])
+                            ? "file://" + Quickshell.env("HOME") + "/.cache/qs_movies/" + window.selectedImdbId + ".jpg"
+                            : (window.selectedPoster || "")
                         fillMode: Image.PreserveAspectCrop
                         asynchronous: true; smooth: true; cache: true
                         sourceSize.width: window.s(440); sourceSize.height: window.s(600)
                         visible: status === Image.Ready
+                        onStatusChanged: {
+                            if (status === Image.Ready && window.selectedPoster && window.selectedPoster !== "" && !window.cachedPostersMap[window.selectedImdbId]) {
+                                window.downloadPoster(window.selectedImdbId, window.selectedPoster)
+                            }
+                        }
                     }
                     Rectangle {
                         anchors.fill: parent; color: window.surface0; radius: window.s(14)
