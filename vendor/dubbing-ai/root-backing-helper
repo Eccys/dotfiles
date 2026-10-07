@@ -1,0 +1,32 @@
+#!/usr/bin/python
+"""Freeze/thaw the fixed Windows backing volume around the dedicated VM."""
+import os,pathlib,socket,subprocess,sys,time
+mount='/mnt/windows-c'; unit='dubbing-ai-disk.service'
+def run(*args):subprocess.run(args,check=True)
+def options():return subprocess.check_output(['findmnt','-no','OPTIONS',mount],text=True).strip().split(',')
+if len(sys.argv)!=2:raise SystemExit(2)
+if sys.argv[1]=='prepare':
+ if 'ro' not in options():
+  run('umount',mount) # Refuses busy mounts; never forces access away from applications.
+  try:run('mount','-o','ro',mount)
+  except Exception:
+   run('mount',mount);raise
+ run('systemctl','start',unit)
+ for i in range(200):
+  try:
+   with socket.socket(socket.AF_UNIX) as s:
+    s.settimeout(1);s.connect('/run/user/1000/dubbing-ai/backing.sock')
+    if s.recv(8)==b'NBDMAGIC':break
+  except OSError:time.sleep(.1)
+ else:raise SystemExit('Read-only backing server did not become ready')
+elif sys.argv[1]=='release':
+ for p in pathlib.Path('/proc').iterdir():
+  if not p.name.isdigit():continue
+  try:
+   args=(p/'cmdline').read_bytes()
+   if b'qemu-system-x86_64' in args and b'windows-existing.qcow2' in args:raise SystemExit('VM is still running; retaining read-only backing')
+  except (FileNotFoundError,PermissionError):pass
+ run('systemctl','stop',unit)
+ if 'ro' in options():
+  run('umount',mount);run('mount',mount)
+else:raise SystemExit(2)

@@ -1,0 +1,25 @@
+pkgbase = discord-canary
+	pkgdesc = All-in-one voice and text chat for gamers - alpha build
+	pkgver = 1.0.2092
+	pkgrel = 1
+	url = https://discord.com
+	arch = x86_64
+	license = custom
+	optdepends = libpulse: PulseAudio support
+	optdepends = libappindicator-gtk3: Systray indicator support
+	optdepends = xdg-utils: For opening URLs and files
+	options = !debug
+	options = !strip
+	source = https://dl-canary.discordapp.net/apps/linux/1.0.2092/discord-canary-1.0.2092.tar.gz
+	source = LICENSE-1.0.2092.html::https://discordapp.com/terms
+	source = OSS-LICENSES-1.0.2092.html::https://discordapp.com/licenses
+	sha512sums = e79fc1dcc753ba11eedce962cb5675d36eb376f1e5632a18e676de361bb58eea4c19b4ac592c1ab2d4992385300519562e9ba146f55f4dc796e2ae360bd780f8
+	sha512sums = SKIP
+	sha512sums = SKIP
+
+pkgname = discord-canary
+	depends = libnotify
+	depends = libxss
+	depends = nspr
+	depends = nss
+	depends = gtk3

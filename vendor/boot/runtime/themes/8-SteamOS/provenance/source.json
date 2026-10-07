@@ -1,0 +1,341 @@
+{
+  "id": 8,
+  "name": "SteamOS (Personalized)",
+  "packageFolder": "8-SteamOS",
+  "entrypoint": "8-SteamOS/theme.txt",
+  "catalogLinkFromGorgeousGRUB": "https://github.com/LegendaryBibo/Steam-Big-Picture-Grub-Theme",
+  "sourceRepository": "https://LegendaryBibo/Steam-Big-Picture-Grub-Theme",
+  "sourceBranch": "master",
+  "sourceCommit": "9b2c23172dacffd2c0add05318090f61a2286567",
+  "sourceThemePath": "theme.txt",
+  "license": "NOASSERTION",
+  "licenseStatus": "No license file or SPDX license declaration found in the pinned repository",
+  "notes": "README says the design was created for 1600x1200; the theme is adapted for 2560x1440. No external installer or optional personalization dependencies are included.",
+  "upstreamInstallerExecuted": false,
+  "sourceAssets": [
+    {
+      "path": "DejaVuSans-20.pf2",
+      "sourcePath": "DejaVuSans-20.pf2",
+      "kind": "asset",
+      "sha256": "c6698eb4307a214a0c5d5b7c6c294697069b299c79b0fda102274549c4309d7a",
+      "bytes": 3474
+    },
+    {
+      "path": "avatarBorder.png",
+      "sourcePath": "avatarBorder.png",
+      "kind": "asset",
+      "sha256": "6745d225f12d757efa3d6bd8c19be245949e333152398c7d4442c8a07f35238c",
+      "bytes": 1773
+    },
+    {
+      "path": "background.png",
+      "sourcePath": "background.png",
+      "kind": "asset",
+      "sha256": "5d4ddb024acabf2ed558733288ee8a9f81298b0262dc8d9a191ba6fa06ed3693",
+      "bytes": 1034269
+    },
+    {
+      "path": "btnEnter.png",
+      "sourcePath": "btnEnter.png",
+      "kind": "asset",
+      "sha256": "4aa0b10ef36a5fd188fee9f0d0b67573f3ab97aedbd92a04371eafb87865ed0b",
+      "bytes": 9241
+    },
+    {
+      "path": "btnNav.png",
+      "sourcePath": "btnNav.png",
+      "kind": "asset",
+      "sha256": "4c6780d0f34a441b8555854b0a423b7928c2558b7df2e0374770ab7f73080cf1",
+      "bytes": 11750
+    },
+    {
+      "path": "icons/Arch.png",
+      "sourcePath": "icons/Arch.png",
+      "kind": "asset",
+      "sha256": "3d12498ac3de4be49dfd3050f971dd96640636b98afb9ae3ea1eb1bbedad0a3a",
+      "bytes": 1869
+    },
+    {
+      "path": "icons/Fedora.png",
+      "sourcePath": "icons/Fedora.png",
+      "kind": "asset",
+      "sha256": "a01d4aa48366246d7ed3d0b23c89ab2e9572e963219d08b0a0cf881c7012abd5",
+      "bytes": 2585
+    },
+    {
+      "path": "icons/arch.png",
+      "sourcePath": "icons/arch.png",
+      "kind": "asset",
+      "sha256": "3d12498ac3de4be49dfd3050f971dd96640636b98afb9ae3ea1eb1bbedad0a3a",
+      "bytes": 1869
+    },
+    {
+      "path": "icons/debian.png",
+      "sourcePath": "icons/debian.png",
+      "kind": "asset",
+      "sha256": "b22ff3f94cc525870876febe14e3bfede6e918617fac2a351a6d2aef619ccb4e",
+      "bytes": 2530
+    },
+    {
+      "path": "icons/fedora.png",
+      "sourcePath": "icons/fedora.png",
+      "kind": "asset",
+      "sha256": "a01d4aa48366246d7ed3d0b23c89ab2e9572e963219d08b0a0cf881c7012abd5",
+      "bytes": 2585
+    },
+    {
+      "path": "icons/fuduntu.png",
+      "sourcePath": "icons/fuduntu.png",
+      "kind": "asset",
+      "sha256": "3752dbb686afa243aa7ab69d628ff1f8604a7bdb2e20314bc237bd02bdf17656",
+      "bytes": 2247
+    },
+    {
+      "path": "icons/gentoo.png",
+      "sourcePath": "icons/gentoo.png",
+      "kind": "asset",
+      "sha256": "83fcc24b5ae37620c870fac5c59d7b328375a3e1e7fda4361b9ba48b5106d563",
+      "bytes": 3319
+    },
+    {
+      "path": "icons/kubuntu.png",
+      "sourcePath": "icons/kubuntu.png",
+      "kind": "asset",
+      "sha256": "18bc657a795369852ba889896a591da722c2092603527144a6b2daeb31976d7f",
+      "bytes": 2984
+    },
+    {
+      "path": "icons/linuxmint.png",
+      "sourcePath": "icons/linuxmint.png",
+      "kind": "asset",
+      "sha256": "d3ceb6a616e1283e47aed928bcbaaf0e0b490d532cfd15622621c3d3e05513b3",
+      "bytes": 2152
+    },
+    {
+      "path": "icons/opensuse.png",
+      "sourcePath": "icons/opensuse.png",
+      "kind": "asset",
+      "sha256": "ab36cf2fbe6100ea4ca504cd1bf8a871e8a2c9acb389d9adfca11a134f3db235",
+      "bytes": 2148
+    },
+    {
+      "path": "icons/sabayon.png",
+      "sourcePath": "icons/sabayon.png",
+      "kind": "asset",
+      "sha256": "1d6cba9721b476eda4329998a0cc4d18abdd077b0a129cb881cf0f42fc6c96d7",
+      "bytes": 1895
+    },
+    {
+      "path": "icons/steamos.png",
+      "sourcePath": "icons/steamos.png",
+      "kind": "asset",
+      "sha256": "1679b8dd434943f28256c0d3be029f89b1ee831203bd55160df234201404e6d4",
+      "bytes": 3006
+    },
+    {
+      "path": "icons/submenu.png",
+      "sourcePath": "icons/submenu.png",
+      "kind": "asset",
+      "sha256": "29ec609e672978623c96ad7182d3865c3d129c9b2fe470881759add432c6e7f7",
+      "bytes": 2237
+    },
+    {
+      "path": "icons/ubuntu.png",
+      "sourcePath": "icons/ubuntu.png",
+      "kind": "asset",
+      "sha256": "c3620d36dfbefa5b7985d105acd958985ce7ae2edc21c0f987eea63a6cb125b1",
+      "bytes": 2850
+    },
+    {
+      "path": "icons/windows.png",
+      "sourcePath": "icons/windows.png",
+      "kind": "asset",
+      "sha256": "e962594080cc99dea4a722bff6f13b8059521274320fd9f4504a934913cc2c67",
+      "bytes": 2620
+    },
+    {
+      "path": "menu_bkg_c.png",
+      "sourcePath": "menu_bkg_c.png",
+      "kind": "asset",
+      "sha256": "dc80922eb4a8338123f3dc626573095727bd216b7f2b6f07bc4b6b0d7d756406",
+      "bytes": 298327
+    },
+    {
+      "path": "menu_bkg_e.png",
+      "sourcePath": "menu_bkg_e.png",
+      "kind": "asset",
+      "sha256": "c7a1ee4301b2f15cf5a1a20366983fd47964eb5e2c66a32f3b17ad71a1b6ccf3",
+      "bytes": 829
+    },
+    {
+      "path": "menu_bkg_n.png",
+      "sourcePath": "menu_bkg_n.png",
+      "kind": "asset",
+      "sha256": "09e8d889513835242cc0f1c2c78c3dc5c872ed2a2fedac7cbb2ae3adf8895eaa",
+      "bytes": 710
+    },
+    {
+      "path": "menu_bkg_ne.png",
+      "sourcePath": "menu_bkg_ne.png",
+      "kind": "asset",
+      "sha256": "92f816feb2ac617b193f699b6fb36621a62ce0b459ac1bbe9cfa87a23b5b4206",
+      "bytes": 1128
+    },
+    {
+      "path": "menu_bkg_nw.png",
+      "sourcePath": "menu_bkg_nw.png",
+      "kind": "asset",
+      "sha256": "57100e96a2415007d7b2cb01564ba69cd929c72f30a078ed6ac8c74375a7d185",
+      "bytes": 1023
+    },
+    {
+      "path": "menu_bkg_s.png",
+      "sourcePath": "menu_bkg_s.png",
+      "kind": "asset",
+      "sha256": "39ee804b064ff3cf52d8f2c6462c48c7edbccd3c890e7d4b27436223f43efbd1",
+      "bytes": 722
+    },
+    {
+      "path": "menu_bkg_se.png",
+      "sourcePath": "menu_bkg_se.png",
+      "kind": "asset",
+      "sha256": "93229955efd1298087a9245628953af1ebf6f55b3c3996191bdecfc44d0320b1",
+      "bytes": 1120
+    },
+    {
+      "path": "menu_bkg_sw.png",
+      "sourcePath": "menu_bkg_sw.png",
+      "kind": "asset",
+      "sha256": "e60d9038509bb075c48b0a6d3832d48b5a604d265ea3537f6e03e3acd6b35475",
+      "bytes": 1130
+    },
+    {
+      "path": "menu_bkg_w.png",
+      "sourcePath": "menu_bkg_w.png",
+      "kind": "asset",
+      "sha256": "40c587a810f1e099fc494eacace4ac6d620c6728e450b6a54cdbf27d076a2bdc",
+      "bytes": 834
+    },
+    {
+      "path": "progress_bar_c.png",
+      "sourcePath": "progress_bar_c.png",
+      "kind": "asset",
+      "sha256": "474745dc43635945de269e96caaa824cbe7af9bcda231bca22e62e6531bcc83f",
+      "bytes": 1076
+    },
+    {
+      "path": "progress_bar_e.png",
+      "sourcePath": "progress_bar_e.png",
+      "kind": "asset",
+      "sha256": "8549a986e3ddf558ad9852bcc54f645925353b80c238bd61f56abc66ba346870",
+      "bytes": 713
+    },
+    {
+      "path": "progress_bar_w.png",
+      "sourcePath": "progress_bar_w.png",
+      "kind": "asset",
+      "sha256": "950e580674278f111458f0270315b6e55192eedc8154192b02eb03eb9859ad43",
+      "bytes": 722
+    },
+    {
+      "path": "progress_highlight_c.png",
+      "sourcePath": "progress_highlight_c.png",
+      "kind": "asset",
+      "sha256": "9422fc43c29e3a92a593f2c59217b9a856b8a67b5c73ac25d91309bd1080da40",
+      "bytes": 1028
+    },
+    {
+      "path": "select_bkg_c.png",
+      "sourcePath": "select_bkg_c.png",
+      "kind": "asset",
+      "sha256": "f2324672b0a1ddc9aec1cef69a4aa5249141c816c6989cadbf91ac4068f8f6c7",
+      "bytes": 187
+    },
+    {
+      "path": "select_bkg_e.png",
+      "sourcePath": "select_bkg_e.png",
+      "kind": "asset",
+      "sha256": "e5a4e803395add345c73668c22fc1f894209899848498e1e1314f46604c313ea",
+      "bytes": 229
+    },
+    {
+      "path": "select_bkg_w.png",
+      "sourcePath": "select_bkg_w.png",
+      "kind": "asset",
+      "sha256": "a1a037ef41f3e8b62a02b46f92b2e935317c2c93a6273b6170e925cfaef044c5",
+      "bytes": 234
+    },
+    {
+      "path": "term_bkg_c.png",
+      "sourcePath": "term_bkg_c.png",
+      "kind": "asset",
+      "sha256": "a0039bed5eb02908ce4681730b7c4eca07a27c477a31e86bc880ffa3e5309993",
+      "bytes": 186
+    },
+    {
+      "path": "term_bkg_e.png",
+      "sourcePath": "term_bkg_e.png",
+      "kind": "asset",
+      "sha256": "0479fee75031a635441659d789afe0c1832c82dbabb2c65fd3f1e78faad3e1a6",
+      "bytes": 231
+    },
+    {
+      "path": "term_bkg_n.png",
+      "sourcePath": "term_bkg_n.png",
+      "kind": "asset",
+      "sha256": "5209c231a606062d359bf87694f17eafeb586fdaddd3cf0d67781c16a320c9b3",
+      "bytes": 234
+    },
+    {
+      "path": "term_bkg_ne.png",
+      "sourcePath": "term_bkg_ne.png",
+      "kind": "asset",
+      "sha256": "a7bf899d6c3278a3c1b7cbcc8cf9ff2779dd8e12e505642f45c46c53581f6215",
+      "bytes": 698
+    },
+    {
+      "path": "term_bkg_nw.png",
+      "sourcePath": "term_bkg_nw.png",
+      "kind": "asset",
+      "sha256": "ac1ac4d20b7b8dc212c5c7f40c402533ed12683207693efc5d5dce768e23d5f9",
+      "bytes": 562
+    },
+    {
+      "path": "term_bkg_s.png",
+      "sourcePath": "term_bkg_s.png",
+      "kind": "asset",
+      "sha256": "9ddf9ad9736a910e28be04286f2c38e907f7d6f4c8301721f478c9ca4ff2c56a",
+      "bytes": 243
+    },
+    {
+      "path": "term_bkg_se.png",
+      "sourcePath": "term_bkg_se.png",
+      "kind": "asset",
+      "sha256": "c861984295e41f8236f78098df81775a5538e2adafbea3f5bcb3780cd7179782",
+      "bytes": 644
+    },
+    {
+      "path": "term_bkg_sw.png",
+      "sourcePath": "term_bkg_sw.png",
+      "kind": "asset",
+      "sha256": "cc6bc253147a00120f40e121a7f9360abe793b32e58f502116743ffb22e8a3d1",
+      "bytes": 641
+    },
+    {
+      "path": "term_bkg_w.png",
+      "sourcePath": "term_bkg_w.png",
+      "kind": "asset",
+      "sha256": "bec4e5d1a6b7b1f1dc4560a278f42d3ff738ac13fe79c1a09b4823e07dfc8dec",
+      "bytes": 228
+    },
+    {
+      "path": "title.png",
+      "sourcePath": "title.png",
+      "kind": "asset",
+      "sha256": "7b928babc5c5b7f8f61ab0d463667c95bfe07fcf69301ed4f8c7b1cdd9a864fc",
+      "bytes": 4522
+    }
+  ],
+  "sourceReadmeAndLicense": "provenance/README.md and provenance/LICENSE when present; original theme file is provenance/upstream-theme.txt",
+  "retrievalFailures": []
+}

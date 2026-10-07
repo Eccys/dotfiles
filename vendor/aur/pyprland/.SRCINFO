@@ -1,0 +1,23 @@
+pkgbase = pyprland
+	pkgdesc = Enhance your Desktop with menus, easy monitor layout and other extensions (powerful hyprland scratchpads)
+	pkgver = 3.4.5
+	pkgrel = 0
+	url = https://github.com/hyprland-community/pyprland
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-hatchling
+	makedepends = gcc
+	depends = python
+	depends = python-aiofiles
+	depends = python-aiohttp
+	depends = python-pillow
+	optdepends = python-questionary: for pypr-quickstart to work
+	provides = pyprland
+	conflicts = pyprland
+	source = pyprland-3.4.5.tar.gz::https://github.com/hyprland-community/pyprland/archive/refs/tags/3.4.5.tar.gz
+	sha256sums = 68308303d72752301c0f82d865f03c04ade26d01685521944672d705816d1629
+
+pkgname = pyprland

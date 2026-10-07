@@ -1,0 +1,15 @@
+#!/usr/bin/python
+import json,os,socket,time
+path=f'/run/user/{os.getuid()}/dubbing-ai/qmp.sock'
+try:
+ s=socket.socket(socket.AF_UNIX);s.settimeout(5);s.connect(path);f=s.makefile('rwb');f.readline()
+ for name in ['qmp_capabilities','system_powerdown']:
+  f.write(json.dumps({'execute':name}).encode()+b'\n');f.flush()
+  while True:
+   data=f.readline()
+   if not data:raise SystemExit(0)
+   obj=json.loads(data)
+   if 'return' in obj or 'error' in obj:break
+ s.settimeout(85)
+ while f.readline():pass
+except (OSError,TimeoutError):pass

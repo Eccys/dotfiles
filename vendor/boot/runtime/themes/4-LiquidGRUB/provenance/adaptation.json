@@ -1,0 +1,47 @@
+{
+  "targetResolution": "2560x1440",
+  "sourceDesignResolution": [
+    1920,
+    1080
+  ],
+  "scaleX": 1.3333333333333333,
+  "scaleY": 1.3333333333333333,
+  "method": "Config uses a 1920x1080-style layout; literal pixel geometry is scaled for the target. Original 16:10 background remains intact.",
+  "scaledProperties": [
+    {
+      "key": "icon_width",
+      "from": "64",
+      "to": "85"
+    },
+    {
+      "key": "icon_height",
+      "from": "64",
+      "to": "85"
+    },
+    {
+      "key": "item_icon_space",
+      "from": "12",
+      "to": "16"
+    },
+    {
+      "key": "item_height",
+      "from": "96",
+      "to": "128"
+    },
+    {
+      "key": "item_padding",
+      "from": "6",
+      "to": "8"
+    },
+    {
+      "key": "item_spacing",
+      "from": "12",
+      "to": "16"
+    }
+  ],
+  "imageComponentDimensionsAdded": [],
+  "adaptedBackground": null,
+  "sourceThemePreserved": "provenance/upstream-theme.txt",
+  "fontsUnchanged": true,
+  "fontSubstitutionOwner": "runtime package; JetBrains Mono PF2 names to be applied there"
+}

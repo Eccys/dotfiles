@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Dubbing AI
+Comment=Voice changer in its dedicated Windows virtual machine
+Exec=@HOME@/.local/bin/dubbing-ai
+Icon=@HOME@/.local/share/dubbing-ai/app/dubbing.ico
+Terminal=false
+Categories=AudioVideo;Audio;

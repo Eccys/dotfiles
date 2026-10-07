@@ -1,0 +1,117 @@
+{
+  "id": 5,
+  "name": "Grand Theft Gentoo",
+  "packageFolder": "5-GTG",
+  "entrypoint": "5-GTG/theme.txt",
+  "catalogLinkFromGorgeousGRUB": "https://gitlab.com/imnotpua/grub_gtg/",
+  "sourceRepository": "https://imnotpua/grub_gtg",
+  "sourceBranch": "main",
+  "sourceCommit": "47420d283989b38775180636c724fe4f2490f414",
+  "sourceThemePath": "assets/theme.txt",
+  "license": "GPL-3.0 license text included",
+  "licenseStatus": "A GNU GPL Version 3 LICENSE text is present in the pinned source; the GitLab project API did not provide SPDX metadata.",
+  "notes": "Ventoy configuration and installers are excluded. GRUB static data includes a prebuilt bankgothic.pf2 font.",
+  "upstreamInstallerExecuted": false,
+  "sourceAssets": [
+    {
+      "path": "bankgothic.pf2",
+      "sourcePath": "assets/fonts/bankgothic.pf2",
+      "kind": "asset",
+      "sha256": "4feb6270210bcf2de8cf66594cc0fae4759cd2ea4f59718a5e9c30d11ccf12ed",
+      "bytes": 8225
+    },
+    {
+      "path": "background.png",
+      "sourcePath": "assets/images/background.png",
+      "kind": "asset",
+      "sha256": "5bf8509c95363d190dcbd7c784d01ecb5475a804c851a4e6c9ba0cdc5c16be50",
+      "bytes": 917012
+    },
+    {
+      "path": "menu_c.png",
+      "sourcePath": "assets/menu/menu_c.png",
+      "kind": "asset",
+      "sha256": "ee3269f0d9d593801c13c09f43a4525a49b6a454382d353b7746b24bbeb3deb0",
+      "bytes": 4921
+    },
+    {
+      "path": "menu_e.png",
+      "sourcePath": "assets/menu/menu_e.png",
+      "kind": "asset",
+      "sha256": "d62abd00b2bac713ddfc5d421092ed09a633cfeb608646a73abafdd2326ff23a",
+      "bytes": 5113
+    },
+    {
+      "path": "menu_n.png",
+      "sourcePath": "assets/menu/menu_n.png",
+      "kind": "asset",
+      "sha256": "0f3373c8fba977cbb73a5eda8f9f50eb8154ba243ab078561f8977335e7aea6b",
+      "bytes": 4882
+    },
+    {
+      "path": "menu_ne.png",
+      "sourcePath": "assets/menu/menu_ne.png",
+      "kind": "asset",
+      "sha256": "a98b2047f5df95ce0817ca387694bcd94a5942ce9ce7ad66784709cdb8ed07cb",
+      "bytes": 5142
+    },
+    {
+      "path": "menu_nw.png",
+      "sourcePath": "assets/menu/menu_nw.png",
+      "kind": "asset",
+      "sha256": "93aa56d52b49996cc436479dd7587442acab56c8a2ba54a4dca4f50f53c92c57",
+      "bytes": 5138
+    },
+    {
+      "path": "menu_s.png",
+      "sourcePath": "assets/menu/menu_s.png",
+      "kind": "asset",
+      "sha256": "b10cce58510e1f467a8aeb22ad428d0fcef5ea192292f56499a6a8d645b1e2fb",
+      "bytes": 5122
+    },
+    {
+      "path": "menu_se.png",
+      "sourcePath": "assets/menu/menu_se.png",
+      "kind": "asset",
+      "sha256": "9b4735831f891c65b71a8ba07f583a6b15d58ab4f9efbed91f79d6b7623387e5",
+      "bytes": 5141
+    },
+    {
+      "path": "menu_sw.png",
+      "sourcePath": "assets/menu/menu_sw.png",
+      "kind": "asset",
+      "sha256": "05b7e8e802cbebe02e9c74f4139c0b092005b7d087b9212939b58e890465f7a4",
+      "bytes": 4914
+    },
+    {
+      "path": "menu_w.png",
+      "sourcePath": "assets/menu/menu_w.png",
+      "kind": "asset",
+      "sha256": "2ad961d41c611bd15d91d6f2fa12f2f0fd4ea73d6bdea7328bd32767fa7ac6e4",
+      "bytes": 4889
+    },
+    {
+      "path": "scrollbar_thumb_c.png",
+      "sourcePath": "assets/scrollbar/scrollbar_thumb_c.png",
+      "kind": "asset",
+      "sha256": "855ca0ca97748cbb284192c4ebacada6296b3548d11320b4defb9a674c1f730b",
+      "bytes": 4426
+    },
+    {
+      "path": "select_c.png",
+      "sourcePath": "assets/selection/select_c.png",
+      "kind": "asset",
+      "sha256": "80a502d09e386b65180e0bbd6ee6f4c76a4772b0db6f1a0e170ab83dd731a21e",
+      "bytes": 4465
+    },
+    {
+      "path": "select_w.png",
+      "sourcePath": "assets/selection/select_w.png",
+      "kind": "asset",
+      "sha256": "70d0251bf0b29dca3d9f3d7e062c872ee594c02787f967f4bc703d3e860cc91f",
+      "bytes": 5596
+    }
+  ],
+  "sourceReadmeAndLicense": "provenance/README.md and provenance/LICENSE when present; original theme file is provenance/upstream-theme.txt",
+  "retrievalFailures": []
+}

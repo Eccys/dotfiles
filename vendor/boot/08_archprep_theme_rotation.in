@@ -1,0 +1,14 @@
+#!/bin/sh
+cat <<'GRUB_ROTATION'
+if [ -f "$prefix/themes/0-CyberRe/theme.txt" ]; then
+    set theme="$prefix/themes/0-CyberRe/theme.txt"
+    export theme
+fi
+if search --no-floppy --fs-uuid --set=rotation_dev @BOOT_UUID@; then
+    set rotation_state_file="($rotation_dev)/grub/theme-rotation.env"
+    set rotation_seed_file="($rotation_dev)/grub/theme-rotation-seed.cfg"
+    set rotation_theme_root="($rotation_dev)/grub/themes"
+    set rotation_font_root="($rotation_dev)/grub/fonts"
+    source ($rotation_dev)/grub/theme-rotation-selector.cfg
+fi
+GRUB_ROTATION

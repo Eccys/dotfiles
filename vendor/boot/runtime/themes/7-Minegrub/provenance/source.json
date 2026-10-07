@@ -1,0 +1,257 @@
+{
+  "id": 7,
+  "name": "Minegrub",
+  "packageFolder": "7-Minegrub",
+  "entrypoint": "7-Minegrub/theme.txt",
+  "catalogLinkFromGorgeousGRUB": "https://github.com/Lxtharia/minegrub-theme",
+  "sourceRepository": "https://Lxtharia/minegrub-theme",
+  "sourceBranch": "dev",
+  "sourceCommit": "142f67baed783b4f6774f316476f46ff7ab1823a",
+  "sourceThemePath": "minegrub/theme.txt",
+  "license": "MIT",
+  "licenseStatus": "MIT in source repository; README separately states the bundled Minecraft font is for non-commercial use",
+  "notes": "The optional background selector, Python/systemd updater, and GRUB console patch are omitted; static theme assets only.",
+  "upstreamInstallerExecuted": false,
+  "sourceAssets": [
+    {
+      "path": "Minecraft24.pf2",
+      "sourcePath": "minegrub/Minecraft24.pf2",
+      "kind": "asset",
+      "sha256": "672fe4c8a691aa1eeb2cd0c51b8612099ae039fc341e0454c3b6c6e0203339d0",
+      "bytes": 6524
+    },
+    {
+      "path": "Minecraft30.pf2",
+      "sourcePath": "minegrub/Minecraft30.pf2",
+      "kind": "asset",
+      "sha256": "c89c490bbc44ca2b731f99507bb20cb03d1a183b4bbb733e165f4eb102c8d44e",
+      "bytes": 8402
+    },
+    {
+      "path": "Monocraft22.pf2",
+      "sourcePath": "minegrub/Monocraft22.pf2",
+      "kind": "asset",
+      "sha256": "ef3592063dce99f4e2542369ab2bed4f4f528017577dff5ef6076e134706c2e6",
+      "bytes": 12482
+    },
+    {
+      "path": "assets/logo_clear.png",
+      "sourcePath": "minegrub/assets/logo_clear.png",
+      "kind": "asset",
+      "sha256": "a3980bf791cb7a972e51fbb74b69532402299e0bf6a2c6c8eb10adc5e28ab2b2",
+      "bytes": 10850
+    },
+    {
+      "path": "background.png",
+      "sourcePath": "minegrub/background.png",
+      "kind": "asset",
+      "sha256": "f47efec478b70967969bf9000461f42fd2ab26fa562a2ced3561d4093761eca2",
+      "bytes": 841669
+    },
+    {
+      "path": "dirt.png",
+      "sourcePath": "minegrub/dirt.png",
+      "kind": "asset",
+      "sha256": "0f87eb3286e875396aeffb7b8c86da71abf27ea25855a5cc50b8577bb8fcb5e1",
+      "bytes": 26974
+    },
+    {
+      "path": "item_c.png",
+      "sourcePath": "minegrub/item_c.png",
+      "kind": "asset",
+      "sha256": "fbcf8f3b9c688205b92def8c3e65eb93b3eb60b995f250293427388ed8bb4078",
+      "bytes": 2973
+    },
+    {
+      "path": "item_e.png",
+      "sourcePath": "minegrub/item_e.png",
+      "kind": "asset",
+      "sha256": "b002cda8afd5a236ac90d000d09ee197aa9986a35fa86da8418e907359510d3b",
+      "bytes": 549
+    },
+    {
+      "path": "item_n.png",
+      "sourcePath": "minegrub/item_n.png",
+      "kind": "asset",
+      "sha256": "f2be7897f6b5a169d4e3c4785c5317d17888a3bb775f7a4e95bab76bc6bf679b",
+      "bytes": 1540
+    },
+    {
+      "path": "item_ne.png",
+      "sourcePath": "minegrub/item_ne.png",
+      "kind": "asset",
+      "sha256": "5b5f169ae63541df5e330deda4972477ae21e53810463d18028ecb0716ddc1fc",
+      "bytes": 529
+    },
+    {
+      "path": "item_nw.png",
+      "sourcePath": "minegrub/item_nw.png",
+      "kind": "asset",
+      "sha256": "a8a93761fdf3e91bce5c3a7903627e7a32238220bb6c806e6ad44c2085223d18",
+      "bytes": 515
+    },
+    {
+      "path": "item_s.png",
+      "sourcePath": "minegrub/item_s.png",
+      "kind": "asset",
+      "sha256": "6ed459ab3b770840988e40f90e0e20aea389c3cd1fd5d243def6c6229b322525",
+      "bytes": 1012
+    },
+    {
+      "path": "item_se.png",
+      "sourcePath": "minegrub/item_se.png",
+      "kind": "asset",
+      "sha256": "58ab75f4cd59ce997612a1d2ce2b27ad7a225d8e69fab779d25f7c67699807f2",
+      "bytes": 515
+    },
+    {
+      "path": "item_sw.png",
+      "sourcePath": "minegrub/item_sw.png",
+      "kind": "asset",
+      "sha256": "0fcefca87571bda6f87afd1fe1f7f78b36b98d3ddaefcd35acc2979800cb8c92",
+      "bytes": 508
+    },
+    {
+      "path": "item_w.png",
+      "sourcePath": "minegrub/item_w.png",
+      "kind": "asset",
+      "sha256": "61440e607405a4c3722665630abc210821e2cc199c451893f819862f9f38692b",
+      "bytes": 540
+    },
+    {
+      "path": "logo.png",
+      "sourcePath": "minegrub/logo.png",
+      "kind": "asset",
+      "sha256": "5ad247595f60d62afd955fa17421a1a1167c14f41a3244b98e88d1af498431e5",
+      "bytes": 15476
+    },
+    {
+      "path": "selected_item_c.png",
+      "sourcePath": "minegrub/selected_item_c.png",
+      "kind": "asset",
+      "sha256": "4b6acd3428fb1f06fd1fd2753d1eba50949b70572ccdca659807995d8b2a9510",
+      "bytes": 3685
+    },
+    {
+      "path": "selected_item_e.png",
+      "sourcePath": "minegrub/selected_item_e.png",
+      "kind": "asset",
+      "sha256": "fa3ff0e14a3a5b2d188317e28926dbc4e4133a4876415d9263fd2b63dc629d1d",
+      "bytes": 552
+    },
+    {
+      "path": "selected_item_n.png",
+      "sourcePath": "minegrub/selected_item_n.png",
+      "kind": "asset",
+      "sha256": "1a8d10b49c306965fc0a765b874777cb7e53171aad08a673c01e6d762b47abe5",
+      "bytes": 1884
+    },
+    {
+      "path": "selected_item_ne.png",
+      "sourcePath": "minegrub/selected_item_ne.png",
+      "kind": "asset",
+      "sha256": "8b4f47aa3d0ce903cad42a2eb12a09d9b692aeb46cc83ad7bf7796bee9ebc53b",
+      "bytes": 529
+    },
+    {
+      "path": "selected_item_nw.png",
+      "sourcePath": "minegrub/selected_item_nw.png",
+      "kind": "asset",
+      "sha256": "f8ec6359fc1f1dc31d843324d6e041c6322f8e6316f0e0f6f8b3a0a9c03343c7",
+      "bytes": 513
+    },
+    {
+      "path": "selected_item_s.png",
+      "sourcePath": "minegrub/selected_item_s.png",
+      "kind": "asset",
+      "sha256": "678bfd0271009d84291d66d1c9cf0b683fcc0c75d0e5b551c719f42c6106ed8a",
+      "bytes": 1116
+    },
+    {
+      "path": "selected_item_se.png",
+      "sourcePath": "minegrub/selected_item_se.png",
+      "kind": "asset",
+      "sha256": "6424c450a23fa002aac540ee3122a62f060b9e69030f4c593cb705260b2ceb49",
+      "bytes": 515
+    },
+    {
+      "path": "selected_item_sw.png",
+      "sourcePath": "minegrub/selected_item_sw.png",
+      "kind": "asset",
+      "sha256": "60b052cfe9bb9270460b6570f492124c6a6b594ae97de976f3e17d9bbff37dea",
+      "bytes": 508
+    },
+    {
+      "path": "selected_item_w.png",
+      "sourcePath": "minegrub/selected_item_w.png",
+      "kind": "asset",
+      "sha256": "4a8242269ccf1a7b736f2b7c1f028902db753fbf54c1070b71e556b2113bd6c2",
+      "bytes": 535
+    },
+    {
+      "path": "static_bar.png",
+      "sourcePath": "minegrub/static_bar.png",
+      "kind": "asset",
+      "sha256": "ba1c2516bfdcbe0cad8a9e6ed9e4c21f7a6cd296f078046968292f2fa1fd004e",
+      "bytes": 5119
+    },
+    {
+      "path": "term_e.png",
+      "sourcePath": "minegrub/term_e.png",
+      "kind": "asset",
+      "sha256": "79f7b3a5574d67be889e6cc3c257f8aeb0d8dd1f77968e9a76d4d30bb4aaae47",
+      "bytes": 547
+    },
+    {
+      "path": "term_n.png",
+      "sourcePath": "minegrub/term_n.png",
+      "kind": "asset",
+      "sha256": "fefd7fd2a910b450c8004eeee2c8913f4831d6ce0def4ece4ab0ea517e352393",
+      "bytes": 553
+    },
+    {
+      "path": "term_ne.png",
+      "sourcePath": "minegrub/term_ne.png",
+      "kind": "asset",
+      "sha256": "600af31fb00ce71891c8cdcaca52abd3e8f3c73a77f3573337c39d5b6de5a876",
+      "bytes": 2375
+    },
+    {
+      "path": "term_nw.png",
+      "sourcePath": "minegrub/term_nw.png",
+      "kind": "asset",
+      "sha256": "758cc9647587f41d01564948f697cb0c463f3a7d141bb7b1b6a01bb62a7619cd",
+      "bytes": 2351
+    },
+    {
+      "path": "term_s.png",
+      "sourcePath": "minegrub/term_s.png",
+      "kind": "asset",
+      "sha256": "a24b6c5faeaba965124768481435f27a2dbec0f87522d383fa7489c3e6610fee",
+      "bytes": 553
+    },
+    {
+      "path": "term_se.png",
+      "sourcePath": "minegrub/term_se.png",
+      "kind": "asset",
+      "sha256": "9391fda656fcef10723a0e3bc4fbe07695c589fdefa26c7518850206057a5e85",
+      "bytes": 2368
+    },
+    {
+      "path": "term_sw.png",
+      "sourcePath": "minegrub/term_sw.png",
+      "kind": "asset",
+      "sha256": "51de2b9190ba6e9094b2a7d410112c81458031134026af5f41dccdd8b8ac14c7",
+      "bytes": 2373
+    },
+    {
+      "path": "term_w.png",
+      "sourcePath": "minegrub/term_w.png",
+      "kind": "asset",
+      "sha256": "fe37d4a59c93a0afcf44dbd1a5c3aec02f794a22940f6c203fa3827c3f0924be",
+      "bytes": 546
+    }
+  ],
+  "sourceReadmeAndLicense": "provenance/README.md and provenance/LICENSE when present; original theme file is provenance/upstream-theme.txt",
+  "retrievalFailures": []
+}

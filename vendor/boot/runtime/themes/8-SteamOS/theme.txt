@@ -1,0 +1,79 @@
+# Local 2560x1440 adaptation of the pinned upstream theme; see provenance/adaptation.json.
+# GRUB2 gfxmenu Steam Big Picture theme.
+# Designed for 1600x1200 (so you can stretch it to 1920x1200 just fine). Might work for 1920x1080. Works for 800x600 and 1024x768 as well, but things get squeezed.
+# Created by Legendary Bibo
+
+# Global Property
+title-text: ""
+title-font: "JetBrains Mono Regular 20"
+title-color: "#333333"
+message-font: "JetBrains Mono Regular 13"
+message-color: "#333333"
+message-bg-color: "#f2f2f2"
+desktop-image: "background.png"
+desktop-color: "#000000"
+terminal-box: "term_bkg_*.png"
+terminal-font: "JetBrains Mono Regular 13"
+
+
+
+# Show the boot menu
++ boot_menu {
+		left = 50%-667
+		width = 1334
+		top = 30%
+		height = 50%+41
+		item_font = "JetBrains Mono Regular 20"
+		selected_item_font = "JetBrains Mono Regular 20"
+		item_color = "#6d7a82"
+		selected_item_color = "#2e373e"
+		item_height = 72
+		item_padding = 35
+		item_spacing = 12
+		icon_width = 77
+		icon_height = 58
+		item_icon_space = 32
+		selected_item_pixmap_style= "select_bkg_*.png"
+		menu_pixmap_style = "menu_bkg_*.png"
+		scrollbar = false
+		scrollbar_width = 27
+}
+
++ image {
+		top = 24%
+		left = 5%+16
+		width = 406
+		height = 52
+		file = "title.png"
+}
+
++ image {
+		top = 90%
+		left = 50%-211
+		width = 422
+		height = 83
+		file = "btnEnter.png"
+}
+
++ image {
+		top = 90%
+		left = 100%-397
+		width = 301
+		height = 83
+		file = "btnNav.png"
+}
+
+# Show a styled horizontal progress bar
++ progress_bar {
+		id = "__timeout__"
+		left = 50%-622
+		width = 1245
+		top = 84%+8
+		height = 37
+		show_text = false
+		font = "JetBrains Mono Regular 20"
+		text_color = "255, 255, 255"
+		text = ""
+		bar_style = "progress_bar_*.png"
+		highlight_style = "progress_highlight_*.png"
+}

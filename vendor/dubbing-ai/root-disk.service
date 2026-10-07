@@ -1,0 +1,5 @@
+[Unit]
+Description=Read-only Windows partition view for Dubbing AI VM
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /usr/local/libexec/dubbing-ai-readonly-disk.py

@@ -1,0 +1,1369 @@
+{
+  "guide": {
+    "about": {
+      "title": "Serpantinum",
+      "loading": "\u0110ang t\u1ea3i...",
+      "unknown": "Kh\u00f4ng r\u00f5",
+      "version_by": "v{version} \u2022 b\u1edfi {author}",
+      "hardware": {
+        "device_name": "T\u00ean thi\u1ebft b\u1ecb",
+        "processor": "B\u1ed9 x\u1eed l\u00fd",
+        "graphics": "Card \u0111\u1ed3 h\u1ecda",
+        "memory": "B\u1ed9 nh\u1edb (RAM)",
+        "disk_capacity": "Dung l\u01b0\u1ee3ng \u1ed5 \u0111\u0129a",
+        "integrated_graphics": "\u0110\u1ed3 h\u1ecda t\u00edch h\u1ee3p"
+      },
+      "system": {
+        "os_name": "T\u00ean h\u1ec7 \u0111i\u1ec1u h\u00e0nh",
+        "kernel_version": "Phi\u00ean b\u1ea3n Kernel",
+        "desktop": "M\u00f4i tr\u01b0\u1eddng desktop",
+        "shell": "Shell",
+        "uptime": "Th\u1eddi gian ho\u1ea1t \u0111\u1ed9ng",
+        "default_os": "Linux"
+      },
+      "github_repo": "ilyamiro/serpantinum"
+    },
+    "tabs": {
+      "welcome": "Ch\u00e0o m\u1eebng",
+      "general": "Chung",
+      "display": "M\u00e0n h\u00ecnh",
+      "bar": "Thanh t\u00e1c v\u1ee5",
+      "launcher": "Tr\u00ecnh kh\u1edfi ch\u1ea1y",
+      "theme": "Giao di\u1ec7n",
+      "notifications": "Th\u00f4ng b\u00e1o",
+      "idle": "Tr\u1ea1ng th\u00e1i ch\u1edd",
+      "wellbeing": "S\u1ee9c kh\u1ecfe s\u1ed1",
+      "tutorial": "H\u01b0\u1edbng d\u1eabn",
+      "update": "C\u1eadp nh\u1eadt",
+      "about": "Gi\u1edbi thi\u1ec7u",
+      "display_widgets": "Ti\u1ec7n \u00edch",
+      "display_general": "Chung",
+      "osd": "OSD",
+      "dock": "Dock",
+      "bar_general": "Chung",
+      "bar_modules": "M\u00f4-\u0111un",
+      "bar_side_modules": "M\u00f4-\u0111un b\u00ean c\u1ea1nh"
+    },
+    "launcher": {
+      "position": {
+        "title": "V\u1ecb tr\u00ed tr\u00ean m\u00e0n h\u00ecnh",
+        "desc": "Ch\u1ecdn c\u1ea1nh m\u00e0n h\u00ecnh \u0111\u1ec3 ghim tr\u00ecnh kh\u1edfi ch\u1ea1y",
+        "top": "Tr\u00ean",
+        "bottom": "D\u01b0\u1edbi",
+        "left": "Tr\u00e1i",
+        "right": "Ph\u1ea3i",
+        "center": "Gi\u1eefa"
+      },
+      "width": {
+        "title": "Chi\u1ec1u r\u1ed9ng tr\u00ecnh kh\u1edfi ch\u1ea1y",
+        "desc": "T\u1ed5ng chi\u1ec1u r\u1ed9ng c\u1ee7a c\u1eeda s\u1ed5 tr\u00ecnh kh\u1edfi ch\u1ea1y t\u00ednh b\u1eb1ng pixel"
+      },
+      "items": {
+        "title": "S\u1ed1 m\u1ee5c hi\u1ec3n th\u1ecb",
+        "desc": "S\u1ed1 k\u1ebft qu\u1ea3 t\u00ecm ki\u1ebfm hi\u1ec3n th\u1ecb \u0111\u1ed3ng th\u1eddi"
+      },
+      "terminal": {
+        "title": "L\u1ec7nh terminal",
+        "desc": "Ti\u1ec1n t\u1ed1 l\u1ec7nh d\u00f9ng cho c\u00e1c l\u1ec7nh b\u1eaft \u0111\u1ea7u b\u1eb1ng > (VD: kitty -e, alacritty -e, foot -e)"
+      },
+      "smart_ranking": {
+        "title": "S\u1eafp x\u1ebfp th\u00f4ng minh trong tr\u00ecnh kh\u1edfi ch\u1ea1y",
+        "desc": "S\u1eafp x\u1ebfp \u1ee9ng d\u1ee5ng d\u1ef1a tr\u00ean t\u1ea7n su\u1ea5t s\u1eed d\u1ee5ng v\u00e0 th\u1eddi gian m\u1edf"
+      },
+      "test": "M\u1edf tr\u00ecnh kh\u1edfi ch\u1ea1y"
+    },
+    "notifications": {
+      "dnd": {
+        "title": "Kh\u00f4ng l\u00e0m phi\u1ec1n",
+        "desc": "T\u1eaft th\u00f4ng b\u00e1o n\u1ed5i ngo\u1ea1i tr\u1eeb c\u00e1c c\u1ea3nh b\u00e1o quan tr\u1ecdng"
+      },
+      "position": {
+        "title": "V\u1ecb tr\u00ed th\u00f4ng b\u00e1o n\u1ed5i",
+        "desc": "Ch\u1ecdn v\u1ecb tr\u00ed xu\u1ea5t hi\u1ec7n c\u1ee7a th\u00f4ng b\u00e1o n\u1ed5i tr\u00ean m\u00e0n h\u00ecnh",
+        "top_right": "Tr\u00ean c\u00f9ng b\u00ean ph\u1ea3i",
+        "top_left": "Tr\u00ean c\u00f9ng b\u00ean tr\u00e1i",
+        "bottom_right": "D\u01b0\u1edbi c\u00f9ng b\u00ean ph\u1ea3i",
+        "bottom_left": "D\u01b0\u1edbi c\u00f9ng b\u00ean tr\u00e1i",
+        "top_center": "Gi\u1eefa ph\u00eda tr\u00ean",
+        "bottom_center": "Gi\u1eefa ph\u00eda d\u01b0\u1edbi",
+        "select_on_screen": "Ch\u1ecdn tr\u00ean m\u00e0n h\u00ecnh...",
+        "close_selector": "\u0110\u00f3ng b\u1ed9 ch\u1ecdn"
+      },
+      "sound": {
+        "title": "\u00c2m thanh th\u00f4ng b\u00e1o",
+        "desc": "Ph\u00e1t \u00e2m thanh b\u00e1o hi\u1ec7u khi c\u00f3 th\u00f4ng b\u00e1o \u0111\u1ebfn"
+      },
+      "sound_file": {
+        "title": "Hi\u1ec7u \u1ee9ng \u00e2m thanh",
+        "desc": "Ch\u1ecdn \u00e2m thanh ph\u00e1t cho c\u00e1c c\u1ea3nh b\u00e1o \u0111\u1ebfn"
+      },
+      "empty_graphic": {
+        "title": "Ho\u1ea1t \u1ea3nh trung t\u00e2m tr\u1ed1ng",
+        "desc": "Hi\u1ec3n th\u1ecb h\u00ecnh ch\u00fa m\u00e8o \u0111ang ng\u1ee7 trong trung t\u00e2m th\u00f4ng b\u00e1o khi kh\u00f4ng c\u00f3 th\u00f4ng b\u00e1o"
+      },
+      "test": "Th\u1eed nghi\u1ec7m th\u00f4ng b\u00e1o",
+      "test_desc": "\u0110\u00e2y l\u00e0 th\u00f4ng b\u00e1o th\u1eed nghi\u1ec7m"
+    },
+    "idle": {
+      "enabled": {
+        "title": "B\u1eadt h\u1ec7 th\u1ed1ng tr\u1ea1ng th\u00e1i ch\u1edd",
+        "desc": "K\u00edch ho\u1ea1t qu\u1ea3n l\u00fd ngu\u1ed3n \u0111i\u1ec7n v\u00e0 th\u1eddi gian ch\u1edd kh\u00f3a m\u00e0n h\u00ecnh"
+      },
+      "manual_inhibit": {
+        "title": "Kh\u00f4ng l\u00e0m phi\u1ec1n (gi\u1eef m\u00e0n h\u00ecnh lu\u00f4n s\u00e1ng)",
+        "desc": "Ng\u0103n h\u1ec7 th\u1ed1ng chuy\u1ec3n sang tr\u1ea1ng th\u00e1i ch\u1edd th\u1ee7 c\u00f4ng"
+      },
+      "mpris_inhibit": {
+        "title": "Ch\u1eb7n ch\u1edd khi \u0111ang ph\u00e1t ph\u01b0\u01a1ng ti\u1ec7n",
+        "desc": "Ng\u0103n c\u00e1c t\u00e1c v\u1ee5 ch\u1edd khi nh\u1ea1c ho\u1eb7c video \u0111ang ph\u00e1t"
+      },
+      "respect_inhibitors": {
+        "title": "Tu\u00e2n th\u1ee7 b\u1ed9 ch\u1eb7n t\u1eeb \u1ee9ng d\u1ee5ng",
+        "desc": "T\u00f4n tr\u1ecdng kh\u00f3a ch\u1eb7n tr\u1ea1ng th\u00e1i ch\u1edd Wayland t\u1eeb c\u00e1c \u1ee9ng d\u1ee5ng"
+      },
+      "pipeline_notice": "Th\u1ee9 t\u1ef1: L\u00e0m m\u1edd m\u00e0n h\u00ecnh < kh\u00f3a phi\u00ean < t\u1eaft m\u00e0n h\u00ecnh < ng\u1ee7 \u0111\u00f4ng. C\u00e1c t\u00e1c v\u1ee5 vi ph\u1ea1m th\u1ee9 t\u1ef1 n\u00e0y s\u1ebd b\u1ecb lo\u1ea1i tr\u1eeb.",
+      "order_violation": "\u0110\u00e3 lo\u1ea1i tr\u1eeb",
+      "actions_header": {
+        "title": "\u0110\u1ed1i t\u01b0\u1ee3ng th\u1eddi gian ch\u1edd",
+        "desc": "C\u1ea5u h\u00ecnh th\u1eddi gian ch\u1edd, tr\u00ecnh k\u00edch ho\u1ea1t t\u00edch h\u1ee3p v\u00e0 l\u1ec7nh t\u00f9y ch\u1ec9nh"
+      },
+      "action_name_placeholder": "T\u00ean t\u00e1c v\u1ee5",
+      "command_placeholder": "L\u1ec7nh c\u1ea7n th\u1ef1c thi",
+      "custom_action_default": "T\u00e1c v\u1ee5 ch\u1edd t\u00f9y ch\u1ec9nh",
+      "custom_action_fallback": "T\u00e1c v\u1ee5 ch\u1edd",
+      "warning_command": {
+        "title": "L\u1ec7nh c\u1ea3nh b\u00e1o",
+        "desc": "\u0110\u1ed9 tr\u1ec5 v\u00e0 l\u1ec7nh th\u1ef1c thi tr\u01b0\u1edbc t\u00e1c v\u1ee5",
+        "placeholder": "VD: notify-send 'c\u1ea3nh b\u00e1o'"
+      },
+      "before_command": {
+        "title": "L\u1ec7nh tr\u01b0\u1edbc t\u00e1c v\u1ee5",
+        "desc": "Th\u1ef1c thi ngay tr\u01b0\u1edbc khi t\u00e1c v\u1ee5 \u0111\u01b0\u1ee3c k\u00edch ho\u1ea1t",
+        "placeholder": "VD: playerctl pause"
+      },
+      "resume_command": {
+        "title": "L\u1ec7nh khi kh\u00f4i ph\u1ee5c",
+        "desc": "Th\u1ef1c thi khi ng\u01b0\u1eddi d\u00f9ng ti\u1ebfp t\u1ee5c ho\u1ea1t \u0111\u1ed9ng",
+        "placeholder": "VD: notify-send '\u0111\u00e3 kh\u00f4i ph\u1ee5c'"
+      },
+      "dim": {
+        "title": "L\u00e0m m\u1edd m\u00e0n h\u00ecnh",
+        "desc": "Gi\u1ea3m \u0111\u1ed9 s\u00e1ng m\u00e0n h\u00ecnh tr\u01b0\u1edbc khi kh\u00f3a"
+      },
+      "dpms": {
+        "title": "T\u1eaft m\u00e0n h\u00ecnh (DPMS)",
+        "desc": "T\u1eaft t\u00edn hi\u1ec7u m\u00e0n h\u00ecnh hi\u1ec3n th\u1ecb"
+      },
+      "lock": {
+        "title": "Kh\u00f3a phi\u00ean",
+        "desc": "Kh\u00f3a phi\u00ean l\u00e0m vi\u1ec7c sau m\u1ed9t kho\u1ea3ng th\u1eddi gian kh\u00f4ng ho\u1ea1t \u0111\u1ed9ng"
+      },
+      "suspend": {
+        "title": "Ng\u1ee7 \u0111\u00f4ng h\u1ec7 th\u1ed1ng",
+        "desc": "\u0110\u01b0a h\u1ec7 th\u1ed1ng v\u00e0o ch\u1ebf \u0111\u1ed9 ng\u1ee7"
+      },
+      "hooks": {
+        "title": "Hook (l\u1ec7nh shell)"
+      },
+      "custom_action_desc": "H\u00e0nh \u0111\u1ed9ng v\u00e0 l\u1ec7nh h\u1ebft th\u1eddi gian t\u00f9y ch\u1ec9nh"
+    },
+    "welcome": {
+      "by_author": "b\u1edfi @{author}",
+      "about": "Gi\u1edbi thi\u1ec7u",
+      "hold_for_tutorial": "Nh\u1ea5n gi\u1eef \u0111\u1ec3 xem h\u01b0\u1edbng d\u1eabn",
+      "start_tutorial": "B\u1eaft \u0111\u1ea7u h\u01b0\u1edbng d\u1eabn"
+    },
+    "tutorial": {
+      "section_title": "H\u01b0\u1edbng d\u1eabn {section}",
+      "default_desc": "Nh\u1ea5n \u0111\u1ec3 b\u1eaft \u0111\u1ea7u h\u01b0\u1edbng d\u1eabn",
+      "start": "B\u1eaft \u0111\u1ea7u"
+    },
+    "general": {
+      "language": {
+        "title": "Ng\u00f4n ng\u1eef",
+        "desc": "Ch\u1ecdn ng\u00f4n ng\u1eef giao di\u1ec7n h\u1ec7 th\u1ed1ng"
+      },
+      "uiscale": {
+        "title": "T\u1ef7 l\u1ec7 giao di\u1ec7n",
+        "desc": "\u0110\u1eb7t h\u1ec7 s\u1ed1 t\u1ef7 l\u1ec7 giao di\u1ec7n t\u1ed5ng th\u1ec3"
+      },
+      "avatar": {
+        "title": "\u1ea2nh \u0111\u1ea1i di\u1ec7n",
+        "desc": "Ch\u1ecdn \u1ea3nh \u0111\u1ea1i di\u1ec7n",
+        "select": "Ch\u1ecdn",
+        "select_image_path": "Ch\u1ecdn \u0111\u01b0\u1eddng d\u1eabn \u1ea3nh..."
+      },
+      "mutesfx": {
+        "title": "T\u1eaft hi\u1ec7u \u1ee9ng \u00e2m thanh",
+        "desc": "V\u00f4 hi\u1ec7u h\u00f3a hi\u1ec7u \u1ee9ng \u00e2m thanh giao di\u1ec7n ng\u01b0\u1eddi d\u00f9ng"
+      },
+      "sfxvolume": {
+        "title": "Thay \u0111\u1ed5i \u00e2m l\u01b0\u1ee3ng hi\u1ec7u \u1ee9ng \u00e2m thanh",
+        "desc": "Kh\u00f4ng \u1ea3nh h\u01b0\u1edfng \u0111\u1ebfn \u0111\u1ea7u ra \u00e2m thanh h\u1ec7 th\u1ed1ng"
+      },
+      "quickactions": {
+        "title": "Thao t\u00e1c nhanh",
+        "desc": "B\u1eadt l\u1edbp ph\u1ee7 thao t\u00e1c nhanh n\u1ed5i"
+      },
+      "location": {
+        "title": "V\u1ecb tr\u00ed",
+        "desc": "C\u1ea5u h\u00ecnh v\u1ecb tr\u00ed cho l\u1ecbch tr\u00ecnh m\u1eb7t tr\u1eddi t\u1ef1 \u0111\u1ed9ng v\u00e0 th\u1eddi ti\u1ebft",
+        "popup_title": "Chi ti\u1ebft v\u1ecb tr\u00ed",
+        "autodetect": "T\u1ef1 \u0111\u1ed9ng ph\u00e1t hi\u1ec7n",
+        "latitude": "V\u0129 \u0111\u1ed9",
+        "longitude": "Kinh \u0111\u1ed9",
+        "apply": "\u00c1p d\u1ee5ng"
+      },
+      "weatherinterval": {
+        "title": "T\u1ea7n su\u1ea5t c\u1eadp nh\u1eadt th\u1eddi ti\u1ebft",
+        "desc": "T\u1ea7n su\u1ea5t c\u1eadp nh\u1eadt t\u00ednh b\u1eb1ng ph\u00fat"
+      },
+      "weatherunit": {
+        "title": "\u0110\u01a1n v\u1ecb th\u1eddi ti\u1ebft",
+        "desc": "Thang nhi\u1ec7t \u0111\u1ed9 hi\u1ec3n th\u1ecb th\u1eddi ti\u1ebft",
+        "celsius": "\u0110\u1ed9 C",
+        "fahrenheit": "\u0110\u1ed9 F",
+        "kelvin": "Kelvin"
+      },
+      "copysettings": {
+        "title": "Sao ch\u00e9p c\u00e0i \u0111\u1eb7t",
+        "desc": "Sao ch\u00e9p JSON c\u1ea5u h\u00ecnh v\u00e0o b\u1ed9 nh\u1edb t\u1ea1m",
+        "button": "Sao ch\u00e9p c\u00e0i \u0111\u1eb7t"
+      },
+      "screenshot_on_release": {
+        "title": "Ch\u1ee5p v\u00f9ng khi th\u1ea3 chu\u1ed9t",
+        "desc": "Ch\u1ee5p \u1ea3nh m\u00e0n h\u00ecnh ngay khi k\u00e9o xong m\u00e0 kh\u00f4ng c\u1ea7n nh\u1ea5n n\u00fat ch\u1ee5p"
+      }
+    },
+    "display": {
+      "bluelight": {
+        "title": "B\u1ed9 l\u1ecdc \u00e1nh s\u00e1ng xanh",
+        "desc": "B\u1eadt/t\u1eaft \u00e1nh s\u00e1ng m\u00e0n h\u00ecnh \u1ea5m"
+      },
+      "enable": {
+        "title": "B\u1eadt m\u00e0n h\u00ecnh n\u00e0y",
+        "desc": "T\u1eaft t\u00ednh n\u0103ng n\u00e0y s\u1ebd v\u00f4 hi\u1ec7u h\u00f3a m\u00e0n h\u00ecnh n\u00e0y"
+      },
+      "schedule": {
+        "title": "L\u1ecbch tr\u00ecnh t\u1ef1 \u0111\u1ed9ng",
+        "desc": "T\u1ef1 \u0111\u1ed9ng \u0111i\u1ec1u ch\u1ec9nh nhi\u1ec7t \u0111\u1ed9 m\u00e0u d\u1ef1a tr\u00ean ho\u00e0ng h\u00f4n v\u00e0 b\u00ecnh minh"
+      },
+      "temperature": {
+        "title": "Nhi\u1ec7t \u0111\u1ed9 m\u00e0u",
+        "desc": "\u0110i\u1ec1u ch\u1ec9nh \u0111\u1ed9 m\u1ea1nh c\u1ee7a nhi\u1ec7t \u0111\u1ed9 m\u00e0u"
+      },
+      "uiscale": {
+        "title": "T\u1ef7 l\u1ec7 giao di\u1ec7n",
+        "desc": "\u0110\u1eb7t h\u1ec7 s\u1ed1 t\u1ef7 l\u1ec7 hi\u1ec3n th\u1ecb cho m\u00e0n h\u00ecnh n\u00e0y"
+      },
+      "widgets": {
+        "title": "Ti\u1ec7n \u00edch m\u00e0n h\u00ecnh",
+        "desc": "C\u1ea5u h\u00ecnh v\u00e0 \u0111\u1eb7t ti\u1ec7n \u00edch cho m\u00e0n h\u00ecnh n\u00e0y",
+        "open": "M\u1edf tr\u00ecnh ch\u1ec9nh s\u1eeda",
+        "hide_bar": {
+          "title": "\u1ea8n thanh trong tr\u00ecnh ch\u1ec9nh s\u1eeda",
+          "desc": "T\u1ef1 \u0111\u1ed9ng \u1ea9n thanh khi ch\u1ec9nh s\u1eeda ti\u1ec7n \u00edch con \u1edf ch\u1ebf \u0111\u1ed9 bi\u00ean t\u1eadp"
+        },
+        "hide_presets": "\u1ea8n m\u1eabu c\u00f3 s\u1eb5n",
+        "choose_preset": "Ch\u1ecdn m\u1eabu c\u00f3 s\u1eb5n",
+        "presets": {
+          "title": "M\u1eabu ti\u1ec7n \u00edch"
+        },
+        "save_preset": {
+          "title": "L\u01b0u preset"
+        },
+        "preset_name_placeholder": "Nh\u1eadp t\u00ean preset...",
+        "screen_desc": "C\u1ea5u h\u00ecnh v\u00e0 ch\u1ec9nh s\u1eeda ti\u1ec7n \u00edch m\u00e0n h\u00ecnh n\u1ec1n"
+      }
+    },
+    "bar": {
+      "modules": {
+        "vis": "Tr\u00ecnh hi\u1ec3n th\u1ecb \u00e2m thanh (cava)",
+        "actions": "Thao t\u00e1c",
+        "workspaces": {
+          "style": {
+            "name": {
+              "pills": "D\u1ea1ng vi\u00ean",
+              "numbers": "S\u1ed1",
+              "pacman": "Pacman"
+            }
+          },
+          "name": "Kh\u00f4ng gian l\u00e0m vi\u1ec7c"
+        },
+        "media": "Ph\u01b0\u01a1ng ti\u1ec7n",
+        "tray": "Khay h\u1ec7 th\u1ed1ng",
+        "keyboard": "B\u00e0n ph\u00edm",
+        "network": "M\u1ea1ng",
+        "bluetooth": "Bluetooth",
+        "volume": "\u00c2m l\u01b0\u1ee3ng",
+        "battery": "Pin",
+        "focus": "Ti\u00eau \u0111i\u1ec3m",
+        "sysmon": "Tr\u00ecnh theo d\u00f5i h\u1ec7 th\u1ed1ng",
+        "timedate": {
+          "name": "Th\u1eddi gian & ng\u00e0y",
+          "style": {
+            "name": {
+              "classic": "C\u1ed5 \u0111i\u1ec3n",
+              "material": "Material",
+              "badge": "Ma tr\u1eadn \u0111i\u1ec3m"
+            }
+          }
+        },
+        "info": "Ghi h\u00ecnh/H\u1eb9n gi\u1edd",
+        "weather": "Th\u1eddi ti\u1ebft"
+      },
+      "position": {
+        "title": "V\u1ecb tr\u00ed thanh t\u00e1c v\u1ee5",
+        "desc": "V\u1ecb tr\u00ed c\u1ee7a thanh t\u00e1c v\u1ee5 tr\u00ean m\u00e0n h\u00ecnh",
+        "top": "Tr\u00ean",
+        "bottom": "D\u01b0\u1edbi",
+        "left": "Tr\u00e1i",
+        "right": "Ph\u1ea3i"
+      },
+      "width": {
+        "title": "Chi\u1ec1u r\u1ed9ng thanh t\u00e1c v\u1ee5",
+        "desc": "\u0110\u1eb7t chi\u1ec1u r\u1ed9ng c\u1ee7a thanh t\u00e1c v\u1ee5 theo ph\u1ea7n tr\u0103m"
+      },
+      "workspaces": {
+        "title": "Ch\u1ecdn s\u1ed1 l\u01b0\u1ee3ng kh\u00f4ng gian l\u00e0m vi\u1ec7c \u0111\u1ec3 hi\u1ec3n th\u1ecb",
+        "disc": "L\u01b0u \u00fd: \u0111i\u1ec1u n\u00e0y kh\u00f4ng \u1ea3nh h\u01b0\u1edfng \u0111\u1ebfn s\u1ed1 l\u01b0\u1ee3ng kh\u00f4ng gian l\u00e0m vi\u1ec7c th\u1ef1c t\u1ebf trong compositor",
+        "desc": "S\u1ed1 l\u01b0\u1ee3ng kh\u00f4ng gian l\u00e0m vi\u1ec7c hi\u1ec3n th\u1ecb",
+        "hide_empty": {
+          "title": "\u1ea8n kh\u00f4ng gian l\u00e0m vi\u1ec7c tr\u1ed1ng",
+          "desc": "Ch\u1ec9 hi\u1ec3n th\u1ecb kh\u00f4ng gian \u0111ang d\u00f9ng v\u00e0 kh\u00f4ng gian hi\u1ec7n t\u1ea1i"
+        },
+        "style": {
+          "title": "Ki\u1ec3u",
+          "desc": "Ch\u1ecdn ki\u1ec3u hi\u1ec3n th\u1ecb cho c\u00e1c ch\u1ec9 b\u00e1o kh\u00f4ng gian l\u00e0m vi\u1ec7c"
+        }
+      },
+      "opacity": {
+        "title": "\u0110\u1ed9 m\u1edd thanh t\u00e1c v\u1ee5",
+        "desc": "\u0110\u1eb7t \u0111\u1ed9 m\u1edd c\u1ee7a thanh t\u00e1c v\u1ee5 theo ph\u1ea7n tr\u0103m"
+      },
+      "style": {
+        "title": "Ki\u1ec3u thanh t\u00e1c v\u1ee5",
+        "desc": "Ch\u1ecdn gi\u1eefa ki\u1ec3u m\u00f4-\u0111un, \u0111\u1eb7c ho\u1eb7c \u0111\u1ea7y \u0111\u1ee7",
+        "modular": "M\u00f4-\u0111un",
+        "solid": "\u0110\u1eb7c",
+        "fill": "\u0110\u1ea7y"
+      },
+      "time": {
+        "title": "\u0110\u1ecbnh d\u1ea1ng th\u1eddi gian",
+        "desc": "Chu\u1ed7i \u0111\u1ecbnh d\u1ea1ng (VD: HH:mm:ss ho\u1eb7c hh:mm AP)"
+      },
+      "guide_button": {
+        "title": "N\u00fat h\u01b0\u1edbng d\u1eabn",
+        "desc": "Hi\u1ec3n th\u1ecb n\u00fat m\u1edf h\u01b0\u1edbng d\u1eabn tr\u00ean thanh ph\u00eda tr\u00ean"
+      },
+      "autohide": {
+        "title": "T\u1ef1 \u0111\u1ed9ng \u1ea9n",
+        "desc": "\u1ea8n thanh t\u00e1c v\u1ee5 khi kh\u00f4ng di chu\u1ed9t qua"
+      },
+      "timeout": {
+        "title": "Th\u1eddi gian ch\u1edd t\u1ef1 \u0111\u1ed9ng \u1ea9n",
+        "desc": "\u0110\u1ed9 tr\u1ec5 tr\u01b0\u1edbc khi thanh t\u00e1c v\u1ee5 \u1ea9n \u0111i"
+      },
+      "config": {
+        "title": "C\u1ea5u h\u00ecnh thanh t\u00e1c v\u1ee5",
+        "desc": "Nh\u1ea5p chu\u1ed9t ph\u1ea3i v\u00e0o m\u1ed9t m\u1ee5c \u0111\u1ec3 b\u1eaft \u0111\u1ea7u nh\u00f3m, nh\u1ea5p chu\u1ed9t ph\u1ea3i v\u00e0o m\u1ee5c kh\u00e1c \u0111\u1ec3 th\u00eam v\u00e0o. Nh\u1ea5p chu\u1ed9t ph\u1ea3i v\u00e0o m\u1ee5c \u0111\u00e3 nh\u00f3m \u0111\u1ec3 x\u00f3a.",
+        "reset": "\u0110\u1eb7t l\u1ea1i",
+        "available": "C\u00f3 s\u1eb5n",
+        "left": "Tr\u00e1i",
+        "center": "Gi\u1eefa",
+        "right": "Ph\u1ea3i"
+      },
+      "distinct_pills": {
+        "title": "B\u1eadt ki\u1ec3u d\u00e1ng m\u00f4-\u0111un v\u00e0 g\u1ecdn g\u00e0ng cho ti\u1ec7n \u00edch",
+        "desc": "Th\u00eam \u0111\u01b0\u1eddng vi\u1ec1n cho c\u00e1c m\u00f4-\u0111un tr\u00ean thanh v\u00e0 thu nh\u1ecf k\u00edch th\u01b0\u1edbc \u0111\u1ec3 ph\u00f9 h\u1ee3p v\u1edbi giao di\u1ec7n m\u00f4-\u0111un"
+      },
+      "timedate": {
+        "show_date": {
+          "title": "Hi\u1ec3n th\u1ecb ng\u00e0y",
+          "desc": "Hi\u1ec3n th\u1ecb v\u0103n b\u1ea3n ng\u00e0y b\u00ean c\u1ea1nh \u0111\u1ed3ng h\u1ed3"
+        },
+        "style": {
+          "title": "Ki\u1ec3u",
+          "desc": "Ch\u1ecdn ki\u1ec3u hi\u1ec3n th\u1ecb cho \u0111\u1ed3ng h\u1ed3 v\u00e0 ng\u00e0y"
+        }
+      },
+      "vis": {
+        "bars": {
+          "title": "S\u1ed1 l\u01b0\u1ee3ng thanh",
+          "desc": "S\u1ed1 l\u01b0\u1ee3ng thanh t\u1ea7n s\u1ed1 hi\u1ec3n th\u1ecb"
+        },
+        "alignment": {
+          "title": "C\u0103n ch\u1ec9nh",
+          "desc": "C\u0103n gi\u1eefa b\u1ed9 tr\u1ef1c quan ho\u1eb7c c\u0103n theo ph\u00eda tr\u00ean ho\u1eb7c d\u01b0\u1edbi"
+        },
+        "align": {
+          "center": "Gi\u1eefa",
+          "top": "Tr\u00ean",
+          "bottom": "D\u01b0\u1edbi",
+          "left": "Tr\u00e1i",
+          "right": "Ph\u1ea3i"
+        },
+        "continuous": {
+          "title": "S\u00f3ng li\u00ean t\u1ee5c",
+          "desc": "Hi\u1ec3n th\u1ecb d\u1ea1ng s\u00f3ng m\u01b0\u1ee3t m\u00e0 thay v\u00ec c\u00e1c thanh ri\u00eang bi\u1ec7t"
+        }
+      },
+      "sysmon": {
+        "style": {
+          "title": "Ki\u1ec3u v\u00f2ng tr\u00f2n",
+          "desc": "Giao di\u1ec7n v\u00f2ng ti\u1ebfn tr\u00ecnh",
+          "wave": "S\u00f3ng",
+          "circle": "V\u00f2ng tr\u00f2n"
+        },
+        "cpu": {
+          "title": "S\u1eed d\u1ee5ng CPU",
+          "desc": "Hi\u1ec3n th\u1ecb v\u00f2ng m\u1ee9c s\u1eed d\u1ee5ng b\u1ed9 vi x\u1eed l\u00fd"
+        },
+        "ram": {
+          "title": "S\u1eed d\u1ee5ng b\u1ed9 nh\u1edb",
+          "desc": "Hi\u1ec3n th\u1ecb v\u00f2ng m\u1ee9c s\u1eed d\u1ee5ng RAM"
+        },
+        "temp": {
+          "title": "Nhi\u1ec7t \u0111\u1ed9",
+          "desc": "Hi\u1ec3n th\u1ecb v\u00f2ng nhi\u1ec7t \u0111\u1ed9 h\u1ec7 th\u1ed1ng"
+        },
+        "disk": {
+          "title": "S\u1eed d\u1ee5ng \u1ed5 \u0111\u0129a",
+          "desc": "Hi\u1ec3n th\u1ecb v\u00f2ng m\u1ee9c s\u1eed d\u1ee5ng b\u1ed9 nh\u1edb l\u01b0u tr\u1eef"
+        }
+      },
+      "bat": {
+        "show_percent": {
+          "title": "Hi\u1ec3n th\u1ecb ph\u1ea7n tr\u0103m",
+          "desc": "Hi\u1ec3n th\u1ecb ph\u1ea7n tr\u0103m pin d\u1ea1ng s\u1ed1"
+        },
+        "show_icon": {
+          "title": "Hi\u1ec3n th\u1ecb bi\u1ec3u t\u01b0\u1ee3ng",
+          "desc": "Hi\u1ec3n th\u1ecb bi\u1ec3u t\u01b0\u1ee3ng pin ho\u1eb7c ch\u1ec9 b\u00e1o \u0111\u1ed3 h\u1ecda"
+        },
+        "style": {
+          "title": "Ki\u1ec3u pin",
+          "desc": "Ch\u1ecdn giao di\u1ec7n hi\u1ec3n th\u1ecb c\u1ee7a ch\u1ec9 b\u00e1o pin",
+          "name": {
+            "classic": "C\u1ed5 \u0111i\u1ec3n",
+            "minimal": "T\u1ed1i gi\u1ea3n"
+          },
+          "classic": "D\u1ea1ng vi\u00ean thu\u1ed1c v\u1edbi s\u00f3ng chuy\u1ec3n m\u00e0u",
+          "minimal": "D\u1ea1ng th\u1ecfi iOS/Android c\u00f3 n\u1eafp"
+        }
+      }
+    },
+    "theme": {
+      "font": {
+        "title": "Ph\u00f4ng ch\u1eef",
+        "desc": "Ch\u1ecdn ph\u00f4ng ch\u1eef m\u1eb7c \u0111\u1ecbnh cho serpantinum",
+        "select": "Ch\u1ecdn..."
+      },
+      "radius": {
+        "title": "B\u00e1n k\u00ednh vi\u1ec1n",
+        "desc": "B\u00e1n k\u00ednh g\u00f3c cho c\u00e1c th\u00e0nh ph\u1ea7n giao di\u1ec7n"
+      },
+      "colors": {
+        "title": "Ch\u1ee7 \u0111\u1ec1 m\u00e0u s\u1eafc",
+        "desc": "Ch\u1ecdn m\u1ed9t b\u1ea3ng m\u00e0u c\u00f3 s\u1eb5n ho\u1eb7c t\u1ea1o ch\u1ee7 \u0111\u1ec1 t\u00f9y ch\u1ec9nh c\u1ee7a ri\u00eang b\u1ea1n.",
+        "search": "T\u00ecm ki\u1ebfm ch\u1ee7 \u0111\u1ec1..."
+      },
+      "delete_theme": "X\u00f3a",
+      "wallpaper": {
+        "title": "Th\u01b0 m\u1ee5c h\u00ecnh n\u1ec1n",
+        "desc": "Th\u01b0 m\u1ee5c \u0111\u1ec3 t\u00ecm ki\u1ebfm h\u00ecnh n\u1ec1n",
+        "select_dir": "Ch\u1ecdn th\u01b0 m\u1ee5c...",
+        "select_wallpaper": "Ch\u1ecdn h\u00ecnh n\u1ec1n",
+        "no_wallpaper_selected": "Ch\u01b0a ch\u1ecdn h\u00ecnh n\u1ec1n n\u00e0o",
+        "select": "H\u00ecnh n\u1ec1n"
+      }
+    },
+    "file_picker": {
+      "title": "Ch\u1ecdn h\u00ecnh \u1ea3nh",
+      "input_placeholder": "T\u00ecm ki\u1ebfm...",
+      "not_found": "Kh\u00f4ng t\u00ecm th\u1ea5y t\u1ec7p n\u00e0o",
+      "no_file_selected": "Ch\u01b0a ch\u1ecdn t\u1ec7p n\u00e0o",
+      "root": "Th\u01b0 m\u1ee5c g\u1ed1c",
+      "places": {
+        "home": "Th\u01b0 m\u1ee5c c\u00e1 nh\u00e2n",
+        "downloads": "T\u1ea3i xu\u1ed1ng",
+        "pictures": "H\u00ecnh \u1ea3nh",
+        "music": "\u00c2m nh\u1ea1c",
+        "documents": "T\u00e0i li\u1ec7u"
+      }
+    },
+    "font_picker": {
+      "title": "Ch\u1ecdn ph\u00f4ng ch\u1eef",
+      "input_placeholder": "T\u00ecm ki\u1ebfm...",
+      "not_found": "Kh\u00f4ng t\u00ecm th\u1ea5y m\u1ee5c n\u00e0o",
+      "places": {
+        "user_fonts": "Ph\u00f4ng ch\u1eef ng\u01b0\u1eddi d\u00f9ng",
+        "system_fonts": "Ph\u00f4ng ch\u1eef h\u1ec7 th\u1ed1ng"
+      }
+    },
+    "sound_picker": {
+      "title": "Ch\u1ecdn \u00e2m thanh th\u00f4ng b\u00e1o",
+      "no_sound_selected": "Ch\u01b0a ch\u1ecdn \u00e2m thanh n\u00e0o",
+      "places": {
+        "user_sounds": "\u00c2m thanh ng\u01b0\u1eddi d\u00f9ng",
+        "system_sounds": "\u00c2m thanh h\u1ec7 th\u1ed1ng"
+      }
+    },
+    "theme_editor": {
+      "title": "Ch\u1ee7 \u0111\u1ec1 m\u00e0u m\u1edbi",
+      "name_placeholder": "T\u00ean ch\u1ee7 \u0111\u1ec1...",
+      "preview": "Xem tr\u01b0\u1edbc",
+      "cancel": "H\u1ee7y",
+      "save": "L\u01b0u",
+      "default_name": "Ch\u1ee7 \u0111\u1ec1 t\u00f9y ch\u1ec9nh",
+      "colors": {
+        "base": "N\u1ec1n ch\u00ednh",
+        "mantle": "Mantle",
+        "crust": "Crust",
+        "text": "V\u0103n b\u1ea3n",
+        "sub0": "Sub0",
+        "sub1": "Sub1",
+        "surf0": "Surf0",
+        "surf1": "Surf1",
+        "surf2": "Surf2",
+        "over0": "Over0",
+        "over1": "Over1",
+        "over2": "Over2",
+        "blue": "Xanh d\u01b0\u01a1ng",
+        "lavender": "O\u1ea3i h\u01b0\u01a1ng",
+        "sapphire": "Xanh ng\u1ecdc b\u00edch",
+        "sky": "Xanh tr\u1eddi",
+        "teal": "Xanh m\u00f2ng k\u00e9t",
+        "green": "Xanh l\u00e1",
+        "yellow": "V\u00e0ng",
+        "peach": "Cam \u0111\u00e0o",
+        "maroon": "\u0110\u1ecf s\u1eabm",
+        "red": "\u0110\u1ecf",
+        "mauve": "T\u00edm hoa c\u00e0",
+        "pink": "H\u1ed3ng",
+        "flamingo": "H\u1ed3ng h\u1ea1c",
+        "rosewater": "H\u1ed3ng ph\u1ea5n"
+      }
+    },
+    "wellbeing": {
+      "desktop": "M\u00e1y t\u00ednh \u0111\u1ec3 b\u00e0n",
+      "not_available": "Kh\u00f4ng c\u00f3",
+      "am": "SA",
+      "pm": "CH",
+      "today": "H\u00f4m nay",
+      "week_overview": "T\u1ed5ng quan tu\u1ea7n",
+      "daily_average": "Trung b\u00ecnh m\u1ed7i ng\u00e0y",
+      "no_data": "Kh\u00f4ng c\u00f3 d\u1eef li\u1ec7u",
+      "same_time": "C\u00f9ng th\u1eddi \u0111i\u1ec3m",
+      "daily_usage": "S\u1eed d\u1ee5ng h\u1eb1ng ng\u00e0y",
+      "peak_hours": "Gi\u1edd cao \u0111i\u1ec3m",
+      "time_hm": "{h}h {m}p",
+      "time_m": "{m}p",
+      "months": {
+        "january": "Th\u00e1ng m\u1ed9t",
+        "february": "Th\u00e1ng hai",
+        "march": "Th\u00e1ng ba",
+        "april": "Th\u00e1ng t\u01b0",
+        "may": "Th\u00e1ng n\u0103m",
+        "june": "Th\u00e1ng s\u00e1u",
+        "july": "Th\u00e1ng b\u1ea3y",
+        "august": "Th\u00e1ng t\u00e1m",
+        "september": "Th\u00e1ng ch\u00edn",
+        "october": "Th\u00e1ng m\u01b0\u1eddi",
+        "november": "Th\u00e1ng m\u01b0\u1eddi m\u1ed9t",
+        "december": "Th\u00e1ng m\u01b0\u1eddi hai"
+      },
+      "days": {
+        "monday": "Th\u1ee9 hai",
+        "tuesday": "Th\u1ee9 ba",
+        "wednesday": "Th\u1ee9 t\u01b0",
+        "thursday": "Th\u1ee9 n\u0103m",
+        "friday": "Th\u1ee9 s\u00e1u",
+        "saturday": "Th\u1ee9 b\u1ea3y",
+        "sunday": "Ch\u1ee7 nh\u1eadt"
+      },
+      "settings": {
+        "title": "C\u00e0i \u0111\u1eb7t s\u1ee9c kh\u1ecfe s\u1ed1",
+        "overall_limit": "Gi\u1edbi h\u1ea1n t\u1ed5ng m\u1ed7i ng\u00e0y",
+        "off": "T\u1eaft",
+        "app_limits": "Gi\u1edbi h\u1ea1n s\u1eed d\u1ee5ng \u1ee9ng d\u1ee5ng",
+        "app_limits_desc": "\u0110\u1eb7t m\u1ee9c s\u1eed d\u1ee5ng t\u1ed1i \u0111a h\u00e0ng ng\u00e0y cho m\u1ed7i \u1ee9ng d\u1ee5ng",
+        "excluded_apps": "\u1ee8ng d\u1ee5ng b\u1ecb lo\u1ea1i tr\u1eeb",
+        "excluded_apps_desc": "Lo\u1ea1i tr\u1eeb \u1ee9ng d\u1ee5ng kh\u1ecfi vi\u1ec7c theo d\u00f5i t\u1ed5ng th\u1ec3 t\u1eeb b\u00e2y gi\u1edd"
+      }
+    },
+    "update_available": "C\u00f3 b\u1ea3n c\u1eadp nh\u1eadt m\u1edbi",
+    "osd": {
+      "capslock": {
+        "title": "Hi\u1ec7n khi b\u1eadt Caps Lock"
+      },
+      "numlock": {
+        "title": "Hi\u1ec7n khi b\u1eadt Num Lock"
+      },
+      "airplane": {
+        "title": "Hi\u1ec7n \u1edf Ch\u1ebf \u0111\u1ed9 m\u00e1y bay"
+      },
+      "attach_bar": {
+        "title": "G\u1eafn v\u00e0o thanh \u1edf ki\u1ec3u solid/fill",
+        "desc": "G\u1eafn OSD v\u00e0o thanh tr\u1ea1ng th\u00e1i \u1edf ch\u1ebf \u0111\u1ed9 solid ho\u1eb7c fill. Khi t\u1eaft, OSD s\u1ebd lu\u00f4n \u1edf v\u1ecb tr\u00ed \u0111\u00e3 \u0111\u1ecbnh c\u1ea5u h\u00ecnh."
+      },
+      "test": "Th\u1eed nghi\u1ec7m OSD",
+      "position": {
+        "title": "V\u1ecb tr\u00ed m\u00e0n h\u00ecnh c\u1ee7a On-Screen Display",
+        "desc": "K\u00e9o h\u1ed9p xem tr\u01b0\u1edbc \u0111\u1ec3 thay \u0111\u1ed5i v\u1ecb tr\u00ed",
+        "select_on_screen": "Ch\u1ecdn tr\u00ean m\u00e0n h\u00ecnh...",
+        "close_selector": "\u0110\u00f3ng b\u1ed9 ch\u1ecdn",
+        "bottom_center": "D\u01b0\u1edbi c\u00f9ng \u1edf gi\u1eefa",
+        "bottom_left": "D\u01b0\u1edbi c\u00f9ng b\u00ean tr\u00e1i",
+        "bottom_right": "D\u01b0\u1edbi c\u00f9ng b\u00ean ph\u1ea3i",
+        "top_center": "Tr\u00ean c\u00f9ng \u1edf gi\u1eefa",
+        "top_left": "Tr\u00ean c\u00f9ng b\u00ean tr\u00e1i",
+        "top_right": "Tr\u00ean c\u00f9ng b\u00ean ph\u1ea3i"
+      },
+      "orientation": {
+        "horizontal": "Ngang",
+        "vertical": "D\u1ecdc"
+      }
+    },
+    "common": {
+      "show_bar": "Hi\u1ec7n thanh bar",
+      "unavailable": "Kh\u00f4ng kh\u1ea3 d\u1ee5ng"
+    },
+    "position": {
+      "custom": "T\u00f9y ch\u1ec9nh"
+    },
+    "dock": {
+      "enabled": {
+        "title": "B\u1eadt dock",
+        "desc": "B\u1eadt thanh dock \u1ee9ng d\u1ee5ng n\u1ed5i"
+      },
+      "position": {
+        "title": "V\u1ecb tr\u00ed dock",
+        "desc": "Ch\u1ecdn c\u1ea1nh m\u00e0n h\u00ecnh \u0111\u1ec3 ghim dock",
+        "bottom": "D\u01b0\u1edbi",
+        "top": "Tr\u00ean",
+        "left": "Tr\u00e1i",
+        "right": "Ph\u1ea3i"
+      },
+      "elements": {
+        "title": "S\u1ed1 l\u01b0\u1ee3ng m\u1ee5c",
+        "desc": "T\u1ed5ng s\u1ed1 ph\u00edm t\u1eaft hi\u1ec3n th\u1ecb tr\u00ean dock"
+      },
+      "size": {
+        "title": "K\u00edch th\u01b0\u1edbc m\u1ee5c",
+        "desc": "K\u00edch th\u01b0\u1edbc c\u00e1c n\u00fat \u1ee9ng d\u1ee5ng theo pixel"
+      },
+      "autohide": {
+        "title": "T\u1ef1 \u0111\u1ed9ng \u1ea9n",
+        "desc": "\u1ea8n dock khi kh\u00f4ng r\u00ea chu\u1ed9t v\u00e0o c\u1ea1nh m\u00e0n h\u00ecnh"
+      },
+      "timeout": {
+        "title": "\u0110\u1ed9 tr\u1ec5 t\u1ef1 \u0111\u1ed9ng \u1ea9n",
+        "desc": "Th\u1eddi gian ch\u1edd tr\u01b0\u1edbc khi \u1ea9n sau khi r\u1eddi chu\u1ed9t"
+      },
+      "floating": {
+        "title": "Dock n\u1ed5i",
+        "desc": "T\u00e1ch dock kh\u1ecfi c\u1ea1nh m\u00e0n h\u00ecnh v\u1edbi c\u00e1c g\u00f3c bo tr\u00f2n"
+      },
+      "transparency": {
+        "title": "\u0110\u1ed9 trong su\u1ed1t dock",
+        "desc": "\u0110i\u1ec1u ch\u1ec9nh \u0111\u1ed9 m\u1edd c\u1ee7a n\u1ec1n dock"
+      },
+      "apps": {
+        "title": "\u1ee8ng d\u1ee5ng dock",
+        "singular": "\u1ee9ng d\u1ee5ng",
+        "plural": "\u1ee9ng d\u1ee5ng",
+        "shuffle": "X\u00e1o tr\u1ed9n \u1ee9ng d\u1ee5ng",
+        "empty": "Kh\u00f4ng c\u00f3 \u1ee9ng d\u1ee5ng n\u00e0o \u0111\u01b0\u1ee3c c\u1ea5u h\u00ecnh cho dock",
+        "enter_edit": "Ch\u1ebf \u0111\u1ed9 ch\u1ec9nh s\u1eeda",
+        "exit_edit": "Tho\u00e1t ch\u1ec9nh s\u1eeda"
+      },
+      "picker": {
+        "search": "T\u00ecm ki\u1ebfm \u1ee9ng d\u1ee5ng...",
+        "done": "Xong",
+        "empty": "Kh\u00f4ng t\u00ecm th\u1ea5y \u1ee9ng d\u1ee5ng ph\u00f9 h\u1ee3p"
+      },
+      "opacity": {
+        "title": "\u0110\u1ed9 \u0111\u1ee5c c\u1ee7a dock",
+        "desc": "\u0110i\u1ec1u ch\u1ec9nh m\u1ee9c \u0111\u1ed9 \u0111\u1ee5c c\u1ee7a n\u1ec1n dock"
+      },
+      "override_bounds": {
+        "title": "Ghi \u0111\u00e8 \u0111i\u1ec1u ch\u1ec9nh k\u00edch th\u01b0\u1edbc ngo\u00e0i gi\u1edbi h\u1ea1n m\u00e0n h\u00ecnh",
+        "desc": "Gi\u1eef nguy\u00ean k\u00edch th\u01b0\u1edbc ph\u1ea7n t\u1eed ngay c\u1ea3 khi dock v\u01b0\u1ee3t qu\u00e1 gi\u1edbi h\u1ea1n m\u00e0n h\u00ecnh"
+      },
+      "scrolling": {
+        "title": "B\u1eadt cu\u1ed9n ph\u1ea7n t\u1eed",
+        "desc": "Gi\u1edbi h\u1ea1n c\u00e1c ph\u1ea7n t\u1eed hi\u1ec3n th\u1ecb v\u00e0 cho ph\u00e9p cu\u1ed9n b\u1eb1ng con l\u0103n chu\u1ed9t ho\u1eb7c b\u00e0n di chu\u1ed9t"
+      },
+      "visible_elements": {
+        "title": "Ph\u1ea7n t\u1eed hi\u1ec3n th\u1ecb",
+        "desc": "S\u1ed1 l\u01b0\u1ee3ng m\u1ee5c dock hi\u1ec3n th\u1ecb \u0111\u1ed3ng th\u1eddi"
+      },
+      "hover_scale": {
+        "title": "Hi\u1ec7u \u1ee9ng ph\u00f3ng to khi di chu\u1ed9t",
+        "desc": "M\u1ee9c \u0111\u1ed9 ph\u00f3ng to khi di chu\u1ed9t qua c\u00e1c bi\u1ec3u t\u01b0\u1ee3ng dock"
+      },
+      "cascade_scale": {
+        "title": "Ph\u00f3ng to c\u00e1c m\u1ee5c l\u00e2n c\u1eadn",
+        "desc": "Ph\u00f3ng to ph\u00e2n t\u1ea7ng cho c\u00e1c bi\u1ec3u t\u01b0\u1ee3ng li\u1ec1n k\u1ec1"
+      },
+      "exclusive": {
+        "title": "Ch\u1ebf \u0111\u1ed9 \u0111\u1ed9c quy\u1ec1n",
+        "desc": "Ng\u0103n c\u1eeda s\u1ed5 chi\u1ebfm kh\u00f4ng gian c\u1ee7a dock"
+      },
+      "on_top": {
+        "title": "\u0110\u1eb7t dock l\u00ean tr\u00ean c\u00e1c c\u1eeda s\u1ed5",
+        "desc": "Gi\u1eef dock hi\u1ec3n th\u1ecb ph\u00eda tr\u00ean c\u00e1c c\u1eeda s\u1ed5 \u1ee9ng d\u1ee5ng"
+      },
+      "smart_autohide": {
+        "title": "T\u1ef1 \u0111\u1ed9ng \u1ea9n th\u00f4ng minh",
+        "desc": "Ch\u1ec9 \u1ea9n dock khi c\u00f3 c\u1eeda s\u1ed5 m\u1edf, gi\u1eef hi\u1ec3n th\u1ecb tr\u00ean m\u00e0n h\u00ecnh ch\u00ednh"
+      }
+    },
+    "lyrics_picker": {
+      "title": "Ch\u1ecdn t\u1ec7p l\u1eddi b\u00e0i h\u00e1t",
+      "no_lyrics_selected": "Ch\u01b0a ch\u1ecdn t\u1ec7p l\u1eddi b\u00e0i h\u00e1t"
+    },
+    "settings": "C\u00e0i \u0111\u1eb7t",
+    "search": {
+      "placeholder": "T\u00ecm ki\u1ebfm c\u00e0i \u0111\u1eb7t...",
+      "prompt": "Nh\u1eadp \u0111\u1ec3 t\u00ecm ki\u1ebfm c\u00e0i \u0111\u1eb7t...",
+      "no_results": "Kh\u00f4ng t\u00ecm th\u1ea5y c\u00e0i \u0111\u1eb7t"
+    }
+  },
+  "sysnotif": {
+    "battery": {
+      "app_name": "H\u1ec7 th\u1ed1ng",
+      "full_title": "\u0110\u00e3 s\u1ea1c \u0111\u1ea7y",
+      "full_body": "Pin \u0111\u00e3 \u0111\u01b0\u1ee3c s\u1ea1c \u0111\u1ea7y (100%).",
+      "low_title": "Pin y\u1ebfu",
+      "low_body": "M\u1ee9c pin c\u00f2n {pct}%. Vui l\u00f2ng k\u1ebft n\u1ed1i b\u1ed9 s\u1ea1c.",
+      "critical_title": "Pin c\u1ea1n ki\u1ec7t",
+      "critical_body": "M\u1ee9c pin c\u00f2n {pct}%. H\u00e3y c\u1eafm s\u1ea1c ngay l\u1eadp t\u1ee9c."
+    }
+  },
+  "updater": {
+    "notification": {
+      "app_name": "C\u1eadp nh\u1eadt",
+      "action_open_guide": "M\u1edf h\u01b0\u1edbng d\u1eabn",
+      "update_available_title": "C\u00f3 b\u1ea3n c\u1eadp nh\u1eadt: v{remote}",
+      "update_available_body": "Phi\u00ean b\u1ea3n hi\u1ec7n t\u1ea1i: v{local}. Nh\u1ea5p \u0111\u1ec3 xem thay \u0111\u1ed5i v\u00e0 c\u1eadp nh\u1eadt."
+    }
+  },
+  "polkit": {
+    "title": "Y\u00eau c\u1ea7u x\u00e1c th\u1ef1c",
+    "default_message": "M\u1ed9t \u1ee9ng d\u1ee5ng \u0111ang y\u00eau c\u1ea7u quy\u1ec1n qu\u1ea3n tr\u1ecb.",
+    "default_description": "C\u1ea7n x\u00e1c th\u1ef1c \u0111\u1ec3 ch\u1ea1y t\u00e1c v\u1ee5 n\u00e0y v\u1edbi quy\u1ec1n si\u00eau ng\u01b0\u1eddi d\u00f9ng.",
+    "error_failed": "X\u00e1c th\u1ef1c th\u1ea5t b\u1ea1i. Vui l\u00f2ng th\u1eed l\u1ea1i."
+  },
+  "applauncher": {
+    "search": "T\u00ecm ki\u1ebfm",
+    "placeholder": "B\u1eaft \u0111\u1ea7u b\u1eb1ng d\u1ea5u > \u0111\u1ec3 nh\u1eadp l\u1ec7nh...",
+    "tab_applications": "\u1ee8ng d\u1ee5ng",
+    "tab_files": "T\u1ec7p",
+    "placeholder_files": "T\u00ecm ki\u1ebfm t\u1ec7p ho\u1eb7c nh\u1eadp \u0111\u01b0\u1eddng d\u1eabn...",
+    "tab_emojis": "Bi\u1ec3u t\u01b0\u1ee3ng c\u1ea3m x\u00fac",
+    "placeholder_emojis": "T\u00ecm ki\u1ebfm bi\u1ec3u t\u01b0\u1ee3ng c\u1ea3m x\u00fac ho\u1eb7c nh\u1eadp t\u1eeb kh\u00f3a..."
+  },
+  "calendar": {
+    "loading": "\u0110ang t\u1ea3i...",
+    "loading_schedule": "\u0110ang t\u1ea3i l\u1ecbch tr\u00ecnh...",
+    "no_events": "Kh\u00f4ng c\u00f3 s\u1ef1 ki\u1ec7n n\u00e0o \u0111\u01b0\u1ee3c l\u00ean l\u1ecbch.",
+    "open_web": "M\u1edf trang web",
+    "weather": {
+      "wind": "Gi\u00f3",
+      "humid": "\u0110\u1ed9 \u1ea9m",
+      "rain": "M\u01b0a",
+      "feels": "C\u1ea3m gi\u00e1c"
+    },
+    "days": {
+      "mo": "T2",
+      "tu": "T3",
+      "we": "T4",
+      "th": "T5",
+      "fr": "T6",
+      "sa": "T7",
+      "su": "CN"
+    }
+  },
+  "clipboard": {
+    "search": "T\u00ecm ki\u1ebfm",
+    "title": "B\u1ed9 nh\u1edb t\u1ea1m",
+    "clear": "X\u00f3a",
+    "empty": "Kh\u00f4ng t\u00ecm th\u1ea5y g\u00ec",
+    "recent": "G\u1ea7n \u0111\u00e2y",
+    "pinned": "\u0110\u00e3 ghim"
+  },
+  "lock": {
+    "status": {
+      "locked": "\u0110\u00e3 kh\u00f3a",
+      "access_denied": "Truy c\u1eadp b\u1ecb t\u1eeb ch\u1ed1i",
+      "authenticating": "\u0110ang x\u00e1c th\u1ef1c...",
+      "enter_pin": "Nh\u1eadp m\u00e3 PIN"
+    },
+    "power": {
+      "suspend": "Ng\u1ee7",
+      "reboot": "Kh\u1edfi \u0111\u1ed9ng l\u1ea1i",
+      "power_off": "T\u1eaft ngu\u1ed3n"
+    },
+    "default_user": "Ng\u01b0\u1eddi d\u00f9ng",
+    "unknown": "Kh\u00f4ng r\u00f5"
+  },
+  "music": {
+    "nothing_playing": "Kh\u00f4ng c\u00f3 nh\u1ea1c \u0111ang ph\u00e1t",
+    "loading": "\u0110ang t\u1ea3i...",
+    "by_artist": "B\u1edfi {artist}",
+    "unknown_artist": "Ngh\u1ec7 s\u0129 kh\u00f4ng r\u00f5",
+    "speaker": "Loa",
+    "via_source": "Qua {source}",
+    "offline": "Ngo\u1ea1i tuy\u1ebfn",
+    "equalizer": "B\u1ed9 c\u00e2n ch\u1ec9nh \u00e2m thanh",
+    "eq": {
+      "apply": "\u00c1p d\u1ee5ng",
+      "saved": "\u0110\u00e3 l\u01b0u"
+    },
+    "presets": {
+      "flat": "Ph\u1eb3ng",
+      "bass": "Tr\u1ea7m",
+      "treble": "Cao",
+      "vocal": "Gi\u1ecdng h\u00e1t",
+      "pop": "Pop",
+      "rock": "Rock",
+      "jazz": "Jazz",
+      "classic": "C\u1ed5 \u0111i\u1ec3n",
+      "custom": "T\u00f9y ch\u1ec9nh"
+    },
+    "searching_lyrics": "\u0110ang t\u00ecm l\u1eddi b\u00e0i h\u00e1t...",
+    "no_lyrics": "Kh\u00f4ng t\u00ecm th\u1ea5y l\u1eddi b\u00e0i h\u00e1t",
+    "select_local_file": "Ch\u1ecdn t\u1ec7p c\u1ee5c b\u1ed9",
+    "lyrics": "L\u1eddi b\u00e0i h\u00e1t"
+  },
+  "network": {
+    "tabs": {
+      "ethernet": "Ethernet",
+      "wifi": "Wi-Fi",
+      "bluetooth": "Bluetooth"
+    },
+    "status": {
+      "no_ip": "Kh\u00f4ng c\u00f3 IP",
+      "unknown": "Kh\u00f4ng r\u00f5",
+      "calculating": "\u0110ang t\u00ednh to\u00e1n...",
+      "open": "M\u1edf",
+      "current_device": "Thi\u1ebft b\u1ecb hi\u1ec7n t\u1ea1i",
+      "powering_on": "\u0110ang b\u1eadt ngu\u1ed3n...",
+      "powering_off": "\u0110ang t\u1eaft ngu\u1ed3n...",
+      "disconnected": "\u0110\u00e3 ng\u1eaft k\u1ebft n\u1ed1i",
+      "disconnecting": "\u0110ang ng\u1eaft k\u1ebft n\u1ed1i...",
+      "hold": "Gi\u1eef...",
+      "connected": "\u0110\u00e3 k\u1ebft n\u1ed1i"
+    },
+    "actions": {
+      "unpair": "H\u1ee7y gh\u00e9p n\u1ed1i",
+      "scan": "Qu\u00e9t"
+    }
+  },
+  "notifications": {
+    "center": {
+      "reserved": "D\u00e0nh cho c\u00e1c b\u1ea3n c\u1eadp nh\u1eadt trong t\u01b0\u01a1ng lai"
+    },
+    "types": {
+      "default": {
+        "fallback_summary": "Th\u00f4ng b\u00e1o",
+        "system": "H\u1ec7 th\u1ed1ng",
+        "action": "T\u00e1c v\u1ee5"
+      },
+      "weather": {
+        "fallback_summary": "B\u1ea3n tin th\u1eddi ti\u1ebft",
+        "fallback_body": "Kh\u00f4ng c\u00f3 d\u1eef li\u1ec7u chi ti\u1ebft."
+      },
+      "screenshot": {
+        "badge": "\u1ea2nh ch\u1ee5p m\u00e0n h\u00ecnh",
+        "fallback_summary": "\u0110\u00e3 ch\u1ee5p m\u00e0n h\u00ecnh",
+        "click_to_open": "Nh\u1ea5p \u0111\u1ec3 m\u1edf th\u01b0 m\u1ee5c \u1ea3nh ch\u1ee5p m\u00e0n h\u00ecnh"
+      }
+    }
+  },
+  "quickactions": {
+    "systemusage": {
+      "cpu": "CPU",
+      "ram": "RAM",
+      "temp": "Nhi\u1ec7t \u0111\u1ed9",
+      "disk": "\u1ed4 \u0111\u0129a",
+      "net": "M\u1ea1ng"
+    },
+    "timer": {
+      "tabs": {
+        "timer": "H\u1eb9n gi\u1edd",
+        "stopwatch": "\u0110\u1ed3ng h\u1ed3 b\u1ea5m gi\u1edd",
+        "pomodoro": "Pomodoro"
+      },
+      "stopwatch": {
+        "lap": "V\u00f2ng {number}"
+      },
+      "pomodoro": {
+        "phases": {
+          "focus": "T\u1eadp trung",
+          "short_break": "Ngh\u1ec9 ng\u1eafn",
+          "long_break": "Ngh\u1ec9 d\u00e0i"
+        },
+        "settings": {
+          "work": "L\u00e0m vi\u1ec7c (ph\u00fat)",
+          "short_break": "Ngh\u1ec9 ng\u1eafn (ph\u00fat)",
+          "long_break": "Ngh\u1ec9 d\u00e0i (ph\u00fat)",
+          "sessions": "Phi\u00ean"
+        }
+      },
+      "notification": {
+        "app_name": "B\u1ed9 h\u1eb9n gi\u1edd Quickshell",
+        "timer_finished_title": "\u0110\u00e3 h\u1ebft gi\u1edd",
+        "timer_finished_body": "B\u1ed9 h\u1eb9n gi\u1edd {time} c\u1ee7a b\u1ea1n \u0111\u00e3 ho\u00e0n t\u1ea5t.",
+        "focus_complete_title": "Ho\u00e0n th\u00e0nh phi\u00ean t\u1eadp trung",
+        "focus_complete_body": "L\u00e0m t\u1ed1t l\u1eafm! \u0110\u00e3 \u0111\u1ebfn l\u00fac ngh\u1ec9 ng\u01a1i x\u1ee9ng \u0111\u00e1ng.",
+        "break_over_title": "H\u1ebft gi\u1edd ngh\u1ec9",
+        "break_over_body": "\u0110\u00e3 h\u1ebft th\u1eddi gian ngh\u1ec9. H\u00e3y quay l\u1ea1i t\u1eadp trung n\u00e0o!",
+        "pomo_skipped_title": "\u0110\u00e3 b\u1ecf qua Pomodoro",
+        "pomo_skipped_focus_body": "\u0110\u00e3 b\u1ecf qua phi\u00ean t\u1eadp trung. Chuy\u1ec3n sang gi\u1edd ngh\u1ec9.",
+        "pomo_skipped_break_body": "\u0110\u00e3 b\u1ecf qua gi\u1edd ngh\u1ec9. Quay l\u1ea1i phi\u00ean t\u1eadp trung."
+      }
+    }
+  },
+  "screenshot": {
+    "video_mode": "Nh\u1ea5p ghi h\u00ecnh (c\u1ed5ng th\u00f4ng tin x\u1eed l\u00fd ch\u1ecdn v\u00f9ng)",
+    "select_region": "Ch\u1ecdn v\u00f9ng \u0111\u1ec3 ch\u1ee5p",
+    "no_microphones": "Kh\u00f4ng t\u00ecm th\u1ea5y micro (h\u00e3y c\u00e0i pulseaudio)",
+    "qr_timeout": "Qu\u00e9t h\u1ebft th\u1eddi gian ho\u1eb7c th\u1ea5t b\u1ea1i.",
+    "qr_not_found": "Kh\u00f4ng t\u00ecm th\u1ea5y m\u00e3 QR n\u00e0o.",
+    "notifications": {
+      "screenshot_app_name": "Ch\u1ee5p m\u00e0n h\u00ecnh",
+      "recorder_app_name": "Tr\u00ecnh ghi m\u00e0n h\u00ecnh",
+      "system_app_name": "H\u1ec7 th\u1ed1ng ch\u1ee5p m\u00e0n h\u00ecnh",
+      "missing_deps_title": "Thi\u1ebfu ph\u1ea7n ph\u1ee5 thu\u1ed9c",
+      "missing_deps_body": "Kh\u00f4ng th\u1ec3 kh\u1edfi \u0111\u1ed9ng. Vui l\u00f2ng c\u00e0i \u0111\u1eb7t:\n{cmds}",
+      "open_folder": "M\u1edf th\u01b0 m\u1ee5c",
+      "recording_saved_title": "\u0110\u00e3 l\u01b0u b\u1ea3n ghi",
+      "recording_saved_body": "T\u1ec7p: {file}\nTh\u01b0 m\u1ee5c: {folder}",
+      "recording_error_title": "L\u1ed7i",
+      "recording_error_body": "Kh\u00f4ng th\u1ec3 l\u01b0u t\u1ec7p video.",
+      "recording_started_title": "\u0110\u00e3 b\u1eaft \u0111\u1ea7u ghi h\u00ecnh",
+      "recording_started_body": "Nh\u1ea5n ph\u00edm t\u1eaft ch\u1ee5p m\u00e0n h\u00ecnh m\u1ed9t l\u1ea7n n\u1eefa \u0111\u1ec3 d\u1eebng.",
+      "screenshot_saved_title": "\u0110\u00e3 l\u01b0u \u1ea3nh ch\u1ee5p m\u00e0n h\u00ecnh",
+      "screenshot_saved_body": "T\u1ec7p: {file}\nTh\u01b0 m\u1ee5c: {folder}"
+    }
+  },
+  "start": {
+    "title": "Serpantinum",
+    "made_by": "Th\u1ef1c hi\u1ec7n b\u1edfi @{author}",
+    "welcome": "Ch\u00e0o m\u1eebng",
+    "tagline": "M\u1ed9t desktop shell \u0111\u01b0\u1ee3c x\u00e2y d\u1ef1ng cho",
+    "you": "B\u1ea1n",
+    "start_preview": "B\u1eaft \u0111\u1ea7u xem tr\u01b0\u1edbc"
+  },
+  "syspanel": {
+    "user": {
+      "default_name": "Ng\u01b0\u1eddi d\u00f9ng",
+      "default_os": "Linux",
+      "logout": "\u0110\u0103ng xu\u1ea5t"
+    },
+    "notifications": {
+      "title": "Th\u00f4ng b\u00e1o",
+      "clear": "X\u00f3a",
+      "silent": "Im l\u1eb7ng",
+      "mute": "T\u1eaft ti\u1ebfng",
+      "empty": "B\u1ea1n \u0111\u00e3 xem h\u1ebft th\u00f4ng b\u00e1o."
+    },
+    "profiles": {
+      "performance": "Hi\u1ec7u n\u0103ng cao",
+      "balanced": "C\u00e2n b\u1eb1ng",
+      "power_saver": "Ti\u1ebft ki\u1ec7m pin"
+    },
+    "battery": {
+      "fully_charged": "\u0110\u00e3 s\u1ea1c \u0111\u1ea7y",
+      "charging": "\u0110ang s\u1ea1c",
+      "charging_time": "\u0110ang s\u1ea1c \u2022 {hours}g {mins}p",
+      "discharging": "\u0110ang x\u1ea3 pin",
+      "left_time": "C\u00f2n l\u1ea1i {hours}g {mins}p",
+      "until_full": "cho \u0111\u1ebfn khi \u0111\u1ea7y",
+      "remaining": "c\u00f2n l\u1ea1i"
+    },
+    "actions": {
+      "system_name": "H\u1ec7 th\u1ed1ng",
+      "hibernate_error_title": "Kh\u00f4ng kh\u1ea3 d\u1ee5ng ch\u1ebf \u0111\u1ed9 ng\u1ee7 \u0111\u00f4ng",
+      "hibernate_error_body": "Ch\u1ebf \u0111\u1ed9 ng\u1ee7 \u0111\u00f4ng kh\u00f4ng kh\u1ea3 d\u1ee5ng tr\u00ean h\u1ec7 th\u1ed1ng n\u00e0y. Vui l\u00f2ng ki\u1ec3m tra c\u1ea5u h\u00ecnh ph\u00e2n v\u00f9ng swap c\u1ee7a b\u1ea1n."
+    }
+  },
+  "volumepopup": {
+    "no_device": "Kh\u00f4ng c\u00f3 thi\u1ebft b\u1ecb",
+    "mute": "T\u1eaft ti\u1ebfng",
+    "master_output_volume": "\u00c2m l\u01b0\u1ee3ng \u0111\u1ea7u ra ch\u00ednh",
+    "no_active_streams": "Kh\u00f4ng c\u00f3 lu\u1ed3ng \u00e2m thanh ho\u1ea1t \u0111\u1ed9ng",
+    "active_default": "M\u1eb7c \u0111\u1ecbnh \u0111ang ho\u1ea1t \u0111\u1ed9ng",
+    "tabs": {
+      "outputs": "\u0110\u1ea7u ra",
+      "inputs": "\u0110\u1ea7u v\u00e0o",
+      "streams": "Lu\u1ed3ng"
+    }
+  },
+  "wallpaper": {
+    "notifications": {
+      "downloading": "\u0110ang t\u1ea3i xu\u1ed1ng h\u00ecnh n\u1ec1n...",
+      "type_to_search": "Nh\u1eadp g\u00ec \u0111\u00f3 \u0111\u1ec3 t\u00ecm ki\u1ebfm...",
+      "search_paused": "\u0110\u00e3 t\u1ea1m d\u1eebng t\u00ecm ki\u1ebfm",
+      "searching_ddg": "\u0110ang t\u00ecm ki\u1ebfm h\u00ecnh n\u1ec1n...",
+      "generating_thumbnails": "\u0110ang t\u1ea1o \u1ea3nh thu nh\u1ecf...",
+      "no_wallpapers_found": "Kh\u00f4ng t\u00ecm th\u1ea5y h\u00ecnh n\u1ec1n n\u00e0o",
+      "videos": "Video",
+      "history": "\u0110\u00e3 \u00e1p d\u1ee5ng g\u1ea7n \u0111\u00e2y"
+    },
+    "filters": {
+      "all": "T\u1ea5t c\u1ea3",
+      "vid": "Video",
+      "search": "T\u00ecm ki\u1ebfm",
+      "red": "\u0110\u1ecf",
+      "orange": "Cam",
+      "yellow": "V\u00e0ng",
+      "green": "Xanh l\u00e1",
+      "blue": "Xanh d\u01b0\u01a1ng",
+      "purple": "T\u00edm",
+      "pink": "H\u1ed3ng",
+      "monochrome": "\u0110\u01a1n s\u1eafc"
+    }
+  },
+  "weather": {
+    "desc": {
+      "sunny": "N\u1eafng",
+      "clear": "Quang m\u00e2y",
+      "cloudy": "C\u00f3 m\u00e2y",
+      "mist": "S\u01b0\u01a1ng m\u00f9",
+      "rainy": "C\u00f3 m\u01b0a",
+      "snow": "C\u00f3 tuy\u1ebft",
+      "storm": "B\u00e3o",
+      "unknown": "Kh\u00f4ng r\u00f5",
+      "offline": "Ngo\u1ea1i tuy\u1ebfn"
+    },
+    "days": {
+      "mon": "T2",
+      "tue": "T3",
+      "wed": "T4",
+      "thu": "T5",
+      "fri": "T6",
+      "sat": "T7",
+      "sun": "CN",
+      "monday": "Th\u1ee9 hai",
+      "tuesday": "Th\u1ee9 ba",
+      "wednesday": "Th\u1ee9 t\u01b0",
+      "thursday": "Th\u1ee9 n\u0103m",
+      "friday": "Th\u1ee9 s\u00e1u",
+      "saturday": "Th\u1ee9 b\u1ea3y",
+      "sunday": "Ch\u1ee7 nh\u1eadt"
+    },
+    "months": {
+      "jan": "Thg 1",
+      "feb": "Thg 2",
+      "mar": "Thg 3",
+      "apr": "Thg 4",
+      "may": "Thg 5",
+      "jun": "Thg 6",
+      "jul": "Thg 7",
+      "aug": "Thg 8",
+      "sep": "Thg 9",
+      "oct": "Thg 10",
+      "nov": "Thg 11",
+      "dec": "Thg 12"
+    }
+  },
+  "widgets": {
+    "wallpaper": {
+      "name": "Tr\u00ecnh ch\u1ecdn h\u00ecnh n\u1ec1n",
+      "desc": "Duy\u1ec7t v\u00e0 \u0111\u1eb7t h\u00ecnh n\u1ec1n m\u00e0n h\u00ecnh"
+    },
+    "network": {
+      "name": "C\u00e0i \u0111\u1eb7t m\u1ea1ng",
+      "desc": "Qu\u1ea3n l\u00fd Wi-Fi, ethernet v\u00e0 k\u1ebft n\u1ed1i m\u1ea1ng"
+    },
+    "volume": {
+      "name": "\u00c2m l\u01b0\u1ee3ng & \u00c2m thanh",
+      "desc": "Qu\u1ea3n l\u00fd thi\u1ebft b\u1ecb \u00e2m thanh v\u00e0 m\u1ee9c \u00e2m l\u01b0\u1ee3ng"
+    },
+    "guide": {
+      "name": "C\u00e0i \u0111\u1eb7t",
+      "desc": "C\u00e0i \u0111\u1eb7t Serpantinum"
+    },
+    "calendar": {
+      "name": "L\u1ecbch & \u0110\u1ed3ng h\u1ed3",
+      "desc": "Xem ng\u00e0y, gi\u1edd v\u00e0 l\u1ecbch tr\u00ecnh"
+    },
+    "music": {
+      "name": "Tr\u00ecnh ph\u00e1t nh\u1ea1c",
+      "desc": "\u0110i\u1ec1u khi\u1ec3n ph\u00e1t nh\u1ea1c v\u00e0 ph\u01b0\u01a1ng ti\u1ec7n"
+    },
+    "notifications": {
+      "name": "Trung t\u00e2m th\u00f4ng b\u00e1o",
+      "desc": "Xem th\u00f4ng b\u00e1o g\u1ea7n \u0111\u00e2y v\u00e0 l\u1ecbch s\u1eed"
+    },
+    "system": {
+      "name": "\u0110i\u1ec1u khi\u1ec3n h\u1ec7 th\u1ed1ng",
+      "desc": "Theo d\u00f5i hi\u1ec7u n\u0103ng, ngu\u1ed3n \u0111i\u1ec7n v\u00e0 c\u00e0i \u0111\u1eb7t nhanh"
+    },
+    "redactor": {
+      "no_widgets_active": "Kh\u00f4ng c\u00f3 ti\u1ec7n \u00edch n\u00e0o ho\u1ea1t \u0111\u1ed9ng",
+      "click_to_add": "Nh\u1ea5p v\u00e0o bi\u1ec3u t\u01b0\u1ee3ng ti\u1ec7n \u00edch \u1edf thanh c\u00f4ng c\u1ee5 ph\u00eda d\u01b0\u1edbi \u0111\u1ec3 th\u00eam",
+      "done": "Ho\u00e0n t\u1ea5t",
+      "widget_singular": "ti\u1ec7n \u00edch",
+      "widgets_plural": "ti\u1ec7n \u00edch",
+      "widgets_short": "ti\u1ec7n \u00edch"
+    },
+    "types": {
+      "clock": "\u0110\u1ed3ng h\u1ed3",
+      "music": "Nh\u1ea1c",
+      "weather": "Th\u1eddi ti\u1ebft",
+      "image": "H\u00ecnh \u1ea3nh",
+      "visualizer": "Tr\u00ecnh tr\u1ef1c quan h\u00f3a",
+      "user": "Ng\u01b0\u1eddi d\u00f9ng",
+      "usage": "M\u1ee9c s\u1eed d\u1ee5ng",
+      "battery": "Pin",
+      "github": "Github",
+      "time": "Th\u1eddi gian"
+    },
+    "variants": {
+      "digital": "\u0110i\u1ec7n t\u1eed",
+      "analog": "Kim",
+      "full": "\u0110\u1ea7y \u0111\u1ee7",
+      "minimal": "T\u1ed1i gi\u1ea3n",
+      "round": "Tr\u00f2n",
+      "compact": "G\u1ecdn nh\u1eb9",
+      "rect": "Ch\u1eef nh\u1eadt",
+      "rounded": "Bo tr\u00f2n",
+      "bars": "Thanh",
+      "continuous": "Li\u00ean t\u1ee5c",
+      "default": "M\u1eb7c \u0111\u1ecbnh",
+      "material": "Material",
+      "materialAnalog": "Material kim",
+      "lumen": "Lumen",
+      "lyrics": "L\u1eddi b\u00e0i h\u00e1t",
+      "simpleLyrics": "L\u1eddi b\u00e0i h\u00e1t \u0111\u01a1n gi\u1ea3n"
+    },
+    "presets": {
+      "minimal": {
+        "name": "T\u1ed1i gi\u1ea3n",
+        "desc": "B\u1ed1 c\u1ee5c tinh t\u1ebf v\u00e0 t\u1ed1i gi\u1ea3n v\u1edbi \u0111\u1ed3ng h\u1ed3 s\u1ed1 g\u1ecdn g\u00e0ng c\u00f9ng th\u00f4ng tin th\u1eddi ti\u1ebft."
+      },
+      "media_station": {
+        "name": "Tr\u1ea1m \u0110a Ph\u01b0\u01a1ng Ti\u1ec7n",
+        "desc": "Thi\u1ebft l\u1eadp \u0111a ph\u01b0\u01a1ng ti\u1ec7n v\u1edbi thanh s\u00f3ng \u00e2m trung t\u00e2m v\u00e0 tr\u00ecnh \u0111i\u1ec1u khi\u1ec3n nh\u1ea1c h\u00ecnh tr\u00f2n."
+      },
+      "dashboard": {
+        "name": "B\u1ea3ng \u0110i\u1ec1u Khi\u1ec3n",
+        "desc": "B\u1ea3ng theo d\u00f5i to\u00e0n di\u1ec7n v\u1edbi \u0111\u1ed3ng h\u1ed3 s\u1ed1, m\u1ee9c s\u1eed d\u1ee5ng ph\u1ea7n c\u1ee9ng v\u00e0 tr\u1ea1ng th\u00e1i pin."
+      }
+    },
+    "github": {
+      "set_user": "\u0110\u1eb7t ng\u01b0\u1eddi d\u00f9ng",
+      "error": "L\u1ed7i",
+      "commit": "commit",
+      "commits": "commit",
+      "no_day_selected": "Ch\u01b0a ch\u1ecdn ng\u00e0y",
+      "fetching": "\u0110ang t\u1ea3i \u0111\u00f3ng g\u00f3p GitHub...",
+      "fetch_error": "Kh\u00f4ng th\u1ec3 t\u1ea3i ng\u01b0\u1eddi d\u00f9ng @{user}",
+      "enter_username": "Nh\u1eadp t\u00ean ng\u01b0\u1eddi d\u00f9ng GitHub",
+      "no_contributions": "Kh\u00f4ng t\u00ecm th\u1ea5y \u0111\u00f3ng g\u00f3p n\u00e0o"
+    },
+    "settings": {
+      "lyricsLines": "D\u00f2ng",
+      "lyricsAlignment": "C\u0103n ch\u1ec9nh"
+    },
+    "align": {
+      "left": "Tr\u00e1i",
+      "center": "Gi\u1eefa",
+      "right": "Ph\u1ea3i"
+    }
+  },
+  "cli": {
+    "usage": "C\u00e1ch d\u00f9ng: serpantinum [l\u1ec7nh] [t\u00f9y ch\u1ecdn...]",
+    "description": "M\u1ed9t desktop shell d\u00e0nh cho c\u00e1c Wayland compositor.",
+    "commands": "C\u00e1c l\u1ec7nh:",
+    "script_commands": "C\u00e1c l\u1ec7nh t\u1eadp l\u1ec7nh:",
+    "launch_desc": "Kh\u1edfi ch\u1ea1y c\u00e1c th\u00e0nh ph\u1ea7n \u0111\u1ed9c l\u1eadp (start, widgetredactor)",
+    "msg_desc": "G\u1eedi l\u1ec7nh ho\u1eb7c chuy\u1ec3n kh\u00f4ng gian l\u00e0m vi\u1ec7c \u0111\u1ebfn tr\u00ecnh qu\u1ea3n l\u00fd giao di\u1ec7n",
+    "ipc_desc": "Chuy\u1ec3n ti\u1ebfp l\u1ec7nh g\u1ecdi IPC tr\u1ef1c ti\u1ebfp \u0111\u1ebfn shell",
+    "kill_desc": "D\u1eebng daemon \u0111ang ch\u1ea1y m\u1ed9t c\u00e1ch s\u1ea1ch s\u1ebd",
+    "options": "C\u00e1c t\u00f9y ch\u1ecdn:",
+    "verbose_desc": "B\u1eadt ghi nh\u1eadt k\u00fd chi ti\u1ebft",
+    "version_desc": "Hi\u1ec3n th\u1ecb th\u00f4ng tin phi\u00ean b\u1ea3n v\u00e0 tho\u00e1t",
+    "help_desc": "Hi\u1ec3n th\u1ecb th\u00f4ng b\u00e1o tr\u1ee3 gi\u00fap n\u00e0y v\u00e0 tho\u00e1t",
+    "examples": "V\u00ed d\u1ee5:",
+    "daemon_stopped": "\u0110\u00e3 d\u1eebng daemon Serpantinum.",
+    "starting_daemon": "Daemon kh\u00f4ng ch\u1ea1y. \u0110ang kh\u1edfi \u0111\u1ed9ng serpantinumd \u1edf n\u1ec1n...",
+    "error_missing_qml": "L\u1ed7i: thi\u1ebfu m\u1ee5c ti\u00eau \u0111\u1ec3 kh\u1edfi ch\u1ea1y.",
+    "launch_usage": "C\u00e1ch d\u00f9ng: serpantinum launch <start|widgetredactor> [\u0111\u1ed1i s\u1ed1...]",
+    "error_qml_not_found": "L\u1ed7i: kh\u00f4ng t\u00ecm th\u1ea5y {NAME}.qml trong {DIR}",
+    "error_shell_qml_not_found": "L\u1ed7i: kh\u00f4ng t\u00ecm th\u1ea5y \u0111\u01b0\u1eddng d\u1eabn \u0111\u1ebfn shell.qml trong {DIR}",
+    "error_unknown_command": "L\u1ed7i: l\u1ec7nh kh\u00f4ng x\u00e1c \u0111\u1ecbnh '{CMD}'.",
+    "error_unknown_target": "L\u1ed7i: m\u1ee5c ti\u00eau kh\u00f4ng x\u00e1c \u0111\u1ecbnh '{TARGET}'.",
+    "launch_help": {
+      "usage": "C\u00e1ch d\u00f9ng: serpantinum launch <start|widgetredactor> [\u0111\u1ed1i s\u1ed1...]",
+      "description": "Kh\u1edfi ch\u1ea1y tr\u1ef1c ti\u1ebfp c\u00e1c th\u00e0nh ph\u1ea7n \u0111\u1ed9c l\u1eadp \u1edf ch\u1ebf \u0111\u1ed9 ch\u1ea1y.",
+      "available_targets": "C\u00e1c m\u1ee5c ti\u00eau kh\u1ea3 d\u1ee5ng:",
+      "target_start": "Kh\u1edfi ch\u1ea1y giao di\u1ec7n thi\u1ebft l\u1eadp ban \u0111\u1ea7u",
+      "target_widgetredactor": "Kh\u1edfi ch\u1ea1y giao di\u1ec7n ch\u1ec9nh s\u1eeda ti\u1ec7n \u00edch m\u00e0n h\u00ecnh"
+    },
+    "msg_help": {
+      "usage": "C\u00e1ch d\u00f9ng: serpantinum msg <l\u1ec7nh|kh\u00f4ng_gian_l\u00e0m_vi\u1ec7c> [\u0111\u1ed1i s\u1ed1...]",
+      "description": "G\u1eedi tr\u1ef1c ti\u1ebfp th\u00f4ng \u0111i\u1ec7p qu\u1ea3n l\u00fd b\u1ed1 c\u1ee5c, kh\u00f4ng gian l\u00e0m vi\u1ec7c v\u00e0 c\u1eeda s\u1ed5.",
+      "available_commands": "C\u00e1c th\u00f4ng \u0111i\u1ec7p kh\u1ea3 d\u1ee5ng:",
+      "cmd_workspace": "Chuy\u1ec3n \u0111\u1ebfn kh\u00f4ng gian l\u00e0m vi\u1ec7c <s\u1ed1> (th\u00eam 'move' \u0111\u1ec3 chuy\u1ec3n c\u1eeda s\u1ed5 \u0111ang ho\u1ea1t \u0111\u1ed9ng)",
+      "cmd_open": "M\u1edf b\u1ea3ng giao di\u1ec7n qu\u1ea3n l\u00fd (network, guide, wallpaper, applauncher)",
+      "cmd_toggle": "B\u1eadt/t\u1eaft b\u1ea3ng giao di\u1ec7n qu\u1ea3n l\u00fd",
+      "cmd_close": "\u0110\u00f3ng m\u1ecdi l\u1edbp ph\u1ee7 shell \u0111ang ho\u1ea1t \u0111\u1ed9ng"
+    },
+    "ipc_help": {
+      "usage": "C\u00e1ch d\u00f9ng: serpantinum ipc call <m\u1ee5c_ti\u00eau> <ph\u01b0\u01a1ng_th\u1ee9c> [\u0111\u1ed1i s\u1ed1...]",
+      "description": "G\u1eedi l\u1ec7nh g\u1ecdi IPC tr\u1ef1c ti\u1ebfp \u0111\u1ebfn phi\u00ean b\u1ea3n quickshell \u0111ang ch\u1ea1y."
+    },
+    "scripts": {
+      "exit": "K\u1ebft th\u00fac phi\u00ean \u0111\u1ed3 h\u1ecda v\u00e0 tho\u00e1t compositor",
+      "lock": "K\u00edch ho\u1ea1t giao di\u1ec7n m\u00e0n h\u00ecnh kh\u00f3a",
+      "volume": "\u0110i\u1ec1u khi\u1ec3n \u00e2m l\u01b0\u1ee3ng v\u00e0 tr\u1ea1ng th\u00e1i t\u1eaft ti\u1ebfng \u0111\u1ea7u ra/\u0111\u1ea7u v\u00e0o \u00e2m thanh m\u1eb7c \u0111\u1ecbnh",
+      "reload": "Bu\u1ed9c t\u1ea3i l\u1ea1i c\u00e1c th\u00e0nh ph\u1ea7n m\u00e0n h\u00ecnh quickshell",
+      "weather": "T\u1ea3i v\u00e0 qu\u1ea3n l\u00fd d\u1eef li\u1ec7u d\u1ef1 b\u00e1o th\u1eddi ti\u1ebft c\u00f9ng b\u1ed9 nh\u1edb \u0111\u1ec7m",
+      "location": "L\u1ea5y v\u00e0 c\u1eadp nh\u1eadt t\u1ecda \u0111\u1ed9 \u0111\u1ecba l\u00fd",
+      "screenshot": "Ch\u1ee5p \u1ea3nh m\u00e0n h\u00ecnh, quay video ho\u1eb7c ph\u00e2n t\u00edch m\u00e3 QR",
+      "brightness": "\u0110i\u1ec1u ch\u1ec9nh \u0111\u1ed9 s\u00e1ng \u0111\u00e8n n\u1ec1n m\u00e0n h\u00ecnh",
+      "current_focus": "Theo d\u00f5i v\u00e0 ghi nh\u1eadt k\u00fd thay \u0111\u1ed5i ti\u00eau \u0111i\u1ec3m c\u1eeda s\u1ed5 \u0111ang ho\u1ea1t \u0111\u1ed9ng",
+      "monitors_detect": "Truy v\u1ea5n c\u00e1c \u0111\u1ea7u ra m\u00e0n h\u00ecnh \u0111ang ho\u1ea1t \u0111\u1ed9ng v\u00e0 t\u1ea7n s\u1ed1 qu\u00e9t",
+      "location_manual": "\u0110\u1eb7t th\u1ee7 c\u00f4ng t\u1ecda \u0111\u1ed9 \u0111\u1ecba l\u00fd v\u00e0 m\u00fai gi\u1edd",
+      "blue_light_filter": "\u0110i\u1ec1u ch\u1ec9nh nhi\u1ec7t \u0111\u1ed9 m\u00e0u v\u00e0 l\u1ecbch tr\u00ecnh ng\u00e0y/\u0111\u00eam t\u1ef1 \u0111\u1ed9ng",
+      "translate": "Tr\u00ecnh d\u1ecbch v\u0103n b\u1ea3n v\u00e0 v\u00f9ng ch\u1ecdn t\u1ee9c th\u00ec"
+    }
+  },
+  "daemon": {
+    "already_running": "Daemon \u0111ang ch\u1ea1y r\u1ed3i. \u0110ang tho\u00e1t...",
+    "shutting_down": "\u0110ang t\u1eaft daemon serpantinum...",
+    "launching": "\u0110ang kh\u1edfi ch\u1ea1y daemon serpantinum...",
+    "cli": {
+      "usage": "C\u00e1ch d\u00f9ng: serpantinumd <l\u1ec7nh> [t\u00f9y ch\u1ecdn...]",
+      "description": "Daemon d\u1ecbch v\u1ee5 n\u1ec1n cho desktop shell serpantinum.",
+      "commands": "C\u00e1c l\u1ec7nh:",
+      "cmd_start": "Kh\u1edfi \u0111\u1ed9ng d\u1ecbch v\u1ee5 daemon v\u00e0 c\u00e1c ti\u1ebfn tr\u00ecnh n\u1ec1n",
+      "cmd_stop": "D\u1eebng d\u1ecbch v\u1ee5 daemon \u0111ang ch\u1ea1y",
+      "cmd_status": "Ki\u1ec3m tra tr\u1ea1ng th\u00e1i ho\u1ea1t \u0111\u1ed9ng c\u1ee7a d\u1ecbch v\u1ee5 daemon",
+      "options": "C\u00e1c t\u00f9y ch\u1ecdn:",
+      "opt_verbose": "B\u1eadt ghi nh\u1eadt k\u00fd \u0111\u1ea7u ra chi ti\u1ebft",
+      "opt_version": "Hi\u1ec3n th\u1ecb th\u00f4ng tin phi\u00ean b\u1ea3n v\u00e0 tho\u00e1t",
+      "opt_help": "Hi\u1ec3n th\u1ecb th\u00f4ng b\u00e1o tr\u1ee3 gi\u00fap n\u00e0y v\u00e0 tho\u00e1t",
+      "stopped": "\u0110\u00e3 d\u1eebng daemon Serpantinum.",
+      "status_running": "Daemon Serpantinum \u0111ang ch\u1ea1y (PID: {PID}).",
+      "status_stopped": "Daemon Serpantinum kh\u00f4ng ch\u1ea1y.",
+      "unknown_arg": "\u0110\u1ed1i s\u1ed1 kh\u00f4ng x\u00e1c \u0111\u1ecbnh: {ARG}"
+    }
+  },
+  "installer": {
+    "auth": {
+      "enter_code": "Nh\u1eadp m\u00e3 truy c\u1eadp c\u00e0i \u0111\u1eb7t: ",
+      "error_interactive": "L\u1ed7i: Y\u00eau c\u1ea7u terminal t\u01b0\u01a1ng t\u00e1c \u0111\u1ec3 x\u00e1c th\u1ef1c.",
+      "error_empty": "X\u00e1c th\u1ef1c th\u1ea5t b\u1ea1i: M\u00e3 truy c\u1eadp kh\u00f4ng \u0111\u01b0\u1ee3c \u0111\u1ec3 tr\u1ed1ng.",
+      "error_default": "X\u00e1c th\u1ef1c th\u1ea5t b\u1ea1i: M\u00e3 truy c\u1eadp kh\u00f4ng h\u1ee3p l\u1ec7 ho\u1eb7c \u0111\u00e3 h\u1ebft h\u1ea1n.",
+      "error_failed": "X\u00e1c th\u1ef1c th\u1ea5t b\u1ea1i.",
+      "access_granted": "\u0110\u00e3 c\u1ea5p quy\u1ec1n truy c\u1eadp. ({active}/{max} ng\u01b0\u1eddi d\u00f9ng \u0111\u00e3 k\u00edch ho\u1ea1t m\u00e3 n\u00e0y)"
+    },
+    "os": {
+      "error_root": "L\u1ed7i: Kh\u00f4ng ch\u1ea1y tr\u1ef1c ti\u1ebfp t\u1eadp l\u1ec7nh n\u00e0y b\u1eb1ng root/sudo. H\u00e3y ch\u1ea1y v\u1edbi t\u01b0 c\u00e1ch ng\u01b0\u1eddi d\u00f9ng th\u01b0\u1eddng.",
+      "error_unsupported": "H\u1ec7 \u0111i\u1ec1u h\u00e0nh kh\u00f4ng \u0111\u01b0\u1ee3c h\u1ed7 tr\u1ee3 ({os}). Serpantinum ch\u1ec9 h\u1ed7 tr\u1ee3 Arch Linux v\u00e0 c\u00e1c b\u1ea3n ph\u00e2n ph\u1ed1i d\u1ef1a tr\u00ean Arch.",
+      "error_not_found": "Kh\u00f4ng th\u1ec3 nh\u1eadn di\u1ec7n h\u1ec7 \u0111i\u1ec1u h\u00e0nh. Kh\u00f4ng t\u00ecm th\u1ea5y /etc/os-release.",
+      "unknown_cpu": "CPU kh\u00f4ng r\u00f5",
+      "unknown_gpu": "Kh\u00f4ng r\u00f5 / M\u00e1y \u1ea3o",
+      "default_os": "Arch Linux"
+    },
+    "ui": {
+      "user": "Ng\u01b0\u1eddi d\u00f9ng:",
+      "os": "H\u0110H:",
+      "cpu": "CPU:",
+      "gpu": "GPU:",
+      "target_version": "Phi\u00ean b\u1ea3n \u0111\u00edch:",
+      "install_mode": "Ch\u1ebf \u0111\u1ed9 c\u00e0i \u0111\u1eb7t:",
+      "github": "GitHub:",
+      "twitter": "Twitter:",
+      "reddit": "Reddit:",
+      "telegram": "Telegram:",
+      "donate": "\u1ee6ng h\u1ed9:",
+      "donate_sub": "(\u1ee6ng h\u1ed9 d\u1ef1 \u00e1n!)",
+      "packages_prompt": " G\u00f3i ph\u1ea7n m\u1ec1m > ",
+      "packages_header": " Nh\u1ea5n esc ho\u1eb7c enter \u0111\u1ec3 quay l\u1ea1i ",
+      "package_missing": "{pkg} (thi\u1ebfu - s\u1ebd \u0111\u01b0\u1ee3c c\u00e0i \u0111\u1eb7t)",
+      "package_installed": "{pkg} (\u0111\u00e3 c\u00e0i \u0111\u1eb7t)",
+      "compositors_title": "=== Ch\u1ecdn compositor \u0111\u00edch ===",
+      "installed": " (\u0111\u00e3 c\u00e0i \u0111\u1eb7t)",
+      "not_installed": " (ch\u01b0a c\u00e0i \u0111\u1eb7t)",
+      "done": "Ho\u00e0n t\u1ea5t",
+      "compositors_prompt": " C\u00e0i \u0111\u1eb7t compositor > ",
+      "compositors_header": " B\u1eadt/t\u1eaft c\u00e1c compositor \u0111\u01b0\u1ee3c h\u1ed7 tr\u1ee3, sau \u0111\u00f3 ch\u1ecdn ho\u00e0n t\u1ea5t ",
+      "sddm_title": "=== C\u00e0i \u0111\u1eb7t tr\u00ecnh qu\u1ea3n l\u00fd hi\u1ec3n th\u1ecb (SDDM) ===",
+      "sddm_detected_active": "Ph\u00e1t hi\u1ec7n tr\u00ecnh qu\u1ea3n l\u00fd hi\u1ec3n th\u1ecb \u0111ang ho\u1ea1t \u0111\u1ed9ng/b\u1eadt: {dm}",
+      "sddm_detected_none": "Ph\u00e1t hi\u1ec7n tr\u00ecnh qu\u1ea3n l\u00fd hi\u1ec3n th\u1ecb \u0111ang ho\u1ea1t \u0111\u1ed9ng/b\u1eadt: Kh\u00f4ng c\u00f3",
+      "sddm_opt_install": "C\u00e0i \u0111\u1eb7t v\u00e0 c\u1ea5u h\u00ecnh SDDM (ch\u1ee7 \u0111\u1ec1 Material You)",
+      "sddm_opt_disable": "V\u00f4 hi\u1ec7u h\u00f3a v\u00e0 g\u1ee1 b\u1ecf '{dm}'",
+      "sddm_opt_wayland": "Bu\u1ed9c d\u00f9ng backend Wayland",
+      "sddm_prompt": " C\u00e0i \u0111\u1eb7t SDDM > ",
+      "sddm_header": " B\u1eadt/t\u1eaft c\u00e1c t\u00f9y ch\u1ecdn, sau \u0111\u00f3 ch\u1ecdn ho\u00e0n t\u1ea5t ",
+      "target_compositor_none": "Compositor \u0111\u00edch [b\u1eaft bu\u1ed9c - ch\u01b0a ch\u1ecdn]",
+      "target_compositor_selected": "Compositor \u0111\u00edch [{comps}]",
+      "target_compositor_req": "Compositor \u0111\u00edch ({label}) [b\u1eaft bu\u1ed9c]",
+      "target_compositor_label": "Compositor \u0111\u00edch ({comps})",
+      "unsupported_compositor": "Compositor kh\u00f4ng \u0111\u01b0\u1ee3c h\u1ed7 tr\u1ee3",
+      "menu_overview": "T\u1ed5ng quan c\u00e0i \u0111\u1eb7t g\u00f3i ({count} g\u00f3i c\u1ed1t l\u00f5i)",
+      "menu_sddm": "Tr\u00ecnh qu\u1ea3n l\u00fd \u0111\u0103ng nh\u1eadp SDDM",
+      "menu_wallpapers": "G\u00f3i h\u00ecnh n\u1ec1n",
+      "menu_telemetry": "G\u1eedi d\u1eef li\u1ec7u ch\u1ea9n \u0111o\u00e1n \u1ea9n danh",
+      "menu_update": "C\u1eadp nh\u1eadt",
+      "menu_reinstall": "C\u00e0i \u0111\u1eb7t l\u1ea1i",
+      "menu_install": "C\u00e0i \u0111\u1eb7t",
+      "menu_exit": "Tho\u00e1t",
+      "main_menu_prompt": " Menu ch\u00ednh > ",
+      "main_menu_header": " S\u1eed d\u1ee5ng ph\u00edm m\u0169i t\u00ean \u0111\u1ec3 \u0111i\u1ec1u h\u01b0\u1edbng, enter \u0111\u1ec3 ch\u1ecdn ",
+      "error_no_compositor": "B\u1ea1n ph\u1ea3i ch\u1ecdn \u00edt nh\u1ea5t m\u1ed9t compositor \u0111\u01b0\u1ee3c h\u1ed7 tr\u1ee3 tr\u01b0\u1edbc khi ti\u1ebfp t\u1ee5c.",
+      "tagline": "M\u1ed9t desktop shell \u0111\u01b0\u1ee3c x\u00e2y d\u1ef1ng cho b\u1ea1n",
+      "support_creator": "\u1ee6ng h\u1ed9 t\u00e1c gi\u1ea3:",
+      "buy_coffee": "N\u1ebfu b\u1ea1n th\u00edch d\u1ef1 \u00e1n n\u00e0y, h\u00e3y c\u00e2n nh\u1eafc m\u1eddi t\u00f4i m\u1ed9t ly c\u00e0 ph\u00ea!",
+      "installed_success": "\u2714 \u0110\u00e3 c\u00e0i \u0111\u1eb7t th\u00e0nh c\u00f4ng Serpantinum {ver} ({commit}).",
+      "failed_packages": "C\u00e1c g\u00f3i sau \u0111\u00e3 g\u1eb7p l\u1ed7i trong qu\u00e1 tr\u00ecnh c\u00e0i \u0111\u1eb7t:",
+      "restart_prompt": "H\u00e3y kh\u1edfi \u0111\u1ed9ng l\u1ea1i compositor ho\u1eb7c ch\u1ea1y 'serpantinumd start' \u0111\u1ec3 b\u1eaft \u0111\u1ea7u.",
+      "ask_reboot": "B\u1ea1n c\u00f3 mu\u1ed1n kh\u1edfi \u0111\u1ed9ng l\u1ea1i kh\u00f4ng? [y/n] "
+    },
+    "deps": {
+      "syncing": "\u0110ang \u0111\u1ed3ng b\u1ed9 h\u00f3a v\u00e0 c\u1eadp nh\u1eadt c\u00e1c g\u00f3i h\u1ec7 th\u1ed1ng (pacman -syyu)...",
+      "all_installed": "-> T\u1ea5t c\u1ea3 c\u00e1c g\u00f3i \u0111\u00e3 \u0111\u01b0\u1ee3c c\u00e0i \u0111\u1eb7t s\u1eb5n! B\u1ecf qua giai \u0111o\u1ea1n t\u1ea3i xu\u1ed1ng g\u00f3i.",
+      "missing_count": "-> T\u00ecm th\u1ea5y {count} g\u00f3i c\u00f2n thi\u1ebfu c\u1ea7n c\u00e0i \u0111\u1eb7t.",
+      "installing_title": "\u0110ang c\u00e0i \u0111\u1eb7t c\u00e1c g\u00f3i h\u1ec7 th\u1ed1ng v\u00e0 ph\u1ea7n ph\u1ee5 thu\u1ed9c...",
+      "installing_pkg": "\u0110ang c\u00e0i \u0111\u1eb7t {pkg}...",
+      "install_ok": "\u0110\u00e3 c\u00e0i \u0111\u1eb7t th\u00e0nh c\u00f4ng {pkg}",
+      "install_failed": "C\u00e0i \u0111\u1eb7t th\u1ea5t b\u1ea1i {pkg}"
+    },
+    "deploy": {
+      "configuring_sddm": "\u0110ang c\u1ea5u h\u00ecnh tr\u00ecnh qu\u1ea3n l\u00fd hi\u1ec3n th\u1ecb SDDM...",
+      "disabling_dm": "-> \u0110ang v\u00f4 hi\u1ec7u h\u00f3a tr\u00ecnh qu\u1ea3n l\u00fd hi\u1ec3n th\u1ecb xung \u0111\u1ed9t: {dm}",
+      "sddm_success": "-> \u0110\u00e3 c\u00e0i \u0111\u1eb7t ch\u1ee7 \u0111\u1ec1 Material You cho SDDM v\u00e0 b\u1eadt d\u1ecbch v\u1ee5 [ OK ]"
+    }
+  },
+  "translator": {
+    "title": "Tr\u00ecnh d\u1ecbch",
+    "status_translating": "\u0110ang d\u1ecbch...",
+    "speed": "T\u1ed1c \u0111\u1ed9: ",
+    "detected": "\u0110\u00e3 ph\u00e1t hi\u1ec7n: ",
+    "input_label": "V\u0103n b\u1ea3n ngu\u1ed3n",
+    "placeholder": "Nh\u1eadp, d\u00e1n ho\u1eb7c n\u00f3i v\u0103n b\u1ea3n \u1edf \u0111\u00e2y...",
+    "chars": "k\u00fd t\u1ef1",
+    "translation_label": "B\u1ea3n d\u1ecbch",
+    "empty_prompt": "B\u1ea3n d\u1ecbch s\u1ebd xu\u1ea5t hi\u1ec7n \u1edf \u0111\u00e2y ngay l\u1eadp t\u1ee9c...",
+    "recent": "G\u1ea7n \u0111\u00e2y:",
+    "failed": "Kh\u00f4ng c\u00f3 b\u1ea3n d\u1ecbch n\u00e0o",
+    "quick_settings": "C\u00e0i \u0111\u1eb7t thay th\u1ebf nhanh",
+    "replace_settings_title": "Thay th\u1ebf v\u00f9ng ch\u1ecdn nhanh",
+    "replace_settings_desc": "D\u1ecbch v\u0103n b\u1ea3n \u0111\u01b0\u1ee3c ch\u1ecdn v\u00e0 thay th\u1ebf ngay t\u1ea1i ch\u1ed7",
+    "auto_paste": "T\u1ef1 \u0111\u1ed9ng d\u00e1n v\u0103n b\u1ea3n \u0111\u00e3 d\u1ecbch",
+    "auto_paste_sub": "N\u1ebfu t\u1eaft \u2014 b\u1ea3n d\u1ecbch ch\u1ec9 \u0111\u01b0\u1ee3c sao ch\u00e9p v\u00e0o b\u1ed9 nh\u1edb t\u1ea1m",
+    "keep_clipboard": "Gi\u1eef b\u1ea3n d\u1ecbch trong b\u1ed9 nh\u1edb t\u1ea1m",
+    "keep_clipboard_sub": "N\u1ebfu t\u1eaft \u2014 n\u1ed9i dung b\u1ed9 nh\u1edb t\u1ea1m ban \u0111\u1ea7u s\u1ebd \u0111\u01b0\u1ee3c kh\u00f4i ph\u1ee5c sau khi d\u00e1n"
+  },
+  "datetime": {
+    "full_date": "dddd, d MMMM"
+  }
+}

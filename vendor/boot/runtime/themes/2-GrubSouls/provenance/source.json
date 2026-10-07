@@ -1,0 +1,152 @@
+{
+  "id": 2,
+  "name": "GrubSouls",
+  "packageFolder": "2-GrubSouls",
+  "entrypoint": "2-GrubSouls/theme.txt",
+  "catalogLinkFromGorgeousGRUB": "https://github.com/PedroMMarinho/grubsouls-theme",
+  "sourceRepository": "https://PedroMMarinho/grubsouls-theme",
+  "sourceBranch": "main",
+  "sourceCommit": "114f7fe6a5b71ec9cc231b22789867f6a975aaf1",
+  "sourceThemePath": "grubsouls/theme.txt",
+  "license": "NOASSERTION",
+  "licenseStatus": "No license file or SPDX license declaration found in the pinned repository",
+  "notes": "README describes optional Python/systemd background and status updater; scripts/service are intentionally omitted. Native theme remains static.",
+  "upstreamInstallerExecuted": false,
+  "sourceAssets": [
+    {
+      "path": "AGaramond-Regular32.pf2",
+      "sourcePath": "grubsouls/AGaramond-Regular32.pf2",
+      "kind": "asset",
+      "sha256": "eb5880ce6730bad395eb4f9b0b287023d988bf9edadfdb3b559d53d63d634709",
+      "bytes": 12621
+    },
+    {
+      "path": "Iosevka-Term-Slab-18.pf2",
+      "sourcePath": "grubsouls/Iosevka-Term-Slab-18.pf2",
+      "kind": "asset",
+      "sha256": "5830192310416d447c2e9867b8337e9439ec84106b778abc8c7210b0336c867f",
+      "bytes": 234417
+    },
+    {
+      "path": "assets/GRUB_SOULS_3_WHITE.png",
+      "sourcePath": "grubsouls/assets/GRUB_SOULS_3_WHITE.png",
+      "kind": "asset",
+      "sha256": "c21f84e867d1c41d1009f0705e4447bbd4cdf2a5495e180f6b899f059e22e566",
+      "bytes": 31545
+    },
+    {
+      "path": "assets/GRUB_SOULS_LOGO.png",
+      "sourcePath": "grubsouls/assets/GRUB_SOULS_LOGO.png",
+      "kind": "asset",
+      "sha256": "c5d175f01b4575f676eae2341f2892a7db22f10bb8dd00c88b5908f1907656fb",
+      "bytes": 203353
+    },
+    {
+      "path": "background.png",
+      "sourcePath": "grubsouls/background.png",
+      "kind": "asset",
+      "sha256": "7feee618aabaf9733ca3c916327488208b1307c8c8b152199ed2f4df4f8282f3",
+      "bytes": 38676
+    },
+    {
+      "path": "icons/arch.png",
+      "sourcePath": "grubsouls/icons/arch.png",
+      "kind": "asset",
+      "sha256": "915862987158a751e12a513dffca29e6ababbfb81cb8c7f7076b2acd2342ecfc",
+      "bytes": 2124948
+    },
+    {
+      "path": "icons/bonefire.png",
+      "sourcePath": "grubsouls/icons/bonefire.png",
+      "kind": "asset",
+      "sha256": "ca9102356d1902f248d1e4338f3ceac4d34e227cfbbaf5652c60aca6da3b207c",
+      "bytes": 12141
+    },
+    {
+      "path": "icons/ember.png",
+      "sourcePath": "grubsouls/icons/ember.png",
+      "kind": "asset",
+      "sha256": "b14c5117b0b084988702630a775fefd7e6cdb1b9239062ba4540d38a0ff10813",
+      "bytes": 146481
+    },
+    {
+      "path": "icons/windows.png",
+      "sourcePath": "grubsouls/icons/windows.png",
+      "kind": "asset",
+      "sha256": "36a6b455a13c5133edcc9211c1d80e4649d82c03fa74feeb7bb4f9978c5c8130",
+      "bytes": 2037929
+    },
+    {
+      "path": "inbox_e.png",
+      "sourcePath": "grubsouls/inbox_e.png",
+      "kind": "asset",
+      "sha256": "d2a04a57cfb5090cd3155d4395a2111a63d94965a602aa959ac900ec43359477",
+      "bytes": 89345
+    },
+    {
+      "path": "inbox_n.png",
+      "sourcePath": "grubsouls/inbox_n.png",
+      "kind": "asset",
+      "sha256": "3975590d247adbc2eb4e2e8e7345567b9d8cda3fdebd27df2810d491bdc73541",
+      "bytes": 90914
+    },
+    {
+      "path": "inbox_ne.png",
+      "sourcePath": "grubsouls/inbox_ne.png",
+      "kind": "asset",
+      "sha256": "40599bd60c75a92a46e56f31a3c1bc3aada9b037f9cedb4f6c4b5ce1c189837b",
+      "bytes": 12428
+    },
+    {
+      "path": "inbox_nw.png",
+      "sourcePath": "grubsouls/inbox_nw.png",
+      "kind": "asset",
+      "sha256": "54c744ea99eec49ec4cc2dad5a672952fc10b5e9dcfa747250b1653b001b9099",
+      "bytes": 11020
+    },
+    {
+      "path": "inbox_s.png",
+      "sourcePath": "grubsouls/inbox_s.png",
+      "kind": "asset",
+      "sha256": "bb8cbba7d4d2a6c8313b56056df00632ef7b54109b5d61d642b93c9a57ab4c01",
+      "bytes": 62850
+    },
+    {
+      "path": "inbox_se.png",
+      "sourcePath": "grubsouls/inbox_se.png",
+      "kind": "asset",
+      "sha256": "1ffcea46d09b69fa2b90c706fedb5315cffd9247e5ac2ffe98ac019e94bb0a56",
+      "bytes": 11387
+    },
+    {
+      "path": "inbox_sw.png",
+      "sourcePath": "grubsouls/inbox_sw.png",
+      "kind": "asset",
+      "sha256": "652a9b636d25f03880cb56ba18b014696be04619f710fed25782d2ccf9a18534",
+      "bytes": 8689
+    },
+    {
+      "path": "inbox_w.png",
+      "sourcePath": "grubsouls/inbox_w.png",
+      "kind": "asset",
+      "sha256": "db048f6df062014572d7dbd606f4c9842d5fb4d2ffce8221930ea90dcaec2c94",
+      "bytes": 68939
+    },
+    {
+      "path": "select_c.png",
+      "sourcePath": "grubsouls/select_c.png",
+      "kind": "asset",
+      "sha256": "46f29e772628817752bb1fcf4066673eb49df3bf7045ee49771f485e7b5a50fc",
+      "bytes": 10726
+    },
+    {
+      "path": "terminal_background.png",
+      "sourcePath": "grubsouls/terminal_background.png",
+      "kind": "asset",
+      "sha256": "3d1b4162bce77f45162bd96199e756e291d10ef275e9e7a771d3e215eb62774e",
+      "bytes": 505461
+    }
+  ],
+  "sourceReadmeAndLicense": "provenance/README.md and provenance/LICENSE when present; original theme file is provenance/upstream-theme.txt",
+  "retrievalFailures": []
+}

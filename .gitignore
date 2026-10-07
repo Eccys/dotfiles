@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+*.pkg.tar.*
+/src/
+/pkg/
+*.log
+.env
+private/

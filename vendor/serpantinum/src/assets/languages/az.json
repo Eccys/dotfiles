@@ -1,0 +1,1363 @@
+{
+  "guide": {
+    "about": {
+      "title": "Serpantinum",
+      "loading": "Y\u00fckl\u0259nir...",
+      "unknown": "Nam\u0259lum",
+      "version_by": "v{version} \u2022 m\u00fc\u0259llif: {author}",
+      "hardware": {
+        "device_name": "Cihaz\u0131n ad\u0131",
+        "processor": "Prosessor",
+        "graphics": "Qrafika",
+        "memory": "Yadda\u015f",
+        "disk_capacity": "Diskin tutumu",
+        "integrated_graphics": "Daxili qrafika"
+      },
+      "system": {
+        "os_name": "\u018fm\u0259liyyat sisteminin ad\u0131",
+        "kernel_version": "N\u00fcv\u0259nin versiyas\u0131",
+        "desktop": "\u0130\u015f masas\u0131",
+        "shell": "Qab\u0131q",
+        "uptime": "\u0130\u015fl\u0259m\u0259 m\u00fcdd\u0259ti",
+        "default_os": "Linux"
+      },
+      "github_repo": "ilyamiro/serpantinum"
+    },
+    "tabs": {
+      "welcome": "Xo\u015f g\u0259lmisiniz",
+      "general": "\u00dcmumi",
+      "display": "Ekran",
+      "bar": "Zolaq",
+      "launcher": "Ba\u015flad\u0131c\u0131",
+      "theme": "M\u00f6vzu",
+      "notifications": "Bildiri\u015fl\u0259r",
+      "idle": "F\u0259aliyy\u0259tsizlik",
+      "wellbeing": "R\u0259q\u0259msal rifah",
+      "tutorial": "T\u0259limat",
+      "update": "Yenil\u0259m\u0259",
+      "about": "Haqq\u0131nda",
+      "display_widgets": "Vidcetl\u0259r",
+      "display_general": "\u00dcmumi",
+      "osd": "Ekran g\u00f6st\u0259ricisi",
+      "dock": "T\u0259tbiq r\u0259fi",
+      "bar_general": "\u00dcmumi",
+      "bar_modules": "Modullar",
+      "bar_side_modules": "Yan modullar"
+    },
+    "launcher": {
+      "position": {
+        "title": "Ekrandak\u0131 m\u00f6vqe",
+        "desc": "Ba\u015flad\u0131c\u0131n\u0131n yerl\u0259\u015f\u0259c\u0259yi ekran k\u0259nar\u0131n\u0131 se\u00e7in",
+        "top": "Yuxar\u0131",
+        "bottom": "A\u015fa\u011f\u0131",
+        "left": "Sol",
+        "right": "Sa\u011f",
+        "center": "M\u0259rk\u0259z"
+      },
+      "width": {
+        "title": "Ba\u015flad\u0131c\u0131n\u0131n eni",
+        "desc": "Ba\u015flad\u0131c\u0131 p\u0259nc\u0259r\u0259sinin piksell\u0259 \u00fcmumi eni"
+      },
+      "items": {
+        "title": "G\u00f6r\u00fcn\u0259n elementl\u0259r",
+        "desc": "Eyni anda g\u00f6st\u0259ril\u0259n axtar\u0131\u015f n\u0259tic\u0259l\u0259rinin say\u0131"
+      },
+      "terminal": {
+        "title": "Terminal \u0259mri",
+        "desc": "> il\u0259 ba\u015flayan \u0259mrl\u0259ri icra etm\u0259k \u00fc\u00e7\u00fcn terminal \u0259mri (m\u0259s\u0259l\u0259n, kitty -e, alacritty -e, foot -e)"
+      },
+      "smart_ranking": {
+        "title": "Ba\u015flad\u0131c\u0131dak\u0131 elementl\u0259rin a\u011f\u0131ll\u0131 s\u0131ralanmas\u0131",
+        "desc": "T\u0259tbiql\u0259ri istifad\u0259 tezliyin\u0259 v\u0259 istifad\u0259 m\u00fcdd\u0259tin\u0259 g\u00f6r\u0259 s\u0131rala"
+      },
+      "test": "Ba\u015flad\u0131c\u0131n\u0131 a\u00e7"
+    },
+    "notifications": {
+      "dnd": {
+        "title": "Narahat etm\u0259yin",
+        "desc": "Vacib x\u0259b\u0259rdarl\u0131qlar istisna olmaqla, a\u00e7\u0131lan bildiri\u015fl\u0259ri s\u0259ssizl\u0259\u015fdir"
+      },
+      "position": {
+        "title": "A\u00e7\u0131lan p\u0259nc\u0259r\u0259nin m\u00f6vqeyi",
+        "desc": "A\u00e7\u0131lan bildiri\u015fl\u0259rin ekran\u0131n haras\u0131nda g\u00f6r\u00fcn\u0259c\u0259yini se\u00e7in",
+        "top_right": "Yuxar\u0131 sa\u011f",
+        "top_left": "Yuxar\u0131 sol",
+        "bottom_right": "A\u015fa\u011f\u0131 sa\u011f",
+        "bottom_left": "A\u015fa\u011f\u0131 sol",
+        "top_center": "Yuxar\u0131 m\u0259rk\u0259z",
+        "bottom_center": "A\u015fa\u011f\u0131 m\u0259rk\u0259z",
+        "select_on_screen": "Ekranda se\u00e7...",
+        "close_selector": "Se\u00e7im vasit\u0259sini ba\u011fla"
+      },
+      "sound": {
+        "title": "Bildiri\u015f s\u0259si",
+        "desc": "Bildiri\u015f g\u0259l\u0259nd\u0259 s\u0259s siqnal\u0131 s\u0259sl\u0259ndir"
+      },
+      "sound_file": {
+        "title": "S\u0259s effekti",
+        "desc": "G\u0259l\u0259n x\u0259b\u0259rdarl\u0131qlar \u00fc\u00e7\u00fcn s\u0259sl\u0259ndiril\u0259n s\u0259si se\u00e7in"
+      },
+      "empty_graphic": {
+        "title": "Bildiri\u015f olmad\u0131qda g\u00f6st\u0259ril\u0259n animasiya",
+        "desc": "Bildiri\u015f m\u0259rk\u0259zi bo\u015f olduqda yatan pi\u015fik t\u0259svirini g\u00f6st\u0259r"
+      }
+    },
+    "idle": {
+      "enabled": {
+        "title": "F\u0259aliyy\u0259tsizlik sistemini aktivl\u0259\u015fdir",
+        "desc": "Enerji idar\u0259etm\u0259sini v\u0259 kilidl\u0259m\u0259 m\u00fcdd\u0259tl\u0259rini aktivl\u0259\u015fdir"
+      },
+      "manual_inhibit": {
+        "title": "Narahat etm\u0259yin (yuxu rejimin\u0259 ke\u00e7m\u0259)",
+        "desc": "Sistemin f\u0259aliyy\u0259tsiz v\u0259ziyy\u0259t\u0259 ke\u00e7m\u0259sinin qar\u015f\u0131s\u0131n\u0131 \u0259l il\u0259 al"
+      },
+      "mpris_inhibit": {
+        "title": "Media s\u0259sl\u0259ndiril\u0259rk\u0259n f\u0259aliyy\u0259tsizliy\u0259 ke\u00e7idi \u0259ng\u0259ll\u0259",
+        "desc": "Media s\u0259sl\u0259ndiril\u0259rk\u0259n f\u0259aliyy\u0259tsizlik \u0259m\u0259liyyatlar\u0131n\u0131n qar\u015f\u0131s\u0131n\u0131 al"
+      },
+      "respect_inhibitors": {
+        "title": "T\u0259tbiql\u0259rin f\u0259aliyy\u0259tsizliy\u0259 ke\u00e7idi \u0259ng\u0259ll\u0259m\u0259sin\u0259 icaz\u0259 ver",
+        "desc": "T\u0259tbiql\u0259rin Wayland vasit\u0259sil\u0259 f\u0259aliyy\u0259tsizliy\u0259 ke\u00e7idi \u0259ng\u0259ll\u0259m\u0259sin\u0259 icaz\u0259 ver"
+      },
+      "pipeline_notice": "Ard\u0131c\u0131ll\u0131q: ekran\u0131 tutqunla\u015fd\u0131r < seans\u0131 kilidl\u0259 < ekran\u0131 s\u00f6nd\u00fcr < yuxu rejimin\u0259 ke\u00e7ir. Bu ard\u0131c\u0131ll\u0131\u011f\u0131 pozan \u0259m\u0259liyyatlar icra edilmir.",
+      "order_violation": "\u0130stisna edilib",
+      "actions_header": {
+        "title": "F\u0259aliyy\u0259tsizlik zaman\u0131 icra olunan \u0259m\u0259liyyatlar",
+        "desc": "G\u00f6zl\u0259m\u0259 m\u00fcdd\u0259tl\u0259rini, daxili i\u015f\u0259 salma \u015f\u0259rtl\u0259rini v\u0259 x\u00fcsusi \u0259mrl\u0259ri t\u0259nziml\u0259"
+      },
+      "action_name_placeholder": "\u018fm\u0259liyyat\u0131n ad\u0131",
+      "command_placeholder": "\u0130cra olunacaq \u0259mr",
+      "custom_action_default": "X\u00fcsusi f\u0259aliyy\u0259tsizlik \u0259m\u0259liyyat\u0131",
+      "custom_action_fallback": "F\u0259aliyy\u0259tsizlik \u0259m\u0259liyyat\u0131",
+      "warning_command": {
+        "title": "X\u0259b\u0259rdarl\u0131q \u0259mri",
+        "desc": "\u018fm\u0259liyyatdan n\u0259 q\u0259d\u0259r \u0259vv\u0259l x\u0259b\u0259rdarl\u0131q veril\u0259c\u0259yini v\u0259 icra olunacaq \u0259mri t\u0259yin et",
+        "placeholder": "M\u0259s\u0259l\u0259n, notify-send 'x\u0259b\u0259rdarl\u0131q'"
+      },
+      "before_command": {
+        "title": "\u018fvv\u0259l icra olunan \u0259mr",
+        "desc": "\u018fm\u0259liyyat ba\u015flamazdan d\u0259rhal \u0259vv\u0259l icra olunur",
+        "placeholder": "M\u0259s\u0259l\u0259n, playerctl pause"
+      },
+      "resume_command": {
+        "title": "F\u0259aliyy\u0259t b\u0259rpa olunanda icra olunan \u0259mr",
+        "desc": "\u0130stifad\u0259\u00e7i f\u0259aliyy\u0259ti b\u0259rpa olunanda icra olunur",
+        "placeholder": "M\u0259s\u0259l\u0259n, notify-send 'b\u0259rpa olundu'"
+      },
+      "dim": {
+        "title": "Ekran\u0131 tutqunla\u015fd\u0131r",
+        "desc": "Kilidl\u0259m\u0259d\u0259n \u0259vv\u0259l ekran parlaql\u0131\u011f\u0131n\u0131 azaltmaq"
+      },
+      "dpms": {
+        "title": "Ekran\u0131 s\u00f6nd\u00fcr (DPMS)",
+        "desc": "Monitorun ekran siqnal\u0131n\u0131 s\u00f6nd\u00fcrm\u0259k"
+      },
+      "lock": {
+        "title": "Seans\u0131 kilidl\u0259",
+        "desc": "H\u0259r\u0259k\u0259tsizlik m\u00fcdd\u0259tind\u0259n sonra sessiyan\u0131 kilidl\u0259m\u0259k"
+      },
+      "suspend": {
+        "title": "Sistemi yuxu rejimin\u0259 ke\u00e7ir",
+        "desc": "Sistemi yuxu rejimin\u0259 ke\u00e7irm\u0259k"
+      },
+      "hooks": {
+        "title": "Hadis\u0259 \u0259mrl\u0259ri (qab\u0131q \u0259mrl\u0259ri)"
+      },
+      "custom_action_desc": "X\u00fcsusi vaxt a\u015f\u0131m\u0131 f\u0259aliyy\u0259ti v\u0259 \u0259mri"
+    },
+    "welcome": {
+      "by_author": "M\u00fc\u0259llif: @{author}",
+      "about": "Haqq\u0131nda",
+      "hold_for_tutorial": "T\u0259limat \u00fc\u00e7\u00fcn bas\u0131l\u0131 saxla",
+      "start_tutorial": "T\u0259limat\u0131 ba\u015flat"
+    },
+    "tutorial": {
+      "section_title": "{section} \u00fczr\u0259 t\u0259limat",
+      "default_desc": "T\u0259limat\u0131 ba\u015flatmaq \u00fc\u00e7\u00fcn klikl\u0259yin",
+      "start": "Ba\u015flat"
+    },
+    "general": {
+      "language": {
+        "title": "Dil",
+        "desc": "Sistem interfeysinin dilini se\u00e7in"
+      },
+      "uiscale": {
+        "title": "\u0130nterfeysin miqyas\u0131",
+        "desc": "\u0130nterfeysin \u00fcmumi miqyas \u0259msal\u0131n\u0131 t\u0259yin edin"
+      },
+      "avatar": {
+        "title": "Profil \u015f\u0259kli",
+        "desc": "Profil \u015f\u0259klini se\u00e7in",
+        "select": "Se\u00e7",
+        "select_image_path": "\u015e\u0259kil yolunu se\u00e7..."
+      },
+      "mutesfx": {
+        "title": "S\u0259s effektl\u0259rini s\u0259ssizl\u0259\u015fdir",
+        "desc": "\u0130stifad\u0259\u00e7i interfeysinin s\u0259s effektl\u0259rini s\u00f6nd\u00fcr"
+      },
+      "sfxvolume": {
+        "title": "S\u0259s effektl\u0259rinin s\u0259viyy\u0259sini d\u0259yi\u015f",
+        "desc": "Sistemin s\u0259s \u00e7\u0131x\u0131\u015flar\u0131na t\u0259sir etmir"
+      },
+      "quickactions": {
+        "title": "S\u00fcr\u0259tli \u0259m\u0259liyyatlar",
+        "desc": "\u00dcz\u0259n s\u00fcr\u0259tli \u0259m\u0259liyyatlar qat\u0131n\u0131 aktivl\u0259\u015fdir"
+      },
+      "location": {
+        "title": "M\u0259kan",
+        "desc": "G\u00fcn\u0259\u015fin do\u011fu\u015f v\u0259 bat\u0131\u015f vaxtlar\u0131n\u0131 avtomatik hesablamaq v\u0259 hava m\u0259lumat\u0131n\u0131 g\u00f6st\u0259rm\u0259k \u00fc\u00e7\u00fcn m\u0259kan\u0131 t\u0259yin edin",
+        "popup_title": "M\u0259kan m\u0259lumatlar\u0131",
+        "autodetect": "Avtomatik m\u00fc\u0259yy\u0259n et",
+        "latitude": "Co\u011frafi enlik",
+        "longitude": "Co\u011frafi uzunluq",
+        "apply": "T\u0259tbiq et"
+      },
+      "weatherinterval": {
+        "title": "Hava m\u0259lumat\u0131n\u0131n yenil\u0259nm\u0259 aral\u0131\u011f\u0131",
+        "desc": "Sor\u011fular aras\u0131ndak\u0131 m\u00fcdd\u0259t (d\u0259qiq\u0259 il\u0259)"
+      },
+      "weatherunit": {
+        "title": "Hava m\u0259lumat\u0131n\u0131n \u00f6l\u00e7\u00fc vahidi",
+        "desc": "Hava m\u0259lumat\u0131nda temperaturun \u00f6l\u00e7\u00fc vahidi",
+        "celsius": "Celsius",
+        "fahrenheit": "Fahrenheit",
+        "kelvin": "Kelvin"
+      },
+      "copysettings": {
+        "title": "Parametrl\u0259rin sur\u0259tini \u00e7\u0131xar",
+        "desc": "Parametrl\u0259ri JSON format\u0131nda m\u00fcbadil\u0259 yadda\u015f\u0131na k\u00f6\u00e7\u00fcr",
+        "button": "Parametrl\u0259rin sur\u0259tini \u00e7\u0131xar"
+      },
+      "screenshot_on_release": {
+        "title": "Si\u00e7an d\u00fcym\u0259si burax\u0131landa sah\u0259nin \u015f\u0259klini \u00e7\u0259k",
+        "desc": "\u015e\u0259kil \u00e7\u0259km\u0259 d\u00fcym\u0259sin\u0259 klikl\u0259m\u0259d\u0259n, sah\u0259nin se\u00e7ilm\u0259si bit\u0259n kimi ekran \u015f\u0259klini \u00e7\u0259k"
+      }
+    },
+    "display": {
+      "bluelight": {
+        "title": "Mavi i\u015f\u0131q s\u00fczg\u0259ci",
+        "desc": "Ekran\u0131n isti i\u015f\u0131qland\u0131rmas\u0131n\u0131 a\u00e7 v\u0259 ya s\u00f6nd\u00fcr"
+      },
+      "enable": {
+        "title": "Bu monitoru aktivl\u0259\u015fdir",
+        "desc": "Bunu s\u00f6nd\u00fcrs\u0259niz, bu monitor s\u00f6n\u0259c\u0259k"
+      },
+      "schedule": {
+        "title": "Avtomatik c\u0259dv\u0259l",
+        "desc": "R\u0259ng temperaturunu bu m\u0259kanda g\u00fcn\u0259\u015fin batmas\u0131na v\u0259 do\u011fmas\u0131na \u0259sas\u0259n avtomatik t\u0259nziml\u0259:"
+      },
+      "temperature": {
+        "title": "R\u0259ng temperaturu",
+        "desc": "R\u0259ng temperaturunun t\u0259sir g\u00fcc\u00fcn\u00fc t\u0259nziml\u0259"
+      },
+      "uiscale": {
+        "title": "\u0130nterfeysin miqyas\u0131",
+        "desc": "Bu monitor \u00fc\u00e7\u00fcn ekran miqyas\u0131 \u0259msal\u0131n\u0131 t\u0259yin edin"
+      },
+      "widgets": {
+        "title": "\u0130\u015f masas\u0131 vidcetl\u0259ri",
+        "desc": "Bu monitor \u00fc\u00e7\u00fcn vidcetl\u0259ri t\u0259nziml\u0259 v\u0259 yerl\u0259\u015fdir",
+        "open": "D\u00fcz\u0259li\u015f al\u0259tini a\u00e7",
+        "hide_bar": {
+          "title": "D\u00fcz\u0259li\u015f al\u0259tind\u0259 zola\u011f\u0131 gizl\u0259t",
+          "desc": "Vidcetl\u0259r\u0259 d\u00fcz\u0259li\u015f ed\u0259rk\u0259n zola\u011f\u0131 avtomatik gizl\u0259t"
+        },
+        "hide_presets": "Haz\u0131r \u015fablonlar\u0131 gizl\u0259t",
+        "choose_preset": "\u015eablon se\u00e7in",
+        "presets": {
+          "title": "Vidcet \u015fablonlar\u0131"
+        },
+        "save_preset": {
+          "title": "Preseti yadda saxla"
+        },
+        "preset_name_placeholder": "Presetin ad\u0131n\u0131 daxil edin...",
+        "screen_desc": "Masa\u00fcst\u00fc vidjetl\u0259rini konfiqurasiya edin v\u0259 redakt\u0259 edin"
+      }
+    },
+    "bar": {
+      "modules": {
+        "vis": "S\u0259s g\u00f6r\u00fcnt\u00fcl\u0259yicisi (cava)",
+        "actions": "\u018fm\u0259liyyatlar",
+        "workspaces": {
+          "style": {
+            "name": {
+              "pills": "H\u0259bl\u0259r",
+              "numbers": "N\u00f6mr\u0259l\u0259r",
+              "pacman": "Pacman"
+            }
+          },
+          "name": "\u0130\u015f sah\u0259l\u0259ri"
+        },
+        "media": "Media",
+        "tray": "Sistem ni\u015fanlar\u0131 sah\u0259si",
+        "keyboard": "Klaviatura",
+        "network": "\u015e\u0259b\u0259k\u0259",
+        "bluetooth": "Bluetooth",
+        "volume": "S\u0259s s\u0259viyy\u0259si",
+        "battery": "Batareya",
+        "focus": "Diqq\u0259t",
+        "sysmon": "Sistem izl\u0259yicisi",
+        "timedate": {
+          "name": "Vaxt v\u0259 tarix",
+          "style": {
+            "name": {
+              "classic": "Klassik",
+              "material": "Material",
+              "badge": "N\u00f6qt\u0259li matris"
+            }
+          }
+        },
+        "info": "Video \u00e7\u0259kili\u015fi/vaxt\u00f6l\u00e7\u0259n",
+        "weather": "Hava"
+      },
+      "position": {
+        "title": "Zola\u011f\u0131n m\u00f6vqeyi",
+        "desc": "Zola\u011f\u0131n ekrandak\u0131 m\u00f6vqeyi",
+        "top": "Yuxar\u0131",
+        "bottom": "A\u015fa\u011f\u0131",
+        "left": "Sol",
+        "right": "Sa\u011f"
+      },
+      "width": {
+        "title": "Zola\u011f\u0131n eni",
+        "desc": "Zola\u011f\u0131n enini faizl\u0259 t\u0259yin edin"
+      },
+      "workspaces": {
+        "title": "G\u00f6st\u0259ril\u0259c\u0259k i\u015f sah\u0259l\u0259rinin say\u0131n\u0131 se\u00e7in",
+        "disc": "Qeyd: bu, g\u00f6r\u00fcnt\u00fc birl\u0259\u015fdiricisind\u0259ki i\u015f sah\u0259l\u0259rinin h\u0259qiqi say\u0131na t\u0259sir etmir",
+        "desc": "G\u00f6st\u0259ril\u0259c\u0259k i\u015f sah\u0259l\u0259rinin say\u0131",
+        "hide_empty": {
+          "title": "Bo\u015f i\u015f sah\u0259l\u0259rini gizl\u0259t",
+          "desc": "Yaln\u0131z dolu v\u0259 aktiv i\u015f sah\u0259l\u0259rini g\u00f6st\u0259r"
+        },
+        "style": {
+          "title": "Stil",
+          "desc": "\u0130\u015f sah\u0259l\u0259ri indikatorlar\u0131n\u0131n vizual stilini se\u00e7in"
+        }
+      },
+      "opacity": {
+        "title": "Zola\u011f\u0131n qeyri-\u015f\u0259ffafl\u0131\u011f\u0131",
+        "desc": "Zola\u011f\u0131n qeyri-\u015f\u0259ffafl\u0131\u011f\u0131n\u0131 faizl\u0259 t\u0259yin edin"
+      },
+      "style": {
+        "title": "Zola\u011f\u0131n \u00fcslubu",
+        "desc": "Hiss\u0259l\u0259r\u0259 b\u00f6l\u00fcnm\u00fc\u015f, b\u00fct\u00f6v v\u0259 ya doldurulmu\u015f zolaq g\u00f6r\u00fcn\u00fc\u015f\u00fcn\u00fc se\u00e7in",
+        "modular": "Hiss\u0259l\u0259r\u0259 b\u00f6l\u00fcnm\u00fc\u015f",
+        "solid": "B\u00fct\u00f6v",
+        "fill": "Doldurulmu\u015f"
+      },
+      "time": {
+        "title": "Vaxt format\u0131",
+        "desc": "Format s\u0259tri (m\u0259s\u0259l\u0259n, HH:mm:ss v\u0259 ya hh:mm AP)"
+      },
+      "guide_button": {
+        "title": "B\u0259l\u0259d\u00e7i d\u00fcym\u0259si",
+        "desc": "Yuxar\u0131 zolaqda b\u0259l\u0259d\u00e7i p\u0259nc\u0259r\u0259sini a\u00e7an d\u00fcym\u0259ni g\u00f6st\u0259r"
+      },
+      "autohide": {
+        "title": "Avtomatik gizl\u0259t",
+        "desc": "G\u00f6st\u0259rici \u00fcz\u0259rind\u0259 olmayanda zola\u011f\u0131 gizl\u0259t"
+      },
+      "timeout": {
+        "title": "Avtomatik gizl\u0259tm\u0259 m\u00fcdd\u0259ti",
+        "desc": "Zolaq gizl\u0259n\u0259n\u0259 q\u0259d\u0259r gecikm\u0259"
+      },
+      "config": {
+        "title": "Zola\u011f\u0131n parametrl\u0259ri",
+        "desc": "Qrupla\u015fd\u0131rma\u011fa ba\u015flamaq \u00fc\u00e7\u00fcn element\u0259 sa\u011f klikl\u0259yin, ba\u015fqa elementi \u0259lav\u0259 etm\u0259k \u00fc\u00e7\u00fcn ona sa\u011f klikl\u0259yin. Qrupla\u015fd\u0131r\u0131lm\u0131\u015f elementi \u00e7\u0131xarmaq \u00fc\u00e7\u00fcn ona sa\u011f klikl\u0259yin.",
+        "reset": "S\u0131f\u0131rla",
+        "available": "M\u00f6vcud",
+        "left": "Sol",
+        "center": "M\u0259rk\u0259z",
+        "right": "Sa\u011f"
+      },
+      "distinct_pills": {
+        "title": "Vidcetl\u0259r \u00fc\u00e7\u00fcn hiss\u0259l\u0259r\u0259 b\u00f6l\u00fcnm\u00fc\u015f v\u0259 y\u0131\u011fcam \u00fcslubu aktivl\u0259\u015fdir",
+        "desc": "Zola\u011f\u0131n modullar\u0131na d\u00fczbucaql\u0131 \u00e7\u0259r\u00e7iv\u0259 \u0259lav\u0259 edir v\u0259 hiss\u0259l\u0259r\u0259 b\u00f6l\u00fcnm\u00fc\u015f g\u00f6r\u00fcn\u00fc\u015f\u0259 uy\u011fun \u00f6l\u00e7\u00fcl\u0259rini ki\u00e7ildir"
+      },
+      "timedate": {
+        "show_date": {
+          "title": "Tarixi g\u00f6st\u0259r",
+          "desc": "Saat\u0131n yan\u0131nda tarix m\u0259tnini g\u00f6st\u0259rin"
+        },
+        "style": {
+          "title": "Stil",
+          "desc": "Saat v\u0259 tarix ekran\u0131n\u0131n vizual stilini se\u00e7in"
+        }
+      },
+      "vis": {
+        "bars": {
+          "title": "Zolaqlar\u0131n say\u0131",
+          "desc": "G\u00f6st\u0259ril\u0259c\u0259k tezlik zolaqlar\u0131n\u0131n say\u0131"
+        },
+        "alignment": {
+          "title": "D\u00fczl\u0259ndirm\u0259",
+          "desc": "Vizualizatoru m\u0259rk\u0259z\u0259, yuxar\u0131 v\u0259 ya a\u015fa\u011f\u0131 d\u00fczl\u0259ndirin"
+        },
+        "align": {
+          "center": "M\u0259rk\u0259z",
+          "top": "Yuxar\u0131",
+          "bottom": "A\u015fa\u011f\u0131",
+          "left": "Sol",
+          "right": "Sa\u011f"
+        },
+        "continuous": {
+          "title": "Davaml\u0131 dal\u011fa",
+          "desc": "Ayr\u0131-ayr\u0131 zolaqlar \u0259v\u0259zin\u0259 hamar dal\u011fa g\u00f6st\u0259rin"
+        }
+      },
+      "sysmon": {
+        "style": {
+          "title": "Dair\u0259 t\u0259rzi",
+          "desc": "Gedi\u015fat dair\u0259l\u0259rinin g\u00f6r\u00fcn\u00fc\u015f\u00fc",
+          "wave": "Dal\u011fa",
+          "circle": "Dair\u0259"
+        },
+        "cpu": {
+          "title": "CPU istifad\u0259si",
+          "desc": "Prosessor istifad\u0259si halqas\u0131n\u0131 g\u00f6st\u0259r"
+        },
+        "ram": {
+          "title": "Yadda\u015f istifad\u0259si",
+          "desc": "Operativ yadda\u015f (RAM) halqas\u0131n\u0131 g\u00f6st\u0259r"
+        },
+        "temp": {
+          "title": "Temperatur",
+          "desc": "Sistem temperaturu halqas\u0131n\u0131 g\u00f6st\u0259r"
+        },
+        "disk": {
+          "title": "Disk istifad\u0259si",
+          "desc": "Yadda\u015f diski istifad\u0259si halqas\u0131n\u0131 g\u00f6st\u0259r"
+        }
+      },
+      "bat": {
+        "show_percent": {
+          "title": "Faizi g\u00f6st\u0259r",
+          "desc": "Batareya enerjisinin faizini r\u0259q\u0259ml\u0259 g\u00f6st\u0259r"
+        },
+        "show_icon": {
+          "title": "\u0130konu g\u00f6st\u0259r",
+          "desc": "Batareya ikonunu v\u0259 ya qrafik g\u00f6st\u0259ricini g\u00f6st\u0259r"
+        },
+        "style": {
+          "title": "Batareya t\u0259rzi",
+          "desc": "Batareya g\u00f6st\u0259ricisinin vizual g\u00f6r\u00fcn\u00fc\u015f\u00fcn\u00fc se\u00e7in",
+          "name": {
+            "classic": "Klassik",
+            "minimal": "Minimal"
+          },
+          "classic": "Qradiyent dal\u011fal\u0131 kapsul",
+          "minimal": "iOS/Android t\u0259rzind\u0259 qapaql\u0131 kapsul"
+        }
+      }
+    },
+    "theme": {
+      "font": {
+        "title": "Yaz\u0131 n\u00f6v\u00fc",
+        "desc": "Serpantinum \u00fc\u00e7\u00fcn standart yaz\u0131 n\u00f6v\u00fcn\u00fc se\u00e7in",
+        "select": "Se\u00e7..."
+      },
+      "radius": {
+        "title": "K\u00fcncl\u0259rin radiusu",
+        "desc": "\u0130nterfeys elementl\u0259rinin k\u00fcnc radiusu"
+      },
+      "colors": {
+        "title": "R\u0259ng m\u00f6vzular\u0131",
+        "desc": "Haz\u0131r r\u0259ng palitras\u0131 se\u00e7in v\u0259 ya \u00f6z m\u00f6vzunuzu yarad\u0131n.",
+        "search": "M\u00f6vzu axtar..."
+      },
+      "delete_theme": "Sil",
+      "wallpaper": {
+        "title": "Fon \u015f\u0259kill\u0259ri qovlu\u011fu",
+        "desc": "Fon \u015f\u0259kill\u0259rinin axtar\u0131laca\u011f\u0131 qovluq",
+        "select_dir": "Qovluq se\u00e7...",
+        "select_wallpaper": "Fon \u015f\u0259kli se\u00e7",
+        "no_wallpaper_selected": "Fon \u015f\u0259kli se\u00e7ilm\u0259yib",
+        "select": "Divar ka\u011f\u0131z\u0131"
+      }
+    },
+    "file_picker": {
+      "title": "\u015e\u0259kil se\u00e7",
+      "input_placeholder": "Axtar...",
+      "not_found": "Fayl tap\u0131lmad\u0131",
+      "no_file_selected": "Fayl se\u00e7ilm\u0259yib",
+      "root": "K\u00f6k",
+      "places": {
+        "home": "Ev qovlu\u011fu",
+        "downloads": "Endiril\u0259nl\u0259r",
+        "pictures": "\u015e\u0259kill\u0259r",
+        "music": "Musiqi",
+        "documents": "S\u0259n\u0259dl\u0259r"
+      }
+    },
+    "font_picker": {
+      "title": "Yaz\u0131 n\u00f6v\u00fc se\u00e7",
+      "input_placeholder": "Axtar...",
+      "not_found": "Element tap\u0131lmad\u0131",
+      "places": {
+        "user_fonts": "\u0130stifad\u0259\u00e7inin yaz\u0131 n\u00f6vl\u0259ri",
+        "system_fonts": "Sistemin yaz\u0131 n\u00f6vl\u0259ri"
+      }
+    },
+    "sound_picker": {
+      "title": "Bildiri\u015f s\u0259sini se\u00e7",
+      "no_sound_selected": "S\u0259s se\u00e7ilm\u0259yib",
+      "places": {
+        "user_sounds": "\u0130stifad\u0259\u00e7inin s\u0259sl\u0259ri",
+        "system_sounds": "Sistemin s\u0259sl\u0259ri"
+      }
+    },
+    "theme_editor": {
+      "title": "Yeni r\u0259ng m\u00f6vzusu",
+      "name_placeholder": "M\u00f6vzunun ad\u0131...",
+      "preview": "\u00d6nbax\u0131\u015f",
+      "cancel": "L\u0259\u011fv et",
+      "save": "Saxla",
+      "default_name": "X\u00fcsusi m\u00f6vzu",
+      "colors": {
+        "base": "\u018fsas",
+        "mantle": "\u00d6rt\u00fck",
+        "crust": "Qab\u0131q",
+        "text": "M\u0259tn",
+        "sub0": "Alt m\u0259tn 0",
+        "sub1": "Alt m\u0259tn 1",
+        "surf0": "S\u0259th 0",
+        "surf1": "S\u0259th 1",
+        "surf2": "S\u0259th 2",
+        "over0": "\u00dcst qat 0",
+        "over1": "\u00dcst qat 1",
+        "over2": "\u00dcst qat 2",
+        "blue": "Mavi",
+        "lavender": "Lavanda",
+        "sapphire": "Safir",
+        "sky": "S\u0259ma",
+        "teal": "Mavi-ya\u015f\u0131l",
+        "green": "Ya\u015f\u0131l",
+        "yellow": "Sar\u0131",
+        "peach": "\u015eaftal\u0131",
+        "maroon": "\u015eabal\u0131d\u0131",
+        "red": "Q\u0131rm\u0131z\u0131",
+        "mauve": "A\u00e7\u0131q b\u0259n\u00f6v\u015f\u0259yi",
+        "pink": "\u00c7\u0259hray\u0131",
+        "flamingo": "Flaminqo",
+        "rosewater": "G\u00fcl suyu"
+      }
+    },
+    "wellbeing": {
+      "desktop": "\u0130\u015f masas\u0131",
+      "not_available": "M\u00f6vcud deyil",
+      "am": "G\u00fcnortadan \u0259vv\u0259l",
+      "pm": "G\u00fcnortadan sonra",
+      "today": "Bu g\u00fcn",
+      "week_overview": "H\u0259ft\u0259lik icmal",
+      "daily_average": "G\u00fcnd\u0259lik orta g\u00f6st\u0259rici",
+      "no_data": "M\u0259lumat yoxdur",
+      "same_time": "Eyni m\u00fcdd\u0259t",
+      "daily_usage": "G\u00fcnd\u0259lik istifad\u0259",
+      "peak_hours": "\u018fn f\u0259al saatlar",
+      "time_hm": "{h} saat {m} d\u0259q",
+      "time_m": "{m} d\u0259q",
+      "months": {
+        "january": "Yanvar",
+        "february": "Fevral",
+        "march": "Mart",
+        "april": "Aprel",
+        "may": "May",
+        "june": "\u0130yun",
+        "july": "\u0130yul",
+        "august": "Avqust",
+        "september": "Sentyabr",
+        "october": "Oktyabr",
+        "november": "Noyabr",
+        "december": "Dekabr"
+      },
+      "days": {
+        "monday": "Bazar ert\u0259si",
+        "tuesday": "\u00c7\u0259r\u015f\u0259nb\u0259 ax\u015fam\u0131",
+        "wednesday": "\u00c7\u0259r\u015f\u0259nb\u0259",
+        "thursday": "C\u00fcm\u0259 ax\u015fam\u0131",
+        "friday": "C\u00fcm\u0259",
+        "saturday": "\u015e\u0259nb\u0259",
+        "sunday": "Bazar"
+      },
+      "settings": {
+        "title": "R\u0259q\u0259msal rifah parametrl\u0259ri",
+        "overall_limit": "\u00dcmumi g\u00fcnd\u0259lik h\u0259dd",
+        "off": "S\u00f6n\u00fcl\u00fc",
+        "app_limits": "T\u0259tbiq istifad\u0259si h\u0259dl\u0259ri",
+        "app_limits_desc": "H\u0259r t\u0259tbiq \u00fc\u00e7\u00fcn g\u00fcnd\u0259lik istifad\u0259 m\u00fcdd\u0259tinin yuxar\u0131 h\u0259ddini t\u0259yin edin",
+        "excluded_apps": "\u0130stisna edilmi\u015f t\u0259tbiql\u0259r",
+        "excluded_apps_desc": "Se\u00e7ilmi\u015f t\u0259tbiql\u0259rin bundan sonrak\u0131 istifad\u0259sini \u00fcmumi hesablamaya daxil etm\u0259"
+      }
+    },
+    "update_available": "Yenil\u0259m\u0259 m\u00f6vcuddur",
+    "osd": {
+      "capslock": {
+        "title": "Caps Lock bas\u0131landa g\u00f6st\u0259r"
+      },
+      "numlock": {
+        "title": "Num Lock bas\u0131landa g\u00f6st\u0259r"
+      },
+      "airplane": {
+        "title": "T\u0259yyar\u0259 rejimind\u0259 g\u00f6st\u0259r"
+      },
+      "attach_bar": {
+        "title": "B\u00fct\u00f6v/doldurulmu\u015f \u00fcslubda zola\u011fa b\u0259rkit",
+        "desc": "Ekran g\u00f6st\u0259ricisi p\u0259nc\u0259r\u0259l\u0259rini b\u00fct\u00f6v v\u0259 ya doldurulmu\u015f rejimd\u0259 v\u0259ziyy\u0259t zola\u011f\u0131na b\u0259rkit. Bu se\u00e7im s\u00f6nd\u00fcr\u00fcld\u00fckd\u0259 ekran g\u00f6st\u0259ricisi h\u0259mi\u015f\u0259 t\u0259yin olunmu\u015f m\u00f6vqed\u0259 qal\u0131r."
+      },
+      "test": "Ekran g\u00f6st\u0259ricisini s\u0131na",
+      "position": {
+        "title": "Ekran g\u00f6st\u0259ricisinin ekrandak\u0131 m\u00f6vqeyi",
+        "desc": "M\u00f6vqeyi d\u0259yi\u015fm\u0259k \u00fc\u00e7\u00fcn \u00f6nbax\u0131\u015f qutusunu s\u00fcr\u00fckl\u0259yin",
+        "select_on_screen": "Ekranda se\u00e7...",
+        "close_selector": "Se\u00e7im vasit\u0259sini ba\u011fla",
+        "bottom_center": "A\u015fa\u011f\u0131 m\u0259rk\u0259z",
+        "bottom_left": "A\u015fa\u011f\u0131 sol",
+        "bottom_right": "A\u015fa\u011f\u0131 sa\u011f",
+        "top_center": "Yuxar\u0131 m\u0259rk\u0259z",
+        "top_left": "Yuxar\u0131 sol",
+        "top_right": "Yuxar\u0131 sa\u011f"
+      },
+      "orientation": {
+        "horizontal": "\u00dcf\u00fcqi",
+        "vertical": "\u015eaquli"
+      }
+    },
+    "common": {
+      "show_bar": "Zola\u011f\u0131 g\u00f6st\u0259r",
+      "unavailable": "M\u00f6vcud deyil"
+    },
+    "position": {
+      "custom": "X\u00fcsusi"
+    },
+    "dock": {
+      "enabled": {
+        "title": "T\u0259tbiq r\u0259fini aktivl\u0259\u015fdir",
+        "desc": "\u00dcz\u0259n t\u0259tbiq r\u0259fini aktivl\u0259\u015fdir"
+      },
+      "position": {
+        "title": "T\u0259tbiq r\u0259finin m\u00f6vqeyi",
+        "desc": "T\u0259tbiq r\u0259finin b\u0259rkidil\u0259c\u0259yi ekran k\u0259nar\u0131n\u0131 se\u00e7in",
+        "bottom": "A\u015fa\u011f\u0131",
+        "top": "Yuxar\u0131",
+        "left": "Sol",
+        "right": "Sa\u011f"
+      },
+      "elements": {
+        "title": "Elementl\u0259rin say\u0131",
+        "desc": "T\u0259tbiq r\u0259find\u0259 g\u00f6st\u0259ril\u0259n t\u0259tbiq q\u0131sayollar\u0131n\u0131n \u00fcmumi say\u0131"
+      },
+      "size": {
+        "title": "Elementin \u00f6l\u00e7\u00fcs\u00fc",
+        "desc": "Ayr\u0131-ayr\u0131 t\u0259tbiq d\u00fcym\u0259l\u0259rinin piksell\u0259 \u00f6l\u00e7\u00fcl\u0259ri"
+      },
+      "autohide": {
+        "title": "Avtomatik gizl\u0259t",
+        "desc": "G\u00f6st\u0259rici ekran\u0131n k\u0259nar\u0131nda olmayanda t\u0259tbiq r\u0259fini gizl\u0259t"
+      },
+      "timeout": {
+        "title": "Avtomatik gizl\u0259tm\u0259 gecikm\u0259si",
+        "desc": "G\u00f6st\u0259rici uzaqla\u015fd\u0131qdan sonra gizl\u0259n\u0259n\u0259 q\u0259d\u0259r ke\u00e7\u0259n vaxt"
+      },
+      "floating": {
+        "title": "\u00dcz\u0259n t\u0259tbiq r\u0259fi",
+        "desc": "T\u0259tbiq r\u0259fini ekran\u0131n k\u0259nar\u0131ndan ay\u0131r v\u0259 k\u00fcncl\u0259rini yuvarlaqla\u015fd\u0131r"
+      },
+      "transparency": {
+        "title": "T\u0259tbiq r\u0259finin \u015f\u0259ffafl\u0131\u011f\u0131",
+        "desc": "T\u0259tbiq r\u0259finin arxa fonunun qeyri-\u015f\u0259ffafl\u0131q s\u0259viyy\u0259sini t\u0259nziml\u0259"
+      },
+      "apps": {
+        "title": "T\u0259tbiq r\u0259find\u0259ki t\u0259tbiql\u0259r",
+        "singular": "t\u0259tbiq",
+        "plural": "t\u0259tbiq",
+        "shuffle": "T\u0259tbiql\u0259ri qar\u0131\u015fd\u0131r",
+        "empty": "T\u0259tbiq r\u0259fin\u0259 he\u00e7 bir t\u0259tbiq \u0259lav\u0259 edilm\u0259yib",
+        "enter_edit": "D\u00fcz\u0259li\u015f et",
+        "exit_edit": "D\u00fcz\u0259li\u015f rejimind\u0259n \u00e7\u0131x"
+      },
+      "picker": {
+        "search": "T\u0259tbiq axtar...",
+        "done": "Haz\u0131rd\u0131r",
+        "empty": "Uy\u011fun t\u0259tbiq yoxdur"
+      },
+      "opacity": {
+        "title": "T\u0259tbiq r\u0259finin qeyri-\u015f\u0259ffafl\u0131\u011f\u0131",
+        "desc": "T\u0259tbiq r\u0259finin arxa fonunun qeyri-\u015f\u0259ffafl\u0131q s\u0259viyy\u0259sini t\u0259nziml\u0259"
+      },
+      "override_bounds": {
+        "title": "Ekran h\u00fcdudlar\u0131ndan k\u0259nara \u00e7\u0131xanda \u00f6l\u00e7\u00fcn\u00fcn d\u00fcz\u0259ldilm\u0259sini l\u0259\u011fv et",
+        "desc": "T\u0259tbiq r\u0259fi ekran h\u00fcdudlar\u0131n\u0131 a\u015fsa bel\u0259, elementin x\u00fcsusi \u00f6l\u00e7\u00fcs\u00fcn\u00fc saxla"
+      },
+      "scrolling": {
+        "title": "Elementl\u0259rin s\u00fcr\u00fc\u015fd\u00fcr\u00fclm\u0259sini aktivl\u0259\u015fdir",
+        "desc": "G\u00f6r\u00fcn\u0259n elementl\u0259ri m\u0259hdudla\u015fd\u0131r v\u0259 si\u00e7an \u00e7arx\u0131 v\u0259 ya toxunma s\u0259thi il\u0259 s\u00fcr\u00fc\u015fd\u00fcrm\u0259y\u0259 icaz\u0259 ver"
+      },
+      "visible_elements": {
+        "title": "G\u00f6r\u00fcn\u0259n elementl\u0259r",
+        "desc": "Eyni anda g\u00f6r\u00fcn\u0259n t\u0259tbiq r\u0259fi elementl\u0259rinin say\u0131"
+      },
+      "hover_scale": {
+        "title": "G\u00f6st\u0259rici \u00fcz\u0259rin\u0259 g\u0259l\u0259nd\u0259 b\u00f6y\u00fctm\u0259 effekti",
+        "desc": "G\u00f6st\u0259rici t\u0259tbiq r\u0259finin elementl\u0259ri \u00fcz\u0259rin\u0259 g\u0259l\u0259nd\u0259 b\u00f6y\u00fctm\u0259 s\u0259viyy\u0259si"
+      },
+      "cascade_scale": {
+        "title": "\u018fn yax\u0131n elementl\u0259ri b\u00f6y\u00fct",
+        "desc": "Qon\u015fu ni\u015fanlar\u0131 pill\u0259li \u015f\u0259kild\u0259 b\u00f6y\u00fct"
+      },
+      "on_top": {
+        "title": "Doku p\u0259nc\u0259r\u0259l\u0259rin \u00fcz\u0259rind\u0259 yerl\u0259\u015fdirin",
+        "desc": "Doku t\u0259tbiq p\u0259nc\u0259r\u0259l\u0259rinin \u00fcz\u0259rind\u0259 g\u00f6r\u00fcn\u0259n saxlay\u0131n"
+      },
+      "smart_autohide": {
+        "title": "A\u011f\u0131ll\u0131 avto-gizl\u0259tm\u0259",
+        "desc": "Doku yaln\u0131z p\u0259nc\u0259r\u0259l\u0259r a\u00e7\u0131q olduqda gizl\u0259t, masa\u00fcst\u00fcnd\u0259 g\u00f6r\u00fcn\u0259n saxla"
+      }
+    },
+    "lyrics_picker": {
+      "title": "Mahn\u0131 m\u0259tni fayl\u0131n\u0131 se\u00e7in",
+      "no_lyrics_selected": "Mahn\u0131 m\u0259tni se\u00e7ilm\u0259yib"
+    },
+    "settings": "T\u0259nziml\u0259m\u0259l\u0259r",
+    "search": {
+      "placeholder": "T\u0259nziml\u0259m\u0259l\u0259ri axtar\u0131n...",
+      "prompt": "Axtarmaq \u00fc\u00e7\u00fcn yaz\u0131n...",
+      "no_results": "T\u0259nziml\u0259m\u0259 tap\u0131lmad\u0131"
+    }
+  },
+  "sysnotif": {
+    "battery": {
+      "app_name": "Sistem",
+      "full_title": "Batareya doludur",
+      "full_body": "Batareya tam doludur (100%).",
+      "low_title": "Batareya z\u0259ifdir",
+      "low_body": "Batareyan\u0131n s\u0259viyy\u0259si: {pct}%. \u015earj cihaz\u0131n\u0131 qo\u015fun.",
+      "critical_title": "Batareyan\u0131n s\u0259viyy\u0259si \u00e7ox a\u015fa\u011f\u0131d\u0131r",
+      "critical_body": "Batareyan\u0131n s\u0259viyy\u0259si: {pct}%. \u015earj cihaz\u0131n\u0131 d\u0259rhal qo\u015fun."
+    }
+  },
+  "updater": {
+    "notification": {
+      "app_name": "Yenil\u0259m\u0259",
+      "action_open_guide": "B\u0259l\u0259d\u00e7ini a\u00e7",
+      "update_available_title": "Yenil\u0259m\u0259 m\u00f6vcuddur: v{remote}",
+      "update_available_body": "Cari versiya: v{local}. D\u0259yi\u015fiklik tarix\u00e7\u0259sin\u0259 baxmaq v\u0259 yenil\u0259m\u0259k \u00fc\u00e7\u00fcn klikl\u0259yin."
+    }
+  },
+  "polkit": {
+    "title": "Kimliyin do\u011frulanmas\u0131 t\u0259l\u0259b olunur",
+    "default_message": "T\u0259tbiq inzibat\u00e7\u0131 h\u00fcquqlar\u0131 ist\u0259yir.",
+    "default_description": "Bu \u0259m\u0259liyyat\u0131 y\u00fcks\u0259k s\u0259lahiyy\u0259tli istifad\u0259\u00e7i kimi icra etm\u0259k \u00fc\u00e7\u00fcn kimliyin do\u011frulanmas\u0131 laz\u0131md\u0131r.",
+    "error_failed": "Kimlik do\u011frulanmad\u0131. Yenid\u0259n c\u0259hd edin."
+  },
+  "applauncher": {
+    "search": "Axtar",
+    "placeholder": "\u018fmr \u00fc\u00e7\u00fcn > il\u0259 ba\u015flay\u0131n...",
+    "tab_applications": "T\u0259tbiql\u0259r",
+    "tab_files": "Fayllar",
+    "placeholder_files": "Fayllar\u0131 axtar\u0131n v\u0259 ya yol daxil edin...",
+    "tab_emojis": "Emojil\u0259r",
+    "placeholder_emojis": "Emojil\u0259ri axtar\u0131n v\u0259 ya a\u00e7ar s\u00f6z daxil edin..."
+  },
+  "calendar": {
+    "loading": "Y\u00fckl\u0259nir...",
+    "loading_schedule": "C\u0259dv\u0259l y\u00fckl\u0259nir...",
+    "no_events": "Planla\u015fd\u0131r\u0131lm\u0131\u015f t\u0259dbir yoxdur.",
+    "open_web": "Vebd\u0259 a\u00e7",
+    "weather": {
+      "wind": "K\u00fcl\u0259k",
+      "humid": "R\u00fctub\u0259t",
+      "rain": "Ya\u011f\u0131\u015f",
+      "feels": "Hiss olunan"
+    },
+    "days": {
+      "mo": "B.e.",
+      "tu": "\u00c7.a.",
+      "we": "\u00c7.",
+      "th": "C.a.",
+      "fr": "C.",
+      "sa": "\u015e.",
+      "su": "B."
+    }
+  },
+  "clipboard": {
+    "search": "Axtar",
+    "title": "M\u00fcbadil\u0259 yadda\u015f\u0131",
+    "clear": "T\u0259mizl\u0259",
+    "empty": "He\u00e7 n\u0259 tap\u0131lmad\u0131",
+    "recent": "Son istifad\u0259 olunanlar",
+    "pinned": "B\u0259rkidilmi\u015f"
+  },
+  "lock": {
+    "status": {
+      "locked": "Kilidlidir",
+      "access_denied": "Giri\u015f r\u0259dd edildi",
+      "authenticating": "Kimlik do\u011frulan\u0131r...",
+      "enter_pin": "PIN daxil edin"
+    },
+    "power": {
+      "suspend": "Yuxu rejimin\u0259 ke\u00e7ir",
+      "reboot": "Yenid\u0259n ba\u015flat",
+      "power_off": "S\u00f6nd\u00fcr"
+    },
+    "default_user": "\u0130stifad\u0259\u00e7i",
+    "unknown": "Nam\u0259lum"
+  },
+  "music": {
+    "nothing_playing": "He\u00e7 n\u0259 s\u0259sl\u0259ndirilmir",
+    "loading": "Y\u00fckl\u0259nir...",
+    "by_artist": "\u0130fa\u00e7\u0131: {artist}",
+    "unknown_artist": "Nam\u0259lum ifa\u00e7\u0131",
+    "speaker": "S\u0259sucaldan",
+    "via_source": "{source} vasit\u0259sil\u0259",
+    "offline": "\u015e\u0259b\u0259k\u0259d\u0259n k\u0259nar",
+    "equalizer": "S\u0259s tezliyi t\u0259nziml\u0259yicisi",
+    "eq": {
+      "apply": "T\u0259tbiq et",
+      "saved": "Saxlan\u0131l\u0131b"
+    },
+    "presets": {
+      "flat": "D\u00fcz",
+      "bass": "B\u0259m",
+      "treble": "Zil",
+      "vocal": "Vokal",
+      "pop": "Pop",
+      "rock": "Rok",
+      "jazz": "Caz",
+      "classic": "Klassik",
+      "custom": "X\u00fcsusi"
+    },
+    "searching_lyrics": "S\u00f6zl\u0259r axtar\u0131l\u0131r...",
+    "no_lyrics": "S\u00f6zl\u0259r tap\u0131lmad\u0131",
+    "select_local_file": "Lokal fayl se\u00e7in",
+    "lyrics": "Mahn\u0131 s\u00f6zl\u0259ri"
+  },
+  "network": {
+    "tabs": {
+      "ethernet": "Ethernet",
+      "wifi": "Wi-Fi",
+      "bluetooth": "Bluetooth"
+    },
+    "status": {
+      "no_ip": "IP yoxdur",
+      "unknown": "Nam\u0259lum",
+      "calculating": "Hesablan\u0131r...",
+      "open": "A\u00e7\u0131q",
+      "current_device": "Cari cihaz",
+      "powering_on": "A\u00e7\u0131l\u0131r...",
+      "powering_off": "S\u00f6nd\u00fcr\u00fcl\u00fcr...",
+      "disconnected": "\u018flaq\u0259 k\u0259silib",
+      "disconnecting": "\u018flaq\u0259 k\u0259silir...",
+      "hold": "G\u00f6zl\u0259yin...",
+      "connected": "\u018flaq\u0259 qurulub"
+    },
+    "actions": {
+      "unpair": "C\u00fctl\u0259\u015fdirm\u0259ni l\u0259\u011fv et",
+      "scan": "Axtar"
+    }
+  },
+  "notifications": {
+    "center": {
+      "reserved": "G\u0259l\u0259c\u0259k yenil\u0259m\u0259l\u0259r \u00fc\u00e7\u00fcn ayr\u0131l\u0131b"
+    },
+    "types": {
+      "default": {
+        "fallback_summary": "Bildiri\u015f",
+        "system": "Sistem",
+        "action": "\u018fm\u0259liyyat"
+      },
+      "weather": {
+        "fallback_summary": "Hava m\u0259lumat\u0131",
+        "fallback_body": "\u018ftrafl\u0131 m\u0259lumat verilm\u0259yib."
+      },
+      "screenshot": {
+        "badge": "Ekran \u015f\u0259kli",
+        "fallback_summary": "Ekran\u0131n \u015f\u0259kli \u00e7\u0259kildi",
+        "click_to_open": "Ekran \u015f\u0259kill\u0259ri qovlu\u011funu a\u00e7maq \u00fc\u00e7\u00fcn klikl\u0259yin"
+      }
+    }
+  },
+  "quickactions": {
+    "systemusage": {
+      "cpu": "CPU",
+      "ram": "RAM",
+      "temp": "Temperatur",
+      "disk": "Disk",
+      "net": "\u015e\u0259b\u0259k\u0259"
+    },
+    "timer": {
+      "tabs": {
+        "timer": "Vaxt\u00f6l\u00e7\u0259n",
+        "stopwatch": "Saniy\u0259\u00f6l\u00e7\u0259n",
+        "pomodoro": "Pomodoro"
+      },
+      "stopwatch": {
+        "lap": "D\u00f6vr\u0259 {number}"
+      },
+      "pomodoro": {
+        "phases": {
+          "focus": "Diqq\u0259t",
+          "short_break": "Q\u0131sa fasil\u0259",
+          "long_break": "Uzun fasil\u0259"
+        },
+        "settings": {
+          "work": "\u0130\u015f (d\u0259q)",
+          "short_break": "Q\u0131sa fasil\u0259 (d\u0259q)",
+          "long_break": "Uzun fasil\u0259 (d\u0259q)",
+          "sessions": "Seanslar"
+        }
+      },
+      "notification": {
+        "app_name": "Quickshell vaxt\u00f6l\u00e7\u0259ni",
+        "timer_finished_title": "Vaxt bitdi",
+        "timer_finished_body": "{time} \u00fc\u00e7\u00fcn qurdu\u011funuz vaxt\u00f6l\u00e7\u0259nd\u0259 vaxt bitdi.",
+        "focus_complete_title": "Diqq\u0259t m\u00fcdd\u0259ti bitdi",
+        "focus_complete_body": "\u018fla i\u015f g\u00f6rd\u00fcn\u00fcz! \u0130ndi bir q\u0259d\u0259r dinc\u0259lm\u0259y\u0259 haqq\u0131n\u0131z var.",
+        "break_over_title": "Fasil\u0259 bitdi",
+        "break_over_body": "Fasil\u0259nin vaxt\u0131 bitdi. Yenid\u0259n diqq\u0259timizi c\u0259ml\u0259y\u0259k!",
+        "pomo_skipped_title": "Pomodoro \u00f6t\u00fcr\u00fcld\u00fc",
+        "pomo_skipped_focus_body": "Diqq\u0259t seans\u0131 \u00f6t\u00fcr\u00fcld\u00fc. Fasil\u0259y\u0259 ke\u00e7ilir.",
+        "pomo_skipped_break_body": "Fasil\u0259 \u00f6t\u00fcr\u00fcld\u00fc. Yenid\u0259n diqq\u0259t seans\u0131na ke\u00e7ilir."
+      }
+    }
+  },
+  "screenshot": {
+    "video_mode": "Video \u00e7\u0259km\u0259 d\u00fcym\u0259sin\u0259 klikl\u0259yin (sah\u0259 se\u00e7imini portal idar\u0259 edir)",
+    "select_region": "\u015e\u0259kli \u00e7\u0259kil\u0259c\u0259k sah\u0259ni se\u00e7in",
+    "no_microphones": "Mikrofon yoxdur (pulseaudio qura\u015fd\u0131r\u0131n)",
+    "qr_timeout": "Kodun oxunmas\u0131 \u00fc\u00e7\u00fcn ayr\u0131lan vaxt bitdi v\u0259 ya kodu oxumaq m\u00fcmk\u00fcn olmad\u0131.",
+    "qr_not_found": "QR kod tap\u0131lmad\u0131.",
+    "notifications": {
+      "screenshot_app_name": "Ekran \u015f\u0259kli",
+      "recorder_app_name": "Ekrandan video \u00e7\u0259km\u0259 al\u0259ti",
+      "system_app_name": "Ekran \u015f\u0259kli sistemi",
+      "missing_deps_title": "\u00c7at\u0131\u015fmayan as\u0131l\u0131l\u0131qlar",
+      "missing_deps_body": "Ba\u015flatmaq m\u00fcmk\u00fcn deyil. Bunlar\u0131 qura\u015fd\u0131r\u0131n:\n{cmds}",
+      "open_folder": "Qovlu\u011fu a\u00e7",
+      "recording_saved_title": "Video saxlan\u0131ld\u0131",
+      "recording_saved_body": "Fayl: {file}\nQovluq: {folder}",
+      "recording_error_title": "X\u0259ta",
+      "recording_error_body": "Video fayl\u0131n\u0131 saxlamaq m\u00fcmk\u00fcn olmad\u0131.",
+      "recording_started_title": "Video \u00e7\u0259kili\u015fi ba\u015flad\u0131",
+      "recording_started_body": "Dayand\u0131rmaq \u00fc\u00e7\u00fcn ekran \u015f\u0259kli q\u0131sayolunu yenid\u0259n bas\u0131n.",
+      "screenshot_saved_title": "Ekran \u015f\u0259kli saxlan\u0131ld\u0131",
+      "screenshot_saved_body": "Fayl: {file}\nQovluq: {folder}"
+    }
+  },
+  "start": {
+    "title": "Serpantinum",
+    "made_by": "Haz\u0131rlayan: @{author}",
+    "welcome": "Xo\u015f g\u0259lmisiniz",
+    "tagline": "Bu i\u015f masas\u0131 m\u00fchitinin haz\u0131rland\u0131\u011f\u0131 \u015f\u0259xs",
+    "you": "Sizsiniz",
+    "start_preview": "\u00d6nbax\u0131\u015f\u0131 ba\u015flat"
+  },
+  "syspanel": {
+    "user": {
+      "default_name": "\u0130stifad\u0259\u00e7i",
+      "default_os": "Linux",
+      "logout": "Hesabdan \u00e7\u0131x"
+    },
+    "notifications": {
+      "title": "Bildiri\u015fl\u0259r",
+      "clear": "T\u0259mizl\u0259",
+      "silent": "S\u0259ssiz",
+      "mute": "S\u0259ssizl\u0259\u015fdir",
+      "empty": "B\u00fct\u00fcn bildiri\u015fl\u0259r\u0259 baxm\u0131s\u0131n\u0131z."
+    },
+    "profiles": {
+      "performance": "M\u0259hsuldarl\u0131q",
+      "balanced": "Tarazl\u0131",
+      "power_saver": "Enerjiy\u0259 q\u0259na\u0259t"
+    },
+    "battery": {
+      "fully_charged": "Tam doludur",
+      "charging": "Doldurulur",
+      "charging_time": "Doldurulur \u2022 {hours} saat {mins} d\u0259q",
+      "discharging": "Enerjisi azal\u0131r",
+      "left_time": "{hours} saat {mins} d\u0259q qal\u0131b",
+      "until_full": "tam dolana q\u0259d\u0259r",
+      "remaining": "qalan"
+    },
+    "actions": {
+      "system_name": "Sistem",
+      "hibernate_error_title": "D\u0259rin yuxu rejimi m\u00f6vcud deyil",
+      "hibernate_error_body": "Bu sistemd\u0259 d\u0259rin yuxu rejimi m\u00f6vcud deyil. M\u00fcbadil\u0259 sah\u0259sinin parametrl\u0259rini yoxlay\u0131n."
+    }
+  },
+  "volumepopup": {
+    "no_device": "Cihaz yoxdur",
+    "mute": "S\u0259ssizl\u0259\u015fdir",
+    "master_output_volume": "\u018fsas \u00e7\u0131x\u0131\u015f\u0131n s\u0259s s\u0259viyy\u0259si",
+    "no_active_streams": "F\u0259al ax\u0131n yoxdur",
+    "active_default": "Haz\u0131rda standart cihaz",
+    "tabs": {
+      "outputs": "\u00c7\u0131x\u0131\u015flar",
+      "inputs": "Giri\u015fl\u0259r",
+      "streams": "Ax\u0131nlar"
+    }
+  },
+  "wallpaper": {
+    "notifications": {
+      "downloading": "Fon \u015f\u0259kli endirilir...",
+      "type_to_search": "Axtar\u0131\u015f \u00fc\u00e7\u00fcn n\u0259s\u0259 yaz\u0131n...",
+      "search_paused": "Axtar\u0131\u015f dayand\u0131r\u0131l\u0131b",
+      "searching_ddg": "Fon \u015f\u0259kill\u0259ri axtar\u0131l\u0131r...",
+      "generating_thumbnails": "Ki\u00e7ik t\u0259svirl\u0259r yarad\u0131l\u0131r...",
+      "no_wallpapers_found": "Fon \u015f\u0259kli tap\u0131lmad\u0131",
+      "videos": "Videolar",
+      "history": "Son t\u0259tbiq olunanlar"
+    },
+    "filters": {
+      "all": "Ham\u0131s\u0131",
+      "vid": "Video",
+      "search": "Axtar",
+      "red": "Q\u0131rm\u0131z\u0131",
+      "orange": "Nar\u0131nc\u0131",
+      "yellow": "Sar\u0131",
+      "green": "Ya\u015f\u0131l",
+      "blue": "Mavi",
+      "purple": "B\u0259n\u00f6v\u015f\u0259yi",
+      "pink": "\u00c7\u0259hray\u0131",
+      "monochrome": "T\u0259kr\u0259ngli"
+    }
+  },
+  "weather": {
+    "desc": {
+      "sunny": "G\u00fcn\u0259\u015fli",
+      "clear": "A\u00e7\u0131q",
+      "cloudy": "Buludlu",
+      "mist": "Dumanl\u0131",
+      "rainy": "Ya\u011f\u0131\u015fl\u0131",
+      "snow": "Qarl\u0131",
+      "storm": "F\u0131rt\u0131nal\u0131",
+      "unknown": "Nam\u0259lum",
+      "offline": "\u015e\u0259b\u0259k\u0259d\u0259n k\u0259nar"
+    },
+    "days": {
+      "mon": "B.e.",
+      "tue": "\u00c7.a.",
+      "wed": "\u00c7.",
+      "thu": "C.a.",
+      "fri": "C.",
+      "sat": "\u015e.",
+      "sun": "B.",
+      "monday": "Bazar ert\u0259si",
+      "tuesday": "\u00c7\u0259r\u015f\u0259nb\u0259 ax\u015fam\u0131",
+      "wednesday": "\u00c7\u0259r\u015f\u0259nb\u0259",
+      "thursday": "C\u00fcm\u0259 ax\u015fam\u0131",
+      "friday": "C\u00fcm\u0259",
+      "saturday": "\u015e\u0259nb\u0259",
+      "sunday": "Bazar"
+    },
+    "months": {
+      "jan": "Yan",
+      "feb": "Fev",
+      "mar": "Mar",
+      "apr": "Apr",
+      "may": "May",
+      "jun": "\u0130yn",
+      "jul": "\u0130yl",
+      "aug": "Avq",
+      "sep": "Sen",
+      "oct": "Okt",
+      "nov": "Noy",
+      "dec": "Dek"
+    }
+  },
+  "widgets": {
+    "wallpaper": {
+      "name": "Fon \u015f\u0259kli se\u00e7imi",
+      "desc": "\u0130\u015f masas\u0131 \u00fc\u00e7\u00fcn fon \u015f\u0259kill\u0259rin\u0259 bax v\u0259 fon \u015f\u0259klini t\u0259yin et"
+    },
+    "network": {
+      "name": "\u015e\u0259b\u0259k\u0259 parametrl\u0259ri",
+      "desc": "Wi-Fi, Ethernet v\u0259 \u015f\u0259b\u0259k\u0259 \u0259laq\u0259l\u0259rini idar\u0259 et"
+    },
+    "volume": {
+      "name": "S\u0259s v\u0259 s\u0259s s\u0259viyy\u0259si",
+      "desc": "S\u0259s cihazlar\u0131n\u0131 v\u0259 s\u0259s s\u0259viyy\u0259l\u0259rini idar\u0259 et"
+    },
+    "guide": {
+      "name": "Parametrl\u0259r",
+      "desc": "Serpantinum parametrl\u0259ri"
+    },
+    "calendar": {
+      "name": "T\u0259qvim v\u0259 saat",
+      "desc": "Tarix\u0259, vaxta v\u0259 c\u0259dv\u0259l\u0259 bax"
+    },
+    "music": {
+      "name": "Media s\u0259sl\u0259ndiricisi",
+      "desc": "Musiqi v\u0259 median\u0131n s\u0259sl\u0259ndirilm\u0259sini idar\u0259 et"
+    },
+    "notifications": {
+      "name": "Bildiri\u015f m\u0259rk\u0259zi",
+      "desc": "Son bildiri\u015fl\u0259r\u0259 v\u0259 tarix\u00e7\u0259y\u0259 bax"
+    },
+    "system": {
+      "name": "Sistem idar\u0259etm\u0259si",
+      "desc": "M\u0259hsuldarl\u0131q izl\u0259yicisi, enerji v\u0259 s\u00fcr\u0259tli parametrl\u0259r"
+    },
+    "redactor": {
+      "no_widgets_active": "F\u0259al vidcet yoxdur",
+      "click_to_add": "Vidcet \u0259lav\u0259 etm\u0259k \u00fc\u00e7\u00fcn a\u015fa\u011f\u0131dak\u0131 al\u0259tl\u0259r zola\u011f\u0131nda onun ni\u015fan\u0131na klikl\u0259yin",
+      "done": "Haz\u0131rd\u0131r",
+      "widget_singular": "vidcet",
+      "widgets_plural": "vidcet",
+      "widgets_short": "v"
+    },
+    "types": {
+      "clock": "Saat",
+      "music": "Musiqi",
+      "weather": "Hava",
+      "image": "\u015e\u0259kil",
+      "visualizer": "S\u0259s g\u00f6r\u00fcnt\u00fcl\u0259yicisi",
+      "user": "\u0130stifad\u0259\u00e7i",
+      "usage": "\u0130stifad\u0259",
+      "battery": "Batareya",
+      "github": "Github",
+      "time": "Vaxt"
+    },
+    "variants": {
+      "digital": "R\u0259q\u0259msal",
+      "analog": "Analoq",
+      "full": "Tam",
+      "minimal": "Sad\u0259",
+      "round": "Dair\u0259vi",
+      "compact": "Y\u0131\u011fcam",
+      "rect": "D\u00fczbucaql\u0131",
+      "rounded": "Yuvarlaqla\u015fd\u0131r\u0131lm\u0131\u015f",
+      "bars": "Zolaqlar",
+      "continuous": "Fasil\u0259siz",
+      "default": "Standart",
+      "material": "Material",
+      "materialAnalog": "Material analoq",
+      "lumen": "L\u00fcmen",
+      "lyrics": "Mahn\u0131 s\u00f6zl\u0259ri",
+      "simpleLyrics": "Sad\u0259 mahn\u0131 m\u0259tni"
+    },
+    "presets": {
+      "minimal": {
+        "name": "Minimal",
+        "desc": "Minimal r\u0259q\u0259msal saat v\u0259 y\u0131\u011fcam hava m\u0259lumat\u0131 olan sad\u0259 t\u0259rtibat."
+      },
+      "media_station": {
+        "name": "Media Stansiyas\u0131",
+        "desc": "M\u0259rk\u0259zl\u0259\u015fdirilmi\u015f audio vizualizator v\u0259 dair\u0259vi musiqi pleyeri olan media qura\u015fd\u0131rmas\u0131."
+      },
+      "dashboard": {
+        "name": "\u0130dar\u0259etm\u0259 Paneli",
+        "desc": "R\u0259q\u0259msal saat, sistem resurslar\u0131 v\u0259 batareya v\u0259ziyy\u0259tini g\u00f6st\u0259r\u0259n tam i\u015f paneli."
+      }
+    },
+    "github": {
+      "set_user": "\u0130stifad\u0259\u00e7i t\u0259yin et",
+      "error": "X\u0259ta",
+      "commit": "commit",
+      "commits": "commit",
+      "no_day_selected": "G\u00fcn se\u00e7ilm\u0259yib",
+      "fetching": "GitHub t\u00f6hf\u0259l\u0259ri y\u00fckl\u0259nir...",
+      "fetch_error": "@{user} istifad\u0259\u00e7isi y\u00fckl\u0259nm\u0259di",
+      "enter_username": "GitHub istifad\u0259\u00e7i ad\u0131n\u0131 daxil edin",
+      "no_contributions": "He\u00e7 bir t\u00f6hf\u0259 tap\u0131lmad\u0131"
+    },
+    "settings": {
+      "lyricsLines": "S\u0259tirl\u0259r",
+      "lyricsAlignment": "Hizalama"
+    },
+    "align": {
+      "left": "Sol",
+      "center": "M\u0259rk\u0259z",
+      "right": "Sa\u011f"
+    }
+  },
+  "cli": {
+    "usage": "\u0130stifad\u0259: serpantinum [command] [options...]",
+    "description": "Wayland g\u00f6r\u00fcnt\u00fc birl\u0259\u015fdiricil\u0259ri \u00fc\u00e7\u00fcn i\u015f masas\u0131 qab\u0131\u011f\u0131.",
+    "commands": "\u018fmrl\u0259r:",
+    "script_commands": "Skript \u0259mrl\u0259ri:",
+    "launch_desc": "M\u00fcst\u0259qil t\u0259rkib hiss\u0259l\u0259rini ba\u015flat (start, widgetredactor)",
+    "msg_desc": "\u0130nterfeys idar\u0259edicisin\u0259 \u0259mrl\u0259ri v\u0259 ya i\u015f sah\u0259si ke\u00e7idl\u0259rini g\u00f6nd\u0259r",
+    "ipc_desc": "IPC \u00e7a\u011f\u0131r\u0131\u015flar\u0131n\u0131 birba\u015fa qab\u0131\u011fa \u00f6t\u00fcr",
+    "kill_desc": "\u0130\u015fl\u0259y\u0259n arxa plan xidm\u0259tini d\u00fczg\u00fcn \u015f\u0259kild\u0259 dayand\u0131r",
+    "options": "Se\u00e7iml\u0259r:",
+    "verbose_desc": "\u018ftrafl\u0131 jurnal \u00e7\u0131x\u0131\u015f\u0131n\u0131 aktivl\u0259\u015fdir",
+    "version_desc": "Versiya m\u0259lumat\u0131n\u0131 g\u00f6st\u0259r v\u0259 \u00e7\u0131x",
+    "help_desc": "Bu k\u00f6m\u0259k m\u0259tnini g\u00f6st\u0259r v\u0259 \u00e7\u0131x",
+    "examples": "N\u00fcmun\u0259l\u0259r:",
+    "daemon_stopped": "Serpantinum arxa plan xidm\u0259ti dayand\u0131r\u0131ld\u0131.",
+    "starting_daemon": "Arxa plan xidm\u0259ti i\u015fl\u0259mir. serpantinumd arxa planda ba\u015flad\u0131l\u0131r...",
+    "error_missing_qml": "X\u0259ta: ba\u015flad\u0131lacaq h\u0259d\u0259f g\u00f6st\u0259rilm\u0259yib.",
+    "launch_usage": "\u0130stifad\u0259: serpantinum launch <start|widgetredactor> [args...]",
+    "error_qml_not_found": "X\u0259ta: {DIR} daxilind\u0259 {NAME}.qml tap\u0131lmad\u0131",
+    "error_shell_qml_not_found": "X\u0259ta: {DIR} daxilind\u0259 shell.qml yolu tap\u0131lmad\u0131",
+    "error_unknown_command": "X\u0259ta: nam\u0259lum \u0259mr '{CMD}'.",
+    "error_unknown_target": "X\u0259ta: nam\u0259lum h\u0259d\u0259f '{TARGET}'.",
+    "launch_help": {
+      "usage": "\u0130stifad\u0259: serpantinum launch <start|widgetredactor> [arguments...]",
+      "description": "M\u00fcst\u0259qil t\u0259rkib hiss\u0259l\u0259rini birba\u015fa icra rejimind\u0259 ba\u015flat.",
+      "available_targets": "M\u00f6vcud h\u0259d\u0259fl\u0259r:",
+      "target_start": "\u0130lkin qura\u015fd\u0131rma interfeysini ba\u015flat",
+      "target_widgetredactor": "\u0130\u015f masas\u0131 vidcetl\u0259rin\u0259 d\u00fcz\u0259li\u015f etm\u0259k \u00fc\u00e7\u00fcn interfeysi ba\u015flat"
+    },
+    "msg_help": {
+      "usage": "\u0130stifad\u0259: serpantinum msg <command|workspace> [arguments...]",
+      "description": "D\u00fcz\u00fcl\u00fc\u015f, i\u015f sah\u0259si v\u0259 p\u0259nc\u0259r\u0259 idar\u0259etm\u0259 mesajlar\u0131n\u0131 birba\u015fa g\u00f6nd\u0259r.",
+      "available_commands": "M\u00f6vcud mesajlar:",
+      "cmd_workspace": "<num> n\u00f6mr\u0259li i\u015f sah\u0259sin\u0259 ke\u00e7 (f\u0259al p\u0259nc\u0259r\u0259ni ora k\u00f6\u00e7\u00fcrm\u0259k \u00fc\u00e7\u00fcn 'move' \u0259lav\u0259 et)",
+      "cmd_open": "\u0130dar\u0259 olunan interfeys panelini a\u00e7 (network, guide, wallpaper, applauncher)",
+      "cmd_toggle": "\u0130dar\u0259 olunan interfeys panelini a\u00e7 v\u0259 ya ba\u011fla",
+      "cmd_close": "Qab\u0131\u011f\u0131n h\u0259r hans\u0131 f\u0259al \u00fcst qat\u0131n\u0131 ba\u011fla"
+    },
+    "ipc_help": {
+      "usage": "\u0130stifad\u0259: serpantinum ipc call <target> <method> [arguments...]",
+      "description": "IPC \u00e7a\u011f\u0131r\u0131\u015f\u0131n\u0131 birba\u015fa i\u015fl\u0259y\u0259n Quickshell n\u00fcsx\u0259sin\u0259 g\u00f6nd\u0259r."
+    },
+    "scripts": {
+      "exit": "Qrafik seans\u0131 bitir v\u0259 g\u00f6r\u00fcnt\u00fc birl\u0259\u015fdiricisind\u0259n \u00e7\u0131x",
+      "lock": "Kilid ekran\u0131 interfeysini aktivl\u0259\u015fdir",
+      "volume": "Standart s\u0259s \u00e7\u0131x\u0131\u015f\u0131n\u0131n/m\u0259nb\u0259yinin s\u0259s s\u0259viyy\u0259sini v\u0259 s\u0259ssizlik v\u0259ziyy\u0259tini idar\u0259 et",
+      "reload": "Quickshell i\u015f masas\u0131 elementl\u0259rini m\u0259cburi yenid\u0259n y\u00fckl\u0259",
+      "weather": "Hava proqnozu m\u0259lumatlar\u0131n\u0131 v\u0259 ke\u015fl\u0259rini \u0259ld\u0259 et v\u0259 idar\u0259 et",
+      "location": "Co\u011frafi koordinatlar\u0131 \u0259ld\u0259 et v\u0259 yenil\u0259",
+      "screenshot": "Ekran \u015f\u0259kill\u0259ri \u00e7\u0259k, video \u00e7\u0259k v\u0259 ya QR kodlar\u0131 oxu",
+      "brightness": "Ekran\u0131n arxa i\u015f\u0131\u011f\u0131n\u0131n parlaql\u0131\u011f\u0131n\u0131 t\u0259nziml\u0259",
+      "current_focus": "F\u0259al p\u0259nc\u0259r\u0259nin fokus d\u0259yi\u015fiklikl\u0259rini izl\u0259 v\u0259 jurnala yaz",
+      "monitors_detect": "F\u0259al ekran \u00e7\u0131x\u0131\u015flar\u0131n\u0131 v\u0259 yenil\u0259nm\u0259 tezlikl\u0259rini sor\u011fula",
+      "location_manual": "Co\u011frafi koordinatlar\u0131 v\u0259 saat qur\u015fa\u011f\u0131n\u0131 \u0259l il\u0259 t\u0259yin et",
+      "blue_light_filter": "R\u0259ng temperaturunu v\u0259 avtomatik g\u00fcnd\u00fcz/gec\u0259 c\u0259dv\u0259lini t\u0259nziml\u0259",
+      "translate": "M\u0259tn v\u0259 se\u00e7ilmi\u015f hiss\u0259 \u00fc\u00e7\u00fcn ani t\u0259rc\u00fcm\u0259\u00e7i"
+    }
+  },
+  "daemon": {
+    "already_running": "Arxa plan xidm\u0259ti art\u0131q i\u015fl\u0259yir. \u00c7\u0131x\u0131l\u0131r...",
+    "shutting_down": "Serpantinum arxa plan xidm\u0259ti dayand\u0131r\u0131l\u0131r...",
+    "launching": "Serpantinum arxa plan xidm\u0259ti ba\u015flad\u0131l\u0131r...",
+    "cli": {
+      "usage": "\u0130stifad\u0259: serpantinumd <command> [options...]",
+      "description": "Serpantinum i\u015f masas\u0131 qab\u0131\u011f\u0131 \u00fc\u00e7\u00fcn arxa plan xidm\u0259ti.",
+      "commands": "\u018fmrl\u0259r:",
+      "cmd_start": "Arxa plan xidm\u0259tini v\u0259 arxa planda i\u015fl\u0259y\u0259n prosesl\u0259ri ba\u015flat",
+      "cmd_stop": "\u0130\u015fl\u0259y\u0259n arxa plan xidm\u0259tini dayand\u0131r",
+      "cmd_status": "Arxa plan xidm\u0259tinin i\u015fl\u0259m\u0259 v\u0259ziyy\u0259tini yoxla",
+      "options": "Se\u00e7iml\u0259r:",
+      "opt_verbose": "\u00c7\u0131x\u0131\u015f\u0131n \u0259trafl\u0131 qeydini aktivl\u0259\u015fdir",
+      "opt_version": "Versiya m\u0259lumat\u0131n\u0131 g\u00f6st\u0259r v\u0259 \u00e7\u0131x",
+      "opt_help": "Bu k\u00f6m\u0259k m\u0259tnini g\u00f6st\u0259r v\u0259 \u00e7\u0131x",
+      "stopped": "Serpantinum arxa plan xidm\u0259ti dayand\u0131r\u0131ld\u0131.",
+      "status_running": "Serpantinum arxa plan xidm\u0259ti i\u015fl\u0259yir (PID: {PID}).",
+      "status_stopped": "Serpantinum arxa plan xidm\u0259ti i\u015fl\u0259mir.",
+      "unknown_arg": "Nam\u0259lum arqument: {ARG}"
+    }
+  },
+  "installer": {
+    "auth": {
+      "enter_code": "Qura\u015fd\u0131rmaya giri\u015f kodunu daxil edin: ",
+      "error_interactive": "X\u0259ta: kimliyi do\u011frulamaq \u00fc\u00e7\u00fcn interaktiv terminal t\u0259l\u0259b olunur.",
+      "error_empty": "Kimlik do\u011frulanmad\u0131: giri\u015f kodu bo\u015f ola bilm\u0259z.",
+      "error_default": "Kimlik do\u011frulanmad\u0131: giri\u015f kodu yanl\u0131\u015fd\u0131r v\u0259 ya istifad\u0259 h\u0259ddi bitib.",
+      "error_failed": "Kimlik do\u011frulanmad\u0131.",
+      "access_granted": "Giri\u015f\u0259 icaz\u0259 verildi. ({active}/{max} istifad\u0259\u00e7i bu kodu aktivl\u0259\u015fdirib)"
+    },
+    "os": {
+      "error_root": "X\u0259ta: bu skripti birba\u015fa root/sudo il\u0259 i\u015f\u0259 salmay\u0131n. Adi istifad\u0259\u00e7i kimi i\u015f\u0259 sal\u0131n.",
+      "error_unsupported": "D\u0259st\u0259kl\u0259nm\u0259y\u0259n \u0259m\u0259liyyat sistemi ({os}). Serpantinum yaln\u0131z Arch Linux v\u0259 onun t\u00f6r\u0259m\u0259l\u0259rini d\u0259st\u0259kl\u0259yir.",
+      "error_not_found": "\u018fm\u0259liyyat sistemini m\u00fc\u0259yy\u0259n etm\u0259k m\u00fcmk\u00fcn deyil. /etc/os-release tap\u0131lmad\u0131.",
+      "unknown_cpu": "Nam\u0259lum CPU",
+      "unknown_gpu": "Nam\u0259lum / virtual ma\u015f\u0131n",
+      "default_os": "Arch Linux"
+    },
+    "ui": {
+      "user": "\u0130stifad\u0259\u00e7i:",
+      "os": "\u018fm\u0259liyyat sistemi:",
+      "cpu": "CPU:",
+      "gpu": "GPU:",
+      "target_version": "Qura\u015fd\u0131r\u0131lacaq versiya:",
+      "install_mode": "Qura\u015fd\u0131rma rejimi:",
+      "github": "GitHub:",
+      "twitter": "Twitter:",
+      "reddit": "Reddit:",
+      "telegram": "Telegram:",
+      "donate": "\u0130an\u0259 et:",
+      "donate_sub": "(Layih\u0259ni d\u0259st\u0259kl\u0259yin!)",
+      "packages_prompt": " Paketl\u0259r > ",
+      "packages_header": " Qay\u0131tmaq \u00fc\u00e7\u00fcn Esc v\u0259 ya Enter d\u00fcym\u0259sini bas\u0131n ",
+      "package_missing": "{pkg} (yoxdur - qura\u015fd\u0131r\u0131lacaq)",
+      "package_installed": "{pkg} (qura\u015fd\u0131r\u0131l\u0131b)",
+      "compositors_title": "=== H\u0259d\u0259f g\u00f6r\u00fcnt\u00fc birl\u0259\u015fdiricil\u0259rini se\u00e7in ===",
+      "installed": " (qura\u015fd\u0131r\u0131l\u0131b)",
+      "not_installed": " (qura\u015fd\u0131r\u0131lmay\u0131b)",
+      "done": "Haz\u0131rd\u0131r",
+      "compositors_prompt": " G\u00f6r\u00fcnt\u00fc birl\u0259\u015fdiricisinin qura\u015fd\u0131r\u0131lmas\u0131 > ",
+      "compositors_header": " D\u0259st\u0259kl\u0259n\u0259n g\u00f6r\u00fcnt\u00fc birl\u0259\u015fdiricil\u0259rini se\u00e7in v\u0259 ya se\u00e7imd\u0259n \u00e7\u0131xar\u0131n, sonra \u00abHaz\u0131rd\u0131r\u00bb se\u00e7in ",
+      "sddm_title": "=== Giri\u015f ekran\u0131 idar\u0259edicisinin (SDDM) qura\u015fd\u0131r\u0131lmas\u0131 ===",
+      "sddm_detected_active": "\u0130\u015fl\u0259y\u0259n v\u0259 ya avtomatik ba\u015flad\u0131lan giri\u015f ekran\u0131 idar\u0259edicisi: {dm}",
+      "sddm_detected_none": "\u0130\u015fl\u0259y\u0259n v\u0259 ya avtomatik ba\u015flad\u0131lan giri\u015f ekran\u0131 idar\u0259edicisi: yoxdur",
+      "sddm_opt_install": "SDDM qura\u015fd\u0131r v\u0259 t\u0259nziml\u0259 (Material You m\u00f6vzusu)",
+      "sddm_opt_disable": "'{dm}' xidm\u0259tini s\u00f6nd\u00fcr v\u0259 sil",
+      "sddm_opt_wayland": "Yaln\u0131z Wayland \u0259sas\u0131nda i\u015fl\u0259t",
+      "sddm_prompt": " SDDM qura\u015fd\u0131r\u0131lmas\u0131 > ",
+      "sddm_header": " Se\u00e7iml\u0259ri a\u00e7\u0131n v\u0259 ya s\u00f6nd\u00fcr\u00fcn, sonra \u00abHaz\u0131rd\u0131r\u00bb se\u00e7in ",
+      "target_compositor_none": "H\u0259d\u0259f g\u00f6r\u00fcnt\u00fc birl\u0259\u015fdiricisi [t\u0259l\u0259b olunur - he\u00e7 biri se\u00e7ilm\u0259yib]",
+      "target_compositor_selected": "H\u0259d\u0259f g\u00f6r\u00fcnt\u00fc birl\u0259\u015fdiricisi [{comps}]",
+      "target_compositor_req": "H\u0259d\u0259f g\u00f6r\u00fcnt\u00fc birl\u0259\u015fdiricisi ({label}) [t\u0259l\u0259b olunur]",
+      "target_compositor_label": "H\u0259d\u0259f g\u00f6r\u00fcnt\u00fc birl\u0259\u015fdiricisi ({comps})",
+      "unsupported_compositor": "D\u0259st\u0259kl\u0259nm\u0259y\u0259n g\u00f6r\u00fcnt\u00fc birl\u0259\u015fdiricisi",
+      "menu_overview": "Paket qura\u015fd\u0131r\u0131lmas\u0131n\u0131n icmal\u0131 ({count} \u0259sas paket)",
+      "menu_sddm": "SDDM giri\u015f idar\u0259edicisi",
+      "menu_wallpapers": "Fon \u015f\u0259kill\u0259ri toplusu",
+      "menu_telemetry": "Anonim telemetriya",
+      "menu_update": "Yenil\u0259",
+      "menu_reinstall": "Yenid\u0259n qura\u015fd\u0131r",
+      "menu_install": "Qura\u015fd\u0131r",
+      "menu_exit": "\u00c7\u0131x",
+      "main_menu_prompt": " \u018fsas menyu > ",
+      "main_menu_header": " Menyuda h\u0259r\u0259k\u0259t etm\u0259k \u00fc\u00e7\u00fcn ox d\u00fcym\u0259l\u0259rind\u0259n istifad\u0259 edin, se\u00e7m\u0259k \u00fc\u00e7\u00fcn Enter d\u00fcym\u0259sini bas\u0131n ",
+      "error_no_compositor": "Davam etm\u0259zd\u0259n \u0259vv\u0259l \u0259n az\u0131 bir d\u0259st\u0259kl\u0259n\u0259n g\u00f6r\u00fcnt\u00fc birl\u0259\u015fdiricisi se\u00e7m\u0259lisiniz.",
+      "tagline": "Sizin \u00fc\u00e7\u00fcn haz\u0131rlanm\u0131\u015f i\u015f masas\u0131 m\u00fchiti",
+      "support_creator": "M\u00fc\u0259llif\u0259 d\u0259st\u0259k olun:",
+      "buy_coffee": "Layih\u0259 xo\u015funuza g\u0259lirs\u0259, m\u0259n\u0259 bir fincan q\u0259hv\u0259 almaqla d\u0259st\u0259k ola bil\u0259rsiniz!",
+      "installed_success": "\u2714 Serpantinum {ver} ({commit}) u\u011furla qura\u015fd\u0131r\u0131ld\u0131.",
+      "failed_packages": "A\u015fa\u011f\u0131dak\u0131 paketl\u0259rin qura\u015fd\u0131r\u0131lmas\u0131 zaman\u0131 x\u0259talar ba\u015f verdi:",
+      "restart_prompt": "Ba\u015flamaq \u00fc\u00e7\u00fcn g\u00f6r\u00fcnt\u00fc birl\u0259\u015fdiricisini yenid\u0259n ba\u015flad\u0131n v\u0259 ya 'serpantinumd start' \u0259mrini icra edin.",
+      "ask_reboot": "Yenid\u0259n ba\u015flatmaq ist\u0259yirsiniz? [y/n] "
+    },
+    "deps": {
+      "syncing": "Sistem paketl\u0259ri sinxronla\u015fd\u0131r\u0131l\u0131r v\u0259 yenil\u0259nir (pacman -syyu)...",
+      "all_installed": "-> B\u00fct\u00fcn paketl\u0259r art\u0131q qura\u015fd\u0131r\u0131l\u0131b! Paketl\u0259rin endirilm\u0259si m\u0259rh\u0259l\u0259si \u00f6t\u00fcr\u00fcl\u00fcr.",
+      "missing_count": "-> Qura\u015fd\u0131r\u0131lmam\u0131\u015f {count} paket tap\u0131ld\u0131. Bu paketl\u0259r qura\u015fd\u0131r\u0131lacaq.",
+      "installing_title": "Sistem paketl\u0259ri v\u0259 as\u0131l\u0131l\u0131qlar qura\u015fd\u0131r\u0131l\u0131r...",
+      "installing_pkg": "{pkg} qura\u015fd\u0131r\u0131l\u0131r...",
+      "install_ok": "{pkg} u\u011furla qura\u015fd\u0131r\u0131ld\u0131",
+      "install_failed": "{pkg} qura\u015fd\u0131r\u0131la bilm\u0259di"
+    },
+    "deploy": {
+      "configuring_sddm": "SDDM giri\u015f ekran\u0131 idar\u0259edicisi t\u0259nziml\u0259nir...",
+      "disabling_dm": "-> Uy\u011funsuzluq yaradan giri\u015f ekran\u0131 idar\u0259edicisi s\u00f6nd\u00fcr\u00fcl\u00fcr: {dm}",
+      "sddm_success": "-> SDDM Material You m\u00f6vzusu qura\u015fd\u0131r\u0131l\u0131b v\u0259 xidm\u0259t aktivdir [ OK ]"
+    }
+  },
+  "translator": {
+    "title": "T\u0259rc\u00fcm\u0259\u00e7i",
+    "status_translating": "T\u0259rc\u00fcm\u0259 olunur...",
+    "speed": "S\u00fcr\u0259t: ",
+    "detected": "A\u015fkarlan\u0131b: ",
+    "input_label": "\u0130lkin m\u0259tn",
+    "placeholder": "M\u0259tni buraya yaz\u0131n, yap\u0131\u015fd\u0131r\u0131n v\u0259 ya s\u00f6yl\u0259yin...",
+    "chars": "simvol",
+    "translation_label": "T\u0259rc\u00fcm\u0259",
+    "empty_prompt": "T\u0259rc\u00fcm\u0259 d\u0259rhal burada g\u00f6r\u00fcn\u0259c\u0259k...",
+    "recent": "Son t\u0259rc\u00fcm\u0259l\u0259r:",
+    "failed": "T\u0259rc\u00fcm\u0259 m\u00f6vcud deyil",
+    "quick_settings": "S\u00fcr\u0259tli \u0259v\u0259zetm\u0259 parametrl\u0259ri",
+    "replace_settings_title": "Se\u00e7ilmi\u015f m\u0259tni s\u00fcr\u0259tl\u0259 \u0259v\u0259z et",
+    "replace_settings_desc": "Se\u00e7ilmi\u015f m\u0259tni t\u0259rc\u00fcm\u0259 edir v\u0259 yerind\u0259 \u0259v\u0259z edir",
+    "auto_paste": "T\u0259rc\u00fcm\u0259 olunmu\u015f m\u0259tni avtomatik yap\u0131\u015fd\u0131r",
+    "auto_paste_sub": "Bu se\u00e7im s\u00f6nd\u00fcr\u00fcld\u00fckd\u0259 t\u0259rc\u00fcm\u0259 yaln\u0131z m\u00fcbadil\u0259 yadda\u015f\u0131na k\u00f6\u00e7\u00fcr\u00fcl\u00fcr",
+    "keep_clipboard": "T\u0259rc\u00fcm\u0259ni m\u00fcbadil\u0259 yadda\u015f\u0131nda saxla",
+    "keep_clipboard_sub": "Bu se\u00e7im s\u00f6nd\u00fcr\u00fcld\u00fckd\u0259 m\u0259tn yap\u0131\u015fd\u0131r\u0131ld\u0131qdan sonra m\u00fcbadil\u0259 yadda\u015f\u0131n\u0131n \u0259vv\u0259lki m\u0259zmunu b\u0259rpa olunur"
+  },
+  "datetime": {
+    "full_date": "dddd, MMMM dd"
+  }
+}

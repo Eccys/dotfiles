@@ -1,0 +1,44 @@
+# Local 2560x1440 adaptation of the pinned upstream theme; see provenance/adaptation.json.
+# GRUB2 gfxmenu Linux theme
+# Designed by Purp1eDuck
+
+# Global Property
+title-text: ""
+desktop-image: "background.png"
+desktop-color: "#242424"
+terminal-font: "JetBrains Mono Regular 18"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+
+# Show the boot menu
++ boot_menu {
+  left = 17%
+  top = 19%
+  width = 32%
+  height = 65%
+  item_font = "JetBrains Mono Bold 48"
+  item_color = "#efefef"
+  selected_item_color = "#ffffff"
+  icon_width = 85
+  icon_height = 85
+  item_icon_space = 16
+  item_height = 128
+  item_padding = 8
+  item_spacing = 16
+  selected_item_pixmap_style = "select_*.png"
+}
+
+# Show a countdown message using the label component
++ label {
+  top = 78%
+  left = 19%
+  width = 28%
+  align = "center"
+  id = "__timeout__"
+  text = "Booting in %d seconds"
+  color = "#ffffff"
+  font = "JetBrains Mono Regular 32"
+}

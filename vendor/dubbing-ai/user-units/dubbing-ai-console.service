@@ -1,0 +1,4 @@
+[Unit]
+Description=Local browser console for Dubbing AI Windows VM
+[Service]
+ExecStart=%h/.local/share/dubbing-ai/vm/web-venv/bin/websockify --web=%h/.local/share/dubbing-ai/vm/novnc 127.0.0.1:6083 127.0.0.1:5931

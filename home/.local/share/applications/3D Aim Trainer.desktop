@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=3D Aim Trainer
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/1600530
+Icon=steam_icon_1600530
+Terminal=false
+Type=Application
+Categories=Game;

@@ -1,0 +1,12 @@
+[Unit]
+Description=Dubbing AI dedicated Windows virtual machine
+After=pipewire-pulse.service
+[Service]
+Type=simple
+ExecStartPre=/usr/bin/sudo -n /usr/local/libexec/dubbing-ai-backing prepare
+ExecStart=%h/.local/share/dubbing-ai/vm/run-vm
+ExecStop=%h/.local/share/dubbing-ai/vm/shutdown-vm
+ExecStopPost=/usr/bin/sudo -n /usr/local/libexec/dubbing-ai-backing release
+TimeoutStopSec=100
+[Install]
+WantedBy=default.target

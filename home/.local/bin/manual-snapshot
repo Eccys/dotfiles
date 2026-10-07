@@ -1,0 +1,12 @@
+#!/bin/bash
+set -eu
+case "${1:-}" in
+    root|home) config=$1 ;;
+    *) exit 2 ;;
+esac
+if number=$(sudo -n /usr/bin/snapper -c "$config" create --type single --cleanup-algorithm number --description "Manual $config snapshot" --print-number 2>&1); then
+    notify-send "Snapshot created" "$config snapshot #$number" || true
+else
+    notify-send -u critical "Snapshot failed" "$config: $number" || true
+    exit 1
+fi

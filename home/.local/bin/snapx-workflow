@@ -1,0 +1,177 @@
+#!/usr/bin/env python3
+"""ShareX hotkey compatibility for SnapX 0.4 on Hyprland.
+
+Native Wayland helpers supply the jobs missing from SnapX. Captures are local;
+uploading remains an explicit action in SnapX.
+"""
+import argparse
+import datetime as dt
+import fcntl
+import json
+import os
+from pathlib import Path
+import signal
+import sqlite3
+import subprocess as sp
+import sys
+import tempfile
+
+HOME = Path.home()
+STATE = HOME / '.local/state/snapx-workflow'
+STATE.mkdir(parents=True, exist_ok=True, mode=0o700)
+PICTURES = HOME / 'Pictures/sss'
+DB = HOME / '.local/share/SnapX/SnapX.db'
+
+def run(*args, **kwargs):
+    return sp.run(args, check=True, **kwargs)
+
+def notify(message, path=None):
+    args = ['notify-send', '-a', 'SnapX', 'SnapX']
+    if path and str(path).endswith('.png'):
+        args += ['-i', str(path)]
+    sp.run(args + [message], check=False)
+
+def output_path(ext):
+    now = dt.datetime.now()
+    folder = PICTURES / now.strftime('%Y-%m')
+    folder.mkdir(parents=True, exist_ok=True)
+    return folder / (now.strftime('%d-%H-%M-%S-') + f'{now.microsecond // 1000:03d}.{ext}')
+
+def history(path):
+    item = dict(FileName=path.name, FilePath=str(path), DateTime=dt.datetime.now().isoformat(),
+                Type='Image' if path.suffix in ('.png','.gif') else 'Video', Hidden=0)
+    queue = STATE / 'history-pending.jsonl'
+    with (STATE / 'history.lock').open('a') as lock:
+        fcntl.flock(lock, fcntl.LOCK_EX)
+        pending = [json.loads(line) for line in queue.read_text().splitlines()] if queue.exists() else []
+        pending.append(item)
+        try:
+            with sqlite3.connect(f'file:{DB}?mode=rw', uri=True, timeout=10) as conn:
+                for row in pending:
+                    conn.execute('INSERT INTO HistoryItems (FileName,FilePath,DateTime,Type,Hidden) '
+                                 'SELECT :FileName,:FilePath,:DateTime,:Type,:Hidden '
+                                 'WHERE NOT EXISTS (SELECT 1 FROM HistoryItems WHERE FilePath=:FilePath)', row)
+            queue.unlink(missing_ok=True)
+        except sqlite3.Error:
+            queue.write_text(''.join(json.dumps(row) + '\n' for row in pending))
+            queue.chmod(0o600)
+
+def geometry(mode, supplied):
+    if supplied:
+        return supplied
+    if mode == 'window':
+        w = json.loads(sp.check_output(['hyprctl', 'activewindow', '-j']))
+        if not w.get('mapped'):
+            raise RuntimeError('No active window to capture')
+        x, y = w['at']; width, height = w['size']
+        return f'{x},{y} {width}x{height}'
+    if mode != 'full':
+        return sp.check_output(['slurp'], text=True).strip()
+    return None
+
+def grab(path, geom):
+    run('grim', *(['-g', geom] if geom else []), str(path))
+
+def record_run(mode, geom, path):
+    path = Path(path)
+    raw = path.with_suffix('.mp4') if mode == 'gif' else path
+    proc = sp.Popen(['wf-recorder', '-g', geom, '-r', '30', '-c', 'libx264',
+                     '-p', 'preset=ultrafast', '-p', 'crf=28', '-f', str(raw)])
+    def stop(signum, frame):
+        if proc.poll() is None:
+            proc.send_signal(signal.SIGINT)
+    signal.signal(signal.SIGINT, stop)
+    signal.signal(signal.SIGTERM, stop)
+    code = proc.wait()
+    if not raw.exists() or raw.stat().st_size == 0:
+        raise RuntimeError(f'Recorder failed ({code})')
+    if mode == 'gif':
+        run('ffmpeg', '-v', 'error', '-y', '-i', str(raw), '-filter_complex',
+            '[0:v]fps=15,split[a][b];[a]palettegen=stats_mode=full[p];[b][p]paletteuse=dither=sierra2_4a', str(path))
+        raw.unlink()
+    history(path)
+    notify(f'Recording saved: {path}')
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('mode', nargs='?', default='region',
+                        choices=['region','full','window','edit','record','gif','ocr','qr','app','record-run'])
+    parser.add_argument('--geometry')
+    parser.add_argument('--no-edit', action='store_true')
+    parser.add_argument('--edit', action='store_true')
+    parser.add_argument('--record-mode')
+    parser.add_argument('--output')
+    args = parser.parse_args()
+    if args.mode == 'app':
+        os.execv(str(HOME / '.local/bin/snapx-start'), ['snapx-start'])
+    if args.mode == 'record-run':
+        return record_run(args.record_mode, args.geometry, args.output)
+    if args.mode in ['record', 'gif']:
+        with (STATE / 'record.lock').open('a') as lock:
+            fcntl.flock(lock, fcntl.LOCK_EX)
+            active = sp.run(['systemctl','--user','is-active','--quiet','snapx-recorder.service']).returncode == 0
+            if active:
+                run('systemctl','--user','kill','--signal=SIGINT','--kill-whom=main','snapx-recorder.service')
+                return
+            geom = geometry('region', args.geometry)
+            path = output_path('gif' if args.mode == 'gif' else 'mp4')
+            run('systemd-run','--user','--unit=snapx-recorder','--collect',
+                '--property=TimeoutStopSec=120',str(Path(__file__).resolve()),'record-run',
+                '--record-mode',args.mode,'--geometry',geom,'--output',str(path))
+            notify('Recording started. Press either recording shortcut again to stop.')
+            return
+    if args.mode in ['region', 'edit'] and not args.no_edit and not args.geometry:
+        path = output_path('png')
+        monitors = json.loads(sp.check_output(['hyprctl','monitors','-j']))
+        monitor = next((m['name'] for m in monitors if m.get('focused')), monitors[0]['name'])
+        with tempfile.TemporaryDirectory(prefix='snapx-overlay-') as tmp:
+            image = Path(tmp) / 'screen.png'
+            run('grim','-o',monitor,str(image))
+            env = dict(os.environ, QT_QPA_PLATFORM='wayland')
+            run('python3',str(HOME / '.local/share/snapx-workflow/overlay.py'),
+                '--input',str(image),'--output',str(path),'--monitor',monitor,env=env)
+        if not path.exists():
+            return
+        run('wl-copy','--type','image/png',input=path.read_bytes())
+        history(path)
+        notify(f'Saved and copied: {path}', path)
+        print(path)
+        return
+    geom = geometry(args.mode, args.geometry)
+    if args.mode in ['ocr','qr']:
+        with tempfile.TemporaryDirectory(prefix='snapx-') as tmp:
+            image = Path(tmp) / 'capture.png'
+            grab(image, geom)
+            if args.mode == 'ocr':
+                text = sp.check_output(['tesseract',str(image),'stdout','-l','eng'], text=True)
+            else:
+                result = sp.run(['zbarimg','--quiet','--raw',str(image)],capture_output=True,text=True)
+                if result.returncode or not result.stdout.strip():
+                    raise RuntimeError('No QR code or barcode found')
+                text = result.stdout
+            run('wl-copy','--type','text/plain',input=text.encode())
+            notify('Recognized text copied to clipboard' if args.mode == 'ocr' else 'QR/barcode copied to clipboard')
+        return
+    path = output_path('png')
+    grab(path, geom)
+    if args.edit or args.mode == 'edit' or (args.mode == 'region' and not args.no_edit):
+        run('satty','--filename',str(path),'--output-filename',str(path),
+            '--copy-command','wl-copy --type image/png',
+            '--initial-tool','arrow','--corner-roundness','0',
+            '--actions-on-enter','save-to-clipboard,save-to-file,exit',
+            '--actions-on-escape','exit')
+    run('wl-copy','--type','image/png',input=path.read_bytes())
+    history(path)
+    notify(f'Saved and copied: {path}', path)
+    print(path)
+
+if __name__ == '__main__':
+    try:
+        main()
+    except (sp.CalledProcessError, RuntimeError) as error:
+        # Escape/cancel from the region selector is a normal no-op.
+        if isinstance(error, sp.CalledProcessError) and error.cmd[0] == 'slurp':
+            sys.exit(0)
+        notify(str(error))
+        print(error, file=sys.stderr)
+        sys.exit(1)

@@ -1,60 +1,21 @@
-# 🌌 Eccys' Dotfiles
+# Eccys Arch desktop — serpantinum
 
-A premium, modern Arch Linux configuration powered by **Hyprland** and **Neovim**. This setup is designed for efficiency, aesthetics, and high performance.
+Restore the desktop captured on 7 October 2026: Arch, Hyprland, the customized Serpantinum 2.2.4 shell, Zen, Nautilus, Fish/Kitty/Neovim, Discord Canary with the Ee!? encoder/decoder, OBS/EasyEffects, SnapX capture workflow, Lian Li configuration, services and automatic Btrfs snapshots.
 
----
+Start from an installed, bootable Arch system with a regular sudo user and a working network. Root and `/home` must be Btrfs for the snapshots stage. Read [storage and hardware](docs/SYSTEM.md) before applying to another machine.
 
-## 🚀 Highlights
+```sh
+git clone --branch serpantinum https://github.com/eccys/dotfiles.git
+cd dotfiles
+./install.sh                   # inspect the plan
+./install.sh --apply           # packages, configs, system, snapshots, browser, wallpapers, plugins
+./install.sh --verify          # check the actual running host
+```
 
-### 🛠️ Neovim (v0.12+ Ready)
-Custom IDE-like experience with zero startup errors and lightning-fast completion.
-- **Blink.cmp**: Next-gen completion engine with frecency-based fuzzy matching.
-- **Native LSP**: Transitioned to Neovim's native `vim.lsp.config` and `vim.lsp.enable` APIs.
-- **Modern UI**: Catppuccin Mocha theme with dynamic Matugen color reloading.
-- **Fold/UFO**: Advanced code folding with `nvim-ufo`.
+The installer stops on errors, backs up changed managed files under `~/.local/state/eccys-restore/`, installs official packages through pacman, builds checked-in AUR recipes through makepkg, and builds a local `eccys-serpantinum` Arch package from a checksummed upstream archive plus the local patches. It enables services; log out and back in after a complete restore to start the new desktop. Discord and Zen need restarting after their settings are deployed.
 
-### 🖥️ Hyprland & Desktop
-Smooth animations and vim-centric workflow.
-- **Compositor**: Hyprland with glassmorphism and blur effects.
-- **Bar**: Quickshell-based vertical and horizontal widgets.
-- **Terminal**: Kitty with Matugen-synced color schemes.
-- **File Manager**: Yazi (Terminal) with modern keybinds.
+Run an individual stage with `--only configs` or a comma-separated list. Test the config deployment without changing your login home with `--apply --only configs --target-home /tmp/eccys-test-home`. Run `python scripts/validate_repo.py` before modifying or publishing the repository.
 
----
+This is a declarative package/configuration restore on rolling Arch. Package versions are recorded in `packages/installed-versions.txt`; official repositories supply their current compatible versions. It does not provide NixOS-style immutable generations or exact historical binary versions. Local source and patched shell assets are retained. Snapper provides recovery snapshots separately.
 
-## 📂 Structure
-
-| Directory | Component | Description |
-|-----------|-----------|-------------|
-| `nvim/` | Neovim | Full Lua-based config with Lazy.nvim |
-| `hypr/` | Hyprland | Window manager rules and keybinds |
-| `kitty/` | Kitty | Fast, GPU-accelerated terminal |
-| `quickshell/` | Widgets | Custom bars and system monitors |
-| `yazi/` | Yazi | Modern terminal file manager |
-
----
-
-## 🛠️ Installation
-
-1. **Clone the repo**:
-   ```bash
-   git clone https://github.com/eccys/dotfiles ~/dotfiles
-   ```
-2. **Symlink configs**:
-   ```bash
-   ln -s ~/dotfiles/nvim ~/.config/nvim
-   # Repeat for other directories
-   ```
-3. **Install dependencies**:
-   - `neovim` (v0.12+)
-   - `lua51` (for luarocks/image.nvim)
-   - `hyprland`, `kitty`, `yazi`
-
----
-
-## 📝 Recent Updates
-- **2026-05-03**: Major Neovim refactor. Fixed all deprecation warnings, migrated to native LSP APIs, and optimized `blink.cmp` configuration.
-
----
-
-*Crafted with ❤️ by Eccys*
+Public configuration alone cannot reproduce signed-in accounts, browser history/passwords, private keys, Steam game files or a Windows VM disk. [Private data](docs/PRIVATE-DATA.md) explains the required companion backup. Read [capture controls](docs/SCREENSHOTS.md) for the ShareX-style overlay and the remaining native SnapX limitations. [Validation](docs/VALIDATION.md) records what was actually tested.

@@ -1,0 +1,169 @@
+# Local 2560x1440 adaptation of the pinned upstream theme; see provenance/adaptation.json.
+# Global
+
+title-text: ""
+desktop-image: "background.png"
+
+# Terminal for Console and Options
+terminal-border: "27"
+terminal-left: "10%"
+terminal-top: "10%+31"
+terminal-width: "80%"
+terminal-height: "80%"
+terminal-box: "term_*.png"
+terminal-font: "JetBrains Mono Regular 22"
+
+# Text White 
++ boot_menu {
+	# as we don't have any pixmaps here, it gets aligned strangely
+	# top pixmap is 17px in height 
+	# left pixmap is 6px in width 
+	# the text needs to be 3 pixels above and 3 pixels to the left
+	left = 50%-396
+	top = 40%+19
+	width = 800
+	height = 667
+
+	item_font = "JetBrains Mono Regular 30"
+	item_color = "#ffffff"
+	selected_item_color = "#ffffa0"
+	item_height = 45
+	item_padding = 0
+	item_spacing = 51
+	scrollbar = false
+}
+
+
++ boot_menu {
+	left = 50%-400
+	top = 40%
+	width = 800
+	height = 667
+
+	item_font = "JetBrains Mono Regular 30"
+	item_color = "#383838"
+	selected_item_color = "#3f3f28"
+	item_height = 45
+	item_padding = 0
+	item_spacing = 51
+	item_pixmap_style = "item_*.png"
+	selected_item_pixmap_style = "selected_item_*.png"
+	scrollbar = false
+}
+
+
+
++ image {
+	# width of the static bottom bar image is 744
+	left = 50%-496
+
+	# n is amount of boot options (each element is (42 height + 30 spacing) = 72px in height) 
+	# top = 40%+( 72 * N + 26 )
+	#
+	### +170 (for 2 boot options)
+	### +242 (for 3 boot options)
+	### +314 (for 4 boot options)
+	### +386 (for 5 boot options)
+	### +458 (for 6 boot options)
+	### +530 (for 7 boot options)
+	###
+	############### CHANGE VALUE HERE ################
+
+	top = 40%+419
+
+	### Don't leave spaces in between the value
+	##################################################
+
+	file = "static_bar.png"
+  width = 992
+  height = 80
+}
+
++ image {
+	# width of the logo image is 1200, but the center of the logo is at x=400
+	left = 50%-533
+	top = 0
+	file = "logo.png"	
+  width = 1600
+  height = 667
+}
+
+# TEXT 
++ label {	
+	left = 8
+	top = 100%-81
+	height = 72
+	width = 267
+
+	text = "Minegrub 3.1.0"
+	font = "JetBrains Mono Regular 30"
+	color = "white"
+}
+
+# SHADOW 
++ label {
+	left = 12
+	top = 100%-77
+	height = 72
+	width = 267
+
+	text = "Minegrub 3.1.0"
+	font = "JetBrains Mono Regular 30"
+	color = "#3f3f3f"
+}
+
+# TEXT
++ label {	
+	left = 8
+	top = 100%-41
+	height = 72
+	width = 267
+
+	text = "647 Packages Installed"
+	font = "JetBrains Mono Regular 30"
+	color = "white"
+}
+
+# SHADOW
++ label {
+	left = 12
+	top = 100%-37
+	height = 72
+	width = 267
+
+	text = "647 Packages Installed"
+	font = "JetBrains Mono Regular 30"
+	color = "#3f3f3f"
+}
+
+# TEXT 
++ label {
+	id = "__timeout__"
+	
+	left = 50%
+	top = 100%-41
+	height = 32
+	width = 50%-8
+	
+	text = "Joining world in %d seconds"
+	align = "right"
+	font = "JetBrains Mono Regular 30"
+	color = "white"
+}
+
+# SHADOW 
++ label {
+	id = "__timeout__"
+
+	left = 50%+4
+	top = 100%-37
+	height = 32
+	width = 50%-8
+
+	text = "Joining world in %d seconds"
+	align = "right"
+	font = "JetBrains Mono Regular 30"
+	color = "#3f3f3f"
+}
+
+

@@ -1,0 +1,297 @@
+[
+  {
+    "Name": "antigravity",
+    "Version": "2.19.1-1",
+    "URL": "https://antigravity.google/product/antigravity-2",
+    "Depends": [
+      "alsa-lib",
+      "at-spi2-core",
+      "cairo",
+      "dbus",
+      "expat",
+      "glib2",
+      "glibc",
+      "gtk3",
+      "libcups",
+      "libgcc",
+      "libx11",
+      "libxcb",
+      "libxcomposite",
+      "libxdamage",
+      "libxext",
+      "libxfixes",
+      "libxkbcommon",
+      "libxrandr",
+      "mesa",
+      "nspr",
+      "nss",
+      "pango",
+      "systemd-libs"
+    ],
+    "MakeDepends": null,
+    "PackageBase": "antigravity",
+    "URLPath": "/cgit/aur.git/snapshot/antigravity.tar.gz"
+  },
+  {
+    "Name": "cbonsai",
+    "Version": "1.4.2-1",
+    "URL": "https://gitlab.com/jallbrit/cbonsai",
+    "Depends": [
+      "gcc",
+      "ncurses"
+    ],
+    "MakeDepends": [
+      "scdoc"
+    ],
+    "PackageBase": "cbonsai",
+    "URLPath": "/cgit/aur.git/snapshot/cbonsai.tar.gz"
+  },
+  {
+    "Name": "chatgpt-desktop",
+    "Version": "26.930.21537-1",
+    "URL": "https://chatgpt.com/download",
+    "Depends": [
+      "alsa-lib",
+      "at-spi2-core",
+      "cairo",
+      "dbus",
+      "expat",
+      "gdk-pixbuf2",
+      "glib2",
+      "glibc",
+      "gtk3",
+      "libcups",
+      "libdrm",
+      "libgcc",
+      "libglvnd",
+      "libnotify",
+      "libpulse",
+      "libsecret",
+      "libstdc++",
+      "libusb",
+      "libx11",
+      "libxcb",
+      "libxcomposite",
+      "libxdamage",
+      "libxext",
+      "libxfixes",
+      "libxkbcommon",
+      "libxrandr",
+      "libxss",
+      "mesa",
+      "nspr",
+      "nss",
+      "openssl",
+      "pango",
+      "systemd-libs",
+      "sh",
+      "tpm2-tss",
+      "vulkan-driver",
+      "xdg-utils"
+    ],
+    "MakeDepends": null,
+    "PackageBase": "chatgpt-desktop",
+    "URLPath": "/cgit/aur.git/snapshot/chatgpt-desktop.tar.gz"
+  },
+  {
+    "Name": "discord-canary",
+    "Version": "1.0.2120-1",
+    "URL": "https://discord.com",
+    "Depends": [
+      "libnotify",
+      "libxss",
+      "nspr",
+      "nss",
+      "gtk3"
+    ],
+    "MakeDepends": null,
+    "PackageBase": "discord-canary",
+    "URLPath": "/cgit/aur.git/snapshot/discord-canary.tar.gz"
+  },
+  {
+    "Name": "equicord-installer-bin",
+    "Version": "2.3.0-1",
+    "URL": "https://github.com/Equicord/Equilotl",
+    "Depends": null,
+    "MakeDepends": null,
+    "PackageBase": "equicord-installer-bin",
+    "URLPath": "/cgit/aur.git/snapshot/equicord-installer-bin.tar.gz"
+  },
+  {
+    "Name": "gpa-git",
+    "Version": "0.11.0.r5.g45fc64a-1",
+    "URL": "https://www.gnupg.org/related_software/gpa/",
+    "Depends": [
+      "gpgme",
+      "gtk3"
+    ],
+    "MakeDepends": [
+      "git",
+      "glib2-devel"
+    ],
+    "PackageBase": "gpa-git",
+    "URLPath": "/cgit/aur.git/snapshot/gpa-git.tar.gz"
+  },
+  {
+    "Name": "grok-bot-bin",
+    "Version": "0.68.1-1",
+    "URL": "https://cursor.com",
+    "Depends": [
+      "gtk3",
+      "libnotify",
+      "nss",
+      "libxss",
+      "libxtst",
+      "xdg-utils",
+      "at-spi2-core",
+      "util-linux-libs",
+      "libsecret",
+      "hicolor-icon-theme",
+      "alsa-lib",
+      "libappindicator",
+      "libxkbcommon",
+      "libdrm",
+      "mesa"
+    ],
+    "MakeDepends": [
+      "python"
+    ],
+    "PackageBase": "grok-bot-bin",
+    "URLPath": "/cgit/aur.git/snapshot/grok-bot-bin.tar.gz"
+  },
+  {
+    "Name": "lianli-linux-git",
+    "Version": "1.0.0.r0.g178a494-1",
+    "URL": "https://github.com/sgtaziz/lian-li-linux",
+    "Depends": [
+      "libusb",
+      "ffmpeg",
+      "webkit2gtk-4.1",
+      "gtk3",
+      "glib2",
+      "libsoup3"
+    ],
+    "MakeDepends": [
+      "git",
+      "cargo",
+      "clang",
+      "cmake",
+      "nasm",
+      "npm"
+    ],
+    "PackageBase": "lianli-linux-git",
+    "URLPath": "/cgit/aur.git/snapshot/lianli-linux-git.tar.gz"
+  },
+  {
+    "Name": "neofetch",
+    "Version": "7.1.0-2",
+    "URL": "https://github.com/dylanaraps/neofetch",
+    "Depends": [
+      "bash"
+    ],
+    "MakeDepends": [
+      "git"
+    ],
+    "PackageBase": "neofetch",
+    "URLPath": "/cgit/aur.git/snapshot/neofetch.tar.gz"
+  },
+  {
+    "Name": "pyprland",
+    "Version": "3.4.5-0",
+    "URL": "https://github.com/hyprland-community/pyprland",
+    "Depends": [
+      "python",
+      "python-aiofiles",
+      "python-aiohttp",
+      "python-pillow"
+    ],
+    "MakeDepends": [
+      "git",
+      "python-build",
+      "python-installer",
+      "python-hatchling",
+      "gcc"
+    ],
+    "PackageBase": "pyprland",
+    "URLPath": "/cgit/aur.git/snapshot/pyprland.tar.gz"
+  },
+  {
+    "Name": "snapx-bin",
+    "Version": "0.4.0-2",
+    "URL": "https://github.com/SnapXL/SnapX",
+    "Depends": [
+      "glibc",
+      "gcc-libs",
+      "hicolor-icon-theme"
+    ],
+    "MakeDepends": null,
+    "PackageBase": "snapx-bin",
+    "URLPath": "/cgit/aur.git/snapshot/snapx-bin.tar.gz"
+  },
+  {
+    "Name": "tor-browser-bin",
+    "Version": "15.0.24-1",
+    "URL": "https://www.torproject.org/projects/torbrowser.html",
+    "Depends": [
+      "libxt",
+      "startup-notification",
+      "mime-types",
+      "dbus-glib",
+      "alsa-lib",
+      "desktop-file-utils",
+      "hicolor-icon-theme",
+      "libvpx",
+      "icu",
+      "libevent",
+      "nss",
+      "hunspell",
+      "sqlite"
+    ],
+    "MakeDepends": null,
+    "PackageBase": "tor-browser-bin",
+    "URLPath": "/cgit/aur.git/snapshot/tor-browser-bin.tar.gz"
+  },
+  {
+    "Name": "wl-gammarelay-rs",
+    "Version": "1.0.1-1",
+    "URL": "https://github.com/MaxVerevkin/wl-gammarelay-rs",
+    "Depends": null,
+    "MakeDepends": [
+      "cargo"
+    ],
+    "PackageBase": "wl-gammarelay-rs",
+    "URLPath": "/cgit/aur.git/snapshot/wl-gammarelay-rs.tar.gz"
+  },
+  {
+    "Name": "yay",
+    "Version": "13.0.1-1",
+    "URL": "https://github.com/Jguer/yay",
+    "Depends": [
+      "pacman>6.1",
+      "git"
+    ],
+    "MakeDepends": [
+      "go>=1.24"
+    ],
+    "PackageBase": "yay",
+    "URLPath": "/cgit/aur.git/snapshot/yay.tar.gz"
+  },
+  {
+    "Name": "zen-browser-bin",
+    "Version": "1.23b-1",
+    "URL": "https://github.com/zen-browser/desktop",
+    "Depends": [
+      "gtk3",
+      "libxt",
+      "mime-types",
+      "dbus-glib",
+      "nss",
+      "ttf-font",
+      "systemd",
+      "ffmpeg"
+    ],
+    "MakeDepends": null,
+    "PackageBase": "zen-browser-bin",
+    "URLPath": "/cgit/aur.git/snapshot/zen-browser-bin.tar.gz"
+  }
+]

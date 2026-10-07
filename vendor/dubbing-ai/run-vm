@@ -1,0 +1,62 @@
+#!/usr/bin/env bash
+set -euo pipefail
+vm_dir="$HOME/.local/share/dubbing-ai/vm"
+vm_runtime="${XDG_RUNTIME_DIR:-/run/user/$(id -u)}/dubbing-ai"
+mkdir -p "$vm_runtime"
+if [[ -f "$vm_dir/USE_EXISTING_WINDOWS" ]]; then
+ if ! findmnt -n -o OPTIONS /mnt/windows-c | tr ',' '\n' | grep -qx ro; then
+  echo "Windows source must be mounted read-only before starting this VM." >&2
+  exit 1
+ fi
+ if ! systemctl is-active --quiet dubbing-ai-disk.service; then
+  echo "Read-only Windows backing service is not running." >&2
+  exit 1
+ fi
+ if ! cmp -s "$vm_dir/source-current.json" "$vm_dir/source-overlay.json"; then
+  echo "Windows source changed. Preserve and refresh the VM overlay before starting." >&2
+  exit 1
+ fi
+fi
+if ! pactl list short sinks | awk '{print $2}' | grep -qx dubbing_ai; then
+ pactl load-module module-null-sink sink_name=dubbing_ai sink_properties=device.description=Dubbing_AI_Output rate=48000 channels=2 >/dev/null
+fi
+if ! pactl list short sources | awk '{print $2}' | grep -qx dubbing_ai_mic; then
+ pactl load-module module-remap-source master=dubbing_ai.monitor source_name=dubbing_ai_mic source_properties=device.description=Dubbing_AI_Microphone >/dev/null
+fi
+vm_input="$(pactl get-default-source)"
+if [[ "$vm_input" == dubbing_ai* || "$vm_input" == *.monitor ]]; then
+ vm_input="$(pactl list short sources | awk '$2 !~ /monitor|dubbing_ai/ {print $2; exit}')"
+fi
+swtpm socket --tpm2 --tpmstate dir="$vm_dir/tpm" --ctrl type=unixio,path="$vm_runtime/tpm.sock" --terminate &
+vm_tpm_pid=$!
+trap 'kill "$vm_tpm_pid" 2>/dev/null || true' EXIT
+for ((vm_attempt=0;vm_attempt<100;vm_attempt++)); do
+ [[ -S "$vm_runtime/tpm.sock" ]] && break
+ sleep 0.05
+done
+vm_media=()
+vm_disk="$vm_dir/windows.qcow2"
+if [[ -f "$vm_dir/USE_EXISTING_WINDOWS" ]]; then
+ vm_disk="$vm_dir/windows-existing.qcow2"
+fi
+if [[ -f "$vm_dir/media/ISO_READY" ]]; then
+ vm_media+=(-drive "file=$vm_dir/media/windows11.iso,media=cdrom,if=ide,index=1,readonly=on")
+fi
+if [[ -f "$vm_dir/seed.iso" ]]; then
+ vm_media+=(-drive "file=$vm_dir/seed.iso,media=cdrom,if=ide,index=2,readonly=on")
+fi
+qemu-system-x86_64 \
+ -name 'Dubbing AI Windows' -machine q35,accel=kvm -cpu Skylake-Client,-hle,-rtm,hv-crash=on,hv-relaxed=on,hv-vapic=on,hv-spinlocks=0x1fff,hv-time=on,hv-vpindex=on,hv-synic=on,hv-stimer=on,hv-frequencies=on -smp 6 -m 6G \
+ -drive file=/usr/share/edk2/x64/OVMF_CODE.secboot.4m.fd,if=pflash,format=raw,readonly=on \
+ -drive "file=$vm_dir/OVMF_VARS.fd,if=pflash,format=raw" \
+ -drive "file=$vm_disk,format=qcow2,if=ide,index=0,discard=unmap" \
+ "${vm_media[@]}" -boot menu=on,order=dc \
+ -chardev "socket,id=chrtpm,path=$vm_runtime/tpm.sock" -tpmdev emulator,id=tpm0,chardev=chrtpm -device tpm-tis,tpmdev=tpm0 \
+ -netdev user,id=net0 -device e1000e,netdev=net0 \
+ -device qxl-vga -device qemu-xhci -device usb-tablet \
+ -device intel-hda -device hda-duplex,audiodev=dubbing \
+ -audiodev "pa,id=dubbing,in.name=$vm_input,out.name=dubbing_ai,in.latency=10000,out.latency=10000" \
+ -device virtio-serial-pci -chardev spicevmc,id=vdagent,name=vdagent -device virtserialport,chardev=vdagent,name=com.redhat.spice.0 \
+ -chardev "socket,path=$vm_runtime/guest-agent.sock,server=on,wait=off,id=guestagent" -device virtserialport,chardev=guestagent,name=org.qemu.guest_agent.0 \
+ -spice addr=127.0.0.1,port=5932,disable-ticketing=on -vnc 127.0.0.1:31 \
+ -qmp "unix:$vm_runtime/qmp.sock,server=on,wait=off" -display none -action panic=pause

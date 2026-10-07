@@ -1,0 +1,48 @@
+UseCustomScreenshotsPath: true
+SaveImageSubFolderPattern: '%y-%mo'
+SaveImageSubFolderPatternWindow: ''
+QuickTaskPresets:
+- Name: Save, Upload, Copy URL
+  AfterCaptureTasks: SaveImageToFile, UploadImageToHost
+  AfterUploadTasks: CopyURLToClipboard
+- Name: Save, Copy image
+  AfterCaptureTasks: CopyImageToClipboard, SaveImageToFile
+  AfterUploadTasks: None
+- Name: Save, Copy image file
+  AfterCaptureTasks: SaveImageToFile, CopyFileToClipboard
+  AfterUploadTasks: None
+- Name: Annotate, Save, Upload, Copy URL
+  AfterCaptureTasks: AnnotateImage, SaveImageToFile, UploadImageToHost
+  AfterUploadTasks: CopyURLToClipboard
+- Name: null
+  AfterCaptureTasks: None
+  AfterUploadTasks: None
+- Name: Upload, Copy URL
+  AfterCaptureTasks: UploadImageToHost
+  AfterUploadTasks: CopyURLToClipboard
+- Name: Save
+  AfterCaptureTasks: SaveImageToFile
+  AfterUploadTasks: None
+- Name: Copy image
+  AfterCaptureTasks: CopyImageToClipboard
+  AfterUploadTasks: None
+- Name: Annotate
+  AfterCaptureTasks: AnnotateImage
+  AfterUploadTasks: None
+HistorySaveTasks: true
+RecentTasksMaxCount: 10
+RecentTasksShowInMainWindow: true
+RecentTasksShowInTrayMenu: true
+ShowMostRecentTaskFirst: false
+TrayAutoExpandCaptureMenu: false
+ShowTray: true
+CustomScreenshotsPath: @HOME@/Pictures/sss
+DefaultTaskSettings:
+  AfterCaptureJob: CopyImageToClipboard, SaveImageToFile
+  AfterUploadJob: CopyURLToClipboard
+  ImageSettings:
+    ImageFormat: PNG
+    ImageJPEGQuality: 100
+  UploadSettings:
+    NameFormatPattern: '%d-%h-%mi-%s-%ms'
+    NameFormatPatternActiveWindow: '%d-%h-%mi-%s-%ms'

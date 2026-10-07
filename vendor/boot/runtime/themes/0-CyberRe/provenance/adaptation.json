@@ -1,0 +1,58 @@
+{
+  "targetResolution": "2560x1440",
+  "sourceDesignResolution": [
+    1920,
+    1080
+  ],
+  "scaleX": 1.3333333333333333,
+  "scaleY": 1.3333333333333333,
+  "method": "Source theme background is 1920x1080; percentage anchors are retained and literal pixel geometry is scaled.",
+  "scaledProperties": [
+    {
+      "key": "icon_width",
+      "from": "16",
+      "to": "21"
+    },
+    {
+      "key": "icon_height",
+      "from": "16",
+      "to": "21"
+    },
+    {
+      "key": "item_height",
+      "from": "33",
+      "to": "44"
+    },
+    {
+      "key": "item_padding",
+      "from": "20",
+      "to": "27"
+    },
+    {
+      "key": "item_icon_space",
+      "from": "5",
+      "to": "7"
+    },
+    {
+      "key": "item_spacing",
+      "from": "5",
+      "to": "7"
+    },
+    {
+      "key": "height",
+      "from": "31",
+      "to": "41"
+    },
+    {
+      "key": "progress_bar.top",
+      "from": "99%",
+      "to": "97%",
+      "reason": "Keep the scaled bar within the 2560x1440 viewport."
+    }
+  ],
+  "imageComponentDimensionsAdded": [],
+  "adaptedBackground": null,
+  "sourceThemePreserved": "provenance/upstream-theme.txt",
+  "fontsUnchanged": true,
+  "fontSubstitutionOwner": "runtime package; JetBrains Mono PF2 names to be applied there"
+}

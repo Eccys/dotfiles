@@ -1,0 +1,310 @@
+{
+  "templates": [
+    {
+      "id": "windows-88006-dashboard",
+      "name": "Windows 88006 \u2014 CPU / RAM / GPU",
+      "base_width": 1920,
+      "base_height": 480,
+      "background": {
+        "type": "image",
+        "path": "@HOME@/.config/lianli/windows-88006-background.png"
+      },
+      "widgets": [
+        {
+          "id": "CPU-header",
+          "kind": {
+            "type": "label",
+            "text": "CPU",
+            "font": {
+              "path": null
+            },
+            "font_size": 78.0,
+            "color": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "align": "center",
+            "letter_spacing": 0.0
+          },
+          "x": 320.0,
+          "y": 65.0,
+          "width": 600.0,
+          "height": 105.0,
+          "rotation": 0.0,
+          "visible": true,
+          "update_interval_ms": null,
+          "fps": null
+        },
+        {
+          "id": "CPU-main",
+          "kind": {
+            "type": "value_text",
+            "source": {
+              "type": "hwmon",
+              "name": "coretemp",
+              "label": "temp1",
+              "device_path": "coretemp.0"
+            },
+            "format": "{:.0}",
+            "unit": "\u00b0C",
+            "font": {
+              "path": null
+            },
+            "font_size": 158.0,
+            "color": [
+              0,
+              0,
+              0,
+              255
+            ],
+            "align": "center",
+            "value_min": 0.0,
+            "value_max": 100.0,
+            "ranges": [],
+            "letter_spacing": 0.0
+          },
+          "x": 320.0,
+          "y": 236.0,
+          "width": 600.0,
+          "height": 200.0,
+          "rotation": 0.0,
+          "visible": true,
+          "update_interval_ms": 1000,
+          "fps": null
+        },
+        {
+          "id": "CPU-load",
+          "kind": {
+            "type": "value_text",
+            "source": {
+              "type": "cpu_usage"
+            },
+            "format": "{:.0}",
+            "unit": "% LOAD",
+            "font": {
+              "path": null
+            },
+            "font_size": 42.0,
+            "color": [
+              0,
+              0,
+              0,
+              255
+            ],
+            "align": "center",
+            "value_min": 0.0,
+            "value_max": 100.0,
+            "ranges": [],
+            "letter_spacing": 0.0
+          },
+          "x": 320.0,
+          "y": 385.0,
+          "width": 600.0,
+          "height": 65.0,
+          "rotation": 0.0,
+          "visible": true,
+          "update_interval_ms": 1000,
+          "fps": null
+        },
+        {
+          "id": "RAM-header",
+          "kind": {
+            "type": "label",
+            "text": "RAM",
+            "font": {
+              "path": null
+            },
+            "font_size": 78.0,
+            "color": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "align": "center",
+            "letter_spacing": 0.0
+          },
+          "x": 960.0,
+          "y": 65.0,
+          "width": 600.0,
+          "height": 105.0,
+          "rotation": 0.0,
+          "visible": true,
+          "update_interval_ms": null,
+          "fps": null
+        },
+        {
+          "id": "RAM-main",
+          "kind": {
+            "type": "value_text",
+            "source": {
+              "type": "mem_usage"
+            },
+            "format": "{:.0}",
+            "unit": "%",
+            "font": {
+              "path": null
+            },
+            "font_size": 158.0,
+            "color": [
+              0,
+              0,
+              0,
+              255
+            ],
+            "align": "center",
+            "value_min": 0.0,
+            "value_max": 100.0,
+            "ranges": [],
+            "letter_spacing": 0.0
+          },
+          "x": 960.0,
+          "y": 236.0,
+          "width": 600.0,
+          "height": 200.0,
+          "rotation": 0.0,
+          "visible": true,
+          "update_interval_ms": 1000,
+          "fps": null
+        },
+        {
+          "id": "RAM-used",
+          "kind": {
+            "type": "value_text",
+            "source": {
+              "type": "mem_used"
+            },
+            "format": "{:.1}",
+            "unit": " GB IN USE",
+            "font": {
+              "path": null
+            },
+            "font_size": 42.0,
+            "color": [
+              0,
+              0,
+              0,
+              255
+            ],
+            "align": "center",
+            "value_min": 0.0,
+            "value_max": 100.0,
+            "ranges": [],
+            "letter_spacing": 0.0
+          },
+          "x": 960.0,
+          "y": 385.0,
+          "width": 600.0,
+          "height": 65.0,
+          "rotation": 0.0,
+          "visible": true,
+          "update_interval_ms": 1000,
+          "fps": null
+        },
+        {
+          "id": "GPU-header",
+          "kind": {
+            "type": "label",
+            "text": "GPU",
+            "font": {
+              "path": null
+            },
+            "font_size": 78.0,
+            "color": [
+              255,
+              255,
+              255,
+              255
+            ],
+            "align": "center",
+            "letter_spacing": 0.0
+          },
+          "x": 1600.0,
+          "y": 65.0,
+          "width": 600.0,
+          "height": 105.0,
+          "rotation": 0.0,
+          "visible": true,
+          "update_interval_ms": null,
+          "fps": null
+        },
+        {
+          "id": "GPU-main",
+          "kind": {
+            "type": "value_text",
+            "source": {
+              "type": "nvidia_gpu",
+              "gpu_index": 0,
+              "metric": "temp"
+            },
+            "format": "{:.0}",
+            "unit": "\u00b0C",
+            "font": {
+              "path": null
+            },
+            "font_size": 158.0,
+            "color": [
+              0,
+              0,
+              0,
+              255
+            ],
+            "align": "center",
+            "value_min": 0.0,
+            "value_max": 100.0,
+            "ranges": [],
+            "letter_spacing": 0.0
+          },
+          "x": 1600.0,
+          "y": 236.0,
+          "width": 600.0,
+          "height": 200.0,
+          "rotation": 0.0,
+          "visible": true,
+          "update_interval_ms": 1000,
+          "fps": null
+        },
+        {
+          "id": "GPU-load",
+          "kind": {
+            "type": "value_text",
+            "source": {
+              "type": "nvidia_gpu",
+              "gpu_index": 0,
+              "metric": "usage"
+            },
+            "format": "{:.0}",
+            "unit": "% LOAD",
+            "font": {
+              "path": null
+            },
+            "font_size": 42.0,
+            "color": [
+              0,
+              0,
+              0,
+              255
+            ],
+            "align": "center",
+            "value_min": 0.0,
+            "value_max": 100.0,
+            "ranges": [],
+            "letter_spacing": 0.0
+          },
+          "x": 1600.0,
+          "y": 385.0,
+          "width": 600.0,
+          "height": 65.0,
+          "rotation": 0.0,
+          "visible": true,
+          "update_interval_ms": 1000,
+          "fps": null
+        }
+      ],
+      "rotated": false,
+      "target_device": "universal-screen-88"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+Hotkeys:
+- HotkeyInfo:
+    Hotkey: S, Shift, Control
+    Win: false
+  TaskSettings:
+    Job: RectangleRegion
+    Description: ''
+- HotkeyInfo:
+    Hotkey: PrintScreen
+    Win: false
+  TaskSettings:
+    Job: PrintScreen
+    Description: ''
+- HotkeyInfo:
+    Hotkey: PrintScreen, Alt
+    Win: false
+  TaskSettings:
+    Job: ActiveWindow
+    Description: ''
+- HotkeyInfo:
+    Hotkey: Z, Shift, Control
+    Win: false
+  TaskSettings:
+    Job: ScreenRecorder
+    Description: ''
+- HotkeyInfo:
+    Hotkey: PrintScreen, Shift, Control
+    Win: false
+  TaskSettings:
+    Job: ScreenRecorderGIF
+    Description: ''
+- HotkeyInfo:
+    Hotkey: Q, Shift, Control
+    Win: false
+  TaskSettings:
+    Job: OCR
+    Description: ''
+- HotkeyInfo:
+    Hotkey: Q, Control, Alt
+    Win: false
+  TaskSettings:
+    Job: QRCodeDecodeFromScreen
+    Description: ''

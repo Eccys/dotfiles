@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Screenshot overlay
+Exec=@HOME@/.local/bin/snapx-workflow region
+Icon=SnapX
+Categories=Graphics;
+NoDisplay=true

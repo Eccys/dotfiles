@@ -1,0 +1,193 @@
+{
+  "targetResolution": "2560x1440",
+  "sourceDesignResolution": [
+    1920,
+    1080
+  ],
+  "scaleX": 1.3333333333333333,
+  "scaleY": 1.3333333333333333,
+  "method": "Upstream theme config is paired with the 1920x1080 background; target package uses the source 2560x1440 variant and scaled literal geometry.",
+  "scaledProperties": [
+    {
+      "key": "terminal-border",
+      "from": "\"20\"",
+      "to": "\"27\""
+    },
+    {
+      "key": "terminal-top",
+      "from": "\"10%+23\"",
+      "to": "\"10%+31\""
+    },
+    {
+      "key": "left",
+      "from": "50%-410",
+      "to": "50%-547"
+    },
+    {
+      "key": "top",
+      "from": "97",
+      "to": "129"
+    },
+    {
+      "key": "width",
+      "from": "809",
+      "to": "1079"
+    },
+    {
+      "key": "height",
+      "from": "100%-289",
+      "to": "100%-385"
+    },
+    {
+      "key": "item_padding",
+      "from": "16",
+      "to": "21"
+    },
+    {
+      "key": "item_height",
+      "from": "96",
+      "to": "128"
+    },
+    {
+      "key": "item_spacing",
+      "from": "12",
+      "to": "16"
+    },
+    {
+      "key": "item_icon_space",
+      "from": "2000",
+      "to": "2667"
+    },
+    {
+      "key": "left",
+      "from": "50%-410",
+      "to": "50%-547"
+    },
+    {
+      "key": "top",
+      "from": "97",
+      "to": "129"
+    },
+    {
+      "key": "width",
+      "from": "809",
+      "to": "1079"
+    },
+    {
+      "key": "height",
+      "from": "100%-289",
+      "to": "100%-385"
+    },
+    {
+      "key": "item_padding",
+      "from": "16",
+      "to": "21"
+    },
+    {
+      "key": "item_height",
+      "from": "96",
+      "to": "128"
+    },
+    {
+      "key": "item_spacing",
+      "from": "12",
+      "to": "16"
+    },
+    {
+      "key": "icon_width",
+      "from": "801",
+      "to": "1068"
+    },
+    {
+      "key": "icon_height",
+      "from": "96",
+      "to": "128"
+    },
+    {
+      "key": "item_icon_space",
+      "from": "2000",
+      "to": "2667"
+    },
+    {
+      "key": "left",
+      "from": "50%-410",
+      "to": "50%-547"
+    },
+    {
+      "key": "top",
+      "from": "97",
+      "to": "129"
+    },
+    {
+      "key": "width",
+      "from": "809",
+      "to": "1079"
+    },
+    {
+      "key": "height",
+      "from": "100%-289",
+      "to": "100%-385"
+    },
+    {
+      "key": "item_padding",
+      "from": "16",
+      "to": "21"
+    },
+    {
+      "key": "item_height",
+      "from": "24",
+      "to": "32"
+    },
+    {
+      "key": "item_spacing",
+      "from": "84",
+      "to": "112"
+    },
+    {
+      "key": "item_icon_space",
+      "from": "5",
+      "to": "7"
+    },
+    {
+      "key": "scrollbar_width",
+      "from": "12",
+      "to": "16"
+    },
+    {
+      "key": "top",
+      "from": "60",
+      "to": "80"
+    },
+    {
+      "key": "height",
+      "from": "30",
+      "to": "40"
+    },
+    {
+      "key": "left",
+      "from": "3",
+      "to": "4"
+    },
+    {
+      "key": "top",
+      "from": "63",
+      "to": "84"
+    },
+    {
+      "key": "height",
+      "from": "30",
+      "to": "40"
+    }
+  ],
+  "imageComponentDimensionsAdded": [],
+  "adaptedBackground": {
+    "destination": "background.png",
+    "sourcePath": "assets/background-scaled/background-2560x1440.png",
+    "sha256": "0ff77dace278f983fe1057d9e993a00994054a66303f092d9210f260ddc8dd23",
+    "bytes": 22923,
+    "resolution": "2560x1440"
+  },
+  "sourceThemePreserved": "provenance/upstream-theme.txt",
+  "fontsUnchanged": true,
+  "fontSubstitutionOwner": "runtime package; JetBrains Mono PF2 names to be applied there"
+}

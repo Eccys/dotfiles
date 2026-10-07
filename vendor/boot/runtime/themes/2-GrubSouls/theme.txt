@@ -1,0 +1,153 @@
+# Local 2560x1440 adaptation of the pinned upstream theme; see provenance/adaptation.json.
+# Global
+desktop-image: "background.png"
+title-text: ""
+
+# Terminal Options
+
+terminal-box: "inbox_*.png"
+terminal-font: "JetBrains Mono Regular 18"
+terminal-left: "18%+5"
+terminal-top: "21%+5"
+terminal-width: "63%+15"
+terminal-height: "63%+11"
+terminal-border : "27"
+
+# Boot Options Text
++ boot_menu {
+    left = 39%+8
+    top = 60%
+
+    # Change width depending on the biggest entry
+    width = 480
+
+    # Formula: (N-1)*item_spacing + N*item_height + 2*item_padding = total_height 
+    # With N being the number of entries
+    # For each entry you have it will occupy item_spacing + item_height
+    # In this case 74
+
+    height = 405
+
+    
+    item_font = "JetBrains Mono Regular 32"
+    item_color = "#ffffff"
+    selected_item_color = "#dec490"
+
+    item_height = 61
+    item_padding = 24
+    item_spacing = 37
+ 
+    icon_width = 69
+    icon_height = 69
+    item_icon_space = 11
+    
+
+    scrollbar = false
+}
+
+# Shadow 
++ boot_menu {
+    left = 39%+9
+    top = 60%+3
+
+    # Change width depending on the biggest entry
+    width = 480
+
+    # Formula: (N-1)*item_spacing + N*item_height + 2*item_padding = total_height
+    # With N being the number of entries
+    # For each entry you have it will occupy item_spacing + item_height
+    # In this case 74
+
+    height = 405
+
+
+    item_font = "JetBrains Mono Regular 32"
+    item_color = "#121212"
+    selected_item_color = "#25130e"
+
+    item_height = 61
+    item_padding = 24
+    item_spacing = 37
+
+    icon_width = 69
+    icon_height = 69
+    item_icon_space = 11
+
+    selected_item_pixmap_style = "select_*.png"
+
+    scrollbar = false
+}
+
+
+
+# Logo Image
++ image {
+    left = 4%+17
+    top = 36%+12
+    file = "assets/GRUB_SOULS_LOGO.png"
+  width = 2313
+  height = 251
+}
+
+# Text
++ label {
+    left = 13
+    top = 93%+4
+    text = "GrubSouls 3.1.2"
+    font = "JetBrains Mono Regular 32"
+    color = "#ffffff"
+}
+
+# Shadow
++ label {
+    left = 15
+    top = 93%+7
+    text = "GrubSouls 3.1.2"
+    font = "JetBrains Mono Regular 32"
+    color = "#2f2f2f"
+}
+
+# Text
++ label {
+    left = 13
+    top = 96%+4
+   text = "837 Bosses Slain"
+    font = "JetBrains Mono Regular 32"
+    color = "#ffffff"
+}
+
+# Shadow
++ label {
+    left = 15
+    top = 96%+7
+   text = "837 Bosses Slain"
+    font = "JetBrains Mono Regular 32"
+    color = "#2f2f2f"
+}
+
+# Imminent Despair Countdown Text
++ label {
+    id = "__timeout__"
+ 
+    align = "right"
+    left = 50%
+    top = 96%+1
+    width = 50%-13
+    text = "Imminent despair in %d seconds"
+    font = "JetBrains Mono Regular 32"
+    color = "#ffffff"
+}
+
+
+# Imminent Despair Countdown Shadow
++ label {
+    id = "__timeout__"
+ 
+    align = "right"
+    left = 50%
+    top = 96%+4
+    width = 50%-12
+    text = "Imminent despair in %d seconds"
+    font = "JetBrains Mono Regular 32"
+    color = "#2f2f2f"
+}

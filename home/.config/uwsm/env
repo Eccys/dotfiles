@@ -1,0 +1,5 @@
+
+# Cursor size shared by X11 and native apps
+export XCURSOR_THEME=Adwaita
+export XCURSOR_SIZE=24
+export HYPRCURSOR_SIZE=24

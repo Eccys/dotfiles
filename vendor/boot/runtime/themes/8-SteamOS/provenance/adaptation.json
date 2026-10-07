@@ -1,0 +1,132 @@
+{
+  "targetResolution": "2560x1440",
+  "sourceDesignResolution": [
+    1600,
+    1200
+  ],
+  "scaleX": 1.6,
+  "scaleY": 1.2,
+  "method": "Upstream theme documents a 1600x1200 design. Horizontal and vertical pixel geometry are scaled independently for 2560x1440.",
+  "scaledProperties": [
+    {
+      "key": "left",
+      "from": "50%-417",
+      "to": "50%-667"
+    },
+    {
+      "key": "width",
+      "from": "834",
+      "to": "1334"
+    },
+    {
+      "key": "height",
+      "from": "50%+34",
+      "to": "50%+41"
+    },
+    {
+      "key": "item_height",
+      "from": "60",
+      "to": "72"
+    },
+    {
+      "key": "item_padding",
+      "from": "25",
+      "to": "35"
+    },
+    {
+      "key": "item_spacing",
+      "from": "10",
+      "to": "12"
+    },
+    {
+      "key": "icon_width",
+      "from": "48",
+      "to": "77"
+    },
+    {
+      "key": "icon_height",
+      "from": "48",
+      "to": "58"
+    },
+    {
+      "key": "item_icon_space",
+      "from": "20",
+      "to": "32"
+    },
+    {
+      "key": "scrollbar_width",
+      "from": "17",
+      "to": "27"
+    },
+    {
+      "key": "left",
+      "from": "5%+10",
+      "to": "5%+16"
+    },
+    {
+      "key": "width",
+      "from": "254",
+      "to": "406"
+    },
+    {
+      "key": "height",
+      "from": "43",
+      "to": "52"
+    },
+    {
+      "key": "left",
+      "from": "50%-132",
+      "to": "50%-211"
+    },
+    {
+      "key": "width",
+      "from": "264",
+      "to": "422"
+    },
+    {
+      "key": "height",
+      "from": "69",
+      "to": "83"
+    },
+    {
+      "key": "left",
+      "from": "100%-248",
+      "to": "100%-397"
+    },
+    {
+      "key": "width",
+      "from": "188",
+      "to": "301"
+    },
+    {
+      "key": "height",
+      "from": "69",
+      "to": "83"
+    },
+    {
+      "key": "left",
+      "from": "50%-389",
+      "to": "50%-622"
+    },
+    {
+      "key": "width",
+      "from": "778",
+      "to": "1245"
+    },
+    {
+      "key": "top",
+      "from": "84%+7",
+      "to": "84%+8"
+    },
+    {
+      "key": "height",
+      "from": "31",
+      "to": "37"
+    }
+  ],
+  "imageComponentDimensionsAdded": [],
+  "adaptedBackground": null,
+  "sourceThemePreserved": "provenance/upstream-theme.txt",
+  "fontsUnchanged": true,
+  "fontSubstitutionOwner": "runtime package; JetBrains Mono PF2 names to be applied there"
+}

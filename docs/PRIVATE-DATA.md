@@ -1,0 +1,16 @@
+# Companion private backup
+
+Keep this material outside Git, on encrypted storage, and restore it only as the target user with its original permissions. Do not publish an archive or credentials to the repository.
+
+- Zen: the complete `~/.config/zen` profile, including bookmarks, extension preferences/userscripts, history, cookies and login databases. Close Zen while backing it up. The public browser stage restores selected UI preferences, themes and addons only. IDM's extension can be installed but its Windows native IDM helper has no native Arch counterpart.
+- GnuPG: `~/.gnupg` (directory 0700, private files 0600), plus `~/.config/kleopatrarc` if wanted. GPA is included; Kleopatra-only UI preferences do not map to GPA.
+- SnapX: `~/.local/share/SnapX`, `~/Pictures/sss`, `~/.local/share/snapx-private`, any uploader accounts and the Windows source configuration kept in `~/.local/state/snapx-migration`. Public YAML contains only workflow settings. Retain master-key and encrypted uploader configuration together.
+- Password stores: `~/.local/share/keyrings`, account profiles, VPN credentials, SSH keys and application session state. These can be host-bound; sign in again where necessary.
+- Credential hotkeys: `~/.local/share/credential-hotkeys` contains host-bound systemd encrypted credentials. On a new installation run `credential-hotkeys-setup` to re-encrypt values locally; do not rely on copied ciphertext alone. The root macro helper is installed by the system stage. Never commit `/etc/keyd/credential-macros`.
+- Weather: restore the private OpenWeather key using the existing weather helper configuration. The key returned HTTP 401 on the captured system; deployment cannot validate a bad key.
+- Local media: `~/Pictures/Wallpapers` (148 captured filenames are inventoried), avatar pictures, documents/music/videos, Steam libraries and game saves. One public default wallpaper is bundled, and the wallpapers stage downloads 146 exact upstream images with checksum validation; any additional cached/custom images require the private library. The fantasy landscape feed and picker are included and download new images on demand.
+- Codex conversations, project working directories, local agent state and imported Windows chats stay private; copy their existing storage separately. Account tools and package installation do not restore conversations.
+- OBS scene collections, streaming services/keys, VPN connections and Discord/other app accounts require a private backup. Public OBS profile parameters and Equicord settings/custom plugin source are included.
+- Dubbing AI: the Windows VM directory `~/.local/share/dubbing-ai/vm`, especially QCOW2 disks, OVMF vars, TPM state, copied boot sectors and source fingerprint. Back up with the VM stopped. It relies on an installed/licensed Windows source or an independent VM disk, not a Linux package for the Windows app. See SYSTEM.md.
+
+A full system backup on encrypted storage is the most faithful companion to this configuration restore. Snapper snapshots on the same drive are recovery points, not an independent backup; copy backups to another device. Preserve owners/permissions and sparse VM disk files, and exclude runtime sockets/locks. Restore account profiles before applying public settings if you want to keep existing sessions; the installer backs up files it modifies.

@@ -1,0 +1,96 @@
+{
+  "id": 0,
+  "name": "CyberRe",
+  "packageFolder": "0-CyberRe",
+  "entrypoint": "0-CyberRe/theme.txt",
+  "catalogLinkFromGorgeousGRUB": "https://www.pling.com/p/1420727/",
+  "sourceRepository": "https://ChrisTitusTech/bootloader-themes",
+  "sourceBranch": "main",
+  "sourceCommit": "e3d1b5a3fce186000b628aaa12062cb31701842a",
+  "sourceThemePath": "themes/CyberRe/theme.txt",
+  "license": "MIT",
+  "licenseStatus": "MIT in source mirror; original Pling page currently serves bot interstitial",
+  "notes": "Theme file retains copyright notice for L. Henrique Lopes (2020). This is the Chris Titus Tech repository's published CyberRe theme-data mirror; exact current Pling archive was not verified.",
+  "upstreamInstallerExecuted": false,
+  "sourceAssets": [
+    {
+      "path": "background.png",
+      "sourcePath": "themes/CyberRe/background.png",
+      "kind": "asset",
+      "sha256": "7f687ec59ac0af95c280d2368c7b84974370e908f3b311e859f81ee151016f90",
+      "bytes": 1125928
+    },
+    {
+      "path": "boot_menu2_c.png",
+      "sourcePath": "themes/CyberRe/boot_menu2_c.png",
+      "kind": "asset",
+      "sha256": "4a4372e352977211a9727edd913d43a64c7464dd4442c333a6d3d92931a82ba2",
+      "bytes": 1740
+    },
+    {
+      "path": "dejavu_14.pf2",
+      "sourcePath": "themes/CyberRe/dejavu_14.pf2",
+      "kind": "asset",
+      "sha256": "d5fb0c9e1ba443fb7909ae8872ecd8f273352dcce66b6812b4d0552ba7e29cae",
+      "bytes": 176923
+    },
+    {
+      "path": "droidlogo_bold_17.pf2",
+      "sourcePath": "themes/CyberRe/droidlogo_bold_17.pf2",
+      "kind": "asset",
+      "sha256": "bd2f07eaa5e14cc25fd6fd90793bcd095e2355126cce9618d42cde493ac08256",
+      "bytes": 20041
+    },
+    {
+      "path": "droidlogo_bold_20.pf2",
+      "sourcePath": "themes/CyberRe/droidlogo_bold_20.pf2",
+      "kind": "asset",
+      "sha256": "922b532ae8ed7090d78b13ddf512884e03c27c447d87640be9a930c4d1cc36e7",
+      "bytes": 23339
+    },
+    {
+      "path": "droidlogo_bold_26.pf2",
+      "sourcePath": "themes/CyberRe/droidlogo_bold_26.pf2",
+      "kind": "asset",
+      "sha256": "a123a241756c8ac916d23ee2cab80ab518b6fc55d6823429493afe2a8d9f955d",
+      "bytes": 31498
+    },
+    {
+      "path": "droidlogo_regular_12.pf2",
+      "sourcePath": "themes/CyberRe/droidlogo_regular_12.pf2",
+      "kind": "asset",
+      "sha256": "04d1dd53fc0a882d0a566bcee35009915811c33d26888f28dfeba6a2f8b5c461",
+      "bytes": 15244
+    },
+    {
+      "path": "droidlogo_regular_17.pf2",
+      "sourcePath": "themes/CyberRe/droidlogo_regular_17.pf2",
+      "kind": "asset",
+      "sha256": "bdd3067980a883059e9f36d0a5a38dbf3917b8511d53cbf3f209d77fd8de9b95",
+      "bytes": 19148
+    },
+    {
+      "path": "highlight_c.png",
+      "sourcePath": "themes/CyberRe/highlight_c.png",
+      "kind": "asset",
+      "sha256": "2367cd2d5855ee8b40c5afc19eb6422959ae5c93190f5bc6e9a410584b25d146",
+      "bytes": 2043
+    },
+    {
+      "path": "highlight_w.png",
+      "sourcePath": "themes/CyberRe/highlight_w.png",
+      "kind": "asset",
+      "sha256": "e8ad538a069b2a82f66cf1700fcb0feb089453e0735514e59a2ac7e35a7d1a80",
+      "bytes": 3663
+    },
+    {
+      "path": "progress_highlight_c.png",
+      "sourcePath": "themes/CyberRe/progress_highlight_c.png",
+      "kind": "asset",
+      "sha256": "7a7fad54d3dea0fc03175c9ce13734b28cf912a6d9a3750fcf62d970a032f1ac",
+      "bytes": 1809
+    }
+  ],
+  "sourceReadmeAndLicense": "provenance/README.md and provenance/LICENSE when present; original theme file is provenance/upstream-theme.txt",
+  "retrievalFailures": []
+}

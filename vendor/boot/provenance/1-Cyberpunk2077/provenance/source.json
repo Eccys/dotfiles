@@ -1,0 +1,873 @@
+{
+  "id": 1,
+  "name": "Cyberpunk 2077",
+  "packageFolder": "1-Cyberpunk2077",
+  "entrypoint": "1-Cyberpunk2077/theme.txt",
+  "catalogLinkFromGorgeousGRUB": "https://www.pling.com/p/1515662/",
+  "sourceRepository": "https://NayamAmarshe/Cyberpunk-GRUB-Theme",
+  "sourceBranch": "main",
+  "sourceCommit": "7e939084236e7a1dc65fea94898d28be86f578f1",
+  "sourceThemePath": "Cyberpunk/theme.txt",
+  "license": "CC0-1.0",
+  "licenseStatus": "CC0-1.0 in author GitHub repository",
+  "notes": "Author README links to the same Pling page; this pinned author repository is used as the source mirror. Game-derived artwork is embedded.",
+  "upstreamInstallerExecuted": false,
+  "sourceAssets": [
+    {
+      "path": "Blender_Pro_Book_12.pf2",
+      "sourcePath": "Cyberpunk/Blender_Pro_Book_12.pf2",
+      "kind": "asset",
+      "sha256": "e78a54ac2d909501030112b22a55c4e7f8e9b3596f33b65812a76a0048970827",
+      "bytes": 2327
+    },
+    {
+      "path": "Blender_Pro_Book_14.pf2",
+      "sourcePath": "Cyberpunk/Blender_Pro_Book_14.pf2",
+      "kind": "asset",
+      "sha256": "45bac417aa6ee276a6bdf23acd37232543c721c9c5ca9854b9220b19b3c43b6f",
+      "bytes": 2435
+    },
+    {
+      "path": "Blender_Pro_Book_16.pf2",
+      "sourcePath": "Cyberpunk/Blender_Pro_Book_16.pf2",
+      "kind": "asset",
+      "sha256": "6f4707bfcdfed4ce1cde6820d4a37cc7335668c688be4020a51d518f52739ca3",
+      "bytes": 2558
+    },
+    {
+      "path": "Blender_Pro_Book_24.pf2",
+      "sourcePath": "Cyberpunk/Blender_Pro_Book_24.pf2",
+      "kind": "asset",
+      "sha256": "174a36512da5b509c29146742089647a760f1cb5287a566ba80b1c8c9cd1f9b9",
+      "bytes": 3274
+    },
+    {
+      "path": "Blender_Pro_Book_32.pf2",
+      "sourcePath": "Cyberpunk/Blender_Pro_Book_32.pf2",
+      "kind": "asset",
+      "sha256": "cc7bf06eac62ad8f2abeca9dc6d763b4066e1eca98aa95564b12e27c2a59a1d0",
+      "bytes": 4252
+    },
+    {
+      "path": "Blender_Pro_Book_48.pf2",
+      "sourcePath": "Cyberpunk/Blender_Pro_Book_48.pf2",
+      "kind": "asset",
+      "sha256": "6136b40d118cb3b500d8fffc2b2f5c47674f3aea5b7c8a4406bade3c7d2d0ea3",
+      "bytes": 6984
+    },
+    {
+      "path": "background.png",
+      "sourcePath": "Cyberpunk/background.png",
+      "kind": "asset",
+      "sha256": "bb446a4bfa83da4e99039d244cc1adc198e4feeddfcb65673052deeede311a74",
+      "bytes": 2572728
+    },
+    {
+      "path": "icons/Manjaro.i686.png",
+      "sourcePath": "Cyberpunk/icons/Manjaro.i686.png",
+      "kind": "asset",
+      "sha256": "55352f94f6f6dd8278d50f4006d55f1ebd7c859192e3ce7ca9cb109d141c599a",
+      "bytes": 1943
+    },
+    {
+      "path": "icons/Manjaro.x86_64.png",
+      "sourcePath": "Cyberpunk/icons/Manjaro.x86_64.png",
+      "kind": "asset",
+      "sha256": "55352f94f6f6dd8278d50f4006d55f1ebd7c859192e3ce7ca9cb109d141c599a",
+      "bytes": 1943
+    },
+    {
+      "path": "icons/android-x86.png",
+      "sourcePath": "Cyberpunk/icons/android-x86.png",
+      "kind": "asset",
+      "sha256": "6837227132e2f8464846f01896bba4fc50bda9fa6be6e30fdbab6a0743336355",
+      "bytes": 6975
+    },
+    {
+      "path": "icons/android.png",
+      "sourcePath": "Cyberpunk/icons/android.png",
+      "kind": "asset",
+      "sha256": "6837227132e2f8464846f01896bba4fc50bda9fa6be6e30fdbab6a0743336355",
+      "bytes": 6975
+    },
+    {
+      "path": "icons/antergos.png",
+      "sourcePath": "Cyberpunk/icons/antergos.png",
+      "kind": "asset",
+      "sha256": "068a81b8789183f40e71372bd883ec363506c5525f403f9e82e2d655928adfde",
+      "bytes": 2637
+    },
+    {
+      "path": "icons/arch.png",
+      "sourcePath": "Cyberpunk/icons/arch.png",
+      "kind": "asset",
+      "sha256": "8789c1cf33beeb2e93cf9a4a8239b2ac4bbe4a3278a2caeb2ff9ca1797257376",
+      "bytes": 2645
+    },
+    {
+      "path": "icons/cancel.png",
+      "sourcePath": "Cyberpunk/icons/cancel.png",
+      "kind": "asset",
+      "sha256": "a6f309349ba4fa7987e596a1f9d1f1354f27be7180eeae6286e435c726e1f5ce",
+      "bytes": 1029
+    },
+    {
+      "path": "icons/cd.png",
+      "sourcePath": "Cyberpunk/icons/cd.png",
+      "kind": "asset",
+      "sha256": "6fb98847fa8a10697ef4c1ed056762fbb0d68cea66fab24f16eec24bf43dee11",
+      "bytes": 8832
+    },
+    {
+      "path": "icons/chakra.png",
+      "sourcePath": "Cyberpunk/icons/chakra.png",
+      "kind": "asset",
+      "sha256": "146f7e56cfa5f3e87e29cc0880493c9ef9a2e6fe5accc384d71eac7e68511ab0",
+      "bytes": 3111
+    },
+    {
+      "path": "icons/debian.png",
+      "sourcePath": "Cyberpunk/icons/debian.png",
+      "kind": "asset",
+      "sha256": "4c0a8c3a3ca90c9c08feb94fdd821f2e66976d762258ce5f98828fefa601e027",
+      "bytes": 2758
+    },
+    {
+      "path": "icons/deepin.png",
+      "sourcePath": "Cyberpunk/icons/deepin.png",
+      "kind": "asset",
+      "sha256": "b99ab35b3e84000bd0c2c79259242da4bf7f537db15ec6cb2dd0f8a10723885c",
+      "bytes": 2876
+    },
+    {
+      "path": "icons/devuan.png",
+      "sourcePath": "Cyberpunk/icons/devuan.png",
+      "kind": "asset",
+      "sha256": "70343ba2f8b66ec6d89a1340e5b0b07a7116d0f6ddaffd8fd5c03c31e684bbce",
+      "bytes": 6871
+    },
+    {
+      "path": "icons/dragonflybsd.png",
+      "sourcePath": "Cyberpunk/icons/dragonflybsd.png",
+      "kind": "asset",
+      "sha256": "1818c2037b09ea03fe64dbfd953605aa7cf012b5b931d7f696be421a2f4531c3",
+      "bytes": 8775
+    },
+    {
+      "path": "icons/driver.png",
+      "sourcePath": "Cyberpunk/icons/driver.png",
+      "kind": "asset",
+      "sha256": "290a0eeefb859ffa8eb97d131703bbc7cc41cc85f3977b87f54b33a6bea6660e",
+      "bytes": 1222
+    },
+    {
+      "path": "icons/dvd.png",
+      "sourcePath": "Cyberpunk/icons/dvd.png",
+      "kind": "asset",
+      "sha256": "f3130e1d4963510d48e6fc948c48253e03607f910c5983c6b13cb6daf6fec41f",
+      "bytes": 8832
+    },
+    {
+      "path": "icons/edit.png",
+      "sourcePath": "Cyberpunk/icons/edit.png",
+      "kind": "asset",
+      "sha256": "27ef7ed67c343b3f1f0839fda65bcec07cc36092ad2c46947adc069fc04adba4",
+      "bytes": 938
+    },
+    {
+      "path": "icons/efi.png",
+      "sourcePath": "Cyberpunk/icons/efi.png",
+      "kind": "asset",
+      "sha256": "3306cde187b2ccf4b981040c43988e0cec0b883290c1225b9e5232df9aa2c703",
+      "bytes": 1061
+    },
+    {
+      "path": "icons/elementary.png",
+      "sourcePath": "Cyberpunk/icons/elementary.png",
+      "kind": "asset",
+      "sha256": "5b23e0be83a68d2ffbb2369397a7aea1e1e307402c049488f898d0baca9ce071",
+      "bytes": 3289
+    },
+    {
+      "path": "icons/endeavouros.png",
+      "sourcePath": "Cyberpunk/icons/endeavouros.png",
+      "kind": "asset",
+      "sha256": "9bef885e9f5b6cf3bd04ed3f37a44c7f7f2814d20c4f5eaa7e7be0d5733a12e3",
+      "bytes": 3433
+    },
+    {
+      "path": "icons/fedora.png",
+      "sourcePath": "Cyberpunk/icons/fedora.png",
+      "kind": "asset",
+      "sha256": "b41155f480a32e3c386a959c21473ccb8ca78a330f1093bb1c863bf0c13922b5",
+      "bytes": 2839
+    },
+    {
+      "path": "icons/find.efi.png",
+      "sourcePath": "Cyberpunk/icons/find.efi.png",
+      "kind": "asset",
+      "sha256": "daff207f47a42b0b2a8b860a60cf4f310c0bf40f35d981c412e46ad8ed0d4920",
+      "bytes": 1168
+    },
+    {
+      "path": "icons/find.none.png",
+      "sourcePath": "Cyberpunk/icons/find.none.png",
+      "kind": "asset",
+      "sha256": "151c51ea9fe02f232eb0ddaf28a687250a30df993a6a34878604a68ce561b2d2",
+      "bytes": 1242
+    },
+    {
+      "path": "icons/freebsd.png",
+      "sourcePath": "Cyberpunk/icons/freebsd.png",
+      "kind": "asset",
+      "sha256": "daaeaac1e9f2257b17ecfad4494ddb2ee7464d1a66805a3eb8ebe665f1b93bed",
+      "bytes": 8224
+    },
+    {
+      "path": "icons/gentoo.png",
+      "sourcePath": "Cyberpunk/icons/gentoo.png",
+      "kind": "asset",
+      "sha256": "79251dc3e90d075b1369ceb5293a068dcce83653acb024aff1f1b26476c2815f",
+      "bytes": 2630
+    },
+    {
+      "path": "icons/gnu-linux.png",
+      "sourcePath": "Cyberpunk/icons/gnu-linux.png",
+      "kind": "asset",
+      "sha256": "50d04bf88531c32affe3c647835f2bcc510526323a3e1396e5bd45296c5bd7ce",
+      "bytes": 4623
+    },
+    {
+      "path": "icons/guix.png",
+      "sourcePath": "Cyberpunk/icons/guix.png",
+      "kind": "asset",
+      "sha256": "825e3b9277b760a1cfba4d750c21b9b2031925ceb0f13adcf0d7830d89ef281b",
+      "bytes": 5359
+    },
+    {
+      "path": "icons/guixsd.png",
+      "sourcePath": "Cyberpunk/icons/guixsd.png",
+      "kind": "asset",
+      "sha256": "1aac2c3b861df7a2703edd2ccfe387875b5106ad1198ad0ec4bcb6951946c0c4",
+      "bytes": 5358
+    },
+    {
+      "path": "icons/hard-drive.png",
+      "sourcePath": "Cyberpunk/icons/hard-drive.png",
+      "kind": "asset",
+      "sha256": "671bd89da97465f7b69f40df5b8d65fd4f835c69df42c465a7693b93aaec7a0b",
+      "bytes": 1471
+    },
+    {
+      "path": "icons/harddrive.png",
+      "sourcePath": "Cyberpunk/icons/harddrive.png",
+      "kind": "asset",
+      "sha256": "ca4ca3eec1b7ce32d9a5d47c7a6bf6208ce05324a6049c83b340fff0a17d82b6",
+      "bytes": 1471
+    },
+    {
+      "path": "icons/hdd.png",
+      "sourcePath": "Cyberpunk/icons/hdd.png",
+      "kind": "asset",
+      "sha256": "32f3ef65219f89519dd0cd6ef12bc1fea36652ece8c407485c52703c438a2e1d",
+      "bytes": 1471
+    },
+    {
+      "path": "icons/help.png",
+      "sourcePath": "Cyberpunk/icons/help.png",
+      "kind": "asset",
+      "sha256": "f81168cc56f42f63d98f7b6d13f9d0096dc9df21c68504a9f0d8016377561918",
+      "bytes": 981
+    },
+    {
+      "path": "icons/iso.png",
+      "sourcePath": "Cyberpunk/icons/iso.png",
+      "kind": "asset",
+      "sha256": "f64d8e0b6a827c96277f4db574d6bf5cb26e87b67fb5a73db31d51bc9370dadd",
+      "bytes": 8833
+    },
+    {
+      "path": "icons/kali.png",
+      "sourcePath": "Cyberpunk/icons/kali.png",
+      "kind": "asset",
+      "sha256": "0414add02792fd1cbfc1e7664829b4b46aaa7d5b9725f0a4ed16eb6e2ddc613d",
+      "bytes": 2778
+    },
+    {
+      "path": "icons/kaos.png",
+      "sourcePath": "Cyberpunk/icons/kaos.png",
+      "kind": "asset",
+      "sha256": "649e99e55ed817c30704102eaeadc56c7af29ba9fe5908505ade887217bbb0c2",
+      "bytes": 4337
+    },
+    {
+      "path": "icons/kbd.png",
+      "sourcePath": "Cyberpunk/icons/kbd.png",
+      "kind": "asset",
+      "sha256": "3852281f625a4241e1c0ae7743823cf9249afeccf8c0a4039246407899b4ad24",
+      "bytes": 931
+    },
+    {
+      "path": "icons/korora.png",
+      "sourcePath": "Cyberpunk/icons/korora.png",
+      "kind": "asset",
+      "sha256": "98b8465576b84c46c0a99651a34bb6cb95acf588ead16e88f57783a901626dac",
+      "bytes": 4570
+    },
+    {
+      "path": "icons/kubuntu.png",
+      "sourcePath": "Cyberpunk/icons/kubuntu.png",
+      "kind": "asset",
+      "sha256": "412df3f5a40a50be4ad88cd2269b7485b4b0b8b842ae847cb8dc151bb2508db8",
+      "bytes": 3734
+    },
+    {
+      "path": "icons/lang.png",
+      "sourcePath": "Cyberpunk/icons/lang.png",
+      "kind": "asset",
+      "sha256": "347eb4fcda20f4cdda20881b0091468aafd546e8e1edd913a8b5137f26381169",
+      "bytes": 1255
+    },
+    {
+      "path": "icons/lfs.png",
+      "sourcePath": "Cyberpunk/icons/lfs.png",
+      "kind": "asset",
+      "sha256": "50d04bf88531c32affe3c647835f2bcc510526323a3e1396e5bd45296c5bd7ce",
+      "bytes": 4623
+    },
+    {
+      "path": "icons/linux.png",
+      "sourcePath": "Cyberpunk/icons/linux.png",
+      "kind": "asset",
+      "sha256": "50d04bf88531c32affe3c647835f2bcc510526323a3e1396e5bd45296c5bd7ce",
+      "bytes": 4623
+    },
+    {
+      "path": "icons/linuxmint.png",
+      "sourcePath": "Cyberpunk/icons/linuxmint.png",
+      "kind": "asset",
+      "sha256": "54d17c5c76605c6ea7e8f674d6abf597ee1f66f747b410e2e968467f11ff6003",
+      "bytes": 4331
+    },
+    {
+      "path": "icons/lubuntu.png",
+      "sourcePath": "Cyberpunk/icons/lubuntu.png",
+      "kind": "asset",
+      "sha256": "7efee82d69ecb12e6d43e2ff0652f7927403218a1482a53d2274d759d151c67b",
+      "bytes": 4784
+    },
+    {
+      "path": "icons/macos.png",
+      "sourcePath": "Cyberpunk/icons/macos.png",
+      "kind": "asset",
+      "sha256": "7c0a01aa27de8d74519a1d59284a9cf0e1b3da704e5bcadb09107ea8dca00072",
+      "bytes": 13003
+    },
+    {
+      "path": "icons/macosx.png",
+      "sourcePath": "Cyberpunk/icons/macosx.png",
+      "kind": "asset",
+      "sha256": "4e9e2492ef5aa880604eb307e091f2736fa99394e13e6baafac1b347d4686174",
+      "bytes": 2383
+    },
+    {
+      "path": "icons/mageia.png",
+      "sourcePath": "Cyberpunk/icons/mageia.png",
+      "kind": "asset",
+      "sha256": "6758fe09e1e4c03bfbfd4e87c77359e03cb34da707e7563b0b96fc64657d2f6f",
+      "bytes": 2849
+    },
+    {
+      "path": "icons/manjaro.png",
+      "sourcePath": "Cyberpunk/icons/manjaro.png",
+      "kind": "asset",
+      "sha256": "55352f94f6f6dd8278d50f4006d55f1ebd7c859192e3ce7ca9cb109d141c599a",
+      "bytes": 1943
+    },
+    {
+      "path": "icons/memtest.png",
+      "sourcePath": "Cyberpunk/icons/memtest.png",
+      "kind": "asset",
+      "sha256": "c2c96fbafafd0cecced6c0f207b94c5ce3a39d4ef471be9751ca53fced58efa6",
+      "bytes": 2565
+    },
+    {
+      "path": "icons/memtest86.png",
+      "sourcePath": "Cyberpunk/icons/memtest86.png",
+      "kind": "asset",
+      "sha256": "bc461dc5ec5c8a06cfd7916a39ccf8e6af92360ef7e1c848173dc9c7c82bd54c",
+      "bytes": 10667
+    },
+    {
+      "path": "icons/neon.png",
+      "sourcePath": "Cyberpunk/icons/neon.png",
+      "kind": "asset",
+      "sha256": "cd6bc0e77115a56215c4efaa105e78b06f73fef844e55eab466245d9a7a3958d",
+      "bytes": 15143
+    },
+    {
+      "path": "icons/netbsd.png",
+      "sourcePath": "Cyberpunk/icons/netbsd.png",
+      "kind": "asset",
+      "sha256": "bb325ee10987af82985bead5ebad8373f07d3a861c1ff577008af1bbdb86317f",
+      "bytes": 11481
+    },
+    {
+      "path": "icons/nixos.png",
+      "sourcePath": "Cyberpunk/icons/nixos.png",
+      "kind": "asset",
+      "sha256": "584b704037405a5054c8ffaae46bc54d1f1fdb181520baa6edf2788bdae73c2d",
+      "bytes": 14337
+    },
+    {
+      "path": "icons/openbsd.png",
+      "sourcePath": "Cyberpunk/icons/openbsd.png",
+      "kind": "asset",
+      "sha256": "643a5abba3d5c81cd21250b401c223c187b4a9067c0dfefccf47046fcd0c1ab7",
+      "bytes": 24101
+    },
+    {
+      "path": "icons/opensuse.png",
+      "sourcePath": "Cyberpunk/icons/opensuse.png",
+      "kind": "asset",
+      "sha256": "99fe03a80b3f8fce65fbe1c654fb351359e65faf747b95ccd3e9b1aeaf9a5dcb",
+      "bytes": 4583
+    },
+    {
+      "path": "icons/optical.png",
+      "sourcePath": "Cyberpunk/icons/optical.png",
+      "kind": "asset",
+      "sha256": "6e7488a4baa4f74d6ab205c056f5a469eb84cf3413ce36284f151e7648759bea",
+      "bytes": 8833
+    },
+    {
+      "path": "icons/os.png",
+      "sourcePath": "Cyberpunk/icons/os.png",
+      "kind": "asset",
+      "sha256": "f5abd4fec28b4e341be5c9794ddec1b94902080266efd21d72d6a5cd7714d8f5",
+      "bytes": 10261
+    },
+    {
+      "path": "icons/osx.png",
+      "sourcePath": "Cyberpunk/icons/osx.png",
+      "kind": "asset",
+      "sha256": "63054f9979ba2a5dbff2cff06286d14a60fccb6915939380f6c1bb914c078a0e",
+      "bytes": 13003
+    },
+    {
+      "path": "icons/poweroff.png",
+      "sourcePath": "Cyberpunk/icons/poweroff.png",
+      "kind": "asset",
+      "sha256": "90e8535692227d427f5a1cba2732450bbd3a36b28d416376032ab406b70aa66f",
+      "bytes": 7802
+    },
+    {
+      "path": "icons/puppy.png",
+      "sourcePath": "Cyberpunk/icons/puppy.png",
+      "kind": "asset",
+      "sha256": "9f7487e83b622facc70f811fa3645e92c3e5cd2afd14da924e9e08f31bba1552",
+      "bytes": 13837
+    },
+    {
+      "path": "icons/reactos.png",
+      "sourcePath": "Cyberpunk/icons/reactos.png",
+      "kind": "asset",
+      "sha256": "ef6913b8f2f8a2577f6ccc67b54cc5cafb26282ec95d9ad490e4d372c27e3865",
+      "bytes": 20283
+    },
+    {
+      "path": "icons/reboot.png",
+      "sourcePath": "Cyberpunk/icons/reboot.png",
+      "kind": "asset",
+      "sha256": "4f07329da6c1816851abdb59a7b032851b5d5c614f777f6c52fa6dd0a953965d",
+      "bytes": 10184
+    },
+    {
+      "path": "icons/recovery.png",
+      "sourcePath": "Cyberpunk/icons/recovery.png",
+      "kind": "asset",
+      "sha256": "91e8e665ae2a7331d81f6c279b4e5982d11c02c48b0a653a3555731c8abe9412",
+      "bytes": 2488
+    },
+    {
+      "path": "icons/redhat.png",
+      "sourcePath": "Cyberpunk/icons/redhat.png",
+      "kind": "asset",
+      "sha256": "eb528e08debf41e4400777881be9d791873b46f03d308f8e42d2964a18fbc88f",
+      "bytes": 7144
+    },
+    {
+      "path": "icons/restart.png",
+      "sourcePath": "Cyberpunk/icons/restart.png",
+      "kind": "asset",
+      "sha256": "57deb75187115b221189fe39478b44fe4440ed834e5d6f0b9f6febfe550826a0",
+      "bytes": 2434
+    },
+    {
+      "path": "icons/sabayon.png",
+      "sourcePath": "Cyberpunk/icons/sabayon.png",
+      "kind": "asset",
+      "sha256": "519d063f4346d373f796f99ae3243ee25091e3df28e69a88b60e536dbed8f9ae",
+      "bytes": 7092
+    },
+    {
+      "path": "icons/shutdown.png",
+      "sourcePath": "Cyberpunk/icons/shutdown.png",
+      "kind": "asset",
+      "sha256": "b2bda07a2a21f7af4b7716eac623c6e6a96f7a14c8a6796b7c5fa129a7bf39fe",
+      "bytes": 2465
+    },
+    {
+      "path": "icons/siduction.png",
+      "sourcePath": "Cyberpunk/icons/siduction.png",
+      "kind": "asset",
+      "sha256": "8679876d1181141557366371e3b677e62ec780dd1af34f8209e2c8b8357d0c5a",
+      "bytes": 2199
+    },
+    {
+      "path": "icons/slackware.png",
+      "sourcePath": "Cyberpunk/icons/slackware.png",
+      "kind": "asset",
+      "sha256": "3fa7b91d212427aeb3fa3130be98dca3eecefcd5b06e32e1339dbc06e855a1b6",
+      "bytes": 8810
+    },
+    {
+      "path": "icons/solus.png",
+      "sourcePath": "Cyberpunk/icons/solus.png",
+      "kind": "asset",
+      "sha256": "dc3d3517826e52b5b26ccb5622dd6f3d09bbd4002e130edaa1d961731a784948",
+      "bytes": 1682
+    },
+    {
+      "path": "icons/solusos.png",
+      "sourcePath": "Cyberpunk/icons/solusos.png",
+      "kind": "asset",
+      "sha256": "ee630594ff035dd63c0449f18829fd631cdec26ccbd1cad6cd3229e8544c1801",
+      "bytes": 10722
+    },
+    {
+      "path": "icons/steam.png",
+      "sourcePath": "Cyberpunk/icons/steam.png",
+      "kind": "asset",
+      "sha256": "b70a6872e421a5c893078c194c2d9b99db270b24a42b64490b206be1cd4f61ba",
+      "bytes": 10378
+    },
+    {
+      "path": "icons/steamos.png",
+      "sourcePath": "Cyberpunk/icons/steamos.png",
+      "kind": "asset",
+      "sha256": "ff0ccc8ff1503805d23ecc6ae6d04863ef06214633a690a4dd7e741c10019c9b",
+      "bytes": 2889
+    },
+    {
+      "path": "icons/suse.png",
+      "sourcePath": "Cyberpunk/icons/suse.png",
+      "kind": "asset",
+      "sha256": "d1d748bcf522a5453c7699de9557facdc20ed048037008edb94f315a2ff91fd0",
+      "bytes": 11876
+    },
+    {
+      "path": "icons/system-setup.png",
+      "sourcePath": "Cyberpunk/icons/system-setup.png",
+      "kind": "asset",
+      "sha256": "b2e8a582f45c2d6d0717dfe2dfc4044025a9c37eb1b1302b831b7f466105681c",
+      "bytes": 10141
+    },
+    {
+      "path": "icons/system_setup.png",
+      "sourcePath": "Cyberpunk/icons/system_setup.png",
+      "kind": "asset",
+      "sha256": "6e263ba0b7c985fb359740891195d590737b9c171838c2bf80f9bc90bcd28e45",
+      "bytes": 10142
+    },
+    {
+      "path": "icons/systemsetup.png",
+      "sourcePath": "Cyberpunk/icons/systemsetup.png",
+      "kind": "asset",
+      "sha256": "49e8d6d73484198ea4be3bffdb629aa9a5b6431f390d2b731dcdbe011ab2f18e",
+      "bytes": 10140
+    },
+    {
+      "path": "icons/type.png",
+      "sourcePath": "Cyberpunk/icons/type.png",
+      "kind": "asset",
+      "sha256": "875c5f807643ec6b62a7c9844947db177eb7f17aa2a0e51eb8a4c2323967fd38",
+      "bytes": 853
+    },
+    {
+      "path": "icons/tz.png",
+      "sourcePath": "Cyberpunk/icons/tz.png",
+      "kind": "asset",
+      "sha256": "b2c16fbbeee3ba0fe69de427d3db630dd155c88713673209efe7fb2144530676",
+      "bytes": 1223
+    },
+    {
+      "path": "icons/ubuntu-budgie.png",
+      "sourcePath": "Cyberpunk/icons/ubuntu-budgie.png",
+      "kind": "asset",
+      "sha256": "650963fc14ea3988eb6b3ced536b959f7af7cf4bf532773825daf55ea1474aaf",
+      "bytes": 9164
+    },
+    {
+      "path": "icons/ubuntu-mate.png",
+      "sourcePath": "Cyberpunk/icons/ubuntu-mate.png",
+      "kind": "asset",
+      "sha256": "20ea60c535980701ef6ecec843a0f48340c1e6cd531c98a8286c7fc4ca3fa7e9",
+      "bytes": 11731
+    },
+    {
+      "path": "icons/ubuntu.png",
+      "sourcePath": "Cyberpunk/icons/ubuntu.png",
+      "kind": "asset",
+      "sha256": "1c59ca3b617f2eb7d925a5f4cb230a8429c843afc7c8fca1ac8b8bd0941d62c3",
+      "bytes": 5222
+    },
+    {
+      "path": "icons/ubuntu_budgie.png",
+      "sourcePath": "Cyberpunk/icons/ubuntu_budgie.png",
+      "kind": "asset",
+      "sha256": "c98359b70cfa2e420c977ab8167146de43ba46d3cb642a65a7be8e58e476198b",
+      "bytes": 9164
+    },
+    {
+      "path": "icons/ubuntu_mate.png",
+      "sourcePath": "Cyberpunk/icons/ubuntu_mate.png",
+      "kind": "asset",
+      "sha256": "664541cbce55212ee10bfc3cb446553da11e196ec396af32d7025cfe5726ec8e",
+      "bytes": 11731
+    },
+    {
+      "path": "icons/unknown.png",
+      "sourcePath": "Cyberpunk/icons/unknown.png",
+      "kind": "asset",
+      "sha256": "151c51ea9fe02f232eb0ddaf28a687250a30df993a6a34878604a68ce561b2d2",
+      "bytes": 1242
+    },
+    {
+      "path": "icons/unset.png",
+      "sourcePath": "Cyberpunk/icons/unset.png",
+      "kind": "asset",
+      "sha256": "0615d09f84e1c5d71edf65add340a9d5a68e3ea773b5e29fe1521c59ff410567",
+      "bytes": 1016
+    },
+    {
+      "path": "icons/usb.png",
+      "sourcePath": "Cyberpunk/icons/usb.png",
+      "kind": "asset",
+      "sha256": "4c9a93cbcf2acd559297367622560827505833cd6bd30a06a2ee7a7a9fc1b7a1",
+      "bytes": 1562
+    },
+    {
+      "path": "icons/void.png",
+      "sourcePath": "Cyberpunk/icons/void.png",
+      "kind": "asset",
+      "sha256": "7158034b52c1371bdca9e9c2cf9c57464c202de48a22b1d963054fa8a8d2b4e5",
+      "bytes": 3895
+    },
+    {
+      "path": "icons/windows.png",
+      "sourcePath": "Cyberpunk/icons/windows.png",
+      "kind": "asset",
+      "sha256": "268591d014a394d5494d267acdeac25726834529e6a19fc62fd72ba397001541",
+      "bytes": 2389
+    },
+    {
+      "path": "icons/x86android.png",
+      "sourcePath": "Cyberpunk/icons/x86android.png",
+      "kind": "asset",
+      "sha256": "6837227132e2f8464846f01896bba4fc50bda9fa6be6e30fdbab6a0743336355",
+      "bytes": 6975
+    },
+    {
+      "path": "icons/xubuntu.png",
+      "sourcePath": "Cyberpunk/icons/xubuntu.png",
+      "kind": "asset",
+      "sha256": "0f5d90df2298f36ddd1cffb9bfd4664edcd046b96cc7ef2397ca4a84eae8a3c3",
+      "bytes": 2650
+    },
+    {
+      "path": "icons/zorin.png",
+      "sourcePath": "Cyberpunk/icons/zorin.png",
+      "kind": "asset",
+      "sha256": "8534f5e699ff8eeb4f3c2d47db2c3ff96779f1c14ce7e5ac1d7643b322c5be9d",
+      "bytes": 5222
+    },
+    {
+      "path": "icons/zorinos.png",
+      "sourcePath": "Cyberpunk/icons/zorinos.png",
+      "kind": "asset",
+      "sha256": "16ddea19112c636254fb6446548551db73900ce41f930e377dfa0e041e1cd42c",
+      "bytes": 5222
+    },
+    {
+      "path": "progress_bar_c.png",
+      "sourcePath": "Cyberpunk/progress_bar_c.png",
+      "kind": "asset",
+      "sha256": "400ff3509d4db0f744c53cdffbe15de4f8aa30e08a10718143d993a59f04ed01",
+      "bytes": 192
+    },
+    {
+      "path": "progress_highlight_c.png",
+      "sourcePath": "Cyberpunk/progress_highlight_c.png",
+      "kind": "asset",
+      "sha256": "b19f07faed9ed02a15c0ae1cd2a205a623d4c816c7411cbbd7c8c4bd74617eff",
+      "bytes": 192
+    },
+    {
+      "path": "sb_frame_c.png",
+      "sourcePath": "Cyberpunk/sb_frame_c.png",
+      "kind": "asset",
+      "sha256": "a06d720f00cbee14a020349aae5db5bd17ee0e6654044073e55a414810d975b9",
+      "bytes": 1163
+    },
+    {
+      "path": "sb_frame_n.png",
+      "sourcePath": "Cyberpunk/sb_frame_n.png",
+      "kind": "asset",
+      "sha256": "a0a318b612fcfdad6a134aeb1d4dcd5fb8a8e34f2f43c647995de78083608950",
+      "bytes": 572
+    },
+    {
+      "path": "sb_frame_s.png",
+      "sourcePath": "Cyberpunk/sb_frame_s.png",
+      "kind": "asset",
+      "sha256": "bb957109b6f20b330fc9b96eec1bd4ed60c0f430fa77707ab6232fe6c1d405dc",
+      "bytes": 638
+    },
+    {
+      "path": "sb_thumb_c.png",
+      "sourcePath": "Cyberpunk/sb_thumb_c.png",
+      "kind": "asset",
+      "sha256": "60ee1e21b2c78e2e79d23223d89870f7ec2477183f114815831f85aefdb0509b",
+      "bytes": 881
+    },
+    {
+      "path": "sb_thumb_n.png",
+      "sourcePath": "Cyberpunk/sb_thumb_n.png",
+      "kind": "asset",
+      "sha256": "1441146663e4ce7c304ad56b5dc128d1e4d17c9d2d57d8fff90adaef792d6670",
+      "bytes": 854
+    },
+    {
+      "path": "sb_thumb_s.png",
+      "sourcePath": "Cyberpunk/sb_thumb_s.png",
+      "kind": "asset",
+      "sha256": "343ce9aa8b9433942ff207da9e1eeff3f0d9cf32cc78257e8c7d56b980be7158",
+      "bytes": 856
+    },
+    {
+      "path": "select_c.png",
+      "sourcePath": "Cyberpunk/select_c.png",
+      "kind": "asset",
+      "sha256": "aef3524a3db0e5038f507764e5d8574e6a9eec132433b7e939e5d40afbb0a386",
+      "bytes": 185
+    },
+    {
+      "path": "select_e.png",
+      "sourcePath": "Cyberpunk/select_e.png",
+      "kind": "asset",
+      "sha256": "aa9b8e48bd699a49759af2108571f076522de60dc533b81136e71fb3571abfc5",
+      "bytes": 2205
+    },
+    {
+      "path": "select_w.png",
+      "sourcePath": "Cyberpunk/select_w.png",
+      "kind": "asset",
+      "sha256": "3bc34e129f37f3f67d2b4ffbe428567af603faf812c80c723493ecddc6c5a6ad",
+      "bytes": 2416
+    },
+    {
+      "path": "terminal_box_c.png",
+      "sourcePath": "Cyberpunk/terminal_box_c.png",
+      "kind": "asset",
+      "sha256": "9826543fd9445ffba744030ef16a1ff9ef5facdb4475880618f7eff9851da6ff",
+      "bytes": 976
+    },
+    {
+      "path": "terminal_box_e.png",
+      "sourcePath": "Cyberpunk/terminal_box_e.png",
+      "kind": "asset",
+      "sha256": "30da5778bdfb0d550fe3b991656b26bdec5b310b3d8f84bff8e3c83005e68c81",
+      "bytes": 952
+    },
+    {
+      "path": "terminal_box_n.png",
+      "sourcePath": "Cyberpunk/terminal_box_n.png",
+      "kind": "asset",
+      "sha256": "a7e11592fcf7ec902a413896f80e59e14d6d98e444f0178cf87ec637b0aa05ba",
+      "bytes": 963
+    },
+    {
+      "path": "terminal_box_ne.png",
+      "sourcePath": "Cyberpunk/terminal_box_ne.png",
+      "kind": "asset",
+      "sha256": "669d4dd60d16108ebb6e2648a16ac3abfc856a0c55758f06604c8a6db5fa9257",
+      "bytes": 1115
+    },
+    {
+      "path": "terminal_box_nw.png",
+      "sourcePath": "Cyberpunk/terminal_box_nw.png",
+      "kind": "asset",
+      "sha256": "875e63eea32c5bbf7ba05bc42868e512f0d672f244dad3939e170e2f53bcdfb9",
+      "bytes": 1094
+    },
+    {
+      "path": "terminal_box_s.png",
+      "sourcePath": "Cyberpunk/terminal_box_s.png",
+      "kind": "asset",
+      "sha256": "a91e8608e25bd65e6df8056fd16ba6aff198a2403b2f8c540e9ce5a1878c76b7",
+      "bytes": 963
+    },
+    {
+      "path": "terminal_box_se.png",
+      "sourcePath": "Cyberpunk/terminal_box_se.png",
+      "kind": "asset",
+      "sha256": "a73dac0a5009869fe7e91c986583c266bbec8bf5e98e69b27ebd38dd7d243be0",
+      "bytes": 1102
+    },
+    {
+      "path": "terminal_box_sw.png",
+      "sourcePath": "Cyberpunk/terminal_box_sw.png",
+      "kind": "asset",
+      "sha256": "3e2008f641ce50d32200ad973ef11d2962147acc78dbf5c1be84ed19a09242e8",
+      "bytes": 1107
+    },
+    {
+      "path": "terminal_box_w.png",
+      "sourcePath": "Cyberpunk/terminal_box_w.png",
+      "kind": "asset",
+      "sha256": "fde2d43e2f23531b0a1e3d76ce2119051d84a9b84ec6d4e80343aef268b8e2e8",
+      "bytes": 952
+    },
+    {
+      "path": "terminus-12.pf2",
+      "sourcePath": "Cyberpunk/terminus-12.pf2",
+      "kind": "asset",
+      "sha256": "4bf4b691370c4ad590c2aedf75b9dc88e4e1636cf9bd87fd7fac985e84f1e74e",
+      "bytes": 21895
+    },
+    {
+      "path": "terminus-14.pf2",
+      "sourcePath": "Cyberpunk/terminus-14.pf2",
+      "kind": "asset",
+      "sha256": "bca1c0f8d401e047d2382e8203836e5259063cab415e26d5f02b40cf07fbba08",
+      "bytes": 23941
+    },
+    {
+      "path": "terminus-16.pf2",
+      "sourcePath": "Cyberpunk/terminus-16.pf2",
+      "kind": "asset",
+      "sha256": "4f9a996da1f31638f7bc4516f849b771b88128f086b2584e010d549a9fa1e611",
+      "bytes": 24214
+    },
+    {
+      "path": "terminus-18.pf2",
+      "sourcePath": "Cyberpunk/terminus-18.pf2",
+      "kind": "asset",
+      "sha256": "bdea338e1cfb4fe87b98b5dec2900d85a75c3ff96e33bd8d4183af1d88fc3731",
+      "bytes": 26835
+    }
+  ],
+  "sourceReadmeAndLicense": "provenance/README.md and provenance/LICENSE when present; original theme file is provenance/upstream-theme.txt",
+  "retrievalFailures": []
+}

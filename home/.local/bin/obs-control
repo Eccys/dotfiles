@@ -1,0 +1,41 @@
+#!/usr/bin/python
+import base64, hashlib, json, sys, time, subprocess
+from pathlib import Path
+import websocket
+CONFIG=Path.home()/'.config/obs-studio/plugin_config/obs-websocket/config.json'
+def connect():
+    c=json.loads(CONFIG.read_text())
+    w=websocket.create_connection(f"ws://127.0.0.1:{c['server_port']}",timeout=5)
+    hello=json.loads(w.recv())['d']; identify={'rpcVersion':1,'eventSubscriptions':0}
+    if 'authentication' in hello:
+        a=hello['authentication']
+        secret=base64.b64encode(hashlib.sha256((c['server_password']+a['salt']).encode()).digest()).decode()
+        identify['authentication']=base64.b64encode(hashlib.sha256((secret+a['challenge']).encode()).digest()).decode()
+    w.send(json.dumps({'op':1,'d':identify})); result=json.loads(w.recv())
+    if result['op']!=2: raise RuntimeError('OBS connection failed')
+    return w
+def request(w,kind,data=None):
+    w.send(json.dumps({'op':6,'d':{'requestType':kind,'requestId':'control','requestData':data or {}}}))
+    while True:
+        r=json.loads(w.recv())
+        if r['op']==7:
+            d=r['d']
+            if not d['requestStatus']['result']: raise RuntimeError(d['requestStatus'].get('comment','OBS request failed'))
+            return d.get('responseData',{})
+if __name__=='__main__':
+    try:
+        try: w=connect()
+        except (ConnectionError,OSError):
+            subprocess.Popen(['obs','--minimize-to-tray'],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,start_new_session=True)
+            for _ in range(40):
+                time.sleep(.5)
+                try: w=connect(); break
+                except (ConnectionError,OSError): pass
+            else: raise RuntimeError('OBS did not start')
+        action=sys.argv[1]
+        kind={'record':'ToggleRecord','pause':'ToggleRecordPause'}.get(action,action)
+        result=request(w,kind,json.loads(sys.argv[2]) if len(sys.argv)>2 else None)
+        print(json.dumps(result)); w.close()
+    except Exception as e:
+        subprocess.run(['notify-send','OBS',str(e)])
+        print(str(e),file=sys.stderr); sys.exit(1)

@@ -1,0 +1,37 @@
+{
+  "targetResolution": "2560x1440",
+  "sourceDesignResolution": [
+    1920,
+    1080
+  ],
+  "scaleX": 1.3333333333333333,
+  "scaleY": 1.3333333333333333,
+  "method": "Static source background is 1920x1080; literal pixel geometry is scaled for the target.",
+  "scaledProperties": [
+    {
+      "key": "item_height",
+      "from": "35",
+      "to": "47"
+    },
+    {
+      "key": "item_padding",
+      "from": "15",
+      "to": "20"
+    },
+    {
+      "key": "item_spacing",
+      "from": "3",
+      "to": "4"
+    },
+    {
+      "key": "scrollbar_width",
+      "from": "8",
+      "to": "11"
+    }
+  ],
+  "imageComponentDimensionsAdded": [],
+  "adaptedBackground": null,
+  "sourceThemePreserved": "provenance/upstream-theme.txt",
+  "fontsUnchanged": true,
+  "fontSubstitutionOwner": "runtime package; JetBrains Mono PF2 names to be applied there"
+}

@@ -1,0 +1,32 @@
+pkgname=eccys-serpantinum
+pkgver=2.2.4
+pkgrel=1
+pkgdesc='Pinned Serpantinum desktop with Eccys local configuration and patches'
+arch=('any')
+url='https://github.com/ilyamiro/serpantinum'
+license=('GPL-3.0-only')
+depends=('quickshell' 'hyprland' 'jq' 'python' 'matugen' 'awww' 'wl-clipboard' 'grim' 'pyside6')
+makedepends=('python')
+_commit=d144ffeb989df2234f74116edf5ea6c86eaa0165
+source=("serpantinum-${_commit}.tar.gz::https://github.com/ilyamiro/serpantinum/archive/${_commit}.tar.gz")
+sha256sums=('64063750b47a88241eb567917c7ae5bd8aa75afeb43fbea17059884abe3f7636')
+package() {
+  local destination="$pkgdir/usr/share/serpantinum"
+  install -dm755 "$destination" "$pkgdir/usr/bin"
+  cp -a "$srcdir/serpantinum-$_commit/." "$destination/"
+  python - "$startdir/overlay" "$destination" <<'PY'
+import base64,os,pathlib,sys,shutil
+source,dest=map(pathlib.Path,sys.argv[1:])
+for f in source.rglob('*'):
+    if not f.is_file(): continue
+    target=dest/f.relative_to(source)
+    if f.suffix=='.b64': target=target.with_suffix('')
+    target.parent.mkdir(parents=True,exist_ok=True)
+    if f.suffix=='.b64': target.write_bytes(base64.b64decode(f.read_text()))
+    else: target.write_text(f.read_text().replace('@HOME@',os.path.expanduser('~')))
+    target.chmod(f.stat().st_mode & 0o777)
+PY
+  ln -s /usr/share/serpantinum/bin/serpantinum "$pkgdir/usr/bin/serpantinum"
+  ln -s /usr/share/serpantinum/bin/serpantinumd "$pkgdir/usr/bin/serpantinumd"
+  install -Dm644 "$destination/LICENSE.md" "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
+}

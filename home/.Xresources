@@ -1,0 +1,4 @@
+
+! Match the compositor cursor for X11 clients
+Xcursor.theme: Adwaita
+Xcursor.size: 24

@@ -1,0 +1,62 @@
+[
+  {
+    "package": "antigravity",
+    "aur_commit": "f0ea0d119397af1724d4d1a1b43f6f12ccb5c1b3"
+  },
+  {
+    "package": "cbonsai",
+    "aur_commit": "6a643ecb56b91b3ef5f54f4fbfd69c9745b8437c"
+  },
+  {
+    "package": "chatgpt-desktop",
+    "aur_commit": "893745d2008d06fc32a76f6f43cac74a219a3dfc"
+  },
+  {
+    "package": "discord-canary",
+    "aur_commit": "87cb0415532e7c2b00351c40da05c8898dd049ba"
+  },
+  {
+    "package": "equicord-installer-bin",
+    "aur_commit": "42b4761ec4826aaa8106dd567cfee1d7175da5b9"
+  },
+  {
+    "package": "gpa-git",
+    "aur_commit": "6f08de4eea3fb683c160f33285e22a257d074e64"
+  },
+  {
+    "package": "grok-bot-bin",
+    "aur_commit": "49fadc3c502d3f078aa81f3c2ba5baf7394b036f"
+  },
+  {
+    "package": "lianli-linux-git",
+    "aur_commit": "4256d339dae74cefb7fef29f520ab537b0bf80bf"
+  },
+  {
+    "package": "neofetch",
+    "aur_commit": "f6044ebf112b4ebd433764e6510f8fec68e75e5e"
+  },
+  {
+    "package": "pyprland",
+    "aur_commit": "8738bb8b9dcc8011707681a6d48552b5900bb11a"
+  },
+  {
+    "package": "snapx-bin",
+    "aur_commit": "f9854dca7a7a186835b731f10cbf5c56efdb7e81"
+  },
+  {
+    "package": "tor-browser-bin",
+    "aur_commit": "ccf671cd7ac5d4a820d4d58405d2385ac7102b38"
+  },
+  {
+    "package": "wl-gammarelay-rs",
+    "aur_commit": "1736828a9d27db9ad234651b74b6bbd040fec10d"
+  },
+  {
+    "package": "yay",
+    "aur_commit": "cb43f84828ab4f9700f7c6f9c6d7a923d4cfaff0"
+  },
+  {
+    "package": "zen-browser-bin",
+    "aur_commit": "8d637562e825d5d8e213f21b16c05faee89e2166"
+  }
+]

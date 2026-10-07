@@ -1,0 +1,54 @@
+{
+  "id": 3,
+  "name": "Outer Wilds",
+  "packageFolder": "3-OuterWilds",
+  "entrypoint": "3-OuterWilds/theme.txt",
+  "catalogLinkFromGorgeousGRUB": "https://github.com/Terofale/outer-wilds-grub-theme",
+  "sourceRepository": "https://Terofale/outer-wilds-grub-theme",
+  "sourceBranch": "main",
+  "sourceCommit": "e2b7c015480bd26c688a1bc7d070301c4425ba04",
+  "sourceThemePath": "theme-files-1440p/theme.txt",
+  "license": "NOASSERTION",
+  "licenseStatus": "No license file or SPDX license declaration found in the pinned repository",
+  "notes": "Upstream provides an explicit 1440p theme directory. README mentions optional installer and entry-renaming script; neither is needed for static GRUB theme data.",
+  "upstreamInstallerExecuted": false,
+  "sourceAssets": [
+    {
+      "path": "SpaceMono-16.pf2",
+      "sourcePath": "theme-files-1440p/SpaceMono-16.pf2",
+      "kind": "asset",
+      "sha256": "9d3d351582974670c0fe85da4edcbd49aeb25a9e2d5ad4cec03c19496c644461",
+      "bytes": 18482
+    },
+    {
+      "path": "SpaceMono-32.pf2",
+      "sourcePath": "theme-files-1440p/SpaceMono-32.pf2",
+      "kind": "asset",
+      "sha256": "032d22038b7cba922a4ae240bec84a161ca612407da2dab99bad4469b048ad02",
+      "bytes": 37397
+    },
+    {
+      "path": "outer-wilds-menu-font-48.pf2",
+      "sourcePath": "theme-files-1440p/outer-wilds-menu-font-48.pf2",
+      "kind": "asset",
+      "sha256": "fc721fb9bb17c3fdbc36c08cb6edd3e61f7d3ebcc2c175b9280e4187e2d1203d",
+      "bytes": 28913
+    },
+    {
+      "path": "outer-wilds-menu-selected-font-48.pf2",
+      "sourcePath": "theme-files-1440p/outer-wilds-menu-selected-font-48.pf2",
+      "kind": "asset",
+      "sha256": "2be6ee38203db7d762e0d3fe45dcfb1412c655ef53b8ccdfcc337a3ef792eab7",
+      "bytes": 28931
+    },
+    {
+      "path": "outer-wilds.png",
+      "sourcePath": "theme-files-1440p/outer-wilds.png",
+      "kind": "asset",
+      "sha256": "de677d025d78d2468878647b2943e45d48f75be682929c4ad2082ecfa474eb4f",
+      "bytes": 633986
+    }
+  ],
+  "sourceReadmeAndLicense": "provenance/README.md and provenance/LICENSE when present; original theme file is provenance/upstream-theme.txt",
+  "retrievalFailures": []
+}

@@ -1,0 +1,235 @@
+{
+    "TimestampUtc":  "2026-10-03T21:50:16Z",
+    "EspFileSystem":  "FAT32",
+    "EspSizeBytes":  100663296,
+    "EspFreeBytes":  38843392,
+    "StateBytes":  1024,
+    "EspAssetFileCount":  536,
+    "IconAliasCount":  36,
+    "IconAliasesAllMatch":  true,
+    "IconChecks":  [
+                       {
+                           "Theme":  "0-CyberRe",
+                           "Icon":  "windows.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "0-CyberRe",
+                           "Icon":  "icon-windows.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "0-CyberRe",
+                           "Icon":  "windows11.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "0-CyberRe",
+                           "Icon":  "icon-windows11.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "1-Cyberpunk2077",
+                           "Icon":  "windows.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "1-Cyberpunk2077",
+                           "Icon":  "icon-windows.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "1-Cyberpunk2077",
+                           "Icon":  "windows11.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "1-Cyberpunk2077",
+                           "Icon":  "icon-windows11.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "2-GrubSouls",
+                           "Icon":  "windows.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "2-GrubSouls",
+                           "Icon":  "icon-windows.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "2-GrubSouls",
+                           "Icon":  "windows11.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "2-GrubSouls",
+                           "Icon":  "icon-windows11.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "3-OuterWilds",
+                           "Icon":  "windows.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "3-OuterWilds",
+                           "Icon":  "icon-windows.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "3-OuterWilds",
+                           "Icon":  "windows11.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "3-OuterWilds",
+                           "Icon":  "icon-windows11.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "4-LiquidGRUB",
+                           "Icon":  "windows.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "4-LiquidGRUB",
+                           "Icon":  "icon-windows.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "4-LiquidGRUB",
+                           "Icon":  "windows11.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "4-LiquidGRUB",
+                           "Icon":  "icon-windows11.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "5-GTG",
+                           "Icon":  "windows.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "5-GTG",
+                           "Icon":  "icon-windows.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "5-GTG",
+                           "Icon":  "windows11.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "5-GTG",
+                           "Icon":  "icon-windows11.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "6-Minegrub-World",
+                           "Icon":  "windows.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "6-Minegrub-World",
+                           "Icon":  "icon-windows.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "6-Minegrub-World",
+                           "Icon":  "windows11.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "6-Minegrub-World",
+                           "Icon":  "icon-windows11.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "7-Minegrub",
+                           "Icon":  "windows.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "7-Minegrub",
+                           "Icon":  "icon-windows.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "7-Minegrub",
+                           "Icon":  "windows11.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "7-Minegrub",
+                           "Icon":  "icon-windows11.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "8-SteamOS",
+                           "Icon":  "windows.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "8-SteamOS",
+                           "Icon":  "icon-windows.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "8-SteamOS",
+                           "Icon":  "windows11.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       },
+                       {
+                           "Theme":  "8-SteamOS",
+                           "Icon":  "icon-windows11.png",
+                           "Present":  true,
+                           "HashMatches":  true
+                       }
+                   ],
+    "UserSectionHashesMatch":  true,
+    "UserSectionInitramfsPathCorrect":  true,
+    "GfxMode":  "2560x1440,1920x1080",
+    "GrubGeneratedConfigSha256":  "7126D539C152349463D124CF878D7A17FF8CBEDAC702B9B68E94EEED128B781D",
+    "SecureBoot":  false,
+    "BcdBootManager":  "\r\nWindows Boot Manager\r\n--------------------\r\nidentifier              {9dea862c-5cdd-4e70-acc1-f32b344d4795}\r\ndevice                  partition=M:\r\npath                    \\EFI\\Microsoft\\Boot\\bootmgfw.efi\r\ndescription             Windows Boot Manager\r\nlocale                  en-US\r\ninherit                 {7ea2e1ac-2e61-4728-aaa3-896d9d0a9f0e}\r\ndefault                 {4e92ad6d-877a-11ef-a620-14ac60f9d6de}\r\nresumeobject            {4e92ad6c-877a-11ef-a620-14ac60f9d6de}\r\ndisplayorder            {4e92ad6d-877a-11ef-a620-14ac60f9d6de}\r\ntoolsdisplayorder       {b2721d73-1db4-4c62-bf78-c548a880142d}\r\ntimeout                 10\r\n",
+    "BcdFirmwareOrder":  "\r\nFirmware Boot Manager\r\n---------------------\r\nidentifier              {a5a30fa2-3d06-4e9f-b5f4-a01df9d1fcba}\r\ndisplayorder            {9dea862c-5cdd-4e70-acc1-f32b344d4795}\r\n                        {4e92ad6e-877a-11ef-a620-14ac60f9d6de}\r\ntimeout                 1\r\n\r\nWindows Boot Manager\r\n--------------------\r\nidentifier              {4e92ad6e-877a-11ef-a620-14ac60f9d6de}\r\ndevice                  partition=M:\r\npath                    \\EFI\\grub2win\\g2bootmgr\\gnugrub.kernel64.efi\r\ndescription             GRUB2Win EFI (temporary)\r\nlocale                  en-US\r\ninherit                 {7ea2e1ac-2e61-4728-aaa3-896d9d0a9f0e}\r\ndefault                 {4e92ad6d-877a-11ef-a620-14ac60f9d6de}\r\nresumeobject            {4e92ad6c-877a-11ef-a620-14ac60f9d6de}\r\ndisplayorder            {4e92ad6d-877a-11ef-a620-14ac60f9d6de}\r\ntoolsdisplayorder       {b2721d73-1db4-4c62-bf78-c548a880142d}\r\ntimeout                 10\r\n\r\nWindows Boot Manager\r\n--------------------\r\nidentifier              {9dea862c-5cdd-4e70-acc1-f32b344d4795}\r\ndevice                  partition=M:\r\npath                    \\EFI\\Microsoft\\Boot\\bootmgfw.efi\r\ndescription             Windows Boot Manager\r\nlocale                  en-US\r\ninherit                 {7ea2e1ac-2e61-4728-aaa3-896d9d0a9f0e}\r\ndefault                 {4e92ad6d-877a-11ef-a620-14ac60f9d6de}\r\nresumeobject            {4e92ad6c-877a-11ef-a620-14ac60f9d6de}\r\ndisplayorder            {4e92ad6d-877a-11ef-a620-14ac60f9d6de}\r\ntoolsdisplayorder       {b2721d73-1db4-4c62-bf78-c548a880142d}\r\ntimeout                 10\r\n"
+}

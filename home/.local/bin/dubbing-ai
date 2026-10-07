@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -euo pipefail
+systemctl --user start dubbing-ai-vm.service
+exec remote-viewer --title='Dubbing AI — Windows VM' spice://127.0.0.1:5932

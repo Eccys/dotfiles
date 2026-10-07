@@ -1,0 +1,47 @@
+[
+  {
+    "id": "firefox@tampermonkey.net",
+    "name": "Tampermonkey",
+    "source": "https://addons.mozilla.org/firefox/downloads/file/4797143/tampermonkey-5.5.0.xpi"
+  },
+  {
+    "id": "CookieAutoDelete@kennydo.com",
+    "name": "Cookie AutoDelete",
+    "source": "https://addons.mozilla.org/firefox/downloads/file/4040738/cookie_autodelete-3.8.2.xpi"
+  },
+  {
+    "id": "mozilla_cc3@internetdownloadmanager.com",
+    "name": "IDM Integration Module",
+    "source": "https://addons.mozilla.org/firefox/downloads/file/4832010/tonec_idm_integration_module-6.43.1.xpi"
+  },
+  {
+    "id": "{2e5ff8c8-32fe-46d0-9fc8-6b8986621f3c}",
+    "name": "Search by Image",
+    "source": "https://addons.mozilla.org/firefox/downloads/file/4840197/search_by_image-8.5.3.xpi"
+  },
+  {
+    "id": "{d7742d87-e61d-4b78-b8a1-b469842139fa}",
+    "name": "Vimium",
+    "source": "https://addons.mozilla.org/firefox/downloads/file/4717567/vimium_ff-2.4.2.xpi"
+  },
+  {
+    "id": "uBlock0@raymondhill.net",
+    "name": "uBlock Origin",
+    "source": "https://addons.mozilla.org/firefox/downloads/file/5034826/ublock_origin-1.75.0.xpi"
+  },
+  {
+    "id": "@windscribeff",
+    "name": "Windscribe - Free Proxy and Ad Blocker",
+    "source": "https://addons.mozilla.org/firefox/downloads/file/5006622/windscribe-3.4.14.4.xpi"
+  },
+  {
+    "id": "{4601aaf0-1c86-42ea-b443-570a1ea94c48}",
+    "name": "Redgif Video Downloader",
+    "source": "https://addons.mozilla.org/firefox/downloads/file/5027652/redgif_video_downloader-0.7.xpi"
+  },
+  {
+    "id": "{446900e4-71c2-419f-a6a7-df9c091e268b}",
+    "name": "Bitwarden Password Manager",
+    "source": "https://addons.mozilla.org/firefox/downloads/file/5076543/bitwarden_password_manager-2026.9.3.xpi"
+  }
+]

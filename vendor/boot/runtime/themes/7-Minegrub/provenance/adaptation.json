@@ -1,0 +1,235 @@
+{
+  "targetResolution": "2560x1440",
+  "sourceDesignResolution": [
+    1920,
+    1080
+  ],
+  "scaleX": 1.3333333333333333,
+  "scaleY": 1.3333333333333333,
+  "method": "Theme background is 1920x1080; percentage anchors are retained and literal pixel geometry is scaled.",
+  "scaledProperties": [
+    {
+      "key": "terminal-border",
+      "from": "\"20\"",
+      "to": "\"27\""
+    },
+    {
+      "key": "terminal-top",
+      "from": "\"10%+23\"",
+      "to": "\"10%+31\""
+    },
+    {
+      "key": "left",
+      "from": "50%-297",
+      "to": "50%-396"
+    },
+    {
+      "key": "top",
+      "from": "40%+14",
+      "to": "40%+19"
+    },
+    {
+      "key": "width",
+      "from": "600",
+      "to": "800"
+    },
+    {
+      "key": "height",
+      "from": "500",
+      "to": "667"
+    },
+    {
+      "key": "item_height",
+      "from": "34",
+      "to": "45"
+    },
+    {
+      "key": "item_spacing",
+      "from": "38",
+      "to": "51"
+    },
+    {
+      "key": "left",
+      "from": "50%-300",
+      "to": "50%-400"
+    },
+    {
+      "key": "width",
+      "from": "600",
+      "to": "800"
+    },
+    {
+      "key": "height",
+      "from": "500",
+      "to": "667"
+    },
+    {
+      "key": "item_height",
+      "from": "34",
+      "to": "45"
+    },
+    {
+      "key": "item_spacing",
+      "from": "38",
+      "to": "51"
+    },
+    {
+      "key": "left",
+      "from": "50%-372",
+      "to": "50%-496"
+    },
+    {
+      "key": "top",
+      "from": "40%+314",
+      "to": "40%+419"
+    },
+    {
+      "key": "left",
+      "from": "50%-400",
+      "to": "50%-533"
+    },
+    {
+      "key": "left",
+      "from": "6",
+      "to": "8"
+    },
+    {
+      "key": "top",
+      "from": "100%-61",
+      "to": "100%-81"
+    },
+    {
+      "key": "height",
+      "from": "54",
+      "to": "72"
+    },
+    {
+      "key": "width",
+      "from": "200",
+      "to": "267"
+    },
+    {
+      "key": "left",
+      "from": "9",
+      "to": "12"
+    },
+    {
+      "key": "top",
+      "from": "100%-58",
+      "to": "100%-77"
+    },
+    {
+      "key": "height",
+      "from": "54",
+      "to": "72"
+    },
+    {
+      "key": "width",
+      "from": "200",
+      "to": "267"
+    },
+    {
+      "key": "left",
+      "from": "6",
+      "to": "8"
+    },
+    {
+      "key": "top",
+      "from": "100%-31",
+      "to": "100%-41"
+    },
+    {
+      "key": "height",
+      "from": "54",
+      "to": "72"
+    },
+    {
+      "key": "width",
+      "from": "200",
+      "to": "267"
+    },
+    {
+      "key": "left",
+      "from": "9",
+      "to": "12"
+    },
+    {
+      "key": "top",
+      "from": "100%-28",
+      "to": "100%-37"
+    },
+    {
+      "key": "height",
+      "from": "54",
+      "to": "72"
+    },
+    {
+      "key": "width",
+      "from": "200",
+      "to": "267"
+    },
+    {
+      "key": "top",
+      "from": "100%-31",
+      "to": "100%-41"
+    },
+    {
+      "key": "height",
+      "from": "24",
+      "to": "32"
+    },
+    {
+      "key": "width",
+      "from": "50%-6",
+      "to": "50%-8"
+    },
+    {
+      "key": "left",
+      "from": "50%+3",
+      "to": "50%+4"
+    },
+    {
+      "key": "top",
+      "from": "100%-28",
+      "to": "100%-37"
+    },
+    {
+      "key": "height",
+      "from": "24",
+      "to": "32"
+    },
+    {
+      "key": "width",
+      "from": "50%-6",
+      "to": "50%-8"
+    }
+  ],
+  "imageComponentDimensionsAdded": [
+    {
+      "file": "static_bar.png",
+      "sourcePixels": [
+        744,
+        60
+      ],
+      "adaptedPixels": [
+        992,
+        80
+      ]
+    },
+    {
+      "file": "logo.png",
+      "sourcePixels": [
+        1200,
+        500
+      ],
+      "adaptedPixels": [
+        1600,
+        667
+      ]
+    }
+  ],
+  "adaptedBackground": null,
+  "sourceThemePreserved": "provenance/upstream-theme.txt",
+  "fontsUnchanged": true,
+  "fontSubstitutionOwner": "runtime package; JetBrains Mono PF2 names to be applied there"
+}

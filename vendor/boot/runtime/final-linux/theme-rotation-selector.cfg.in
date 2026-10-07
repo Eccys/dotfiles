@@ -1,0 +1,157 @@
+# Generic per-boot selector. Caller supplies rotation_dev and explicit paths.
+# It never changes root or prefix.
+insmod regexp
+set rotation_font_load_ok=yes
+if [ -f "$rotation_font_root/JetBrainsMono-Regular-12.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Regular-12.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Regular-13.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Regular-13.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Regular-14.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Regular-14.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Regular-16.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Regular-16.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Regular-17.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Regular-17.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Regular-18.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Regular-18.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Regular-20.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Regular-20.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Regular-22.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Regular-22.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Regular-30.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Regular-30.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Regular-32.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Regular-32.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Regular-48.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Regular-48.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Bold-12.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Bold-12.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Bold-13.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Bold-13.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Bold-14.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Bold-14.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Bold-16.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Bold-16.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Bold-17.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Bold-17.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Bold-18.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Bold-18.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Bold-20.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Bold-20.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Bold-22.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Bold-22.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Bold-30.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Bold-30.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Bold-32.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Bold-32.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -f "$rotation_font_root/JetBrainsMono-Bold-48.pf2" ] ; then
+    if loadfont "$rotation_font_root/JetBrainsMono-Bold-48.pf2" ; then set rotation_font_load_ok=yes ; else set rotation_font_load_ok=no ; fi
+else
+    set rotation_font_load_ok=no
+fi
+if [ -n "$rotation_dev" -a -n "$rotation_state_file" -a -n "$rotation_seed_file" -a -n "$rotation_theme_root" -a -n "$rotation_font_root" ] ; then
+    if [ -f "$rotation_seed_file" ] ; then
+        source "$rotation_seed_file"
+        if regexp '^[0-8]{512}$' "$rotation_original_seed" ; then
+            if [ -f "$rotation_state_file" ] ; then
+                unset rotation_queue rotation_current rotation_version
+                if load_env --file "$rotation_state_file" rotation_queue rotation_current rotation_version ; then
+                    if [ "$rotation_version" = 1 ] && regexp '^[0-8]$' "$rotation_current" ; then
+                        if [ -z "$rotation_queue" ] ; then set rotation_queue=$rotation_original_seed ; fi
+                        if regexp --set=1:rotation_theme_id --set=2:rotation_remaining '^([0-8])([0-8]{0,511})$' "$rotation_queue" ; then
+                            set rotation_candidate_theme=
+                            if [ "$rotation_theme_id" = 0 ] ; then set rotation_candidate_theme="$rotation_theme_root/0-CyberRe/theme.txt" ; fi
+                            if [ "$rotation_theme_id" = 1 ] ; then set rotation_candidate_theme="$rotation_theme_root/1-Cyberpunk2077/theme.txt" ; fi
+                            if [ "$rotation_theme_id" = 2 ] ; then set rotation_candidate_theme="$rotation_theme_root/2-GrubSouls/theme.txt" ; fi
+                            if [ "$rotation_theme_id" = 3 ] ; then set rotation_candidate_theme="$rotation_theme_root/3-OuterWilds/theme.txt" ; fi
+                            if [ "$rotation_theme_id" = 4 ] ; then set rotation_candidate_theme="$rotation_theme_root/4-LiquidGRUB/theme.txt" ; fi
+                            if [ "$rotation_theme_id" = 5 ] ; then set rotation_candidate_theme="$rotation_theme_root/5-GTG/theme.txt" ; fi
+                            if [ "$rotation_theme_id" = 6 ] ; then set rotation_candidate_theme="$rotation_theme_root/6-Minegrub-World/theme.txt" ; fi
+                            if [ "$rotation_theme_id" = 7 ] ; then set rotation_candidate_theme="$rotation_theme_root/7-Minegrub/theme.txt" ; fi
+                            if [ "$rotation_theme_id" = 8 ] ; then set rotation_candidate_theme="$rotation_theme_root/8-SteamOS/theme.txt" ; fi
+                            if [ -n "$rotation_candidate_theme" -a -f "$rotation_candidate_theme" -a "$rotation_font_load_ok" = yes ] ; then
+                                set rotation_previous_queue=$rotation_queue
+                                set rotation_previous_current=$rotation_current
+                                set rotation_previous_version=$rotation_version
+                                set rotation_queue=$rotation_remaining
+                                set rotation_current=$rotation_theme_id
+                                set rotation_version=1
+                                if save_env --file "$rotation_state_file" rotation_queue rotation_current rotation_version ; then
+                                    set theme=$rotation_candidate_theme
+                                    export theme
+                                else
+                                    set rotation_queue=$rotation_previous_queue
+                                    set rotation_current=$rotation_previous_current
+                                    set rotation_version=$rotation_previous_version
+                                fi
+                            fi
+                        fi
+                    fi
+                fi
+            fi
+        fi
+    fi
+fi

@@ -1,0 +1,7 @@
+[Unit]
+Description=Refresh weather every 15 minutes
+[Timer]
+OnStartupSec=30s
+OnUnitActiveSec=15min
+[Install]
+WantedBy=timers.target

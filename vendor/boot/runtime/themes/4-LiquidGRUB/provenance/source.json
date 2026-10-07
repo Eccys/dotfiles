@@ -1,0 +1,628 @@
+{
+  "id": 4,
+  "name": "LiquidGRUB",
+  "packageFolder": "4-LiquidGRUB",
+  "entrypoint": "4-LiquidGRUB/theme.txt",
+  "catalogLinkFromGorgeousGRUB": "https://github.com/Purp1eDuck2008/Liquid-GRUB",
+  "sourceRepository": "https://Purp1eDuck2008/Liquid-GRUB",
+  "sourceBranch": "main",
+  "sourceCommit": "1c336ff58c952e614713471b0aeceeb5d6f29c12",
+  "sourceThemePath": "LiquidGlass/theme.txt",
+  "license": "GPL-3.0",
+  "licenseStatus": "GPL-3.0 in source repository; README separately credits Icons8 for icons",
+  "notes": "Selected light/classic LiquidGlass directory; source also contains a separate dark variant which is not the catalog-linked choice.",
+  "upstreamInstallerExecuted": false,
+  "sourceAssets": [
+    {
+      "path": "background.png",
+      "sourcePath": "LiquidGlass/background.png",
+      "kind": "asset",
+      "sha256": "077273dd5f4bf41d232ae063fe161f6e1880f90716f9ed1329d8b7ed707efe25",
+      "bytes": 2616377
+    },
+    {
+      "path": "icons/4MLinux.png",
+      "sourcePath": "LiquidGlass/icons/4MLinux.png",
+      "kind": "asset",
+      "sha256": "bc5a48906b49e575a65a7b86b8a96f547e4f390fc041632f2c09f4f62644caf3",
+      "bytes": 903
+    },
+    {
+      "path": "icons/AlpineLinux.png",
+      "sourcePath": "LiquidGlass/icons/AlpineLinux.png",
+      "kind": "asset",
+      "sha256": "382db3ae624827175bae31997ea8f663f398e1917bd790bb3c17454bb373a8f1",
+      "bytes": 741
+    },
+    {
+      "path": "icons/Manjaro.i686.png",
+      "sourcePath": "LiquidGlass/icons/Manjaro.i686.png",
+      "kind": "asset",
+      "sha256": "b17593e244f3bcc0759825a9e26bd91f2862d807fc8da6ead68d9613b355fbe2",
+      "bytes": 180
+    },
+    {
+      "path": "icons/Manjaro.x86_64.png",
+      "sourcePath": "LiquidGlass/icons/Manjaro.x86_64.png",
+      "kind": "asset",
+      "sha256": "b17593e244f3bcc0759825a9e26bd91f2862d807fc8da6ead68d9613b355fbe2",
+      "bytes": 180
+    },
+    {
+      "path": "icons/SystemRescueCD.png",
+      "sourcePath": "LiquidGlass/icons/SystemRescueCD.png",
+      "kind": "asset",
+      "sha256": "6ac8d72c901e87fa887a5ca370a8233364749ccff0b2e86e700b2eb8c8de621b",
+      "bytes": 1719
+    },
+    {
+      "path": "icons/android.png",
+      "sourcePath": "LiquidGlass/icons/android.png",
+      "kind": "asset",
+      "sha256": "b9b74146c035f4cbb3245227b56c2550c91448c62e482ce30d1de1fc789e851a",
+      "bytes": 733
+    },
+    {
+      "path": "icons/anonymous.png",
+      "sourcePath": "LiquidGlass/icons/anonymous.png",
+      "kind": "asset",
+      "sha256": "10469fcef51b3d9f268c5c3d0f5ce08f9939552aaae9664a72d824566225fcac",
+      "bytes": 1512
+    },
+    {
+      "path": "icons/antergos.png",
+      "sourcePath": "LiquidGlass/icons/antergos.png",
+      "kind": "asset",
+      "sha256": "689ca9e8eec140f920c507789da4681cf8f2cd38bc80e27044ad9946f0b4cd18",
+      "bytes": 899
+    },
+    {
+      "path": "icons/arch.png",
+      "sourcePath": "LiquidGlass/icons/arch.png",
+      "kind": "asset",
+      "sha256": "46ddbc5fe036e8e7204a42d17fc3875d9c54e32fc1dead9f0a0a2c650e07afdb",
+      "bytes": 701
+    },
+    {
+      "path": "icons/archcraft.png",
+      "sourcePath": "LiquidGlass/icons/archcraft.png",
+      "kind": "asset",
+      "sha256": "f8a0956db0ff83a8b27728336614e87f150c2507247454294d2a10ea612ee2d4",
+      "bytes": 818
+    },
+    {
+      "path": "icons/archlinux.png",
+      "sourcePath": "LiquidGlass/icons/archlinux.png",
+      "kind": "asset",
+      "sha256": "46ddbc5fe036e8e7204a42d17fc3875d9c54e32fc1dead9f0a0a2c650e07afdb",
+      "bytes": 701
+    },
+    {
+      "path": "icons/arcolinux.png",
+      "sourcePath": "LiquidGlass/icons/arcolinux.png",
+      "kind": "asset",
+      "sha256": "b6015c22d0647483a8c4254badc74a7ab028be2d0a3c361d5745b2862fc3b51d",
+      "bytes": 400
+    },
+    {
+      "path": "icons/artix.png",
+      "sourcePath": "LiquidGlass/icons/artix.png",
+      "kind": "asset",
+      "sha256": "70c8efb08dfcbe1e22a4266964031bb5a6d4315f735c0341c82a46afcd2125d7",
+      "bytes": 903
+    },
+    {
+      "path": "icons/brunch-settings.png",
+      "sourcePath": "LiquidGlass/icons/brunch-settings.png",
+      "kind": "asset",
+      "sha256": "4b676156dc0c2c96a2fcc512e826e0f46f024f555dff00e95446462582d64e56",
+      "bytes": 725
+    },
+    {
+      "path": "icons/brunch.png",
+      "sourcePath": "LiquidGlass/icons/brunch.png",
+      "kind": "asset",
+      "sha256": "10d057d4292b243ed0e141dd4cc1eb7b35fdd1c7e67db108a48d4b862154e295",
+      "bytes": 1299
+    },
+    {
+      "path": "icons/cancel.png",
+      "sourcePath": "LiquidGlass/icons/cancel.png",
+      "kind": "asset",
+      "sha256": "3b71598cd798a247bf8a54b25a97e1e948903177708a4a525cea46466543f315",
+      "bytes": 442
+    },
+    {
+      "path": "icons/chakra.png",
+      "sourcePath": "LiquidGlass/icons/chakra.png",
+      "kind": "asset",
+      "sha256": "e83ed58e210c9c4159adedae6cd4ff14cde895bf4cc5396a45fc324b8c3fac12",
+      "bytes": 1044
+    },
+    {
+      "path": "icons/chimera.png",
+      "sourcePath": "LiquidGlass/icons/chimera.png",
+      "kind": "asset",
+      "sha256": "236895c44f7fd859be12ff819ad7a702a443d4914a0502fafdab2b19e71509e1",
+      "bytes": 712
+    },
+    {
+      "path": "icons/debian.png",
+      "sourcePath": "LiquidGlass/icons/debian.png",
+      "kind": "asset",
+      "sha256": "71eeddf5e951aba800258c716b2ff7f9900927a721750df59473919bce744c69",
+      "bytes": 882
+    },
+    {
+      "path": "icons/deepin.png",
+      "sourcePath": "LiquidGlass/icons/deepin.png",
+      "kind": "asset",
+      "sha256": "28cfcc591907e54617bd75fa2ac33db86427f71c00f1c1cf3522cd36ed36e536",
+      "bytes": 1268
+    },
+    {
+      "path": "icons/devuan.png",
+      "sourcePath": "LiquidGlass/icons/devuan.png",
+      "kind": "asset",
+      "sha256": "930bf56b698e53bc6f0675dd38199543f947ddd52d3f7aa8ba831797be19dc9a",
+      "bytes": 664
+    },
+    {
+      "path": "icons/driver.png",
+      "sourcePath": "LiquidGlass/icons/driver.png",
+      "kind": "asset",
+      "sha256": "393dcd7eace76cd203e1de6e8d1e4df5a0985dc6d86a950f1ba06adad092525e",
+      "bytes": 629
+    },
+    {
+      "path": "icons/edit.png",
+      "sourcePath": "LiquidGlass/icons/edit.png",
+      "kind": "asset",
+      "sha256": "7209975341c930ee798fa30acd327e506856f8374ece7f42e0c046fde4867a9f",
+      "bytes": 298
+    },
+    {
+      "path": "icons/efi.png",
+      "sourcePath": "LiquidGlass/icons/efi.png",
+      "kind": "asset",
+      "sha256": "7b4a7f30f6244a65619f72fb6e3a88a594a6c5b3fb62b8bc230482e813b41c61",
+      "bytes": 557
+    },
+    {
+      "path": "icons/elementary.png",
+      "sourcePath": "LiquidGlass/icons/elementary.png",
+      "kind": "asset",
+      "sha256": "f1b6439fca036870604338b08ee6c2c303d920400b5d18508427bd0987eb080f",
+      "bytes": 1308
+    },
+    {
+      "path": "icons/endeavouros.png",
+      "sourcePath": "LiquidGlass/icons/endeavouros.png",
+      "kind": "asset",
+      "sha256": "012c102bb5c4fc660504a6858e3734e4b3e915be8ffd6d5e9a65228d0ac4ad44",
+      "bytes": 1029
+    },
+    {
+      "path": "icons/fedora.png",
+      "sourcePath": "LiquidGlass/icons/fedora.png",
+      "kind": "asset",
+      "sha256": "d2a461532112036c2d9ac8d01e81befbc9e55a4cb774f3bc173e2d393d293047",
+      "bytes": 804
+    },
+    {
+      "path": "icons/find.efi.png",
+      "sourcePath": "LiquidGlass/icons/find.efi.png",
+      "kind": "asset",
+      "sha256": "d167279c62ea292603c7ecf2b3e4d4e078516a4cae8ab98019883912f9f521ca",
+      "bytes": 602
+    },
+    {
+      "path": "icons/find.none.png",
+      "sourcePath": "LiquidGlass/icons/find.none.png",
+      "kind": "asset",
+      "sha256": "c3caa3080d774317ecbba4591db12548efdd2f39d2510015317280c86d454460",
+      "bytes": 654
+    },
+    {
+      "path": "icons/freebsd.png",
+      "sourcePath": "LiquidGlass/icons/freebsd.png",
+      "kind": "asset",
+      "sha256": "6eecddf94e22b436064e5042573e652734945123026f0bc8a138510e75b854aa",
+      "bytes": 840
+    },
+    {
+      "path": "icons/gentoo.png",
+      "sourcePath": "LiquidGlass/icons/gentoo.png",
+      "kind": "asset",
+      "sha256": "42815d10d115f462ab8eecf58a9223412782b14e6a5b1cd5597b8e29b1fbddee",
+      "bytes": 709
+    },
+    {
+      "path": "icons/gnu-linux.png",
+      "sourcePath": "LiquidGlass/icons/gnu-linux.png",
+      "kind": "asset",
+      "sha256": "9fb1d9b222cc5bcf08a5f5fcd55b59d48c3b7164f5d32970c66bd74466423094",
+      "bytes": 1037
+    },
+    {
+      "path": "icons/gpart.png",
+      "sourcePath": "LiquidGlass/icons/gpart.png",
+      "kind": "asset",
+      "sha256": "c262c8bcaa1c71f71c894a64e2bff0feecfdbadf599e8b70504ee7f4389e25a3",
+      "bytes": 940
+    },
+    {
+      "path": "icons/haiku.png",
+      "sourcePath": "LiquidGlass/icons/haiku.png",
+      "kind": "asset",
+      "sha256": "d2c0a365b95853da6162b9bf3131abdd8df950b2250d32b54ea23c822950184c",
+      "bytes": 666
+    },
+    {
+      "path": "icons/help.png",
+      "sourcePath": "LiquidGlass/icons/help.png",
+      "kind": "asset",
+      "sha256": "f52add839241458992b66171eaf922053f931621f20965b58e9bfec4c754a921",
+      "bytes": 390
+    },
+    {
+      "path": "icons/kali.png",
+      "sourcePath": "LiquidGlass/icons/kali.png",
+      "kind": "asset",
+      "sha256": "78032b2093d1a908b2930bba7f3939f76c29692c4efad3865000a32a366e6a5f",
+      "bytes": 883
+    },
+    {
+      "path": "icons/kaos.png",
+      "sourcePath": "LiquidGlass/icons/kaos.png",
+      "kind": "asset",
+      "sha256": "db9d6f2f7a3c3396f34d9e2e3393be4caf546b21ecad2bb5bdf1ad53b556e8d5",
+      "bytes": 787
+    },
+    {
+      "path": "icons/kbd.png",
+      "sourcePath": "LiquidGlass/icons/kbd.png",
+      "kind": "asset",
+      "sha256": "ff4ff5d1450b8b0290f04c0ebbde172e9bbef2a28da667a7668f98647a1c3c01",
+      "bytes": 356
+    },
+    {
+      "path": "icons/kernel.png",
+      "sourcePath": "LiquidGlass/icons/kernel.png",
+      "kind": "asset",
+      "sha256": "1ac9246348b09a47565db8e3ed556089dfef08653192ff56cbbe92a344ff687b",
+      "bytes": 869
+    },
+    {
+      "path": "icons/korora.png",
+      "sourcePath": "LiquidGlass/icons/korora.png",
+      "kind": "asset",
+      "sha256": "c884617a96219513cbcce2864af7d09f8fcd6ca3c330f2f3ef928c364c264f3c",
+      "bytes": 911
+    },
+    {
+      "path": "icons/kubuntu.png",
+      "sourcePath": "LiquidGlass/icons/kubuntu.png",
+      "kind": "asset",
+      "sha256": "5b54d93e116b21a946c2c06fcb49bc1f4cbb20153d0046a6e147c9914def38cc",
+      "bytes": 1042
+    },
+    {
+      "path": "icons/lang.png",
+      "sourcePath": "LiquidGlass/icons/lang.png",
+      "kind": "asset",
+      "sha256": "66a102e3e4bab2eb6e03a8b638dd6f384eea2ad946f611dda219a3ec00a12cb6",
+      "bytes": 722
+    },
+    {
+      "path": "icons/lfs.png",
+      "sourcePath": "LiquidGlass/icons/lfs.png",
+      "kind": "asset",
+      "sha256": "9fb1d9b222cc5bcf08a5f5fcd55b59d48c3b7164f5d32970c66bd74466423094",
+      "bytes": 1037
+    },
+    {
+      "path": "icons/linux.png",
+      "sourcePath": "LiquidGlass/icons/linux.png",
+      "kind": "asset",
+      "sha256": "9fb1d9b222cc5bcf08a5f5fcd55b59d48c3b7164f5d32970c66bd74466423094",
+      "bytes": 1037
+    },
+    {
+      "path": "icons/linuxmint.png",
+      "sourcePath": "LiquidGlass/icons/linuxmint.png",
+      "kind": "asset",
+      "sha256": "d5d2f968711b8960aebdef940e25ebe2c30b38706ac7123905e49351fce66ac2",
+      "bytes": 782
+    },
+    {
+      "path": "icons/lubuntu.png",
+      "sourcePath": "LiquidGlass/icons/lubuntu.png",
+      "kind": "asset",
+      "sha256": "8cd0f860fc71aa67489ffc8c4e518e03c8ef811bda1db9c684021b1191a69f17",
+      "bytes": 1004
+    },
+    {
+      "path": "icons/macosx.png",
+      "sourcePath": "LiquidGlass/icons/macosx.png",
+      "kind": "asset",
+      "sha256": "6d458be27b516ae9f8af369b48b922c4ec2017161df07d5b31a1c16ba59d512c",
+      "bytes": 630
+    },
+    {
+      "path": "icons/mageia.png",
+      "sourcePath": "LiquidGlass/icons/mageia.png",
+      "kind": "asset",
+      "sha256": "9961955b28df2a8d0ab36faf1b4a10bf07faeac0242fd47b117cd447442ef883",
+      "bytes": 841
+    },
+    {
+      "path": "icons/manjaro.png",
+      "sourcePath": "LiquidGlass/icons/manjaro.png",
+      "kind": "asset",
+      "sha256": "b17593e244f3bcc0759825a9e26bd91f2862d807fc8da6ead68d9613b355fbe2",
+      "bytes": 180
+    },
+    {
+      "path": "icons/manjarolinux.png",
+      "sourcePath": "LiquidGlass/icons/manjarolinux.png",
+      "kind": "asset",
+      "sha256": "b17593e244f3bcc0759825a9e26bd91f2862d807fc8da6ead68d9613b355fbe2",
+      "bytes": 180
+    },
+    {
+      "path": "icons/memtest.png",
+      "sourcePath": "LiquidGlass/icons/memtest.png",
+      "kind": "asset",
+      "sha256": "393dcd7eace76cd203e1de6e8d1e4df5a0985dc6d86a950f1ba06adad092525e",
+      "bytes": 629
+    },
+    {
+      "path": "icons/mx-linux.png",
+      "sourcePath": "LiquidGlass/icons/mx-linux.png",
+      "kind": "asset",
+      "sha256": "56c27e3d6cd410bf3e57bef83d38eeab067d4e3b72be7907c60db7c9f9c23b1f",
+      "bytes": 809
+    },
+    {
+      "path": "icons/neon.png",
+      "sourcePath": "LiquidGlass/icons/neon.png",
+      "kind": "asset",
+      "sha256": "38a143c1ed7497f4824f14674312b755cdbedd3e7c11f73b2e3ccbdf9e764dac",
+      "bytes": 1771
+    },
+    {
+      "path": "icons/nixos.png",
+      "sourcePath": "LiquidGlass/icons/nixos.png",
+      "kind": "asset",
+      "sha256": "338886613467c21207660c333fe7621faaf9e71acc27c3df49f65c56aa4ad54e",
+      "bytes": 1054
+    },
+    {
+      "path": "icons/nobara.png",
+      "sourcePath": "LiquidGlass/icons/nobara.png",
+      "kind": "asset",
+      "sha256": "47e88ea9b32a3b8cec2d08dbe019d70d72460c4bf9e2e3f27fe8b7781cfa1959",
+      "bytes": 1155
+    },
+    {
+      "path": "icons/opensuse.png",
+      "sourcePath": "LiquidGlass/icons/opensuse.png",
+      "kind": "asset",
+      "sha256": "dbee695f7bb8721b7417ec3a6c737d04a5bb48e4158c4339637abe0b4ba97bfa",
+      "bytes": 1042
+    },
+    {
+      "path": "icons/parrot.png",
+      "sourcePath": "LiquidGlass/icons/parrot.png",
+      "kind": "asset",
+      "sha256": "fe5147fbef6e4f59b549a21c1130a1eabde9801999e25057ec77fd15ebaaf70a",
+      "bytes": 594
+    },
+    {
+      "path": "icons/pop-os.png",
+      "sourcePath": "LiquidGlass/icons/pop-os.png",
+      "kind": "asset",
+      "sha256": "426fd79b5da9d66098fd0193430d30282f368f26b3ec96ce5029dcfdc29bb1c2",
+      "bytes": 1114
+    },
+    {
+      "path": "icons/pop.png",
+      "sourcePath": "LiquidGlass/icons/pop.png",
+      "kind": "asset",
+      "sha256": "426fd79b5da9d66098fd0193430d30282f368f26b3ec96ce5029dcfdc29bb1c2",
+      "bytes": 1114
+    },
+    {
+      "path": "icons/recovery.png",
+      "sourcePath": "LiquidGlass/icons/recovery.png",
+      "kind": "asset",
+      "sha256": "de44fead736ea2732c64014d8914282b497576600cce0015eb34b1277c0ed1e9",
+      "bytes": 633
+    },
+    {
+      "path": "icons/regolith.png",
+      "sourcePath": "LiquidGlass/icons/regolith.png",
+      "kind": "asset",
+      "sha256": "353374ae8772a034d989275b84caba778d3f6a1a0ddd62f2f63f85c07fd3e7b5",
+      "bytes": 1077
+    },
+    {
+      "path": "icons/restart.png",
+      "sourcePath": "LiquidGlass/icons/restart.png",
+      "kind": "asset",
+      "sha256": "58b46d94002f38737daf10c8c091217b34d933c14a001bf26d054703c031c805",
+      "bytes": 594
+    },
+    {
+      "path": "icons/shutdown.png",
+      "sourcePath": "LiquidGlass/icons/shutdown.png",
+      "kind": "asset",
+      "sha256": "344efebadbc260f788673f7be1a29615a64f2b791a976f047e789928fbe3e1c1",
+      "bytes": 697
+    },
+    {
+      "path": "icons/siduction.png",
+      "sourcePath": "LiquidGlass/icons/siduction.png",
+      "kind": "asset",
+      "sha256": "9d70021e00fc3e8f127929487c099a6ea149e98d802d6bc2b8cd1f926fcc2b0a",
+      "bytes": 741
+    },
+    {
+      "path": "icons/solus.png",
+      "sourcePath": "LiquidGlass/icons/solus.png",
+      "kind": "asset",
+      "sha256": "97ac00d81040953121d482944f14acf390bba518ce94ac61abd6eb1fa0dde980",
+      "bytes": 942
+    },
+    {
+      "path": "icons/steamos.png",
+      "sourcePath": "LiquidGlass/icons/steamos.png",
+      "kind": "asset",
+      "sha256": "29d40ecd812cb887552d4ae93b719b30a472bcb8442c2bdc38fda0d4826528c3",
+      "bytes": 922
+    },
+    {
+      "path": "icons/submenu.png",
+      "sourcePath": "LiquidGlass/icons/submenu.png",
+      "kind": "asset",
+      "sha256": "1151a33559896ac390b266f0cc9bac937faff919f344e6a1f07da73a23547238",
+      "bytes": 393
+    },
+    {
+      "path": "icons/type.png",
+      "sourcePath": "LiquidGlass/icons/type.png",
+      "kind": "asset",
+      "sha256": "e38d13d6cb27db5649b7d3e93b24f75a66aa6ee6b84e7833498ca3fdee71eaf1",
+      "bytes": 273
+    },
+    {
+      "path": "icons/tz.png",
+      "sourcePath": "LiquidGlass/icons/tz.png",
+      "kind": "asset",
+      "sha256": "dde31b7ab4570282719b36c37f678b7a62e86e46c4265a792535e3e6cd82e582",
+      "bytes": 684
+    },
+    {
+      "path": "icons/ubuntu.png",
+      "sourcePath": "LiquidGlass/icons/ubuntu.png",
+      "kind": "asset",
+      "sha256": "e88cc3f3709c7b5bd4cb7a6f0bfe567cba4e287855105cbc56ee33201373222a",
+      "bytes": 952
+    },
+    {
+      "path": "icons/ubuntuDDE.png",
+      "sourcePath": "LiquidGlass/icons/ubuntuDDE.png",
+      "kind": "asset",
+      "sha256": "5acbc63343f4b822cbe7c03a3ac66ad9b665f4e996f40a8d7dd29d2d05587394",
+      "bytes": 922
+    },
+    {
+      "path": "icons/unknown.png",
+      "sourcePath": "LiquidGlass/icons/unknown.png",
+      "kind": "asset",
+      "sha256": "9fb1d9b222cc5bcf08a5f5fcd55b59d48c3b7164f5d32970c66bd74466423094",
+      "bytes": 1037
+    },
+    {
+      "path": "icons/unset.png",
+      "sourcePath": "LiquidGlass/icons/unset.png",
+      "kind": "asset",
+      "sha256": "ceacd57258d916e9fad256894fa17aabbc5d8d26a4594640503f4f5c7ff04a3e",
+      "bytes": 467
+    },
+    {
+      "path": "icons/void.png",
+      "sourcePath": "LiquidGlass/icons/void.png",
+      "kind": "asset",
+      "sha256": "862a76618a57121019ea43c2de6cafc028f71d23e2c309d2f072fc163a6d3e58",
+      "bytes": 1025
+    },
+    {
+      "path": "icons/windows.png",
+      "sourcePath": "LiquidGlass/icons/windows.png",
+      "kind": "asset",
+      "sha256": "2a00bb8adb153a3e1925d553c08ba1d85b9e0c5e31953887b7f25f1d180280fd",
+      "bytes": 234
+    },
+    {
+      "path": "icons/xubuntu.png",
+      "sourcePath": "LiquidGlass/icons/xubuntu.png",
+      "kind": "asset",
+      "sha256": "bf57ce69bac2288908af0acb4542d4aac2593881bdd082e8d7bccdc542ee812b",
+      "bytes": 823
+    },
+    {
+      "path": "icons/zorin.png",
+      "sourcePath": "LiquidGlass/icons/zorin.png",
+      "kind": "asset",
+      "sha256": "b3e73fb0d561908c7373437a69ab85fcc9e61d86850fbc0abf26ec01c27b9e13",
+      "bytes": 595
+    },
+    {
+      "path": "select_c.png",
+      "sourcePath": "LiquidGlass/select_c.png",
+      "kind": "asset",
+      "sha256": "dad3c2b15c6021e9b8eb70b6b47a4e22883f2d77a030e479a76e0bfd0a4643b2",
+      "bytes": 1914
+    },
+    {
+      "path": "select_e.png",
+      "sourcePath": "LiquidGlass/select_e.png",
+      "kind": "asset",
+      "sha256": "3903c00a24af389df75a5d9feb7444c70008f87c12b379a2bbf39f1e43f30813",
+      "bytes": 2531
+    },
+    {
+      "path": "select_w.png",
+      "sourcePath": "LiquidGlass/select_w.png",
+      "kind": "asset",
+      "sha256": "776f87604cc3b00c78544e76be1ca5bfea2d4a9ebabcd586ad4921cbf95c45a1",
+      "bytes": 2492
+    },
+    {
+      "path": "terminus-12.pf2",
+      "sourcePath": "LiquidGlass/terminus-12.pf2",
+      "kind": "asset",
+      "sha256": "4bf4b691370c4ad590c2aedf75b9dc88e4e1636cf9bd87fd7fac985e84f1e74e",
+      "bytes": 21895
+    },
+    {
+      "path": "terminus-14.pf2",
+      "sourcePath": "LiquidGlass/terminus-14.pf2",
+      "kind": "asset",
+      "sha256": "bca1c0f8d401e047d2382e8203836e5259063cab415e26d5f02b40cf07fbba08",
+      "bytes": 23941
+    },
+    {
+      "path": "terminus-16.pf2",
+      "sourcePath": "LiquidGlass/terminus-16.pf2",
+      "kind": "asset",
+      "sha256": "4f9a996da1f31638f7bc4516f849b771b88128f086b2584e010d549a9fa1e611",
+      "bytes": 24214
+    },
+    {
+      "path": "terminus-18.pf2",
+      "sourcePath": "LiquidGlass/terminus-18.pf2",
+      "kind": "asset",
+      "sha256": "bdea338e1cfb4fe87b98b5dec2900d85a75c3ff96e33bd8d4183af1d88fc3731",
+      "bytes": 26835
+    },
+    {
+      "path": "unifont-32.pf2",
+      "sourcePath": "LiquidGlass/unifont-32.pf2",
+      "kind": "asset",
+      "sha256": "186b122a501db67ad688a6ceaf2b975c935d677cc4c3cee92277afaa7ffe9904",
+      "bytes": 6577459
+    },
+    {
+      "path": "unifont-48.pf2",
+      "sourcePath": "LiquidGlass/unifont-48.pf2",
+      "kind": "asset",
+      "sha256": "1516b9ffd5168469a20c5d6aefac6d5244689995111563fb5e892d69799bb0b5",
+      "bytes": 22287
+    }
+  ],
+  "sourceReadmeAndLicense": "provenance/README.md and provenance/LICENSE when present; original theme file is provenance/upstream-theme.txt",
+  "retrievalFailures": []
+}

@@ -1,0 +1,523 @@
+{
+  "id": 6,
+  "name": "Minegrub World Select",
+  "packageFolder": "6-Minegrub-World",
+  "entrypoint": "6-Minegrub-World/theme.txt",
+  "catalogLinkFromGorgeousGRUB": "https://github.com/Lxtharia/minegrub-world-sel-theme",
+  "sourceRepository": "https://Lxtharia/minegrub-world-sel-theme",
+  "sourceBranch": "dev",
+  "sourceCommit": "29bfe180a086454e8cd7a690ed0a0d0ed10446c1",
+  "sourceThemePath": "minegrub-world-selection/theme.txt",
+  "license": "MIT",
+  "licenseStatus": "MIT in source repository; README notes font source terms separately",
+  "notes": "No optional GRUB console/UEFI/entry patches are applied. Source includes an exact 2560x1440 background variant and class-named icons.",
+  "upstreamInstallerExecuted": false,
+  "sourceAssets": [
+    {
+      "path": "L2_item_n.png",
+      "sourcePath": "minegrub-world-selection/L2_item_n.png",
+      "kind": "asset",
+      "sha256": "4fcc82c2df5cbd5bf88e96730c67ba14c82232ff0c44a9c3da0f4ec8b7204570",
+      "bytes": 492
+    },
+    {
+      "path": "L2_item_w.png",
+      "sourcePath": "minegrub-world-selection/L2_item_w.png",
+      "kind": "asset",
+      "sha256": "fb3ca0da2b592ccb46ca6f6ec93ebaa4a9a46493104d74963530f6beffc5c9b6",
+      "bytes": 491
+    },
+    {
+      "path": "L3_item_n.png",
+      "sourcePath": "minegrub-world-selection/L3_item_n.png",
+      "kind": "asset",
+      "sha256": "4fcc82c2df5cbd5bf88e96730c67ba14c82232ff0c44a9c3da0f4ec8b7204570",
+      "bytes": 492
+    },
+    {
+      "path": "L3_item_w.png",
+      "sourcePath": "minegrub-world-selection/L3_item_w.png",
+      "kind": "asset",
+      "sha256": "c6603482778256219ef0e826650a400c3125b969afaf17bab9aa9c421bb9d01a",
+      "bytes": 860
+    },
+    {
+      "path": "Minecraft30.pf2",
+      "sourcePath": "minegrub-world-selection/Minecraft30.pf2",
+      "kind": "asset",
+      "sha256": "c89c490bbc44ca2b731f99507bb20cb03d1a183b4bbb733e165f4eb102c8d44e",
+      "bytes": 8402
+    },
+    {
+      "path": "Monocraft22.pf2",
+      "sourcePath": "minegrub-world-selection/Monocraft22.pf2",
+      "kind": "asset",
+      "sha256": "ef3592063dce99f4e2542369ab2bed4f4f528017577dff5ef6076e134706c2e6",
+      "bytes": 12482
+    },
+    {
+      "path": "provenance/upstream-background-1920x1080.png",
+      "sourcePath": "minegrub-world-selection/background.png",
+      "kind": "asset",
+      "sha256": "fb801c064f4e5f1aa6bc07cddde13c28925a98df54e6acf2e3ef9d9acf186cca",
+      "bytes": 39823
+    },
+    {
+      "path": "dirt.png",
+      "sourcePath": "minegrub-world-selection/dirt.png",
+      "kind": "asset",
+      "sha256": "0f87eb3286e875396aeffb7b8c86da71abf27ea25855a5cc50b8577bb8fcb5e1",
+      "bytes": 26974
+    },
+    {
+      "path": "icons/alt-linux.png",
+      "sourcePath": "minegrub-world-selection/icons/alt-linux.png",
+      "kind": "asset",
+      "sha256": "dc95691d2bc815da1d5daff4fa50d12e4b2745c68855bad66d9a335a14a76dad",
+      "bytes": 12213
+    },
+    {
+      "path": "icons/aosc.png",
+      "sourcePath": "minegrub-world-selection/icons/aosc.png",
+      "kind": "asset",
+      "sha256": "8f88dfd7e8a7616d19e65606e071ad45376b78b816122dd19213d297402ba746",
+      "bytes": 10567
+    },
+    {
+      "path": "icons/arch.png",
+      "sourcePath": "minegrub-world-selection/icons/arch.png",
+      "kind": "asset",
+      "sha256": "d44500cde113b8df5c390475503053744e6b3e2cd044ac6048fd999bb3b8ed0a",
+      "bytes": 12094
+    },
+    {
+      "path": "icons/archlinux.png",
+      "sourcePath": "minegrub-world-selection/icons/archlinux.png",
+      "kind": "asset",
+      "sha256": "50d491abc44ba1916c7a488f6210dc5cdcc696a97f4ee47f6ef285b9d9f6cdb1",
+      "bytes": 8440
+    },
+    {
+      "path": "icons/artix.png",
+      "sourcePath": "minegrub-world-selection/icons/artix.png",
+      "kind": "asset",
+      "sha256": "dda15da77a99132d0b112307f4e05ece0cd0f7735ada5f1f22f5238abb303d68",
+      "bytes": 12216
+    },
+    {
+      "path": "icons/astra.png",
+      "sourcePath": "minegrub-world-selection/icons/astra.png",
+      "kind": "asset",
+      "sha256": "90e7fd6d8887f0cab0eb07fdca59b3142013692cec38c7adf4f2dfa66ac26998",
+      "bytes": 12825
+    },
+    {
+      "path": "icons/bazzite.png",
+      "sourcePath": "minegrub-world-selection/icons/bazzite.png",
+      "kind": "asset",
+      "sha256": "71cbf02c2f0bd7bfb90ca04737d30d235545d87c9628033f938ffe6fd6a78994",
+      "bytes": 11916
+    },
+    {
+      "path": "icons/bedrock.png",
+      "sourcePath": "minegrub-world-selection/icons/bedrock.png",
+      "kind": "asset",
+      "sha256": "e90e0fb8e518c2585a72b18f334e4097496f99d62fea5fca9153487246bbed0c",
+      "bytes": 15897
+    },
+    {
+      "path": "icons/cachyos.png",
+      "sourcePath": "minegrub-world-selection/icons/cachyos.png",
+      "kind": "asset",
+      "sha256": "208b9f74713ea2b071106c70401163b7843de9a5566b7ce733dee6f6ceb6ed0b",
+      "bytes": 11135
+    },
+    {
+      "path": "icons/debian.png",
+      "sourcePath": "minegrub-world-selection/icons/debian.png",
+      "kind": "asset",
+      "sha256": "3ae23bf0f57c32d6bdc454419f26c71c750a9ec4840a3d852eebf946fe4f0db6",
+      "bytes": 14209
+    },
+    {
+      "path": "icons/deepin.png",
+      "sourcePath": "minegrub-world-selection/icons/deepin.png",
+      "kind": "asset",
+      "sha256": "1d2528f4775c9b901133d0f7fd0ede998fee88872dfac29d3f555ca71a4ae0e0",
+      "bytes": 13180
+    },
+    {
+      "path": "icons/endeavouros.png",
+      "sourcePath": "minegrub-world-selection/icons/endeavouros.png",
+      "kind": "asset",
+      "sha256": "02fb3df10ea4051506b4d997ac45f01ca969ec8c7052cc0078cbcea2b5331fe6",
+      "bytes": 8619
+    },
+    {
+      "path": "icons/fedora.png",
+      "sourcePath": "minegrub-world-selection/icons/fedora.png",
+      "kind": "asset",
+      "sha256": "cb619c7ff5e06a9e738de615af85125a372c41aecfce426c5c9b96c498e4b0c0",
+      "bytes": 9229
+    },
+    {
+      "path": "icons/gentoo.png",
+      "sourcePath": "minegrub-world-selection/icons/gentoo.png",
+      "kind": "asset",
+      "sha256": "c97238a31a67ae85f9ebc662ec60ef9772f9c3dfb77f5c8b71f7661fe763ea34",
+      "bytes": 10881
+    },
+    {
+      "path": "icons/gnu-linux.png",
+      "sourcePath": "minegrub-world-selection/icons/gnu-linux.png",
+      "kind": "asset",
+      "sha256": "09de2a8000387a53b9e9af0c5e8aa687e0d3708e7375e88f8d2fa3923338d809",
+      "bytes": 2018
+    },
+    {
+      "path": "icons/kali.png",
+      "sourcePath": "minegrub-world-selection/icons/kali.png",
+      "kind": "asset",
+      "sha256": "27d9fd8f43789467ab1402ef95945399d814f4811d99cbfb87210449fdb9dd09",
+      "bytes": 11996
+    },
+    {
+      "path": "icons/kubuntu.png",
+      "sourcePath": "minegrub-world-selection/icons/kubuntu.png",
+      "kind": "asset",
+      "sha256": "56de65ea674d16a2d29527ad334377b357ec021369fc330db47e06a26b98c84c",
+      "bytes": 11221
+    },
+    {
+      "path": "icons/linuxmint.png",
+      "sourcePath": "minegrub-world-selection/icons/linuxmint.png",
+      "kind": "asset",
+      "sha256": "b35334f64550aaa1e4a79858dc791ada218561676c1074394ddd17fae34c80fa",
+      "bytes": 9533
+    },
+    {
+      "path": "icons/manjaro.png",
+      "sourcePath": "minegrub-world-selection/icons/manjaro.png",
+      "kind": "asset",
+      "sha256": "9b50169043f201e4929105215f2590f9bed39f20a0936caf176a661d4d1e9c7a",
+      "bytes": 8481
+    },
+    {
+      "path": "icons/nixos.png",
+      "sourcePath": "minegrub-world-selection/icons/nixos.png",
+      "kind": "asset",
+      "sha256": "5adcc8a501a4b4018184f5004608cd2c1bc04a49db17f6d6cc07145981fbf98c",
+      "bytes": 12533
+    },
+    {
+      "path": "icons/nobara.png",
+      "sourcePath": "minegrub-world-selection/icons/nobara.png",
+      "kind": "asset",
+      "sha256": "4bd06af8633b3e79f4aaefb511d4912fe1cd5a94424107c0b828436c8673daa3",
+      "bytes": 13246
+    },
+    {
+      "path": "icons/opensuse.png",
+      "sourcePath": "minegrub-world-selection/icons/opensuse.png",
+      "kind": "asset",
+      "sha256": "7334fa15cf29310e9a14f2a1285f9c6f8ded02098a86f889e6a1893d68e04945",
+      "bytes": 11186
+    },
+    {
+      "path": "icons/os.png",
+      "sourcePath": "minegrub-world-selection/icons/os.png",
+      "kind": "asset",
+      "sha256": "3726a54d691c06a17caf7b7c9deae7beccea8ff55cd6c608bb1ed2989d716aac",
+      "bytes": 2155
+    },
+    {
+      "path": "icons/pardus.png",
+      "sourcePath": "minegrub-world-selection/icons/pardus.png",
+      "kind": "asset",
+      "sha256": "3015c27812ba0c5919a4fc67e4dfc273802270a9a47a17480539edd30b9868e4",
+      "bytes": 13911
+    },
+    {
+      "path": "icons/pop-os.png",
+      "sourcePath": "minegrub-world-selection/icons/pop-os.png",
+      "kind": "asset",
+      "sha256": "6410cd15e0cee7f3dd93b5a99b747391aa8c7884e47b1e42873c7083564eb137",
+      "bytes": 5674
+    },
+    {
+      "path": "icons/redos.png",
+      "sourcePath": "minegrub-world-selection/icons/redos.png",
+      "kind": "asset",
+      "sha256": "08bad4ae64f29e59e5f764f68721f83b367183c12660049f111c2fad1625911e",
+      "bytes": 12804
+    },
+    {
+      "path": "icons/restart.png",
+      "sourcePath": "minegrub-world-selection/icons/restart.png",
+      "kind": "asset",
+      "sha256": "93f885785b92a0b41b323a2f0d8e67cf76da943a6531641706f95c7dc7b2d5fc",
+      "bytes": 9238
+    },
+    {
+      "path": "icons/shutdown.png",
+      "sourcePath": "minegrub-world-selection/icons/shutdown.png",
+      "kind": "asset",
+      "sha256": "a48776a053522deb50596b9158c897fb9dae1e0bb69505059ea06b6d4833819e",
+      "bytes": 9123
+    },
+    {
+      "path": "icons/snapshot.png",
+      "sourcePath": "minegrub-world-selection/icons/snapshot.png",
+      "kind": "asset",
+      "sha256": "08fec32c5191331ec90e763baf1b12e327244f08cf343be1084ab5533ef8f5b1",
+      "bytes": 12580
+    },
+    {
+      "path": "icons/submenu.png",
+      "sourcePath": "minegrub-world-selection/icons/submenu.png",
+      "kind": "asset",
+      "sha256": "1875e3f90909b9029c73d179d8ac81f2af1d0bd7ad0cf18a9db0f94ba3690645",
+      "bytes": 11869
+    },
+    {
+      "path": "icons/ubuntu.png",
+      "sourcePath": "minegrub-world-selection/icons/ubuntu.png",
+      "kind": "asset",
+      "sha256": "1e48836f1e00de59e9a31e0aefa20318ff8f889b372365d23c881cc6bd2e9d9b",
+      "bytes": 11508
+    },
+    {
+      "path": "icons/uefi.png",
+      "sourcePath": "minegrub-world-selection/icons/uefi.png",
+      "kind": "asset",
+      "sha256": "ea505498921cf485437d7d7551ead8f17038b3d10c561c8d2549bc4969d6adc4",
+      "bytes": 12947
+    },
+    {
+      "path": "icons/void.png",
+      "sourcePath": "minegrub-world-selection/icons/void.png",
+      "kind": "asset",
+      "sha256": "c41da80adac80bbda44b71c5200ca4590a4565eb838ad2b03bd1e49d9cd5613e",
+      "bytes": 6610
+    },
+    {
+      "path": "icons/windows.png",
+      "sourcePath": "minegrub-world-selection/icons/windows.png",
+      "kind": "asset",
+      "sha256": "7aaf824780e7b26a9888a2e32855905a50d41eac85b725805a1ad28c036d07fd",
+      "bytes": 12138
+    },
+    {
+      "path": "icons/windows10.png",
+      "sourcePath": "minegrub-world-selection/icons/windows10.png",
+      "kind": "asset",
+      "sha256": "ec6e0187289c6faf3ec432e86e76a6be6fa818a316464d87074edb66c23c25db",
+      "bytes": 12249
+    },
+    {
+      "path": "icons/windows11.png",
+      "sourcePath": "minegrub-world-selection/icons/windows11.png",
+      "kind": "asset",
+      "sha256": "f3b97d6f313de161c5fe37cd7a5c301ff88796f44dbd93ab8510e8bd34b04494",
+      "bytes": 9874
+    },
+    {
+      "path": "icons/windows7.png",
+      "sourcePath": "minegrub-world-selection/icons/windows7.png",
+      "kind": "asset",
+      "sha256": "84a1bd0ba42dcdd0a175cda4ac48385ca1e94a59dd5468d6f71ba319cde173e1",
+      "bytes": 12702
+    },
+    {
+      "path": "icons/zorin.png",
+      "sourcePath": "minegrub-world-selection/icons/zorin.png",
+      "kind": "asset",
+      "sha256": "6db11a5224659f58bc53c1c9a05db4eae9f6d9dce85ec9bc004f2fca565ac85b",
+      "bytes": 12765
+    },
+    {
+      "path": "item_n.png",
+      "sourcePath": "minegrub-world-selection/item_n.png",
+      "kind": "asset",
+      "sha256": "a70964b27fe87513b630287557e66a0a04fae85ec221c25ec45711b8d0d32c56",
+      "bytes": 494
+    },
+    {
+      "path": "item_nw.png",
+      "sourcePath": "minegrub-world-selection/item_nw.png",
+      "kind": "asset",
+      "sha256": "ed5e1815e879f1d5d031bc5f91ea536edcf7ca06ca850538cf02a345bd8a9f57",
+      "bytes": 532
+    },
+    {
+      "path": "item_s.png",
+      "sourcePath": "minegrub-world-selection/item_s.png",
+      "kind": "asset",
+      "sha256": "8d7cda15c9bfaf9c4001a505db39b7e4326cc05cd7f8f60feb731a5e1977e4f2",
+      "bytes": 509
+    },
+    {
+      "path": "item_sw.png",
+      "sourcePath": "minegrub-world-selection/item_sw.png",
+      "kind": "asset",
+      "sha256": "82f1fe741c2599958160f8538521ee7ca1b5c4c9546c755cf213070aab598685",
+      "bytes": 8915
+    },
+    {
+      "path": "item_w.png",
+      "sourcePath": "minegrub-world-selection/item_w.png",
+      "kind": "asset",
+      "sha256": "49249edb4775d7c40ee784912e19ccff9321cffc1b212013c945f879b8aa235e",
+      "bytes": 952
+    },
+    {
+      "path": "menu_e.png",
+      "sourcePath": "minegrub-world-selection/menu_e.png",
+      "kind": "asset",
+      "sha256": "1b2c752d0c367e646f82f270c916d70401fd94d16524f4b4998e908ede2d41f1",
+      "bytes": 90
+    },
+    {
+      "path": "scrollbar_frame_c.png",
+      "sourcePath": "minegrub-world-selection/scrollbar_frame_c.png",
+      "kind": "asset",
+      "sha256": "83e8b3e3c0fe1d255dab2390100c17b3aaed174d439b984f79be9c2ee8c5c294",
+      "bytes": 94
+    },
+    {
+      "path": "scrollbar_thumb_c.png",
+      "sourcePath": "minegrub-world-selection/scrollbar_thumb_c.png",
+      "kind": "asset",
+      "sha256": "1f3b852cc2f3065e2a218809cc05e896f3b46cd2fa872ffb761dcbaf9d670e95",
+      "bytes": 98
+    },
+    {
+      "path": "scrollbar_thumb_s.png",
+      "sourcePath": "minegrub-world-selection/scrollbar_thumb_s.png",
+      "kind": "asset",
+      "sha256": "8de54cd487fcc1b7b5278641112057726e99582bfd8cad45287bb5a138138048",
+      "bytes": 99
+    },
+    {
+      "path": "selected_item_c.png",
+      "sourcePath": "minegrub-world-selection/selected_item_c.png",
+      "kind": "asset",
+      "sha256": "88ef0d89937324b707b42cb9b2b44d38b5b3163b7ad95f5e0170f72040893770",
+      "bytes": 508
+    },
+    {
+      "path": "selected_item_e.png",
+      "sourcePath": "minegrub-world-selection/selected_item_e.png",
+      "kind": "asset",
+      "sha256": "c015c1cfafb17b949e4bf102aa482f5b57f4b040adebfdc09bf6c2e2e6a35762",
+      "bytes": 500
+    },
+    {
+      "path": "selected_item_n.png",
+      "sourcePath": "minegrub-world-selection/selected_item_n.png",
+      "kind": "asset",
+      "sha256": "a2937903d8ffc98474449bc4eea2e0bb2ebb8eba0dc16fdc8864342312243cb0",
+      "bytes": 516
+    },
+    {
+      "path": "selected_item_ne.png",
+      "sourcePath": "minegrub-world-selection/selected_item_ne.png",
+      "kind": "asset",
+      "sha256": "7a9c3493042161bb4376f9380820a711ba7d3225146e5a419f6c8f58670a196d",
+      "bytes": 506
+    },
+    {
+      "path": "selected_item_nw.png",
+      "sourcePath": "minegrub-world-selection/selected_item_nw.png",
+      "kind": "asset",
+      "sha256": "2155c3d62e96708afb9392cde26d190728257967e0de845957e97e7019f94cb3",
+      "bytes": 547
+    },
+    {
+      "path": "selected_item_s.png",
+      "sourcePath": "minegrub-world-selection/selected_item_s.png",
+      "kind": "asset",
+      "sha256": "4083785d1c79ecc6caf1f3c2e4867750bf43cde95d921ffbb51e175985c06dc9",
+      "bytes": 548
+    },
+    {
+      "path": "selected_item_se.png",
+      "sourcePath": "minegrub-world-selection/selected_item_se.png",
+      "kind": "asset",
+      "sha256": "32a86aa1d712476e8ffd8bdc9c9716847d2f5110b724d179b70b5baf57cd90f2",
+      "bytes": 514
+    },
+    {
+      "path": "selected_item_sw.png",
+      "sourcePath": "minegrub-world-selection/selected_item_sw.png",
+      "kind": "asset",
+      "sha256": "ac0e38afeb58768847a0ec05ecee64b8a7a1a1577a9a4050096e8e0ca6ecf0f9",
+      "bytes": 8393
+    },
+    {
+      "path": "selected_item_w.png",
+      "sourcePath": "minegrub-world-selection/selected_item_w.png",
+      "kind": "asset",
+      "sha256": "03ff2763efed64058989b0dde9680bf67e021fb3a75450d570b0538a729a0a44",
+      "bytes": 924
+    },
+    {
+      "path": "term_e.png",
+      "sourcePath": "minegrub-world-selection/term_e.png",
+      "kind": "asset",
+      "sha256": "79f7b3a5574d67be889e6cc3c257f8aeb0d8dd1f77968e9a76d4d30bb4aaae47",
+      "bytes": 547
+    },
+    {
+      "path": "term_n.png",
+      "sourcePath": "minegrub-world-selection/term_n.png",
+      "kind": "asset",
+      "sha256": "fefd7fd2a910b450c8004eeee2c8913f4831d6ce0def4ece4ab0ea517e352393",
+      "bytes": 553
+    },
+    {
+      "path": "term_ne.png",
+      "sourcePath": "minegrub-world-selection/term_ne.png",
+      "kind": "asset",
+      "sha256": "600af31fb00ce71891c8cdcaca52abd3e8f3c73a77f3573337c39d5b6de5a876",
+      "bytes": 2375
+    },
+    {
+      "path": "term_nw.png",
+      "sourcePath": "minegrub-world-selection/term_nw.png",
+      "kind": "asset",
+      "sha256": "758cc9647587f41d01564948f697cb0c463f3a7d141bb7b1b6a01bb62a7619cd",
+      "bytes": 2351
+    },
+    {
+      "path": "term_s.png",
+      "sourcePath": "minegrub-world-selection/term_s.png",
+      "kind": "asset",
+      "sha256": "a24b6c5faeaba965124768481435f27a2dbec0f87522d383fa7489c3e6610fee",
+      "bytes": 553
+    },
+    {
+      "path": "term_se.png",
+      "sourcePath": "minegrub-world-selection/term_se.png",
+      "kind": "asset",
+      "sha256": "9391fda656fcef10723a0e3bc4fbe07695c589fdefa26c7518850206057a5e85",
+      "bytes": 2368
+    },
+    {
+      "path": "term_sw.png",
+      "sourcePath": "minegrub-world-selection/term_sw.png",
+      "kind": "asset",
+      "sha256": "51de2b9190ba6e9094b2a7d410112c81458031134026af5f41dccdd8b8ac14c7",
+      "bytes": 2373
+    },
+    {
+      "path": "term_w.png",
+      "sourcePath": "minegrub-world-selection/term_w.png",
+      "kind": "asset",
+      "sha256": "fe37d4a59c93a0afcf44dbd1a5c3aec02f794a22940f6c203fa3827c3f0924be",
+      "bytes": 546
+    }
+  ],
+  "sourceReadmeAndLicense": "provenance/README.md and provenance/LICENSE when present; original theme file is provenance/upstream-theme.txt",
+  "retrievalFailures": []
+}

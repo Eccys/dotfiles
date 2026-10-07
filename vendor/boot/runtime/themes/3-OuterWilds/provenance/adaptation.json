@@ -1,0 +1,16 @@
+{
+  "targetResolution": "2560x1440",
+  "sourceDesignResolution": [
+    2560,
+    1440
+  ],
+  "scaleX": 1.0,
+  "scaleY": 1.0,
+  "method": "Upstream explicitly provides a theme-files-1440p directory; keep its intended 1440p geometry.",
+  "scaledProperties": [],
+  "imageComponentDimensionsAdded": [],
+  "adaptedBackground": null,
+  "sourceThemePreserved": "provenance/upstream-theme.txt",
+  "fontsUnchanged": true,
+  "fontSubstitutionOwner": "runtime package; JetBrains Mono PF2 names to be applied there"
+}

@@ -1,0 +1,50 @@
+# Local 2560x1440 adaptation of the pinned upstream theme; see provenance/adaptation.json.
+# Copyright (C) 2020 L. Henrique Lopes - HENK
+
+# general settings
+ title-text: ""
+ title-color: "#3ec6ae"
+ message-font: "JetBrains Mono Regular 14"
+ message-color: "#fd262e"
+ message-bg-color: "#808080"
+ desktop-image: "background.png"
+ desktop-color: "#808080"
+ terminal-font: "JetBrains Mono Regular 14"
+
+
+# boot menu
++ boot_menu {
+    left = 28%
+    width = 50%
+    top = 22%
+    height = 45%	
+    item_font = "JetBrains Mono Regular 17"
+    item_color = "#fb3048"
+    selected_item_font = "JetBrains Mono Regular 17"
+    selected_item_color = "#74d6cf"
+    icon_width = 21
+    icon_height = 21
+    item_height = 44
+    item_padding = 27
+    item_icon_space = 7
+    item_spacing = 7
+    menu_pixmap_style = "boot_menu2_*.png"
+    selected_item_pixmap_style = "highlight_*.png"
+}
+
+# Show progress
++ progress_bar {
+  id = "__timeout__"
+  left = 0%
+  width = 100%
+  top = 97%
+  height = 41
+  show_text = false
+  text = ""
+  fg_color = "#3daee9"
+  bg_color = "#31363b"
+  border_color = "#31363b"
+  highlight_style = "progress_highlight_*.png"
+}
+
+

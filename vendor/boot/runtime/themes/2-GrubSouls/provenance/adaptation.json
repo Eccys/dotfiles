@@ -1,0 +1,214 @@
+{
+  "targetResolution": "2560x1440",
+  "sourceDesignResolution": [
+    1920,
+    1080
+  ],
+  "scaleX": 1.3333333333333333,
+  "scaleY": 1.3333333333333333,
+  "method": "Theme background is 1920x1080; percentage anchors are retained and literal pixel geometry is scaled.",
+  "scaledProperties": [
+    {
+      "key": "terminal-left",
+      "from": "\"18%+4\"",
+      "to": "\"18%+5\""
+    },
+    {
+      "key": "terminal-top",
+      "from": "\"21%+4\"",
+      "to": "\"21%+5\""
+    },
+    {
+      "key": "terminal-width",
+      "from": "\"63%+11\"",
+      "to": "\"63%+15\""
+    },
+    {
+      "key": "terminal-height",
+      "from": "\"63%+8\"",
+      "to": "\"63%+11\""
+    },
+    {
+      "key": "terminal-border",
+      "from": "\"20\"",
+      "to": "\"27\""
+    },
+    {
+      "key": "left",
+      "from": "39%+6",
+      "to": "39%+8"
+    },
+    {
+      "key": "width",
+      "from": "360",
+      "to": "480"
+    },
+    {
+      "key": "height",
+      "from": "304",
+      "to": "405"
+    },
+    {
+      "key": "item_height",
+      "from": "46",
+      "to": "61"
+    },
+    {
+      "key": "item_padding",
+      "from": "18",
+      "to": "24"
+    },
+    {
+      "key": "item_spacing",
+      "from": "28",
+      "to": "37"
+    },
+    {
+      "key": "icon_width",
+      "from": "52",
+      "to": "69"
+    },
+    {
+      "key": "icon_height",
+      "from": "52",
+      "to": "69"
+    },
+    {
+      "key": "item_icon_space",
+      "from": "8",
+      "to": "11"
+    },
+    {
+      "key": "left",
+      "from": "39%+7",
+      "to": "39%+9"
+    },
+    {
+      "key": "top",
+      "from": "60%+2",
+      "to": "60%+3"
+    },
+    {
+      "key": "width",
+      "from": "360",
+      "to": "480"
+    },
+    {
+      "key": "height",
+      "from": "304",
+      "to": "405"
+    },
+    {
+      "key": "item_height",
+      "from": "46",
+      "to": "61"
+    },
+    {
+      "key": "item_padding",
+      "from": "18",
+      "to": "24"
+    },
+    {
+      "key": "item_spacing",
+      "from": "28",
+      "to": "37"
+    },
+    {
+      "key": "icon_width",
+      "from": "52",
+      "to": "69"
+    },
+    {
+      "key": "icon_height",
+      "from": "52",
+      "to": "69"
+    },
+    {
+      "key": "item_icon_space",
+      "from": "8",
+      "to": "11"
+    },
+    {
+      "key": "left",
+      "from": "4%+13",
+      "to": "4%+17"
+    },
+    {
+      "key": "top",
+      "from": "36%+9",
+      "to": "36%+12"
+    },
+    {
+      "key": "left",
+      "from": "10",
+      "to": "13"
+    },
+    {
+      "key": "top",
+      "from": "93%+3",
+      "to": "93%+4"
+    },
+    {
+      "key": "left",
+      "from": "11",
+      "to": "15"
+    },
+    {
+      "key": "top",
+      "from": "93%+5",
+      "to": "93%+7"
+    },
+    {
+      "key": "left",
+      "from": "10",
+      "to": "13"
+    },
+    {
+      "key": "top",
+      "from": "96%+3",
+      "to": "96%+4"
+    },
+    {
+      "key": "left",
+      "from": "11",
+      "to": "15"
+    },
+    {
+      "key": "top",
+      "from": "96%+5",
+      "to": "96%+7"
+    },
+    {
+      "key": "width",
+      "from": "50%-10",
+      "to": "50%-13"
+    },
+    {
+      "key": "top",
+      "from": "96%+3",
+      "to": "96%+4"
+    },
+    {
+      "key": "width",
+      "from": "50%-9",
+      "to": "50%-12"
+    }
+  ],
+  "imageComponentDimensionsAdded": [
+    {
+      "file": "assets/GRUB_SOULS_LOGO.png",
+      "sourcePixels": [
+        1735,
+        188
+      ],
+      "adaptedPixels": [
+        2313,
+        251
+      ]
+    }
+  ],
+  "adaptedBackground": null,
+  "sourceThemePreserved": "provenance/upstream-theme.txt",
+  "fontsUnchanged": true,
+  "fontSubstitutionOwner": "runtime package; JetBrains Mono PF2 names to be applied there"
+}

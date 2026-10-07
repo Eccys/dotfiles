@@ -1,0 +1,15 @@
+antigravity
+cbonsai
+chatgpt-desktop
+discord-canary
+equicord-installer-bin
+gpa-git
+grok-bot-bin
+lianli-linux-git
+neofetch
+pyprland
+snapx-bin
+tor-browser-bin
+wl-gammarelay-rs
+yay
+zen-browser-bin
