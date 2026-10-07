@@ -5,10 +5,10 @@ import math
 from pathlib import Path
 import sys
 from PySide6.QtCore import Qt, QPointF, QRectF, QTimer
-from PySide6.QtGui import QColor, QFont, QImage, QPainter, QPainterPath, QPen, QPixmap, QShortcut, QKeySequence
+from PySide6.QtGui import QColor, QFont, QImage, QPainter, QPainterPath, QPen, QPixmap, QShortcut, QKeySequence, QTransform
 from PySide6.QtWidgets import (QApplication, QColorDialog, QFileDialog, QGraphicsItem,
     QGraphicsScene, QGraphicsView, QInputDialog, QLabel, QMainWindow, QMessageBox,
-    QPushButton, QSpinBox, QToolBar)
+    QPushButton, QSpinBox, QToolBar, QStatusBar)
 
 
 class Layer(QGraphicsItem):
@@ -91,6 +91,25 @@ class Canvas(QGraphicsView):
         self.setMouseTracking(True)
         self.setBackgroundBrush(QColor('#17191d'))
         self.draft = None
+        self.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+        self.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
+
+    def resizeEvent(self,event):
+        super().resizeEvent(event)
+        self.sync_view()
+
+    def sync_view(self):
+        rect=self.editor.scene.sceneRect()
+        if rect.width() and rect.height():
+            self.setTransform(QTransform.fromScale(self.viewport().width()/rect.width(),self.viewport().height()/rect.height()))
+        for name,y in [('toolbar',10),('actions',58)]:
+            widget=getattr(self.editor,name,None)
+            if widget:
+                widget.adjustSize();widget.move(10,y);widget.raise_()
+        status=getattr(self.editor,'status',None)
+        if status:
+            status.resize(max(1,self.viewport().width()-20),30)
+            status.move(10,max(0,self.viewport().height()-40));status.raise_()
 
     def mousePressEvent(self, event):
         e = self.editor
@@ -183,7 +202,7 @@ class Editor(QMainWindow):
         self.setCentralWidget(self.canvas)
         self.toolbar = QToolBar('Capture tools')
         self.toolbar.setMovable(False)
-        self.addToolBar(self.toolbar)
+        self.toolbar.setParent(self.canvas.viewport())
         self.buttons = {}
         for key, label in [('region','Capture area'),('pixels','Copy pixels'),('move','Move/resize'),('arrow','Arrow'),('rect','Rectangle'),
                            ('ellipse','Ellipse'),('line','Line'),('pen','Draw'),('text','Text'),('pixelate','Pixelate')]:
@@ -192,15 +211,15 @@ class Editor(QMainWindow):
             button.clicked.connect(lambda checked=False,k=key:self.set_tool(k))
             self.toolbar.addWidget(button)
             self.buttons[key]=button
-        self.addToolBarBreak()
-        self.actions = QToolBar('Image actions');self.actions.setMovable(False);self.addToolBar(self.actions)
+        self.actions = QToolBar('Image actions');self.actions.setMovable(False);self.actions.setParent(self.canvas.viewport())
         for label, fn in [('Whole screen',self.whole_screen),('Insert image',self.insert_image),('Insert QR',self.insert_qr),('Duplicate region',self.duplicate_region),
                            ('Color',self.choose_color),('Undo',self.undo),('Redo',self.redo),
                            ('Copy & save',self.finish),('Cancel',self.close)]:
             button=QPushButton(label);button.clicked.connect(fn);self.actions.addWidget(button)
         size=QSpinBox();size.setRange(1,30);size.setValue(3);size.setToolTip('Line thickness')
         size.valueChanged.connect(lambda value:setattr(self,'stroke',value));self.actions.addWidget(size)
-        self.statusBar().showMessage('Capture area selects output. Copy pixels selects a source area. Ctrl+C copies it; Ctrl+V inserts an image. Move/resize: drag objects or their blue corner. Enter saves; Esc cancels.')
+        self.status=QStatusBar(self.canvas.viewport())
+        self.status.showMessage('Capture area selects output. Copy pixels selects a source area. Ctrl+C copies it; Ctrl+V inserts an image. Move/resize: drag objects or their blue corner. Enter saves; Esc cancels.')
         self.setStyleSheet('QToolBar,QStatusBar{background:#20242b;color:white} QPushButton{padding:6px;color:white;background:#333a46;border:0;border-radius:4px;margin:2px} QPushButton:checked{background:#276cb7} QSpinBox{color:white;background:#333a46}')
         self.shortcuts=[]
         for key,fn in [('Ctrl+C',self.copy_region),('Ctrl+V',self.paste),('Ctrl+Z',self.undo),('Ctrl+Shift+Z',self.redo),
@@ -286,7 +305,7 @@ class Editor(QMainWindow):
 
     def copy_region(self):
         QApplication.clipboard().setPixmap(self.render(self.pixel_region))
-        self.statusBar().showMessage('Selected pixels copied. Ctrl+V inserts a movable/resizable duplicate.')
+        self.status.showMessage('Selected pixels copied. Ctrl+V inserts a movable/resizable duplicate.')
 
     def paste(self):
         pix=QApplication.clipboard().pixmap()
@@ -342,8 +361,8 @@ def main():
     if pix.isNull():raise SystemExit('Could not load captured screenshot')
     editor=Editor(pix,args.output,args.monitor)
     editor.showFullScreen()
-    QTimer.singleShot(0, lambda: editor.canvas.fitInView(editor.scene.sceneRect(), Qt.KeepAspectRatio))
-    # Preserve 1:1 pixels; users can pan a large image with scrollbars.
+    QTimer.singleShot(0, editor.canvas.sync_view)
+    # Resize events also update the mapping after Wayland fullscreen configure.
     sys.exit(app.exec())
 
 if __name__=='__main__':main()
