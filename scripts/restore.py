@@ -21,7 +21,7 @@ def run(args, **kwargs):
     return sp.run(list(map(str,args)), check=True, **kwargs)
 
 def read_packages(name):
-    return sorted(set(line.strip() for line in (REPO/'packages'/name).read_text().splitlines() if line.strip() and not line.startswith('#')))
+    return sorted(set(line.strip() for line in (REPO/'packages'/name).read_text(encoding='utf-8').splitlines() if line.strip() and not line.startswith('#')))
 
 class Restore:
     def __init__(self,args):
@@ -32,12 +32,14 @@ class Restore:
         self.live=self.home==Path.home().resolve()
         self.backup=self.home/'.local/state/eccys-restore'/datetime.datetime.now().strftime('%Y%m%dT%H%M%S')
         self.saved=set()
+        self.modes=json.loads((REPO/'manifest.json').read_text(encoding='utf-8')).get('modes',{})
 
     def backup_file(self,path):
         if path in self.saved:return
         self.saved.add(path)
         if not path.exists() and not path.is_symlink():return
-        rel=str(path).lstrip('/')
+        rel=path.as_posix().lstrip('/')
+        if ':' in rel:rel=rel.replace(':','',1)
         dst=self.backup/rel
         dst.parent.mkdir(parents=True,exist_ok=True,mode=0o700)
         if path.is_symlink():dst.symlink_to(os.readlink(path))
@@ -58,17 +60,14 @@ class Restore:
 
     def install_file(self,src,dst):
         self.real_parents(dst)
-        if src.suffix=='.b64':data=base64.b64decode(src.read_text(),validate=False)
-        else:data=src.read_text().replace('@HOME@',str(self.home)).encode()
-        modes=json.loads((REPO/'manifest.json').read_text()).get('modes',{})
-        mode=modes.get(str(src.relative_to(REPO)),0o644)
+        if src.suffix=='.b64':data=base64.b64decode(src.read_text(encoding='utf-8'),validate=False)
+        else:data=src.read_text(encoding='utf-8').replace('@HOME@',str(self.home)).encode('utf-8')
+        mode=self.modes.get(src.relative_to(REPO).as_posix(),0o644)
         if dst.is_file() and not dst.is_symlink() and dst.read_bytes()==data:
             dst.chmod(mode);return
         self.backup_file(dst)
         if dst.is_symlink():dst.unlink()
         dst.write_bytes(data)
-        modes=json.loads((REPO/'manifest.json').read_text()).get('modes',{})
-        mode=modes.get(str(src.relative_to(REPO)),0o644)
         dst.chmod(mode)
 
     def packages(self):
