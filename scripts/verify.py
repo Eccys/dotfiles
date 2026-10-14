@@ -7,7 +7,9 @@ def check(label,args):
  print(('PASS' if p.returncode==0 else 'FAIL'),label)
  if p.returncode:failed.append(label)
 for name in ['official.txt','aur.txt']:
- for pkg in (root/'packages'/name).read_text().splitlines():check('package '+pkg,['pacman','-Q',pkg])
+ for raw in (root/'packages'/name).read_text(encoding='utf-8').splitlines():
+  pkg=raw.strip()
+  if pkg and not pkg.startswith('#'):check('package '+pkg,['pacman','-Q',pkg])
 check('packaged desktop',['pacman','-Q','eccys-serpantinum'])
 for unit in ['snapper-timeline.timer','snapper-cleanup.timer']:
  check(unit+' enabled',['systemctl','is-enabled',unit]);check(unit+' active',['systemctl','is-active',unit])
