@@ -15,10 +15,12 @@ for p in root.rglob('*'):
  if p.suffix=='.json':
   try:json.loads(p.read_text(encoding='utf-8'))
   except Exception:errors.append('JSON: '+str(p.relative_to(root)))
-for name in (root/'packages/aur.txt').read_text(encoding='utf-8').splitlines():
+for raw in (root/'packages/aur.txt').read_text(encoding='utf-8').splitlines():
+ name=raw.strip()
+ if not name or name.startswith('#'):continue
  if not (root/'vendor/aur'/name/'PKGBUILD').is_file():errors.append('Missing AUR recipe: '+name)
 for name in ['official.txt','aur.txt']:
- lines=(root/'packages'/name).read_text(encoding='utf-8').splitlines()
+ lines=[l.strip() for l in (root/'packages'/name).read_text(encoding='utf-8').splitlines() if l.strip() and not l.strip().startswith('#')]
  if len(lines)!=len(set(lines)):errors.append('Duplicate package: '+name)
 if errors:print('\n'.join(errors));sys.exit(1)
 print('PASS:',len(manifest['sha256']),'payload checksums; JSON/base64 files and package recipes valid')
