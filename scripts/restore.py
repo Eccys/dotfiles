@@ -39,7 +39,7 @@ class Restore:
         self.saved.add(path)
         if not path.exists() and not path.is_symlink():return
         rel=path.as_posix().lstrip('/')
-        if ':' in rel:rel=rel.replace(':','',1)
+        if len(rel)>=2 and rel[1]==':':rel=rel[0]+rel[2:]
         dst=self.backup/rel
         dst.parent.mkdir(parents=True,exist_ok=True,mode=0o700)
         if path.is_symlink():dst.symlink_to(os.readlink(path))
@@ -72,18 +72,18 @@ class Restore:
 
     def packages(self):
         if not self.live:raise RuntimeError('Package/system operations require the current login home.')
-        os_release=Path('/etc/os-release').read_text()
+        os_release=Path('/etc/os-release').read_text(encoding='utf-8')
         if 'ID=arch' not in os_release and 'ID="arch"' not in os_release:
             raise RuntimeError('This restore target is Arch Linux.')
         if os.geteuid()==0:raise RuntimeError('Run as the desktop user; sudo is used only for system changes.')
         run(['sudo','-v'])
         # Enable multilib without replacing repository/mirror choices.
-        config=Path('/etc/pacman.conf').read_text()
+        config=Path('/etc/pacman.conf').read_text(encoding='utf-8')
         if '[multilib]\nInclude' not in config:
             changed=config.replace('#[multilib]\n#Include = /etc/pacman.d/mirrorlist','[multilib]\nInclude = /etc/pacman.d/mirrorlist')
             if changed==config:raise RuntimeError('Enable [multilib] in /etc/pacman.conf before installing Steam/Wine.')
             run(['sudo','cp','-a','/etc/pacman.conf','/etc/pacman.conf.before-eccys-restore'])
-            with tempfile.NamedTemporaryFile(mode='w') as f:
+            with tempfile.NamedTemporaryFile(mode='w',encoding='utf-8') as f:
                 f.write(changed);f.flush();run(['sudo','install','-m','644',f.name,'/etc/pacman.conf'])
         run(['sudo','pacman','-Syu','--needed','--noconfirm',*read_packages('official.txt')])
         build=self.home/'.cache/eccys-restore/aur'
@@ -148,19 +148,19 @@ class Restore:
             if dest.exists():
                 backup=self.backup/'system'/dest.relative_to('/')
                 run(['sudo','mkdir','-p',backup.parent]);run(['sudo','cp','-a',dest,backup])
-            with tempfile.NamedTemporaryFile(mode='w') as tmp:
-                tmp.write(source.read_text().replace('@HOME@',str(self.home)));tmp.flush()
+            with tempfile.NamedTemporaryFile(mode='w',encoding='utf-8') as tmp:
+                tmp.write(source.read_text(encoding='utf-8').replace('@HOME@',str(self.home)));tmp.flush()
                 run(['sudo','install','-Dm644',tmp.name,dest])
         helper=REPO/'system/usr/local/sbin/update-keyd-credential-macros'
         import pwd
-        with tempfile.NamedTemporaryFile(mode='w') as tmp:
-            tmp.write(helper.read_text().replace('@HOME@',str(self.home)).replace('@USER@',pwd.getpwuid(os.getuid()).pw_name));tmp.flush()
+        with tempfile.NamedTemporaryFile(mode='w',encoding='utf-8') as tmp:
+            tmp.write(helper.read_text(encoding='utf-8').replace('@HOME@',str(self.home)).replace('@USER@',pwd.getpwuid(os.getuid()).pw_name));tmp.flush()
             run(['sudo','install','-Dm755',tmp.name,'/usr/local/sbin/update-keyd-credential-macros'])
         # Grant only the fixed commands needed by the two local helpers.
         user=pwd.getpwuid(os.getuid()).pw_name
         commands=[('/usr/bin/snapper -c '+name+' create --type single --cleanup-algorithm number --description Manual '+name+' snapshot --print-number') for name in ['root','home']]
         commands.append('/usr/local/sbin/update-keyd-credential-macros ""')
-        with tempfile.NamedTemporaryFile(mode='w') as tmp:
+        with tempfile.NamedTemporaryFile(mode='w',encoding='utf-8') as tmp:
             tmp.write(user+' ALL=(root) NOPASSWD: '+', '.join(commands)+'\n');tmp.flush()
             run(['sudo','visudo','-cf',tmp.name]);run(['sudo','install','-Dm440',tmp.name,'/etc/sudoers.d/eccys-desktop-helpers'])
         # Restore the theme from versioned assets, preserving its layout.
@@ -172,7 +172,7 @@ class Restore:
                     dst=Path('/usr/share/sddm/themes/material-you')/src.relative_to(theme)
                     if src.suffix=='.b64':dst=dst.with_suffix('')
                     with tempfile.NamedTemporaryFile() as tmp:
-                        data=base64.b64decode(src.read_text()) if src.suffix=='.b64' else src.read_bytes()
+                        data=base64.b64decode(src.read_text(encoding='utf-8')) if src.suffix=='.b64' else src.read_bytes()
                         tmp.write(data);tmp.flush();run(['sudo','install','-Dm644',tmp.name,dst])
         for unit in ['NetworkManager.service','bluetooth.service','keyd.service','sddm.service']:
             run(['sudo','systemctl','enable',unit])
@@ -197,14 +197,14 @@ class Restore:
             run(['sudo','install','-Dm640',REPO/'system/etc/snapper/configs'/name,config])
         # SNAPPPER_CONFIGS is required by the distribution timer wrapper.
         path=Path('/etc/conf.d/snapper')
-        content=path.read_text() if path.exists() else ''
+        content=path.read_text(encoding='utf-8') if path.exists() else ''
         import re
         old=re.search(r'^SNAPPER_CONFIGS=["\']([^"\']*)',content,re.M)
         names=set(old[1].split()) if old else set()
         names.update(['root','home'])
         line='SNAPPER_CONFIGS="'+' '.join(sorted(names))+'"'
         content=re.sub(r'^SNAPPER_CONFIGS=.*$',line,content,flags=re.M) if old else content+'\n'+line+'\n'
-        with tempfile.NamedTemporaryFile(mode='w') as tmp:
+        with tempfile.NamedTemporaryFile(mode='w',encoding='utf-8') as tmp:
             tmp.write(content);tmp.flush();run(['sudo','install','-Dm644',tmp.name,path])
         run(['sudo','systemctl','enable','--now','snapper-timeline.timer','snapper-cleanup.timer'])
         run(['sudo','snapper','list-configs'])
@@ -216,7 +216,7 @@ class Restore:
         root=self.home/'.config/zen'
         import configparser
         ini=configparser.ConfigParser()
-        if (root/'profiles.ini').exists():ini.read(root/'profiles.ini')
+        if (root/'profiles.ini').exists():ini.read(root/'profiles.ini',encoding='utf-8')
         profiles=[s for s in ini.sections() if s.startswith('Profile')]
         selected=next((s for s in profiles if ini[s].get('Default')=='1'),profiles[0] if profiles else None)
         if selected:
@@ -226,12 +226,12 @@ class Restore:
             profile=root/'eccys-restore';profile.mkdir(parents=True,exist_ok=True)
             root.mkdir(parents=True,exist_ok=True)
             self.backup_file(root/'profiles.ini')
-            (root/'profiles.ini').write_text('[General]\nStartWithLastProfile=1\nVersion=2\n\n[Profile0]\nName=Eccys\nIsRelative=1\nPath=eccys-restore\nDefault=1\n')
+            (root/'profiles.ini').write_text('[General]\nStartWithLastProfile=1\nVersion=2\n\n[Profile0]\nName=Eccys\nIsRelative=1\nPath=eccys-restore\nDefault=1\n',encoding='utf-8')
         self.install_file(REPO/'browser/user.js',profile/'user.js')
         for source in (REPO/'browser/chrome').rglob('*'):
             if source.is_file():self.install_file(source,profile/'chrome'/source.relative_to(REPO/'browser/chrome'))
         extensions=profile/'extensions';extensions.mkdir(parents=True,exist_ok=True)
-        for addon in json.loads((REPO/'browser/extensions.json').read_text()):
+        for addon in json.loads((REPO/'browser/extensions.json').read_text(encoding='utf-8')):
             url=addon.get('source')
             if not url and addon['id'].endswith(('@mozilla.org','@mozilla.com')):continue
             if not url or not url.startswith('https://addons.mozilla.org/'):
@@ -251,7 +251,7 @@ class Restore:
 
     def wallpapers(self):
         directory=self.home/'Pictures/Wallpapers';directory.mkdir(parents=True,exist_ok=True)
-        for image in json.loads((REPO/'packages/wallpapers.json').read_text()):
+        for image in json.loads((REPO/'packages/wallpapers.json').read_text(encoding='utf-8')):
             dest=directory/image['name']
             if dest.is_file() and hashlib.sha256(dest.read_bytes()).hexdigest()==image['sha256']:continue
             with urllib.request.urlopen(image['url'],timeout=60) as result:data=result.read()
